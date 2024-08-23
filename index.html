@@ -22,7 +22,10 @@
 
     <header>
         <nav class="container">
-            <div class="logo">code-seed</div>
+            <div class="logo">
+                <img src="path/to/your/logo.png" alt="CodeSeed Logo" id="header-logo">
+                <span>code-seed</span>
+            </div>
             <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#projects">Projects</a></li>
@@ -40,8 +43,8 @@
         </div>
         <div class="hero-content container">
             <div class="hero-card">
-                <h1>Growing cutting-edge tech solutions</h1>
-                <h2>with <span id="rotating-word"></span></h2>
+                <h1>Growing cutting-edge tech solutions with</h1>
+                <h2><span id="rotating-word"></span></h2>
                 <a href="#projects" class="cta-button">Explore Our Project Garden</a>
             </div>
         </div>
@@ -178,28 +181,64 @@
             <h2>Our Team</h2>
             <div class="team-members">
                 <div class="team-member">
-                    <img src="path/to/team-member1.jpg" alt="Team Member 1">
-                    <h3>Jane Doe</h3>
-                    <p class="role">Chief Technology Officer</p>
-                    <p class="bio">Jane is a visionary tech leader with over 15 years of experience in AI and machine learning.</p>
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <img src="path/to/team-member1.jpg" alt="Jane Doe">
+                            <h3>Jane Doe</h3>
+                            <p class="role">Chief Technology Officer</p>
+                        </div>
+                        <div class="card-back">
+                            <h3>Jane Doe</h3>
+                            <p class="role">Chief Technology Officer</p>
+                            <p class="bio">Jane is a visionary tech leader with over 15 years of experience in AI and machine learning.</p>
+                            <p class="experience">Experience: Google, Microsoft, Stanford AI Lab</p>
+                        </div>
+                    </div>
                 </div>
                 <div class="team-member">
-                    <img src="path/to/team-member2.jpg" alt="Team Member 2">
-                    <h3>John Smith</h3>
-                    <p class="role">Lead Software Architect</p>
-                    <p class="bio">John is a seasoned software architect specializing in scalable cloud solutions and blockchain technology.</p>
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <img src="path/to/team-member2.jpg" alt="John Smith">
+                            <h3>John Smith</h3>
+                            <p class="role">Lead Software Architect</p>
+                        </div>
+                        <div class="card-back">
+                            <h3>John Smith</h3>
+                            <p class="role">Lead Software Architect</p>
+                            <p class="bio">John is a seasoned software architect specializing in scalable cloud solutions and blockchain technology.</p>
+                            <p class="experience">Experience: IBM, Amazon, Oracle</p>
+                        </div>
+                    </div>
                 </div>
                 <div class="team-member">
-                    <img src="path/to/team-member3.jpg" alt="Emily Chen">
-                    <h3>Emily Chen</h3>
-                    <p class="role">Head of Cybersecurity</p>
-                    <p class="bio">Emily is an expert in cybersecurity with a focus on protecting IoT and cloud infrastructures.</p>
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <img src="path/to/team-member3.jpg" alt="Emily Chen">
+                            <h3>Emily Chen</h3>
+                            <p class="role">Head of Cybersecurity</p>
+                        </div>
+                        <div class="card-back">
+                            <h3>Emily Chen</h3>
+                            <p class="role">Head of Cybersecurity</p>
+                            <p class="bio">Emily is an expert in cybersecurity with a focus on protecting IoT and cloud infrastructures.</p>
+                            <p class="experience">Experience: Cisco, Palo Alto Networks, Symantec</p>
+                        </div>
+                    </div>
                 </div>
                 <div class="team-member">
-                    <img src="path/to/team-member4.jpg" alt="Michael Johnson">
-                    <h3>Michael Johnson</h3>
-                    <p class="role">Data Science Lead</p>
-                    <p class="bio">Michael leads our data science initiatives, specializing in big data analytics and predictive modeling.</p>
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <img src="path/to/team-member4.jpg" alt="Michael Johnson">
+                            <h3>Michael Johnson</h3>
+                            <p class="role">Data Science Lead</p>
+                        </div>
+                        <div class="card-back">
+                            <h3>Michael Johnson</h3>
+                            <p class="role">Data Science Lead</p>
+                            <p class="bio">Michael leads our data science initiatives, specializing in big data analytics and predictive modeling.</p>
+                            <p class="experience">Experience: Tableau, SAS, RStudio</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -255,12 +294,24 @@
         console.log('DOM loaded');
         
         const rotatingWord = document.getElementById('rotating-word');
-        const words = ['cutting-edge tech', 'AI innovation', 'rapid deployment', 'scalable solutions'];
+        const words = [
+            'data-driven solutions',
+            'scalable infrastructure',
+            'intelligent automation',
+            'innovative engineering',
+            'LLM-driven solutions',
+            'predictive analytics',
+            'adaptive algorithms'
+        ];
         let currentIndex = 0;
 
         function changeWord() {
-            rotatingWord.textContent = words[currentIndex];
-            currentIndex = (currentIndex + 1) % words.length;
+            rotatingWord.style.opacity = 0;
+            setTimeout(() => {
+                rotatingWord.textContent = words[currentIndex];
+                rotatingWord.style.opacity = 1;
+                currentIndex = (currentIndex + 1) % words.length;
+            }, 500); // Half of the transition time
         }
 
         // Set initial word
