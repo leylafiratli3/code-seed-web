@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>code-seed</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body class="loading">
+    <div class="loading-screen">
+        <div class="plant-animation">
+            <div class="stem"></div>
+            <div class="leaf leaf-left"></div>
+            <div class="leaf leaf-center"></div>
+            <div class="leaf leaf-right"></div>
+        </div>
+    </div>
+
+    <header>
+        <nav class="container">
+            <div class="logo">code-seed</div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="video-background">
+            <video autoplay loop muted playsinline>
+                <source src="assets/codeseed-background.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="hero-content container">
+            <div class="hero-card">
+                <h1>Transforming ideas into reality</h1>
+                <h2>with <span id="rotating-word"></span></h2>
+                <a href="#projects" class="cta-button">Explore Our Project Garden</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects-section">
+        <div class="container">
+            <h2>Project Garden</h2>
+            <div class="project-cards">
+                <div class="project-card">
+                    <div class="project-image" style="background-image: url('path/to/project1-image.jpg');"></div>
+                    <div class="project-info">
+                        <h3>AI-Powered Analytics</h3>
+                        <p class="project-summary">Revolutionizing data analysis with machine learning</p>
+                        <div class="project-details">
+                            <p>Our AI-powered analytics platform uses cutting-edge machine learning algorithms to process vast amounts of data in real-time, providing actionable insights for businesses across various industries.</p>
+                            <ul>
+                                <li>Real-time data processing</li>
+                                <li>Predictive modeling</li>
+                                <li>Custom dashboards</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image" style="background-image: url('path/to/project2-image.jpg');"></div>
+                    <div class="project-info">
+                        <h3>Blockchain Supply Chain</h3>
+                        <p class="project-summary">Enhancing transparency and efficiency in global supply chains</p>
+                        <div class="project-details">
+                            <p>Our blockchain-based supply chain solution provides end-to-end visibility and traceability for products, reducing fraud and improving efficiency in complex global supply networks.</p>
+                            <ul>
+                                <li>Smart contract integration</li>
+                                <li>Real-time tracking</li>
+                                <li>Secure data sharing</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image" style="background-image: url('path/to/project3-image.jpg');"></div>
+                    <div class="project-info">
+                        <h3>IoT Smart City Platform</h3>
+                        <p class="project-summary">Creating connected urban environments for a sustainable future</p>
+                        <div class="project-details">
+                            <p>Our IoT Smart City platform integrates various urban systems, from traffic management to waste collection, creating more efficient and sustainable cities through data-driven decision making.</p>
+                            <ul>
+                                <li>Sensor network integration</li>
+                                <li>Predictive maintenance</li>
+                                <li>Energy optimization</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image" style="background-image: url('path/to/project4-image.jpg');"></div>
+                    <div class="project-info">
+                        <h3>Quantum Computing Simulator</h3>
+                        <p class="project-summary">Pushing the boundaries of computational power</p>
+                        <div class="project-details">
+                            <p>Our quantum computing simulator allows researchers and developers to experiment with quantum algorithms without the need for actual quantum hardware, accelerating innovation in this cutting-edge field.</p>
+                            <ul>
+                                <li>Multi-qubit simulation</li>
+                                <li>Custom gate design</li>
+                                <li>Error correction modeling</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image" style="background-image: url('path/to/project5-image.jpg');"></div>
+                    <div class="project-info">
+                        <h3>AR/VR Training Platform</h3>
+                        <p class="project-summary">Revolutionizing corporate training with immersive experiences</p>
+                        <div class="project-details">
+                            <p>Our AR/VR training platform creates highly engaging and effective learning experiences, improving knowledge retention and skill acquisition across various industries.</p>
+                            <ul>
+                                <li>Customizable scenarios</li>
+                                <li>Real-time performance tracking</li>
+                                <li>Multi-user collaboration</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image" style="background-image: url('path/to/project6-image.jpg');"></div>
+                    <div class="project-info">
+                        <h3>Autonomous Drone Network</h3>
+                        <p class="project-summary">Enhancing surveillance and delivery systems with AI-powered drones</p>
+                        <div class="project-details">
+                            <p>Our autonomous drone network utilizes advanced AI algorithms for coordinated flight, object recognition, and task optimization, revolutionizing surveillance and delivery operations.</p>
+                            <ul>
+                                <li>Swarm intelligence</li>
+                                <li>Edge computing integration</li>
+                                <li>Adaptive path planning</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="team" class="team-section">
+        <div class="container">
+            <h2>Our Team</h2>
+            <div class="team-members">
+                <div class="team-member">
+                    <img src="path/to/team-member1.jpg" alt="Team Member 1">
+                    <h3>Jane Doe</h3>
+                    <p class="role">Chief Technology Officer</p>
+                    <p class="bio">Jane is a visionary tech leader with over 15 years of experience in AI and machine learning.</p>
+                </div>
+                <div class="team-member">
+                    <img src="path/to/team-member2.jpg" alt="Team Member 2">
+                    <h3>John Smith</h3>
+                    <p class="role">Lead Software Architect</p>
+                    <p class="bio">John is a seasoned software architect specializing in scalable cloud solutions and blockchain technology.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="testimonials-section">
+        <div class="container">
+            <h2>What Our Clients Say</h2>
+            <div class="testimonial-slider">
+                <div class="testimonial">
+                    <p class="quote">"CodeSeed's AI-powered analytics platform has transformed our decision-making process. It's been a game-changer for our business."</p>
+                    <p class="author">- Sarah Johnson, CEO of TechCorp</p>
+                </div>
+                <div class="testimonial">
+                    <p class="quote">"The team at CodeSeed delivered our IoT solution on time and exceeded our expectations. Their expertise is unmatched."</p>
+                    <p class="author">- Michael Chen, CTO of SmartCity Solutions</p>
+                </div>
+                <!-- Add more testimonials as needed -->
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2>Get In Touch</h2>
+            <form id="contact-form">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <script>
+    console.log('Script loaded');
+
+    // Loading screen
+    document.body.classList.add('loading');
+
+    window.addEventListener('load', function() {
+        setTimeout(function() {
+            document.querySelector('.loading-screen').style.opacity = '0';
+            setTimeout(function() {
+                document.querySelector('.loading-screen').style.display = 'none';
+                document.body.classList.remove('loading');
+            }, 500);
+        }, 1500); // Adjusted to allow for quicker animation
+    });
+
+    // Rotating words functionality
+    document.addEventListener('DOMContentLoaded', function() {
+        console.log('DOM loaded');
+        
+        const rotatingWord = document.getElementById('rotating-word');
+        const words = ['cutting-edge tech', 'AI innovation', 'rapid deployment', 'scalable solutions'];
+        let currentIndex = 0;
+
+        function changeWord() {
+            rotatingWord.textContent = words[currentIndex];
+            currentIndex = (currentIndex + 1) % words.length;
+        }
+
+        // Set initial word
+        changeWord();
+
+        // Change word every 3 seconds
+        setInterval(changeWord, 3000);
+    });
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const projectCards = document.querySelectorAll('.project-card');
+
+        projectCards.forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.classList.add('active');
+            });
+
+            card.addEventListener('mouseleave', function() {
+                this.classList.remove('active');
+            });
+        });
+    });
+    </script>
+</body>
+</html>

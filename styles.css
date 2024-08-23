@@ -1,0 +1,534 @@
+:root {
+    --primary-bg: #f4f4f4;
+    --secondary-bg: #e0e0e0;
+    --primary-color: #3a7a50;
+    --secondary-color: #2c5a3c;
+    --accent-color: #5fa778;
+    --text-color: #333333;
+    --light-text: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Fira Code', monospace;
+    background-color: #8dba90; /* Light green background */
+}
+
+body {
+    font-family: 'Fira Code', monospace;
+    color: #333; /* Darker text color for better contrast */
+    line-height: 1.6;
+    background-color: var(--primary-bg);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Loading Screen */
+body.loading header {
+    display: none;
+}
+
+.loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.5s;
+    z-index: 1000; /* Ensure it's on top of other content */
+}
+
+.plant-animation {
+    position: relative;
+    width: 100px;
+    height: 100px;
+}
+
+.stem {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 3px;
+    height: 0;
+    background: #4CAF50;
+    transform: translateX(-50%);
+    animation: grow-stem 0.6s ease-out forwards;
+}
+
+.leaf {
+    position: absolute;
+    width: 32px;
+    height: 48px;
+    background: #4CAF50;
+    opacity: 0;
+    clip-path: path('M16 0 C24 16 24 32 16 48 C8 32 8 16 16 0');
+}
+
+.leaf-left {
+    left: 50%;
+    bottom: 50px;
+    transform: translateX(-100%) rotate(-30deg) scale(0);
+    animation: grow-leaf-left 0.4s ease-out 0.3s forwards;
+}
+
+.leaf-center {
+    left: 50%;
+    bottom: 70px;
+    transform: translateX(-50%) scale(0);
+    animation: grow-leaf-center 0.4s ease-out 0.5s forwards;
+}
+
+.leaf-right {
+    left: 50%;
+    bottom: 50px;
+    transform: translateX(0%) rotate(30deg) scale(0);
+    animation: grow-leaf-right 0.4s ease-out 0.7s forwards;
+}
+
+@keyframes grow-stem {
+    to {
+        height: 70px;
+    }
+}
+
+@keyframes grow-leaf-left {
+    to {
+        opacity: 1;
+        transform: translateX(-100%) rotate(-30deg) scale(1);
+    }
+}
+
+@keyframes grow-leaf-center {
+    to {
+        opacity: 1;
+        transform: translateX(-50%) scale(1);
+    }
+}
+
+@keyframes grow-leaf-right {
+    to {
+        opacity: 1;
+        transform: translateX(0%) rotate(30deg) scale(1);
+    }
+}
+
+/* Header */
+header {
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #4CAF50;
+    font-family: 'Fira Code', monospace;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s;
+    font-family: 'Fira Code', monospace;
+}
+
+nav ul li a:hover {
+    color: #4CAF50;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.video-background::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+}
+
+.video-background video {
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #ffffff; /* White text for better contrast */
+}
+
+.hero-card {
+    background-color: rgba(0, 0, 0, 0.6); /* Darker semi-transparent background */
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+}
+
+.hero-card h1 {
+    font-size: 3vw;
+    line-height: 1.2;
+    margin-bottom: 10px;
+    color: #ffffff; /* White for main heading */
+}
+
+.hero-card h2 {
+    font-size: 2.5vw;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    color: #e0e0e0; /* Slightly off-white for secondary heading */
+}
+
+#rotating-word {
+    display: inline-block;
+    min-width: 200px;
+    font-weight: bold;
+    color: #4CAF50; /* Bright green to match the leaves */
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50; /* Green to match the leaves */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #45a049; /* Darker green on hover */
+    transform: translateY(-2px); /* Slight lift effect on hover */
+}
+
+/* Projects Section */
+.projects-section {
+    padding: 4rem 0;
+    background-color: #fff;
+    color: #333;
+}
+
+.projects-section h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+    color: #4CAF50;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.project-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.project-card {
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.project-card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.project-image {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    transition: height 0.3s ease;
+}
+
+.project-card:hover .project-image {
+    height: 100px;
+}
+
+.project-info {
+    padding: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover .project-info {
+    transform: translateY(-100px);
+}
+
+.project-info h3 {
+    margin: 0 0 0.5rem;
+    font-size: 1.5rem;
+    color: #4CAF50;
+}
+
+.project-summary {
+    margin: 0;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.project-details {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+}
+
+.project-card:hover .project-details {
+    max-height: 300px;
+    opacity: 1;
+}
+
+.project-details p {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    color: #333;
+}
+
+.project-details ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 0.5rem;
+}
+
+.project-details li {
+    font-size: 0.85rem;
+    color: #4CAF50;
+    margin-bottom: 0.25rem;
+}
+
+.project-details li::before {
+    content: '•';
+    color: #4CAF50;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+/* Team Section */
+.team-section {
+    padding: 4rem 0;
+    background-color: #0a0a0a;
+    color: #fff;
+}
+
+.team-section h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+    color: #4CAF50;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.team-members {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.team-member {
+    background-color: #1a1a1a;
+    border-radius: 10px;
+    padding: 2rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-member:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 255, 0, 0.2);
+}
+
+.team-member img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+.team-member h3 {
+    color: #4CAF50;
+    margin-bottom: 0.5rem;
+}
+
+.team-member .role {
+    color: #aaa;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.team-member .bio {
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+/* Testimonials Section */
+.testimonials-section {
+    padding: 4rem 0;
+    background-color: #fff;
+    color: #333;
+}
+
+.testimonials-section h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+    color: #4CAF50;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.testimonial-slider {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.testimonial {
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.testimonial .quote {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.testimonial .author {
+    color: #4CAF50;
+    font-style: italic;
+}
+
+/* Contact Section */
+.contact-section {
+    padding: 4rem 0;
+    background-color: #0a0a0a;
+    color: #fff;
+}
+
+.contact-section h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+    color: #4CAF50;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+#contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#contact-form input,
+#contact-form textarea {
+    padding: 0.8rem;
+    border-radius: 5px;
+    border: none;
+    background-color: #1a1a1a;
+    color: #fff;
+}
+
+#contact-form textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+#contact-form button {
+    padding: 1rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#contact-form button:hover {
+    background-color: #45a049;
+}
+
+/* Footer */
+footer {
+    background-color: var(--secondary-bg);
+    color: var(--text-color);
+    text-align: center;
+    padding: 2rem 0;
+}
