@@ -7,6 +7,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body class="loading">
     <div class="loading-screen">
@@ -38,9 +40,37 @@
         </div>
         <div class="hero-content container">
             <div class="hero-card">
-                <h1>Transforming ideas into reality</h1>
+                <h1>Growing cutting-edge tech solutions</h1>
                 <h2>with <span id="rotating-word"></span></h2>
                 <a href="#projects" class="cta-button">Explore Our Project Garden</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about-section">
+        <div class="container">
+            <p class="about-intro">We specialize in cutting-edge technologies to drive innovation and solve complex problems.</p>
+            <div class="tech-grid">
+                <div class="tech-item" data-tech="AI">
+                    <i class="fas fa-brain"></i>
+                    <h3>LLM Models</h3>
+                </div>
+                <div class="tech-item" data-tech="Blockchain">
+                    <i class="fas fa-link"></i>
+                    <h3>Software Development</h3>
+                </div>
+                <div class="tech-item" data-tech="Cloud">
+                    <i class="fas fa-cloud"></i>
+                    <h3>Cloud Computing</h3>
+                </div>
+                <div class="tech-item" data-tech="Cybersecurity">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Automation</h3>
+                </div>
+                <div class="tech-item" data-tech="Data">
+                    <i class="fas fa-database"></i>
+                    <h3>Big Data Analytics</h3>
+                </div>
             </div>
         </div>
     </section>
@@ -53,10 +83,10 @@
                     <div class="project-image" style="background-image: url('path/to/project1-image.jpg');"></div>
                     <div class="project-info">
                         <h3>AI-Powered Analytics</h3>
-                        <p class="project-summary">Revolutionizing data analysis with machine learning</p>
-                        <div class="project-details">
+                        <p class="project-summary" style="color: #666;">Revolutionizing data analysis with machine learning</p>
+                        <div class="project-details" style="color: #333;">
                             <p>Our AI-powered analytics platform uses cutting-edge machine learning algorithms to process vast amounts of data in real-time, providing actionable insights for businesses across various industries.</p>
-                            <ul>
+                            <ul style="color: #4CAF50;">
                                 <li>Real-time data processing</li>
                                 <li>Predictive modeling</li>
                                 <li>Custom dashboards</li>
@@ -68,10 +98,10 @@
                     <div class="project-image" style="background-image: url('path/to/project2-image.jpg');"></div>
                     <div class="project-info">
                         <h3>Blockchain Supply Chain</h3>
-                        <p class="project-summary">Enhancing transparency and efficiency in global supply chains</p>
-                        <div class="project-details">
+                        <p class="project-summary" style="color: #666;">Enhancing transparency and efficiency in global supply chains</p>
+                        <div class="project-details" style="color: #333;">
                             <p>Our blockchain-based supply chain solution provides end-to-end visibility and traceability for products, reducing fraud and improving efficiency in complex global supply networks.</p>
-                            <ul>
+                            <ul style="color: #4CAF50;">
                                 <li>Smart contract integration</li>
                                 <li>Real-time tracking</li>
                                 <li>Secure data sharing</li>
@@ -83,10 +113,10 @@
                     <div class="project-image" style="background-image: url('path/to/project3-image.jpg');"></div>
                     <div class="project-info">
                         <h3>IoT Smart City Platform</h3>
-                        <p class="project-summary">Creating connected urban environments for a sustainable future</p>
-                        <div class="project-details">
+                        <p class="project-summary" style="color: #666;">Creating connected urban environments for a sustainable future</p>
+                        <div class="project-details" style="color: #333;">
                             <p>Our IoT Smart City platform integrates various urban systems, from traffic management to waste collection, creating more efficient and sustainable cities through data-driven decision making.</p>
-                            <ul>
+                            <ul style="color: #4CAF50;">
                                 <li>Sensor network integration</li>
                                 <li>Predictive maintenance</li>
                                 <li>Energy optimization</li>
@@ -98,10 +128,10 @@
                     <div class="project-image" style="background-image: url('path/to/project4-image.jpg');"></div>
                     <div class="project-info">
                         <h3>Quantum Computing Simulator</h3>
-                        <p class="project-summary">Pushing the boundaries of computational power</p>
-                        <div class="project-details">
+                        <p class="project-summary" style="color: #666;">Pushing the boundaries of computational power</p>
+                        <div class="project-details" style="color: #333;">
                             <p>Our quantum computing simulator allows researchers and developers to experiment with quantum algorithms without the need for actual quantum hardware, accelerating innovation in this cutting-edge field.</p>
-                            <ul>
+                            <ul style="color: #4CAF50;">
                                 <li>Multi-qubit simulation</li>
                                 <li>Custom gate design</li>
                                 <li>Error correction modeling</li>
@@ -113,10 +143,10 @@
                     <div class="project-image" style="background-image: url('path/to/project5-image.jpg');"></div>
                     <div class="project-info">
                         <h3>AR/VR Training Platform</h3>
-                        <p class="project-summary">Revolutionizing corporate training with immersive experiences</p>
-                        <div class="project-details">
+                        <p class="project-summary" style="color: #666;">Revolutionizing corporate training with immersive experiences</p>
+                        <div class="project-details" style="color: #333;">
                             <p>Our AR/VR training platform creates highly engaging and effective learning experiences, improving knowledge retention and skill acquisition across various industries.</p>
-                            <ul>
+                            <ul style="color: #4CAF50;">
                                 <li>Customizable scenarios</li>
                                 <li>Real-time performance tracking</li>
                                 <li>Multi-user collaboration</li>
@@ -128,10 +158,10 @@
                     <div class="project-image" style="background-image: url('path/to/project6-image.jpg');"></div>
                     <div class="project-info">
                         <h3>Autonomous Drone Network</h3>
-                        <p class="project-summary">Enhancing surveillance and delivery systems with AI-powered drones</p>
-                        <div class="project-details">
+                        <p class="project-summary" style="color: #666;">Enhancing surveillance and delivery systems with AI-powered drones</p>
+                        <div class="project-details" style="color: #333;">
                             <p>Our autonomous drone network utilizes advanced AI algorithms for coordinated flight, object recognition, and task optimization, revolutionizing surveillance and delivery operations.</p>
-                            <ul>
+                            <ul style="color: #4CAF50;">
                                 <li>Swarm intelligence</li>
                                 <li>Edge computing integration</li>
                                 <li>Adaptive path planning</li>
@@ -159,6 +189,18 @@
                     <p class="role">Lead Software Architect</p>
                     <p class="bio">John is a seasoned software architect specializing in scalable cloud solutions and blockchain technology.</p>
                 </div>
+                <div class="team-member">
+                    <img src="path/to/team-member3.jpg" alt="Emily Chen">
+                    <h3>Emily Chen</h3>
+                    <p class="role">Head of Cybersecurity</p>
+                    <p class="bio">Emily is an expert in cybersecurity with a focus on protecting IoT and cloud infrastructures.</p>
+                </div>
+                <div class="team-member">
+                    <img src="path/to/team-member4.jpg" alt="Michael Johnson">
+                    <h3>Michael Johnson</h3>
+                    <p class="role">Data Science Lead</p>
+                    <p class="bio">Michael leads our data science initiatives, specializing in big data analytics and predictive modeling.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -168,11 +210,11 @@
             <h2>What Our Clients Say</h2>
             <div class="testimonial-slider">
                 <div class="testimonial">
-                    <p class="quote">"CodeSeed's AI-powered analytics platform has transformed our decision-making process. It's been a game-changer for our business."</p>
+                    <p class="quote" style="color: #333;">"CodeSeed's AI-powered analytics platform has transformed our decision-making process. It's been a game-changer for our business."</p>
                     <p class="author">- Sarah Johnson, CEO of TechCorp</p>
                 </div>
                 <div class="testimonial">
-                    <p class="quote">"The team at CodeSeed delivered our IoT solution on time and exceeded our expectations. Their expertise is unmatched."</p>
+                    <p class="quote" style="color: #333;">"The team at CodeSeed delivered our IoT solution on time and exceeded our expectations. Their expertise is unmatched."</p>
                     <p class="author">- Michael Chen, CTO of SmartCity Solutions</p>
                 </div>
                 <!-- Add more testimonials as needed -->
@@ -240,6 +282,57 @@
                 this.classList.remove('active');
             });
         });
+    });
+
+    // Testimonial Slider
+    document.addEventListener('DOMContentLoaded', function() {
+        const testimonials = document.querySelectorAll('.testimonial');
+        let currentTestimonial = 0;
+
+        function showTestimonial(index) {
+            testimonials.forEach((testimonial, i) => {
+                if (i === index) {
+                    testimonial.style.display = 'block';
+                } else {
+                    testimonial.style.display = 'none';
+                }
+            });
+        }
+
+        function nextTestimonial() {
+            currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+            showTestimonial(currentTestimonial);
+        }
+
+        // Show first testimonial and start rotation
+        showTestimonial(currentTestimonial);
+        setInterval(nextTestimonial, 5000); // Change testimonial every 5 seconds
+    });
+
+    // Simple form submission (you'll need to implement server-side handling)
+    document.getElementById('contact-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        // Here you would typically send the form data to your server
+        alert('Thank you for your message! We will get back to you soon.');
+        this.reset();
+    });
+
+    // Tech Grid
+    document.addEventListener('DOMContentLoaded', function() {
+        const techItems = document.querySelectorAll('.tech-item');
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }, index * 100);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        techItems.forEach(item => observer.observe(item));
     });
     </script>
 </body>

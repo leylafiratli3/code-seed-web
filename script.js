@@ -16,7 +16,13 @@ window.addEventListener('load', function() {
 // Rotating words functionality
 document.addEventListener('DOMContentLoaded', function() {
     const rotatingWord = document.getElementById('rotating-word');
-    const words = ['cutting-edge tech', 'AI innovation', 'rapid deployment', 'scalable solutions'];
+    const words = ['data-driven solutions',
+        'scalable infrastructure',
+        'intelligent automation',
+        'innovative engineering',
+        'LLM-driven solutions',
+        'predictive analytics',
+        'adaptive algorithms'];
     let currentIndex = 0;
 
     function changeWord() {
