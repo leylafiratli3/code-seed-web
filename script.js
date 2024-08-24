@@ -51,36 +51,3 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
-
-// Testimonial Slider
-document.addEventListener('DOMContentLoaded', function() {
-    const testimonials = document.querySelectorAll('.testimonial');
-    let currentTestimonial = 0;
-
-    function showTestimonial(index) {
-        testimonials.forEach((testimonial, i) => {
-            if (i === index) {
-                testimonial.style.display = 'block';
-            } else {
-                testimonial.style.display = 'none';
-            }
-        });
-    }
-
-    function nextTestimonial() {
-        currentTestimonial = (currentTestimonial + 1) % testimonials.length;
-        showTestimonial(currentTestimonial);
-    }
-
-    // Show first testimonial and start rotation
-    showTestimonial(currentTestimonial);
-    setInterval(nextTestimonial, 5000); // Change testimonial every 5 seconds
-});
-
-// Simple form submission (you'll need to implement server-side handling)
-document.getElementById('contact-form').addEventListener('submit', function(e) {
-    e.preventDefault();
-    // Here you would typically send the form data to your server
-    alert('Thank you for your message! We will get back to you soon.');
-    this.reset();
-});
