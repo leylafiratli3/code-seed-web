@@ -321,7 +321,7 @@ nav ul li a:hover {
     border-radius: 15px;
 }
 
-/* First row */
+/* Alternating background colors */
 .project-card:nth-child(4n+1),
 .project-card:nth-child(4n+4) {
     background-color: var(--primary-color); /* Green */
@@ -344,6 +344,7 @@ nav ul li a:hover {
     padding: 1.5rem;
     height: 170px; /* Adjusted for new card height */
     overflow: hidden;
+    transition: all 0.3s ease;
 }
 
 .project-info h3 {
@@ -353,8 +354,10 @@ nav ul li a:hover {
 }
 
 .project-details {
-    display: none;
-    padding-top: 1rem;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease;
 }
 
 .project-details ul {
@@ -369,19 +372,19 @@ nav ul li a:hover {
 
 .project-card:hover {
     height: auto;
-    max-height: 800px; /* Adjusted max-height */
+    max-height: none; /* Allow full expansion */
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     z-index: 1;
 }
 
 .project-card:hover .project-info {
     height: auto;
-    max-height: 620px; /* Adjusted for new card height */
-    overflow-y: auto;
+    max-height: none; /* Allow full expansion */
 }
 
 .project-card:hover .project-details {
-    display: block;
+    opacity: 1;
+    max-height: 1000px; /* Large value to ensure all content is shown */
 }
 
 /* Ensure text is readable on both background colors */
