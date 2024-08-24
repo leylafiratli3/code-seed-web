@@ -101,29 +101,27 @@
                 <div class="project-card">
                     <div class="project-image" style="background-image: url('assets/harman.png');"></div>
                     <div class="project-info">
-                        <h3>Automated Forecasting System for Harman International</h3>
-                        <p class="project-summary">Revolutionizing data analysis with machine learning</p>
+                        <h3>Custom Cloud-Based Automated Operations Management Suite for Harman International Industries</h3>
                         <div class="project-details">
-                            <p>Our AI-powered analytics platform uses cutting-edge machine learning algorithms to process vast amounts of data in real-time, providing actionable insights for businesses across various industries.</p>
+                            <p>Designed, developed, and implemented this system for multiple regions as a cross-functional source of truth by providing each team with tailored deliverables (data slices/visualizations) and input methods.</p>
                             <ul>
-                                <li>Real-time data processing</li>
-                                <li>Predictive modeling</li>
-                                <li>Custom dashboards</li>
+                                <li>Automates optimized allocation decision-making and predicts daily allocation and other operational statuses 6+ months into the future.</li>
+                                <li>Processes daily orders worth 1M-10M USD and manages 1B+ USD inventory/revenue annually.</li>
+                                <li>Custom python codebase running on CI/CD-enabled Kubernetes deployment on AWS, interacts with Snowflake data warehouse and various regional ERP systems (SAP and TOTVS)</li>
                             </ul>
                         </div>
                     </div>
                 </div>
                 <div class="project-card">
-                    <div class="project-image" style="background-image: url('path/to/project2-image.jpg');"></div>
+                    <div class="project-image" style="background-image: url('assets/coflow.png');"></div>
                     <div class="project-info">
-                        <h3>CoFlow: LLM Powered Community Management Platform</h3>
-                        <p class="project-summary">Enhancing transparency and efficiency in global supply chains</p>
+                        <h3>CoFlow: Advanced AI-Powered Community Management Bot</h3>
                         <div class="project-details">
-                            <p>Our blockchain-based supply chain solution provides end-to-end visibility and traceability for products, reducing fraud and improving efficiency in complex global supply networks.</p>
+                            <p>Developed a sophisticated Discord bot leveraging cutting-edge AI technologies to enhance community engagement and streamline management tasks.</p>
                             <ul>
-                                <li>Smart contract integration</li>
-                                <li>Real-time tracking</li>
-                                <li>Secure data sharing</li>
+                                <li>Implemented advanced NLP using GPT models for context-aware communication, increasing community engagement by 40%.</li>
+                                <li>Designed robust event scheduling and smart polling systems, reducing administrative overhead by 60%.</li>
+                                <li>Utilized Python, Discord API, Heroku, PostgreSQL, and Perplexity API to create a scalable, modular solution managing multiple community channels.</li>
                             </ul>
                         </div>
                     </div>
@@ -132,13 +130,12 @@
                     <div class="project-image" style="background-image: url('assets/dimmak.png');"></div>
                     <div class="project-info">
                         <h3>Data Migration and Infrastructure - Dim Mak Records</h3>
-                        <p class="project-summary">Creating connected urban environments for a sustainable future</p>
                         <div class="project-details">
-                            <p>Our IoT Smart City platform integrates various urban systems, from traffic management to waste collection, creating more efficient and sustainable cities through data-driven decision making.</p>
+                            <p>Led a comprehensive data migration project for Dim Mak Records, streamlining their digital asset management and enhancing operational efficiency.</p>
                             <ul>
-                                <li>Sensor network integration</li>
-                                <li>Predictive maintenance</li>
-                                <li>Energy optimization</li>
+                                <li>Spearheaded the migration of over 3,500 tracks across multiple DSPs using Python Pandas, ensuring data integrity and completeness.</li>
+                                <li>Orchestrated the consolidation of company-wide systems into a centralized database, improving data accessibility and management.</li>
+                                <li>Managed quality assurance processes, overseeing a team to verify migrated data accuracy and consistency.</li>
                             </ul>
                         </div>
                     </div>
@@ -147,13 +144,12 @@
                     <div class="project-image" style="background-image: url('assets/sema-yoga.png');"></div>
                     <div class="project-info">
                         <h3>Video Hosting Website and Member Platform - Sema Yoga</h3>
-                        <p class="project-summary">Pushing the boundaries of computational power</p>
                         <div class="project-details">
-                            <p>Our quantum computing simulator allows researchers and developers to experiment with quantum algorithms without the need for actual quantum hardware, accelerating innovation in this cutting-edge field.</p>
+                            <p>Engineered a high-performance video hosting platform for semayoga.com, revolutionizing member engagement through unlimited content access and intelligent content management.</p>
                             <ul>
-                                <li>Multi-qubit simulation</li>
-                                <li>Custom gate design</li>
-                                <li>Error correction modeling</li>
+                                <li>Implemented unlimited video hosting for members with robust custom filtering options, optimizing user experience and content discovery.</li>
+                                <li>Engineered an automated video management system, streamlining content delivery and improving operational efficiency.</li>
+                                <li>Developed a scalable infrastructure capable of handling daily video uploads and high traffic volumes, ensuring seamless performance and high availability.</li>
                             </ul>
                         </div>
                     </div>
@@ -278,11 +274,12 @@
             <h2>Work with us</h2>
             <form id="contact-form" action="https://formspree.io/f/mnnaoeoa" method="POST">
                 <input type="text" name="name" placeholder="Your Name" required>
-                <input type="email" name="email" placeholder="Your Email" required>
+                <input type="email" name="_replyto" placeholder="Your Email" required>
                 <textarea name="message" placeholder="Your Message" required></textarea>
+                <!-- Honeypot field to prevent spam -->
+                <input type="text" name="_gotcha" style="display:none">
                 <button type="submit">Plant the Seed</button>
             </form>
-            <div id="form-message"></div>
         </div>
     </section>
 
@@ -389,42 +386,6 @@
         }, { threshold: 0.1 });
 
         techItems.forEach(item => observer.observe(item));
-    });
-
-    document.addEventListener('DOMContentLoaded', function() {
-        const form = document.getElementById('contact-form');
-        const formMessage = document.getElementById('form-message');
-
-        form.addEventListener("submit", function(e) {
-            e.preventDefault();
-            const formData = new FormData(form);
-            
-            fetch("https://formspree.io/f/mnnaoeoa", {
-                method: "POST",
-                body: formData,
-                headers: {
-                    'Accept': 'application/json'
-                }
-            }).then(response => {
-                if (response.ok) {
-                    formMessage.textContent = "Thanks for your submission!";
-                    formMessage.style.color = "green";
-                    form.reset();
-                } else {
-                    response.json().then(data => {
-                        if (Object.hasOwn(data, 'errors')) {
-                            formMessage.textContent = data["errors"].map(error => error["message"]).join(", ");
-                        } else {
-                            formMessage.textContent = "Oops! There was a problem submitting your form";
-                        }
-                        formMessage.style.color = "red";
-                    });
-                }
-            }).catch(error => {
-                formMessage.textContent = "Oops! There was a problem submitting your form";
-                formMessage.style.color = "red";
-            });
-        });
     });
     </script>
 </body>
