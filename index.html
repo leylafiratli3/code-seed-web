@@ -25,6 +25,7 @@
     <script src="script.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="styles.css" rel="stylesheet">
 </head>
 <body class="font-fira bg-primary text-gray-800 loading">
     <div class="loading-screen fixed inset-0 bg-white flex justify-center items-center z-50 transition-opacity duration-500">
@@ -37,18 +38,35 @@
     </div>
 
     <header class="bg-white shadow-md fixed w-full z-50">
-        <nav class="container mx-auto px-4 py-5 flex justify-between items-center">
-            <div class="flex items-center transition-transform duration-300 ease-in-out hover:scale-105">
-                <img src="assets/codeseed-logo.png" alt="CodeSeed Logo" id="header-logo" class="h-20 w-auto mr-4">
-                <span class="text-2xl font-bold text-primary lowercase tracking-wide">code-seed</span>
+        <nav class="container mx-auto px-4 py-5">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center transition-transform duration-300 ease-in-out hover:scale-105">
+                    <img src="assets/codeseed-logo.png" alt="CodeSeed Logo" id="header-logo" class="h-20 w-auto mr-4">
+                    <span class="text-2xl font-bold text-primary lowercase tracking-wide">code-seed</span>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-500 hover:text-gray-600 focus:outline-none focus:text-gray-600" aria-label="Toggle menu">
+                        <svg viewBox="0 0 24 24" class="h-6 w-6 fill-current">
+                            <path fill-rule="evenodd" d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"></path>
+                        </svg>
+                    </button>
+                </div>
+                <ul class="hidden md:flex space-x-6">
+                    <li><a href="#home" class="text-gray-800 hover:text-primary transition-colors duration-300">Home</a></li>
+                    <li><a href="#projects" class="text-gray-800 hover:text-primary transition-colors duration-300">Project Garden</a></li>
+                    <li><a href="#team" class="text-gray-800 hover:text-primary transition-colors duration-300">Our Team</a></li>
+                    <li><a href="#contact" class="text-gray-800 hover:text-primary transition-colors duration-300">Work with Us</a></li>
+                </ul>
             </div>
-            <button class="md:hidden text-2xl" aria-label="Toggle menu">☰</button>
-            <ul class="hidden md:flex space-x-6">
-                <li><a href="#home" class="text-gray-800 hover:text-primary transition-colors duration-300">Home</a></li>
-                <li><a href="#projects" class="text-gray-800 hover:text-primary transition-colors duration-300">Project Garden</a></li>
-                <li><a href="#team" class="text-gray-800 hover:text-primary transition-colors duration-300">Our Team</a></li>
-                <li><a href="#contact" class="text-gray-800 hover:text-primary transition-colors duration-300">Work with Us</a></li>
-            </ul>
+            <!-- Mobile menu, show/hide based on menu state -->
+            <div id="mobile-menu" class="md:hidden hidden">
+                <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                    <a href="#home" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">Home</a>
+                    <a href="#projects" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">Project Garden</a>
+                    <a href="#team" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">Our Team</a>
+                    <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">Work with Us</a>
+                </div>
+            </div>
         </nav>
     </header>
 
@@ -208,57 +226,57 @@
         </div>
     </section>
 
-    <section id="team" class="team-section bg-white py-16">
+    <section id="team" class="bg-white py-16">
         <div class="container mx-auto px-4">
             <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-secondary">Our Team</h2>
-            <div class="team-members grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="team-member">
-                    <div class="relative w-full h-64 transition-transform duration-600 transform preserve-3d">
-                        <div class="absolute inset-0 bg-white rounded-lg shadow-md p-4 backface-hidden">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="team-member group h-64 [perspective:1000px]">
+                    <div class="relative h-full w-full transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+                        <div class="absolute inset-0 bg-white rounded-lg shadow-md p-4 [backface-visibility:hidden]">
                             <img src="assets/team-member-1.png" alt="Bryce Merrill" class="w-32 h-32 mx-auto rounded-full mb-4">
                             <h3 class="text-xl font-semibold text-center">Bryce Merrill</h3>
                             <p class="text-center text-gray-600">Principal Software Engineer</p>
                         </div>
-                        <div class="absolute inset-0 bg-primary text-white rounded-lg shadow-md p-4 backface-hidden transform rotate-y-180">
+                        <div class="absolute inset-0 bg-primary text-white rounded-lg shadow-md p-4 [transform:rotateY(180deg)] [backface-visibility:hidden]">
                             <h3 class="text-xl font-semibold text-center mb-4">Bryce Merrill</h3>
                             <p class="text-center">Bryce is an exceptional engineer with a passion for intelligent systems and automation.</p>
                         </div>
                     </div>
                 </div>
-                <div class="team-member">
-                    <div class="relative w-full h-64 transition-transform duration-600 transform preserve-3d">
-                        <div class="absolute inset-0 bg-white rounded-lg shadow-md p-4 backface-hidden">
+                <div class="team-member group h-64 [perspective:1000px]">
+                    <div class="relative h-full w-full transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+                        <div class="absolute inset-0 bg-white rounded-lg shadow-md p-4 [backface-visibility:hidden]">
                             <img src="assets/team-member-2.png" alt="Leyla Firatli" class="w-32 h-32 mx-auto rounded-full mb-4">
                             <h3 class="text-xl font-semibold text-center">Leyla Firatli</h3>
                             <p class="text-center text-gray-600">Data Architect + Web Developer</p>
                         </div>
-                        <div class="absolute inset-0 bg-primary text-white rounded-lg shadow-md p-4 backface-hidden transform rotate-y-180">
+                        <div class="absolute inset-0 bg-primary text-white rounded-lg shadow-md p-4 [transform:rotateY(180deg)] [backface-visibility:hidden]">
                             <h3 class="text-xl font-semibold text-center mb-4">Leyla Firatli</h3>
                             <p class="text-center">Leyla is a seasoned data architect with 7+ years of experience in data infrastructure, migrations and web development.</p>
                         </div>
                     </div>
                 </div>
-                <div class="team-member">
-                    <div class="relative w-full h-64 transition-transform duration-600 transform preserve-3d">
-                        <div class="absolute inset-0 bg-white rounded-lg shadow-md p-4 backface-hidden">
+                <div class="team-member group h-64 [perspective:1000px]">
+                    <div class="relative h-full w-full transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+                        <div class="absolute inset-0 bg-white rounded-lg shadow-md p-4 [backface-visibility:hidden]">
                             <img src="assets/team-member-3.png" alt="Deanna Patelis" class="w-32 h-32 mx-auto rounded-full mb-4">
                             <h3 class="text-xl font-semibold text-center">Deanna Patelis</h3>
                             <p class="text-center text-gray-600">Machine Learning Engineer</p>
                         </div>
-                        <div class="absolute inset-0 bg-primary text-white rounded-lg shadow-md p-4 backface-hidden transform rotate-y-180">
+                        <div class="absolute inset-0 bg-primary text-white rounded-lg shadow-md p-4 [transform:rotateY(180deg)] [backface-visibility:hidden]">
                             <h3 class="text-xl font-semibold text-center mb-4">Deanna Patelis</h3>
                             <p class="text-center">Deanna is an expert in machine learning with a focus on applied LLM solutions.</p>
                         </div>
                     </div>
                 </div>
-                <div class="team-member">
-                    <div class="relative w-full h-64 transition-transform duration-600 transform preserve-3d">
-                        <div class="absolute inset-0 bg-white rounded-lg shadow-md p-4 backface-hidden">
+                <div class="team-member group h-64 [perspective:1000px]">
+                    <div class="relative h-full w-full transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+                        <div class="absolute inset-0 bg-white rounded-lg shadow-md p-4 [backface-visibility:hidden]">
                             <img src="assets/team-member-4.png" alt="Isaac Vandyne" class="w-32 h-32 mx-auto rounded-full mb-4">
                             <h3 class="text-xl font-semibold text-center">Isaac Vandyne</h3>
                             <p class="text-center text-gray-600">Product Designer + Creative Tactician</p>
                         </div>
-                        <div class="absolute inset-0 bg-primary text-white rounded-lg shadow-md p-4 backface-hidden transform rotate-y-180">
+                        <div class="absolute inset-0 bg-primary text-white rounded-lg shadow-md p-4 [transform:rotateY(180deg)] [backface-visibility:hidden]">
                             <h3 class="text-xl font-semibold text-center mb-4">Isaac Vandyne</h3>
                             <p class="text-center">With a colorful background in graphic and motion design, and 7+ years of experience building complex b2b software platforms, Isaac has both the imagination and technical ability to craft world class products that solve users problems.</p>
                         </div>
@@ -342,15 +360,15 @@
         // Project cards
         const projectCards = document.querySelectorAll('.project-card');
         projectCards.forEach(card => {
-            card.addEventListener('mouseenter', function() {
-                this.classList.add('active');
-            });
-
-            card.addEventListener('mouseleave', function() {
-                this.classList.remove('active');
+            card.addEventListener('click', function() {
+                this.querySelector('.project-details').classList.toggle('hidden');
+                projectCards.forEach(otherCard => {
+                    if (otherCard !== this) {
+                        otherCard.querySelector('.project-details').classList.add('hidden');
+                    }
+                });
             });
         });
-    });
 
         // Testimonial Slider
         const testimonials = document.querySelectorAll('.testimonial');
@@ -426,7 +444,7 @@
         teamMembers.forEach(member => {
             member.addEventListener('click', function(e) {
                 e.preventDefault();
-                this.querySelector('.card-inner').classList.toggle('rotate-y-180');
+                this.querySelector('.relative').classList.toggle('rotate-y-180');
             });
         });
     }
