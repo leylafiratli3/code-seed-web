@@ -396,6 +396,28 @@
     document.querySelector('.menu-toggle').addEventListener('click', function() {
         document.querySelector('.nav-menu').classList.toggle('active');
     });
+
+    // Project cards tap-to-expand on mobile
+    document.addEventListener('DOMContentLoaded', function() {
+        const projectCards = document.querySelectorAll('.project-card');
+
+        projectCards.forEach(card => {
+            card.addEventListener('click', function(e) {
+                // Check if it's a mobile device
+                if (window.innerWidth <= 767) {
+                    e.preventDefault(); // Prevent default link behavior if there's any
+                    this.classList.toggle('active');
+
+                    // Close other cards when one is opened
+                    projectCards.forEach(otherCard => {
+                        if (otherCard !== this) {
+                            otherCard.classList.remove('active');
+                        }
+                    });
+                }
+            });
+        });
+    });
     </script>
 </body>
 </html>
