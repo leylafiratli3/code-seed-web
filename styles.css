@@ -1,14 +1,14 @@
 :root {
     --primary-bg: #f4f4f4;
     --secondary-bg: #e0e0e0;
-    --primary-color: #8dba90;
-    --secondary-color: #5a7d5c;
-    --accent-color: #D2B48C;
+    --primary-color: #8dba90; /* Updated to the new green */
+    --secondary-color: #5a7d5c; /* Darker shade of the new green */
+    --accent-color: #D2B48C; /* Tan color */
     --text-color: #333333;
     --light-text: #ffffff;
 }
 
-/* General styles */
+/* General Styles */
 * {
     margin: 0;
     padding: 0;
@@ -19,9 +19,14 @@ body, html {
     margin: 0;
     padding: 0;
     font-family: 'Fira Code', monospace;
-    background-color: var(--primary-bg);
-    color: var(--text-color);
+    background-color: var(--primary-color);
+}
+
+body {
+    font-family: 'Fira Code', monospace;
+    color: #333; /* Darker text color for better contrast */
     line-height: 1.6;
+    background-color: var(--primary-bg);
 }
 
 .container {
@@ -30,7 +35,100 @@ body, html {
     padding: 0 20px;
 }
 
-/* Header styles */
+/* Loading Screen */
+body.loading header {
+    display: none;
+}
+
+.loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.5s;
+    z-index: 1000; /* Ensure it's on top of other content */
+}
+
+.plant-animation {
+    position: relative;
+    width: 100px;
+    height: 100px;
+}
+
+.stem {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 3px;
+    height: 0;
+    background: #4CAF50;
+    transform: translateX(-50%);
+    animation: grow-stem 0.6s ease-out forwards;
+}
+
+.leaf {
+    position: absolute;
+    width: 32px;
+    height: 48px;
+    background: #4CAF50;
+    opacity: 0;
+    clip-path: path('M16 0 C24 16 24 32 16 48 C8 32 8 16 16 0');
+}
+
+.leaf-left {
+    left: 50%;
+    bottom: 50px;
+    transform: translateX(-100%) rotate(-30deg) scale(0);
+    animation: grow-leaf-left 0.4s ease-out 0.3s forwards;
+}
+
+.leaf-center {
+    left: 50%;
+    bottom: 70px;
+    transform: translateX(-50%) scale(0);
+    animation: grow-leaf-center 0.4s ease-out 0.5s forwards;
+}
+
+.leaf-right {
+    left: 50%;
+    bottom: 50px;
+    transform: translateX(0%) rotate(30deg) scale(0);
+    animation: grow-leaf-right 0.4s ease-out 0.7s forwards;
+}
+
+@keyframes grow-stem {
+    to {
+        height: 70px;
+    }
+}
+
+@keyframes grow-leaf-left {
+    to {
+        opacity: 1;
+        transform: translateX(-100%) rotate(-30deg) scale(1);
+    }
+}
+
+@keyframes grow-leaf-center {
+    to {
+        opacity: 1;
+        transform: translateX(-50%) scale(1);
+    }
+}
+
+@keyframes grow-leaf-right {
+    to {
+        opacity: 1;
+        transform: translateX(0%) rotate(30deg) scale(1);
+    }
+}
+
+/* Header */
 header {
     background-color: #ffffff;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
@@ -57,13 +155,13 @@ header nav {
 }
 
 #header-logo {
-    max-height: 80px;
+    max-height: 80px; /* Increased from 50px to 80px */
     width: auto;
     margin-right: 15px;
 }
 
 .logo span {
-    font-size: 1.8rem;
+    font-size: 1.8rem; /* Increased from 1.2rem to 1.8rem */
     font-weight: bold;
     color: var(--primary-color);
     letter-spacing: 0.5px;
@@ -98,7 +196,7 @@ header nav {
     display: none;
 }
 
-/* Hero section styles */
+/* Hero Section */
 .hero {
     position: relative;
     height: 100vh;
@@ -121,7 +219,7 @@ header nav {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
 }
 
 .video-background video {
@@ -144,41 +242,41 @@ header nav {
     align-items: center;
     justify-content: center;
     text-align: center;
-    color: #ffffff;
+    color: #ffffff; /* White text for better contrast */
 }
 
 .hero-card {
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.6); /* Darker semi-transparent background */
     padding: 2rem;
     border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
 }
 
 .hero-card h1 {
     font-size: 3vw;
     line-height: 1.2;
     margin-bottom: 10px;
-    color: #ffffff;
+    color: #ffffff; /* White for main heading */
 }
 
 .hero-card h2 {
     font-size: 2.5vw;
     line-height: 1.2;
     margin-bottom: 20px;
-    color: #e0e0e0;
+    color: #e0e0e0; /* Slightly off-white for secondary heading */
 }
 
 #rotating-word {
     display: inline-block;
     min-width: 200px;
     font-weight: bold;
-    color: var(--primary-color);
+    color: var(--primary-color); /* Bright green to match the leaves */
 }
 
 .cta-button {
     display: inline-block;
     padding: 10px 20px;
-    background-color: var(--primary-color);
+    background-color: var(--primary-color); /* Green to match the leaves */
     color: white;
     text-decoration: none;
     border-radius: 5px;
@@ -187,15 +285,15 @@ header nav {
 }
 
 .cta-button:hover {
-    background-color: var(--secondary-color);
-    transform: translateY(-2px);
+    background-color: var(--secondary-color); /* Darker green on hover */
+    transform: translateY(-2px); /* Slight lift effect on hover */
 }
 
-/* Projects section styles */
+/* Projects Section */
 .projects-section,
 .sprouting-ventures-section {
     padding: 4rem 0;
-    background-color: #fff;
+    background-color: #fff; /* Ensure this matches the Project Garden background */
 }
 
 .projects-section h2,
@@ -204,9 +302,11 @@ header nav {
     font-size: 2.5rem;
     color: var(--secondary-color);
     margin-bottom: 2rem;
-    font-weight: bold;
+    font-weight: bold; /* Adjust if needed */
+    /* Add any additional styles that are applied to the Project Garden title */
 }
 
+/* PROJECT CARDS - DO NOT MODIFY FOR MOBILE OPTIMIZATION */
 .project-cards {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -216,7 +316,7 @@ header nav {
 
 .project-card {
     position: relative;
-    height: 350px;
+    height: 350px; /* Initial height */
     overflow: hidden;
     transition: all 0.3s ease;
     border-radius: 15px;
@@ -232,7 +332,7 @@ header nav {
 
 .project-info {
     padding: 1.5rem;
-    height: 170px;
+    height: 170px; /* Adjusted for new card height */
     overflow: hidden;
 }
 
@@ -258,69 +358,68 @@ header nav {
 
 .project-card:hover {
     height: auto;
-    max-height: 1000px;
+    max-height: 1000px; /* Adjusted max-height */
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     z-index: 1;
 }
 
 .project-card:hover .project-info {
     height: auto;
-    max-height: 820px;
+    max-height: 820px; /* Adjusted for new card height */
 }
 
 .project-card:hover .project-details {
     display: block;
 }
 
+/* Alternating background colors */
 .project-card:nth-child(4n+1),
 .project-card:nth-child(4n+4) {
-    background-color: var(--primary-color);
+    background-color: var(--primary-color); /* Green */
 }
 
 .project-card:nth-child(4n+2),
 .project-card:nth-child(4n+3) {
-    background-color: var(--accent-color);
+    background-color: var(--accent-color); /* Tan */
 }
 
-/* Team section styles */
+/* END OF PROJECT CARDS - DO NOT MODIFY */
+
+/* Team Section */
 .team-section {
     padding: 4rem 0;
     background-color: #0a0a0a;
     color: #fff;
 }
 
-/* Testimonials section styles */
+/* Testimonials Section */
 .testimonials-section {
     padding: 4rem 0;
     background-color: #f4f4f4;
     color: #333;
 }
 
-/* Contact section styles */
+/* Contact Section */
 .contact-section {
     padding: 4rem 0;
     background-color: #fff;
     color: #333;
 }
 
-/* Footer styles */
-footer {
-    background-color: #333;
-    color: #fff;
-    padding: 2rem 0;
-    text-align: center;
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Loading Screen */
+body.loading header {
+    display: none;
 }
 
 /* Mobile styles */
 @media (max-width: 767px) {
-    #header-logo {
-        max-height: 60px;
-    }
-    
-    .logo span {
-        font-size: 1.5rem;
-    }
-
+    /* Header mobile styles */
     header nav {
         flex-direction: column;
         align-items: center;
@@ -328,6 +427,14 @@ footer {
 
     .logo {
         margin-bottom: 10px;
+    }
+
+    #header-logo {
+        max-height: 60px;
+    }
+    
+    .logo span {
+        font-size: 1.5rem;
     }
 
     .nav-menu {
@@ -356,81 +463,84 @@ footer {
         top: 15px;
     }
 
+    /* Tech grid mobile styles */
     .tech-grid {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 10px;
-        padding: 0 15px;
-        width: 100%;
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 10px !important;
+        padding: 0 15px !important;
+        width: 100% !important;
     }
 
     .tech-item {
-        width: 100%;
-        height: auto;
-        min-height: 100px;
-        margin: 0;
-        padding: 10px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        width: 100% !important;
+        height: auto !important;
+        min-height: 100px !important;
+        margin: 0 !important;
+        padding: 10px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center !important;
     }
 
     .tech-item i {
-        font-size: 2rem;
-        margin-bottom: 5px;
+        font-size: 2rem !important;
+        margin-bottom: 5px !important;
     }
 
     .tech-item h3 {
-        font-size: 0.8rem;
-        margin: 0;
-        word-wrap: break-word;
-        overflow-wrap: break-word;
-        hyphens: auto;
+        font-size: 0.8rem !important;
+        margin: 0 !important;
+        word-wrap: break-word !important;
+        overflow-wrap: break-word !important;
+        hyphens: auto !important;
     }
 
+    /* Project cards mobile styles */
     .project-cards {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-        padding: 15px;
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 20px !important;
+        padding: 15px !important;
     }
 
     .project-card {
-        width: 100%;
-        height: auto;
-        min-height: 300px;
-        margin-bottom: 20px;
+        width: 100% !important;
+        height: auto !important;
+        min-height: 300px !important;
+        margin-bottom: 20px !important;
         cursor: pointer;
     }
 
     .project-image {
-        height: 180px;
+        height: 180px !important;
     }
 
     .project-info {
-        height: auto;
-        max-height: none;
+        height: auto !important;
+        max-height: none !important;
     }
 
     .project-details {
-        display: none;
+        display: none !important;
     }
 
     .project-card.active {
-        height: auto;
-        max-height: none;
+        height: auto !important;
+        max-height: none !important;
     }
 
     .project-card.active .project-info {
-        height: auto;
-        max-height: none;
+        height: auto !important;
+        max-height: none !important;
     }
 
     .project-card.active .project-details {
-        display: block;
+        display: block !important;
     }
 
+    /* Team member cards mobile styles */
     .team-member {
         cursor: pointer;
     }
@@ -813,28 +923,28 @@ footer {
     }
 
     .tech-item {
-        width: 100%;
-        height: auto;
-        min-height: 100px;
-        margin: 0;
-        padding: 10px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        width: 100% !important;
+        height: auto !important;
+        min-height: 100px !important;
+        margin: 0 !important;
+        padding: 10px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center !important;
     }
 
     .tech-item i {
-        font-size: 2rem;
-        margin-bottom: 5px;
+        font-size: 2rem !important;
+        margin-bottom: 5px !important;
     }
 
     .tech-item h3 {
-        font-size: 0.8rem;
-        margin: 0;
-        word-wrap: break-word;
-        overflow-wrap: break-word;
-        hyphens: auto;
+        font-size: 0.8rem !important;
+        margin: 0 !important;
+        word-wrap: break-word !important;
+        overflow-wrap: break-word !important;
+        hyphens: auto !important;
     }
 }
 
