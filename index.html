@@ -5,107 +5,120 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>code-seed</title>
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#8dba90',
+                        secondary: '#5a7d5c',
+                        accent: '#D2B48C',
+                    },
+                    fontFamily: {
+                        'fira': ['"Fira Code"', 'monospace'],
+                    },
+                }
+            }
+        }
+    </script>
     <script src="script.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
-<body class="loading">
-    <div class="loading-screen">
-        <div class="plant-animation">
-            <div class="stem"></div>
-            <div class="leaf leaf-left"></div>
-            <div class="leaf leaf-center"></div>
-            <div class="leaf leaf-right"></div>
+<body class="font-fira bg-primary text-gray-800 loading">
+    <div class="loading-screen fixed inset-0 bg-white flex justify-center items-center z-50 transition-opacity duration-500">
+        <div class="plant-animation relative w-24 h-24">
+            <div class="stem absolute bottom-0 left-1/2 w-1 h-0 bg-green-500 transform -translate-x-1/2 animate-grow-stem"></div>
+            <div class="leaf leaf-left absolute left-1/2 bottom-12 w-8 h-12 bg-green-500 opacity-0 transform -translate-x-full -rotate-30 scale-0 animate-grow-leaf-left"></div>
+            <div class="leaf leaf-center absolute left-1/2 bottom-16 w-8 h-12 bg-green-500 opacity-0 transform -translate-x-1/2 scale-0 animate-grow-leaf-center"></div>
+            <div class="leaf leaf-right absolute left-1/2 bottom-12 w-8 h-12 bg-green-500 opacity-0 transform translate-x-0 rotate-30 scale-0 animate-grow-leaf-right"></div>
         </div>
     </div>
 
-    <header>
-        <nav class="container">
-            <div class="logo">
-                <img src="assets/codeseed-logo.png" alt="CodeSeed Logo" id="header-logo">
-                <span>code-seed</span>
+    <header class="bg-white shadow-md fixed w-full z-50">
+        <nav class="container mx-auto px-4 py-5 flex justify-between items-center">
+            <div class="flex items-center transition-transform duration-300 ease-in-out hover:scale-105">
+                <img src="assets/codeseed-logo.png" alt="CodeSeed Logo" id="header-logo" class="h-20 w-auto mr-4">
+                <span class="text-2xl font-bold text-primary lowercase tracking-wide">code-seed</span>
             </div>
-            <button class="menu-toggle" aria-label="Toggle menu">☰</button>
-            <ul class="nav-menu">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#projects">Project Garden</a></li>
-                <li><a href="#team">Our Team</a></li>
-                <li><a href="#contact">Work with Us</a></li>
+            <button class="md:hidden text-2xl" aria-label="Toggle menu">☰</button>
+            <ul class="hidden md:flex space-x-6">
+                <li><a href="#home" class="text-gray-800 hover:text-primary transition-colors duration-300">Home</a></li>
+                <li><a href="#projects" class="text-gray-800 hover:text-primary transition-colors duration-300">Project Garden</a></li>
+                <li><a href="#team" class="text-gray-800 hover:text-primary transition-colors duration-300">Our Team</a></li>
+                <li><a href="#contact" class="text-gray-800 hover:text-primary transition-colors duration-300">Work with Us</a></li>
             </ul>
         </nav>
     </header>
 
-    <section class="hero">
-        <div class="video-background">
-            <video autoplay loop muted playsinline>
+    <section class="hero relative h-screen overflow-hidden">
+        <div class="video-background absolute inset-0 overflow-hidden">
+            <video autoplay loop muted playsinline class="min-w-full min-h-full object-cover absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
                 <source src="assets/codeseed-background.mp4" type="video/mp4">
             </video>
+            <div class="absolute inset-0 bg-black bg-opacity-50"></div>
         </div>
-        <div class="hero-content container">
-            <div class="hero-card">
-                <h1>Growing cutting-edge tech solutions with</h1>
-                <h2><span id="rotating-word"></span></h2>
-                <a href="#projects" class="cta-button">Explore Our Project Garden</a>
+        <div class="hero-content container mx-auto px-4 h-full flex items-center justify-center text-center text-white relative z-10">
+            <div class="hero-card bg-black bg-opacity-60 p-8 rounded-lg shadow-lg">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">Growing cutting-edge tech solutions with</h1>
+                <h2 class="text-3xl md:text-4xl lg:text-5xl mb-8"><span id="rotating-word" class="text-primary font-bold"></span></h2>
+                <a href="#projects" class="cta-button bg-primary hover:bg-secondary text-white font-bold py-3 px-6 rounded-full transition-colors duration-300">Explore Our Project Garden</a>
             </div>
         </div>
     </section>
 
-    <section id="about" class="about-section">
-        <div class="container">
-            <p class="about-intro">We seed innovation with advanced technologies, cultivating tailored solutions that bloom into transformative results</p>
-            <div class="tech-grid" style="display: flex; flex-wrap: wrap;">
-                <div class="tech-row" style="display: flex; width: 100%;">
-                    <div class="tech-item" data-tech="AI" style="flex: 1 0 25%;">
-                        <i class="fas fa-brain"></i>
-                        <h3>Integrated LLM Solutions</h3>
-                    </div>
-                    <div class="tech-item" data-tech="Software" style="flex: 1 0 25%;">
-                        <i class="fas fa-code"></i>
-                        <h3>Software Development</h3>
-                    </div>
-                    <div class="tech-item" data-tech="Cloud" style="flex: 1 0 25%;">
-                        <i class="fas fa-cloud"></i>
-                        <h3>Cloud Computing</h3>
-                    </div>
-                    <div class="tech-item" data-tech="Data" style="flex: 1 0 25%;">
-                        <i class="fas fa-database"></i>
-                        <h3>Data Analytics & Engineering</h3>
-                    </div>
+    <section id="about" class="about-section bg-gray-100 py-16">
+        <div class="container mx-auto px-4">
+            <p class="about-intro text-center max-w-3xl mx-auto mb-12 text-xl">We seed innovation with advanced technologies, cultivating tailored solutions that bloom into transformative results</p>
+            <div class="tech-grid grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="tech-item bg-white rounded-lg p-6 text-center shadow-md transition-all duration-300 transform hover:scale-105">
+                    <i class="fas fa-brain text-5xl text-primary mb-4"></i>
+                    <h3 class="text-lg font-semibold">Integrated LLM Solutions</h3>
                 </div>
-                <div class="tech-row" style="display: flex; width: 100%;">
-                    <div class="tech-item" data-tech="Web" style="flex: 1 0 25%;">
-                        <i class="fas fa-globe"></i>
-                        <h3>Web Development</h3>
-                    </div>
-                    <div class="tech-item" data-tech="Design" style="flex: 1 0 25%;">
-                        <i class="fas fa-pencil-ruler"></i>
-                        <h3>Product Design</h3>
-                    </div>
-                    <div class="tech-item" data-tech="ML" style="flex: 1 0 25%;">
-                        <i class="fas fa-robot"></i>
-                        <h3>Applied Machine Learning</h3>
-                    </div>
-                    <div class="tech-item" data-tech="Automation" style="flex: 1 0 25%;">
-                        <i class="fas fa-cogs"></i>
-                        <h3>Adaptive Automation</h3>
-                    </div>
+                <div class="tech-item bg-white rounded-lg p-6 text-center shadow-md transition-all duration-300 transform hover:scale-105">
+                    <i class="fas fa-code text-5xl text-primary mb-4"></i>
+                    <h3 class="text-lg font-semibold">Software Development</h3>
+                </div>
+                <div class="tech-item bg-white rounded-lg p-6 text-center shadow-md transition-all duration-300 transform hover:scale-105">
+                    <i class="fas fa-cloud text-5xl text-primary mb-4"></i>
+                    <h3 class="text-lg font-semibold">Cloud Computing</h3>
+                </div>
+                <div class="tech-item bg-white rounded-lg p-6 text-center shadow-md transition-all duration-300 transform hover:scale-105">
+                    <i class="fas fa-database text-5xl text-primary mb-4"></i>
+                    <h3 class="text-lg font-semibold">Data Analytics & Engineering</h3>
+                </div>
+                <div class="tech-item bg-white rounded-lg p-6 text-center shadow-md transition-all duration-300 transform hover:scale-105">
+                    <i class="fas fa-globe text-5xl text-primary mb-4"></i>
+                    <h3 class="text-lg font-semibold">Web Development</h3>
+                </div>
+                <div class="tech-item bg-white rounded-lg p-6 text-center shadow-md transition-all duration-300 transform hover:scale-105">
+                    <i class="fas fa-pencil-ruler text-5xl text-primary mb-4"></i>
+                    <h3 class="text-lg font-semibold">Product Design</h3>
+                </div>
+                <div class="tech-item bg-white rounded-lg p-6 text-center shadow-md transition-all duration-300 transform hover:scale-105">
+                    <i class="fas fa-robot text-5xl text-primary mb-4"></i>
+                    <h3 class="text-lg font-semibold">Applied Machine Learning</h3>
+                </div>
+                <div class="tech-item bg-white rounded-lg p-6 text-center shadow-md transition-all duration-300 transform hover:scale-105">
+                    <i class="fas fa-cogs text-5xl text-primary mb-4"></i>
+                    <h3 class="text-lg font-semibold">Adaptive Automation</h3>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="projects" class="projects-section">
-        <div class="container">
-            <h2>Project Garden</h2>
-            <div class="project-cards">
-                <div class="project-card">
-                    <div class="project-image" style="background-image: url('assets/harman.png');"></div>
-                    <div class="project-info">
-                        <h3>Custom Cloud-Based Automated Operations Management Suite for Harman International Industries</h3>
-                        <div class="project-details">
-                            <p>Designed, developed, and implemented this system for multiple regions as a cross-functional source of truth by providing each team with tailored deliverables (data slices/visualizations) and input methods.</p>
-                            <ul>
+    <section id="projects" class="projects-section bg-white py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-secondary">Project Garden</h2>
+            <div class="project-cards grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="project-card bg-gray-100 rounded-lg overflow-hidden shadow-md transition-all duration-300 hover:shadow-xl">
+                    <div class="project-image h-64 bg-cover bg-center" style="background-image: url('assets/harman.png');"></div>
+                    <div class="project-info p-6">
+                        <h3 class="text-xl font-bold mb-4">Custom Cloud-Based Automated Operations Management Suite for Harman International Industries</h3>
+                        <div class="project-details hidden">
+                            <p class="mb-4">Designed, developed, and implemented this system for multiple regions as a cross-functional source of truth by providing each team with tailored deliverables (data slices/visualizations) and input methods.</p>
+                            <ul class="list-disc list-inside">
                                 <li>Automates optimized allocation decision-making and predicts daily allocation and other operational statuses 6+ months into the future.</li>
                                 <li>Processes daily orders worth 1M-10M USD and manages 1B+ USD inventory/revenue annually.</li>
                                 <li>Custom python codebase running on CI/CD-enabled Kubernetes deployment on AWS, interacts with Snowflake data warehouse and various regional ERP systems (SAP and TOTVS)</li>
@@ -113,13 +126,13 @@
                         </div>
                     </div>
                 </div>
-                <div class="project-card">
-                    <div class="project-image" style="background-image: url('assets/coflow.png');"></div>
-                    <div class="project-info">
-                        <h3>CoFlow: Advanced AI-Powered Community Management Bot</h3>
-                        <div class="project-details">
-                            <p>Developed a sophisticated Discord bot leveraging cutting-edge AI technologies to enhance community engagement and streamline management tasks.</p>
-                            <ul>
+                <div class="project-card bg-gray-100 rounded-lg overflow-hidden shadow-md transition-all duration-300 hover:shadow-xl">
+                    <div class="project-image h-64 bg-cover bg-center" style="background-image: url('assets/coflow.png');"></div>
+                    <div class="project-info p-6">
+                        <h3 class="text-xl font-bold mb-4">CoFlow: Advanced AI-Powered Community Management Bot</h3>
+                        <div class="project-details hidden">
+                            <p class="mb-4">Developed a sophisticated Discord bot leveraging cutting-edge AI technologies to enhance community engagement and streamline management tasks.</p>
+                            <ul class="list-disc list-inside">
                                 <li>Implemented advanced NLP using GPT models for context-aware communication, increasing community engagement by 40%.</li>
                                 <li>Designed robust event scheduling and smart polling systems, reducing administrative overhead by 60%.</li>
                                 <li>Utilized Python, Discord API, Heroku, PostgreSQL, and Perplexity API to create a scalable, modular solution managing multiple community channels.</li>
@@ -127,13 +140,13 @@
                         </div>
                     </div>
                 </div>
-                <div class="project-card">
-                    <div class="project-image" style="background-image: url('assets/dimmak.png');"></div>
-                    <div class="project-info">
-                        <h3>Data Migration and Infrastructure - Dim Mak Records</h3>
-                        <div class="project-details">
-                            <p>Led a comprehensive data migration project for Dim Mak Records, streamlining their digital asset management and enhancing operational efficiency.</p>
-                            <ul>
+                <div class="project-card bg-gray-100 rounded-lg overflow-hidden shadow-md transition-all duration-300 hover:shadow-xl">
+                    <div class="project-image h-64 bg-cover bg-center" style="background-image: url('assets/dimmak.png');"></div>
+                    <div class="project-info p-6">
+                        <h3 class="text-xl font-bold mb-4">Data Migration and Infrastructure - Dim Mak Records</h3>
+                        <div class="project-details hidden">
+                            <p class="mb-4">Led a comprehensive data migration project for Dim Mak Records, streamlining their digital asset management and enhancing operational efficiency.</p>
+                            <ul class="list-disc list-inside">
                                 <li>Spearheaded the migration of over 3,500 tracks across multiple DSPs using Python Pandas, ensuring data integrity and completeness.</li>
                                 <li>Orchestrated the consolidation of company-wide systems into a centralized database, improving data accessibility and management.</li>
                                 <li>Managed quality assurance processes, overseeing a team to verify migrated data accuracy and consistency.</li>
@@ -141,13 +154,13 @@
                         </div>
                     </div>
                 </div>
-                <div class="project-card">
-                    <div class="project-image" style="background-image: url('assets/sema-yoga.png');"></div>
-                    <div class="project-info">
-                        <h3>Video Hosting Website and Member Platform - Sema Yoga</h3>
-                        <div class="project-details">
-                            <p>Engineered a high-performance video hosting platform for Semayoga.com, revolutionizing member engagement through unlimited content access and intelligent content management.</p>
-                            <ul>
+                <div class="project-card bg-gray-100 rounded-lg overflow-hidden shadow-md transition-all duration-300 hover:shadow-xl">
+                    <div class="project-image h-64 bg-cover bg-center" style="background-image: url('assets/sema-yoga.png');"></div>
+                    <div class="project-info p-6">
+                        <h3 class="text-xl font-bold mb-4">Video Hosting Website and Member Platform - Sema Yoga</h3>
+                        <div class="project-details hidden">
+                            <p class="mb-4">Engineered a high-performance video hosting platform for Semayoga.com, revolutionizing member engagement through unlimited content access and intelligent content management.</p>
+                            <ul class="list-disc list-inside">
                                 <li>Implemented unlimited video hosting for members with robust custom filtering options, optimizing user experience and content discovery.</li>
                                 <li>Engineered an automated video management system, streamlining content delivery and improving operational efficiency.</li>
                                 <li>Developed a scalable infrastructure capable of handling daily video uploads and high traffic volumes, ensuring seamless performance and high availability.</li>
@@ -159,17 +172,17 @@
         </div>
     </section>
 
-    <section class="sprouting-ventures-section">
-        <div class="container">
-            <h2>Sprouting Ventures</h2>
-            <div class="project-cards">
-                <div class="project-card">
-                    <div class="project-image" style="background-image: url('assets/backgammon.png');"></div>
-                    <div class="project-info">
-                        <h3>Multi-Player Backgammon Member Platform</h3>
-                        <div class="project-details">
-                            <p>An innovative online platform for backgammon enthusiasts, featuring multi-player functionality and a robust membership system.</p>
-                            <ul>
+    <section class="sprouting-ventures-section bg-gray-100 py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-secondary">Sprouting Ventures</h2>
+            <div class="project-cards grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white rounded-lg overflow-hidden shadow-md transition-all duration-300 hover:shadow-xl">
+                    <div class="h-64 bg-cover bg-center" style="background-image: url('assets/backgammon.png');"></div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-4">Multi-Player Backgammon Member Platform</h3>
+                        <div class="hidden">
+                            <p class="mb-4">An innovative online platform for backgammon enthusiasts, featuring multi-player functionality and a robust membership system.</p>
+                            <ul class="list-disc list-inside">
                                 <li>Real-time multiplayer gameplay</li>
                                 <li>Advanced matchmaking algorithm</li>
                                 <li>Integrated member profiles and leaderboards</li>
@@ -177,13 +190,13 @@
                         </div>
                     </div>
                 </div>
-                <div class="project-card">
-                    <div class="project-image" style="background-image: url('assets/crypto-trading.png');"></div>
-                    <div class="project-info">
-                        <h3>Automated Cryptocurrency Trading System</h3>
-                        <div class="project-details">
-                            <p>A sophisticated system leveraging AI and machine learning to automate cryptocurrency trading strategies.</p>
-                            <ul>
+                <div class="bg-white rounded-lg overflow-hidden shadow-md transition-all duration-300 hover:shadow-xl">
+                    <div class="h-64 bg-cover bg-center" style="background-image: url('assets/crypto-trading.png');"></div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-4">Automated Cryptocurrency Trading System</h3>
+                        <div class="hidden">
+                            <p class="mb-4">A sophisticated system leveraging AI and machine learning to automate cryptocurrency trading strategies.</p>
+                            <ul class="list-disc list-inside">
                                 <li>Real-time market data analysis</li>
                                 <li>Predictive modeling for trading decisions</li>
                                 <li>Risk management and portfolio optimization</li>
@@ -195,60 +208,59 @@
         </div>
     </section>
 
-    <section id="team" class="team-section">
-        <div class="container">
-            <h2>Our Team</h2>
-            <div class="team-members">
+    <section id="team" class="team-section bg-white py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-secondary">Our Team</h2>
+            <div class="team-members grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <div class="team-member">
-                    <div class="card-inner">
-                        <div class="card-front">
-                            <img src="assets/team-member-1.png" alt="Bryce Merrill">
-                            <h3>Bryce Merrill</h3>
-                            <p class="role">Principal Software Engineer</p>
+                    <div class="relative w-full h-64 transition-transform duration-600 transform preserve-3d">
+                        <div class="absolute inset-0 bg-white rounded-lg shadow-md p-4 backface-hidden">
+                            <img src="assets/team-member-1.png" alt="Bryce Merrill" class="w-32 h-32 mx-auto rounded-full mb-4">
+                            <h3 class="text-xl font-semibold text-center">Bryce Merrill</h3>
+                            <p class="text-center text-gray-600">Principal Software Engineer</p>
                         </div>
-                        <div class="card-back">
-                            <h3>Bryce Merrill</h3>
-                            <p class="bio">Bryce is an exceptional engineer with a passion for intelligent systems and automation.</p>
+                        <div class="absolute inset-0 bg-primary text-white rounded-lg shadow-md p-4 backface-hidden transform rotate-y-180">
+                            <h3 class="text-xl font-semibold text-center mb-4">Bryce Merrill</h3>
+                            <p class="text-center">Bryce is an exceptional engineer with a passion for intelligent systems and automation.</p>
                         </div>
                     </div>
                 </div>
                 <div class="team-member">
-                    <div class="card-inner">
-                        <div class="card-front">
-                            <img src="assets/team-member-2.png" alt="Leyla Firatli">
-                            <h3>Leyla Firatli</h3>
-                            <p class="role">Data Architect + Web Developer</p>
+                    <div class="relative w-full h-64 transition-transform duration-600 transform preserve-3d">
+                        <div class="absolute inset-0 bg-white rounded-lg shadow-md p-4 backface-hidden">
+                            <img src="assets/team-member-2.png" alt="Leyla Firatli" class="w-32 h-32 mx-auto rounded-full mb-4">
+                            <h3 class="text-xl font-semibold text-center">Leyla Firatli</h3>
+                            <p class="text-center text-gray-600">Data Architect + Web Developer</p>
                         </div>
-                        <div class="card-back">
-                            <h3>Leyla Firatli</h3>
-                            <p class="bio">Leyla is a seasoned data architect with 7+ years of experience in data infrastructure, migrations and web development.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="team-member">
-                    <div class="card-inner">
-                        <div class="card-front">
-                            <img src="assets/team-member-3.png" alt="Deanna Patelis">
-                            <h3>Deanna Patelis</h3>
-                            <p class="role">Machine Learning Engineer</p>
-                        </div>
-                        <div class="card-back">
-                            <h3>Deanna Patelis</h3>
-                            <p class="bio">Deanna is an expert in machine learning with a focus on applied LLM solutions.</p>
+                        <div class="absolute inset-0 bg-primary text-white rounded-lg shadow-md p-4 backface-hidden transform rotate-y-180">
+                            <h3 class="text-xl font-semibold text-center mb-4">Leyla Firatli</h3>
+                            <p class="text-center">Leyla is a seasoned data architect with 7+ years of experience in data infrastructure, migrations and web development.</p>
                         </div>
                     </div>
                 </div>
                 <div class="team-member">
-                    <div class="card-inner">
-                        <div class="card-front">
-                            <img src="assets/team-member-4.png" alt="Isaac Vandyne">
-                            <h3>Isaac Vandyne</h3>
-                            <p class="role">Product Designer + Creative Tactician</p>
+                    <div class="relative w-full h-64 transition-transform duration-600 transform preserve-3d">
+                        <div class="absolute inset-0 bg-white rounded-lg shadow-md p-4 backface-hidden">
+                            <img src="assets/team-member-3.png" alt="Deanna Patelis" class="w-32 h-32 mx-auto rounded-full mb-4">
+                            <h3 class="text-xl font-semibold text-center">Deanna Patelis</h3>
+                            <p class="text-center text-gray-600">Machine Learning Engineer</p>
                         </div>
-                        <div class="card-back">
-                            <h3>Isaac Vandyne</h3>
-                            <p class="role">Product Designer + Creative Tactician</p>
-                            <p class="bio">With a colorful background in graphic and motion design, and 7+ years of experience building complex b2b software platforms, Isaac has both the imagination and technical ability to craft world class products that solve users problems.</p>
+                        <div class="absolute inset-0 bg-primary text-white rounded-lg shadow-md p-4 backface-hidden transform rotate-y-180">
+                            <h3 class="text-xl font-semibold text-center mb-4">Deanna Patelis</h3>
+                            <p class="text-center">Deanna is an expert in machine learning with a focus on applied LLM solutions.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="relative w-full h-64 transition-transform duration-600 transform preserve-3d">
+                        <div class="absolute inset-0 bg-white rounded-lg shadow-md p-4 backface-hidden">
+                            <img src="assets/team-member-4.png" alt="Isaac Vandyne" class="w-32 h-32 mx-auto rounded-full mb-4">
+                            <h3 class="text-xl font-semibold text-center">Isaac Vandyne</h3>
+                            <p class="text-center text-gray-600">Product Designer + Creative Tactician</p>
+                        </div>
+                        <div class="absolute inset-0 bg-primary text-white rounded-lg shadow-md p-4 backface-hidden transform rotate-y-180">
+                            <h3 class="text-xl font-semibold text-center mb-4">Isaac Vandyne</h3>
+                            <p class="text-center">With a colorful background in graphic and motion design, and 7+ years of experience building complex b2b software platforms, Isaac has both the imagination and technical ability to craft world class products that solve users problems.</p>
                         </div>
                     </div>
                 </div>
@@ -256,33 +268,31 @@
         </div>
     </section>
 
-    <section id="testimonials" class="testimonials-section">
-        <div class="container">
-            <h2>What Our Clients Say</h2>
+    <section id="testimonials" class="testimonials-section bg-gray-100 py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-secondary">What Our Clients Say</h2>
             <div class="testimonial-slider">
-                <div class="testimonial">
-                    <p class="quote" style="color: #333;">"CodeSeed's AI-powered analytics platform has transformed our decision-making process. It's been a game-changer for our business."</p>
-                    <p class="author">- Sarah Johnson, CEO of TechCorp</p>
+                <div class="testimonial bg-white rounded-lg shadow-md p-6 mb-4">
+                    <p class="quote text-lg italic mb-4">"CodeSeed's AI-powered analytics platform has transformed our decision-making process. It's been a game-changer for our business."</p>
+                    <p class="author font-semibold">- Sarah Johnson, CEO of TechCorp</p>
                 </div>
-                <div class="testimonial">
-                    <p class="quote" style="color: #333;">"The team at CodeSeed delivered our IoT solution on time and exceeded our expectations. Their expertise is unmatched."</p>
-                    <p class="author">- Michael Chen, CTO of SmartCity Solutions</p>
+                <div class="testimonial bg-white rounded-lg shadow-md p-6 mb-4">
+                    <p class="quote text-lg italic mb-4">"The team at CodeSeed delivered our IoT solution on time and exceeded our expectations. Their expertise is unmatched."</p>
+                    <p class="author font-semibold">- Michael Chen, CTO of SmartCity Solutions</p>
                 </div>
-                <!-- Add more testimonials as needed -->
             </div>
         </div>
     </section>
 
-    <section id="contact" class="contact-section">
-        <div class="container">
-            <h2>Work with us</h2>
-            <form id="contact-form" action="https://formspree.io/f/mnnaoeoa" method="POST">
-                <input type="text" name="name" placeholder="Your Name" required>
-                <input type="email" name="_replyto" placeholder="Your Email" required>
-                <textarea name="message" placeholder="Your Message" required></textarea>
-                <!-- Honeypot field to prevent spam -->
-                <input type="text" name="_gotcha" style="display:none">
-                <button type="submit">Plant the Seed</button>
+    <section id="contact" class="contact-section bg-white py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-secondary">Work with us</h2>
+            <form id="contact-form" action="https://formspree.io/f/mnnaoeoa" method="POST" class="max-w-lg mx-auto">
+                <input type="text" name="name" placeholder="Your Name" required class="w-full mb-4 p-2 border border-gray-300 rounded">
+                <input type="email" name="_replyto" placeholder="Your Email" required class="w-full mb-4 p-2 border border-gray-300 rounded">
+                <textarea name="message" placeholder="Your Message" required class="w-full mb-4 p-2 border border-gray-300 rounded h-32"></textarea>
+                <input type="text" name="_gotcha" style="display:none" class="hidden">
+                <button type="submit" class="w-full bg-primary hover:bg-secondary text-white font-bold py-2 px-4 rounded transition-colors duration-300">Plant the Seed</button>
             </form>
         </div>
     </section>
@@ -291,22 +301,17 @@
     console.log('Script loaded');
 
     // Loading screen
-    document.body.classList.add('loading');
-
     window.addEventListener('load', function() {
-        setTimeout(function() {
-            document.querySelector('.loading-screen').style.opacity = '0';
-            setTimeout(function() {
-                document.querySelector('.loading-screen').style.display = 'none';
-                document.body.classList.remove('loading');
+        setTimeout(() => {
+            document.querySelector('.loading-screen').classList.add('opacity-0');
+            setTimeout(() => {
+                document.querySelector('.loading-screen').classList.add('hidden');
             }, 500);
-        }, 1500); // Adjusted to allow for quicker animation
+        }, 1500);
     });
 
     // Rotating words functionality
     document.addEventListener('DOMContentLoaded', function() {
-        console.log('DOM loaded');
-        
         const rotatingWord = document.getElementById('rotating-word');
         const words = [
             'data-driven solutions',
@@ -320,24 +325,22 @@
         let currentIndex = 0;
 
         function changeWord() {
-            rotatingWord.style.opacity = 0;
+            rotatingWord.classList.add('opacity-0');
             setTimeout(() => {
                 rotatingWord.textContent = words[currentIndex];
-                rotatingWord.style.opacity = 1;
+                rotatingWord.classList.remove('opacity-0');
                 currentIndex = (currentIndex + 1) % words.length;
-            }, 500); // Half of the transition time
+            }, 500);
         }
 
-        // Set initial word
         changeWord();
-
-        // Change word every 3 seconds
         setInterval(changeWord, 3000);
     });
 
+    // Project cards, Testimonial Slider, and Tech Grid
     document.addEventListener('DOMContentLoaded', function() {
+        // Project cards
         const projectCards = document.querySelectorAll('.project-card');
-
         projectCards.forEach(card => {
             card.addEventListener('mouseenter', function() {
                 this.classList.add('active');
@@ -349,18 +352,13 @@
         });
     });
 
-    // Testimonial Slider
-    document.addEventListener('DOMContentLoaded', function() {
+        // Testimonial Slider
         const testimonials = document.querySelectorAll('.testimonial');
         let currentTestimonial = 0;
 
         function showTestimonial(index) {
             testimonials.forEach((testimonial, i) => {
-                if (i === index) {
-                    testimonial.style.display = 'block';
-                } else {
-                    testimonial.style.display = 'none';
-                }
+                testimonial.classList.toggle('hidden', i !== index);
             });
         }
 
@@ -369,21 +367,16 @@
             showTestimonial(currentTestimonial);
         }
 
-        // Show first testimonial and start rotation
         showTestimonial(currentTestimonial);
-        setInterval(nextTestimonial, 5000); // Change testimonial every 5 seconds
-    });
+        setInterval(nextTestimonial, 5000);
 
-    // Tech Grid
-    document.addEventListener('DOMContentLoaded', function() {
+        // Tech Grid
         const techItems = document.querySelectorAll('.tech-item');
-
         const observer = new IntersectionObserver((entries) => {
             entries.forEach((entry, index) => {
                 if (entry.isIntersecting) {
                     setTimeout(() => {
-                        entry.target.style.opacity = '1';
-                        entry.target.style.transform = 'translateY(0)';
+                        entry.target.classList.remove('opacity-0', 'translate-y-4');
                     }, index * 100);
                 }
             });
@@ -392,48 +385,51 @@
         techItems.forEach(item => observer.observe(item));
     });
 
-       // Mobile menu toggle
-    console.log('Setting up mobile menu toggle');
-    const menuToggle = document.querySelector('.menu-toggle');
-    const navMenu = document.querySelector('.nav-menu');
+    // Mobile menu toggle
+    const menuToggle = document.querySelector('[aria-label="Toggle menu"]');
+    const navMenu = document.querySelector('nav ul');
 
     if (menuToggle && navMenu) {
-        console.log('Menu toggle and nav menu found');
         menuToggle.addEventListener('click', function(e) {
             e.preventDefault();
-            console.log('Menu toggle clicked');
-            navMenu.classList.toggle('active');
-            console.log('Nav menu active:', navMenu.classList.contains('active'));
+            navMenu.classList.toggle('hidden');
+            navMenu.classList.toggle('flex');
         });
-    } else {
-        console.log('Menu toggle or nav menu not found');
+
+        // Close menu when a link is clicked
+        navMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', function() {
+                navMenu.classList.add('hidden');
+                navMenu.classList.remove('flex');
+            });
+        });
     }
 
-    // Close menu when a link is clicked
-    const navLinks = document.querySelectorAll('.nav-menu a');
-    navLinks.forEach(link => {
-        link.addEventListener('click', function() {
-            navMenu.classList.remove('active');
-            console.log('Nav menu closed');
-        });
-    });
-
-        // Project card toggle for mobile
+    // Project card and team member card toggle for mobile
+    if (window.innerWidth <= 767) {
         const projectCards = document.querySelectorAll('.project-card');
         projectCards.forEach(card => {
             card.addEventListener('click', function(e) {
-                if (window.innerWidth <= 767) {
-                    e.preventDefault();
-                    this.classList.toggle('active');
-                    projectCards.forEach(otherCard => {
-                        if (otherCard !== this) {
-                            otherCard.classList.remove('active');
-                        }
-                    });
-                }
+                e.preventDefault();
+                this.classList.toggle('active');
+                this.querySelector('.project-details').classList.toggle('hidden');
+                projectCards.forEach(otherCard => {
+                    if (otherCard !== this) {
+                        otherCard.classList.remove('active');
+                        otherCard.querySelector('.project-details').classList.add('hidden');
+                    }
+                });
             });
         });
-    });
+
+        const teamMembers = document.querySelectorAll('.team-member');
+        teamMembers.forEach(member => {
+            member.addEventListener('click', function(e) {
+                e.preventDefault();
+                this.querySelector('.card-inner').classList.toggle('rotate-y-180');
+            });
+        });
+    }
     </script>
 </body>
 </html>

@@ -1,118 +1,117 @@
 console.log('Script loaded');
 
 // Loading screen
-document.body.classList.add('loading');
-
 window.addEventListener('load', function() {
-    setTimeout(function() {
-        document.querySelector('.loading-screen').style.opacity = '0';
-        setTimeout(function() {
-            document.querySelector('.loading-screen').style.display = 'none';
-            document.body.classList.remove('loading');
+    setTimeout(() => {
+        document.querySelector('.loading-screen').classList.add('opacity-0');
+        setTimeout(() => {
+            document.querySelector('.loading-screen').classList.add('hidden');
         }, 500);
-    }, 1500); // Adjusted to allow for quicker animation
+    }, 1500);
 });
 
 // Rotating words functionality
 document.addEventListener('DOMContentLoaded', function() {
     const rotatingWord = document.getElementById('rotating-word');
-    const words = ['data-driven solutions',
+    const words = [
+        'data-driven solutions',
         'scalable infrastructure',
         'intelligent automation',
         'innovative engineering',
         'LLM-driven solutions',
         'predictive analytics',
-        'adaptive algorithms'];
+        'adaptive algorithms'
+    ];
     let currentIndex = 0;
 
     function changeWord() {
-        rotatingWord.textContent = words[currentIndex];
-        currentIndex = (currentIndex + 1) % words.length;
+        rotatingWord.classList.add('opacity-0');
+        setTimeout(() => {
+            rotatingWord.textContent = words[currentIndex];
+            rotatingWord.classList.remove('opacity-0');
+            currentIndex = (currentIndex + 1) % words.length;
+        }, 500);
     }
 
-    // Set initial word
     changeWord();
-
-    // Change word every 3 seconds
     setInterval(changeWord, 3000);
 });
 
-// Projects section
+// Project cards, Testimonial Slider, and Tech Grid
 document.addEventListener('DOMContentLoaded', function() {
+    // Project cards
     const projectCards = document.querySelectorAll('.project-card');
-
     projectCards.forEach(card => {
         card.addEventListener('click', function() {
-            // Check if this card is already active
-            const isActive = this.classList.contains('active');
-
-            // Remove 'active' class from all cards
-            projectCards.forEach(c => c.classList.remove('active'));
-
-            // If this card wasn't active before, make it active
-            if (!isActive) {
-                this.classList.add('active');
-            }
+            this.querySelector('.project-details').classList.toggle('hidden');
+            projectCards.forEach(otherCard => {
+                if (otherCard !== this) {
+                    otherCard.querySelector('.project-details').classList.add('hidden');
+                }
+            });
         });
     });
-});
 
-// Navigation menu toggle
-document.addEventListener('DOMContentLoaded', function() {
-    // Mobile menu toggle
-    const menuToggle = document.querySelector('.menu-toggle');
-    const navMenu = document.querySelector('.nav-menu');
+    // Testimonial Slider
+    const testimonials = document.querySelectorAll('.testimonial');
+    let currentTestimonial = 0;
 
-    if (menuToggle && navMenu) {
-        menuToggle.addEventListener('click', function(e) {
-            e.preventDefault();
-            navMenu.classList.toggle('active');
-            console.log('Menu toggled'); // For debugging
+    function showTestimonial(index) {
+        testimonials.forEach((testimonial, i) => {
+            testimonial.classList.toggle('hidden', i !== index);
         });
     }
+
+    function nextTestimonial() {
+        currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+        showTestimonial(currentTestimonial);
+    }
+
+    showTestimonial(currentTestimonial);
+    setInterval(nextTestimonial, 5000);
+
+    // Tech Grid
+    const techItems = document.querySelectorAll('.tech-item');
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry, index) => {
+            if (entry.isIntersecting) {
+                setTimeout(() => {
+                    entry.target.classList.remove('opacity-0', 'translate-y-4');
+                }, index * 100);
+            }
+        });
+    }, { threshold: 0.1 });
+
+    techItems.forEach(item => observer.observe(item));
+});
+
+// Mobile menu toggle
+const menuToggle = document.querySelector('[aria-label="Toggle menu"]');
+const navMenu = document.querySelector('nav ul');
+
+if (menuToggle && navMenu) {
+    menuToggle.addEventListener('click', function(e) {
+        e.preventDefault();
+        navMenu.classList.toggle('hidden');
+        navMenu.classList.toggle('flex');
+    });
 
     // Close menu when a link is clicked
-    const navLinks = document.querySelectorAll('.nav-menu a');
-    navLinks.forEach(link => {
+    navMenu.querySelectorAll('a').forEach(link => {
         link.addEventListener('click', function() {
-            navMenu.classList.remove('active');
+            navMenu.classList.add('hidden');
+            navMenu.classList.remove('flex');
         });
     });
+}
 
-    // Project cards and team member cards toggle effect
-    const projectCards = document.querySelectorAll('.project-card');
+// Team member card flip for mobile
+if (window.innerWidth <= 767) {
     const teamMembers = document.querySelectorAll('.team-member');
-
-    function toggleCard(card, className) {
-        if (window.innerWidth <= 767) {
-            card.classList.toggle(className);
-            
-            // For project cards, close other cards when one is opened
-            if (className === 'active') {
-                projectCards.forEach(otherCard => {
-                    if (otherCard !== card) {
-                        otherCard.classList.remove(className);
-                    }
-                });
-            }
-        }
-    }
-
-    projectCards.forEach(card => {
-        card.addEventListener('click', function(e) {
-            if (window.innerWidth <= 767) {
-                e.preventDefault();
-                toggleCard(this, 'active');
-            }
-        });
-    });
-
     teamMembers.forEach(member => {
         member.addEventListener('click', function(e) {
-            if (window.innerWidth <= 767) {
-                e.preventDefault();
-                toggleCard(this, 'flipped');
-            }
+            e.preventDefault();
+            this.querySelector('.card-inner').classList.toggle('rotate-y-180');
         });
     });
-});
+}
