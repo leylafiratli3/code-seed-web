@@ -106,7 +106,6 @@ if (menuToggle && navMenu) {
 }
 
 // Project cards and team member cards
-// Project cards and team member cards
 const projectCards = document.querySelectorAll('.project-card');
 const teamMembers = document.querySelectorAll('.team-member');
 
@@ -129,14 +128,16 @@ function handleCardInteraction(cards, isProjectCard = false) {
                 card.style.height = '';
             }
 
-            cards.forEach(otherCard => {
-                if (otherCard !== card) {
-                    otherCard.classList.remove('expanded');
-                    otherCard.querySelector('.relative').classList.remove('rotate-y-180');
-                    otherCard.querySelector('.absolute.back').style.height = '';
-                    otherCard.style.height = '';
-                }
-            });
+            if (isProjectCard) {
+                cards.forEach(otherCard => {
+                    if (otherCard !== card) {
+                        otherCard.classList.remove('expanded');
+                        otherCard.querySelector('.relative').classList.remove('rotate-y-180');
+                        otherCard.querySelector('.absolute.back').style.height = '';
+                        otherCard.style.height = '';
+                    }
+                });
+            }
 
             // Force layout recalculation
             card.offsetHeight;
@@ -147,14 +148,19 @@ function handleCardInteraction(cards, isProjectCard = false) {
             card.addEventListener('click', toggleCard);
         } else {
             // Desktop interaction
-            card.addEventListener('mouseenter', toggleCard);
-            card.addEventListener('mouseleave', toggleCard);
+            if (isProjectCard) {
+                card.addEventListener('mouseenter', toggleCard);
+                card.addEventListener('mouseleave', toggleCard);
+            } else {
+                // For team members, only toggle on click for both mobile and desktop
+                card.addEventListener('click', toggleCard);
+            }
         }
     });
 }
 
 handleCardInteraction(projectCards, true);
-handleCardInteraction(teamMembers);
+handleCardInteraction(teamMembers, false);
 
 // Mobile Menu
 document.addEventListener('DOMContentLoaded', function() {
