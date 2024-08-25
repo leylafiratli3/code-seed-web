@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>code-seed</title>
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
@@ -26,7 +26,8 @@
                 <img src="assets/codeseed-logo.png" alt="CodeSeed Logo" id="header-logo">
                 <span>code-seed</span>
             </div>
-            <ul>
+            <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+            <ul class="nav-menu">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#projects">Project Garden</a></li>
                 <li><a href="#team">Our Team</a></li>
@@ -145,7 +146,7 @@
                     <div class="project-info">
                         <h3>Video Hosting Website and Member Platform - Sema Yoga</h3>
                         <div class="project-details">
-                            <p>Engineered a high-performance video hosting platform for semayoga.com, revolutionizing member engagement through unlimited content access and intelligent content management.</p>
+                            <p>Engineered a high-performance video hosting platform for Semayoga.com, revolutionizing member engagement through unlimited content access and intelligent content management.</p>
                             <ul>
                                 <li>Implemented unlimited video hosting for members with robust custom filtering options, optimizing user experience and content discovery.</li>
                                 <li>Engineered an automated video management system, streamlining content delivery and improving operational efficiency.</li>
@@ -154,31 +155,38 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="sprouting-ventures-section">
+        <div class="container">
+            <h2>Sprouting Ventures</h2>
+            <div class="project-cards">
                 <div class="project-card">
-                    <div class="project-image" style="background-image: url('path/to/project5-image.jpg');"></div>
+                    <div class="project-image" style="background-image: url('assets/backgammon.png');"></div>
                     <div class="project-info">
-                        <h3>AR/VR Training Platform</h3>
-                        <p class="project-summary">Revolutionizing corporate training with immersive experiences</p>
+                        <h3>Multi-Player Backgammon Member Platform</h3>
                         <div class="project-details">
-                            <p>Our AR/VR training platform creates highly engaging and effective learning experiences, improving knowledge retention and skill acquisition across various industries.</p>
+                            <p>An innovative online platform for backgammon enthusiasts, featuring multi-player functionality and a robust membership system.</p>
                             <ul>
-                                <li>Customizable scenarios</li>
-                                <li>Real-time performance tracking</li>
-                                <li>Multi-user collaboration</li>
+                                <li>Real-time multiplayer gameplay</li>
+                                <li>Advanced matchmaking algorithm</li>
+                                <li>Integrated member profiles and leaderboards</li>
                             </ul>
                         </div>
                     </div>
                 </div>
                 <div class="project-card">
-                    <div class="project-image" style="background-image: url('path/to/project6-image.jpg');"></div>
+                    <div class="project-image" style="background-image: url('assets/crypto-trading.png');"></div>
                     <div class="project-info">
-                        <h3>Enhancing surveillance and delivery systems with AI-powered drones</h3>
+                        <h3>Automated Cryptocurrency Trading System</h3>
                         <div class="project-details">
-                            <p>Our autonomous drone network utilizes advanced AI algorithms for coordinated flight, object recognition, and task optimization, revolutionizing surveillance and delivery operations.</p>
+                            <p>A sophisticated system leveraging AI and machine learning to automate cryptocurrency trading strategies.</p>
                             <ul>
-                                <li>Swarm intelligence</li>
-                                <li>Edge computing integration</li>
-                                <li>Adaptive path planning</li>
+                                <li>Real-time market data analysis</li>
+                                <li>Predictive modeling for trading decisions</li>
+                                <li>Risk management and portfolio optimization</li>
                             </ul>
                         </div>
                     </div>
@@ -382,6 +390,11 @@
         }, { threshold: 0.1 });
 
         techItems.forEach(item => observer.observe(item));
+    });
+
+    // Mobile menu toggle
+    document.querySelector('.menu-toggle').addEventListener('click', function() {
+        document.querySelector('.nav-menu').classList.toggle('active');
     });
     </script>
 </body>

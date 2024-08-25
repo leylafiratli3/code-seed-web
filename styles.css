@@ -294,18 +294,23 @@ nav ul li a:hover {
 }
 
 /* Projects Section */
-.projects-section {
-    padding: 2rem 0;
-    background-color: #fff;
+.projects-section,
+.sprouting-ventures-section {
+    padding: 4rem 0;
+    background-color: #fff; /* Ensure this matches the Project Garden background */
 }
 
-.projects-section h2 {
+.projects-section h2,
+.sprouting-ventures-section h2 {
     text-align: center;
     font-size: 2.5rem;
     color: var(--secondary-color);
     margin-bottom: 2rem;
+    font-weight: bold; /* Adjust if needed */
+    /* Add any additional styles that are applied to the Project Garden title */
 }
 
+/* PROJECT CARDS - DO NOT MODIFY FOR MOBILE OPTIMIZATION */
 .project-cards {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -321,17 +326,6 @@ nav ul li a:hover {
     border-radius: 15px;
 }
 
-/* Alternating background colors */
-.project-card:nth-child(4n+1),
-.project-card:nth-child(4n+4) {
-    background-color: var(--primary-color); /* Green */
-}
-
-.project-card:nth-child(4n+2),
-.project-card:nth-child(4n+3) {
-    background-color: var(--accent-color); /* Tan */
-}
-
 .project-image {
     height: 180px;
     background-size: contain;
@@ -344,7 +338,6 @@ nav ul li a:hover {
     padding: 1.5rem;
     height: 170px; /* Adjusted for new card height */
     overflow: hidden;
-    transition: all 0.3s ease;
 }
 
 .project-info h3 {
@@ -354,10 +347,7 @@ nav ul li a:hover {
 }
 
 .project-details {
-    opacity: 0;
-    max-height: 0;
-    overflow: hidden;
-    transition: all 0.3s ease;
+    display: none;
 }
 
 .project-details ul {
@@ -372,32 +362,32 @@ nav ul li a:hover {
 
 .project-card:hover {
     height: auto;
-    max-height: none; /* Allow full expansion */
+    max-height: 1000px; /* Adjusted max-height */
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     z-index: 1;
 }
 
 .project-card:hover .project-info {
     height: auto;
-    max-height: none; /* Allow full expansion */
+    max-height: 820px; /* Adjusted for new card height */
 }
 
 .project-card:hover .project-details {
-    opacity: 1;
-    max-height: 1000px; /* Large value to ensure all content is shown */
+    display: block;
 }
 
-/* Ensure text is readable on both background colors */
-.project-card,
-.project-card:hover {
-    color: #333;
+/* Alternating background colors */
+.project-card:nth-child(4n+1),
+.project-card:nth-child(4n+4) {
+    background-color: var(--primary-color); /* Green */
 }
 
-@media (max-width: 768px) {
-    .project-cards {
-        grid-template-columns: 1fr;
-    }
+.project-card:nth-child(4n+2),
+.project-card:nth-child(4n+3) {
+    background-color: var(--accent-color); /* Tan */
 }
+
+/* END OF PROJECT CARDS - DO NOT MODIFY */
 
 /* Team Section */
 .team-section {
@@ -423,7 +413,7 @@ nav ul li a:hover {
 
 @media (max-width: 768px) {
     .team-members {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        grid-template-columns: 1fr;
     }
 }
 
