@@ -109,7 +109,7 @@ if (menuToggle && navMenu) {
 const projectCards = document.querySelectorAll('.project-card');
 const teamMembers = document.querySelectorAll('.team-member');
 
-function handleCardInteraction(cards) {
+function handleCardInteraction(cards, isProjectCard = false) {
     cards.forEach(card => {
         if ('ontouchstart' in window || navigator.maxTouchPoints > 0) {
             // Mobile interaction
@@ -126,23 +126,22 @@ function handleCardInteraction(cards) {
         } else {
             // Desktop interaction
             card.addEventListener('mouseenter', function() {
-                this.classList.add('expanded');
+                if (isProjectCard) {
+                    this.classList.add('expanded');
+                }
                 this.querySelector('.relative').classList.add('rotate-y-180');
-                cards.forEach(otherCard => {
-                    if (otherCard !== this) {
-                        otherCard.classList.remove('expanded');
-                    }
-                });
             });
             card.addEventListener('mouseleave', function() {
-                this.classList.remove('expanded');
+                if (isProjectCard) {
+                    this.classList.remove('expanded');
+                }
                 this.querySelector('.relative').classList.remove('rotate-y-180');
             });
         }
     });
 }
 
-handleCardInteraction(projectCards);
+handleCardInteraction(projectCards, true);
 handleCardInteraction(teamMembers);
 
 // Mobile Menu
