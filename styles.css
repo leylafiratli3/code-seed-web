@@ -178,10 +178,6 @@
         width: 100%;
         margin-bottom: 2rem;
     }
-
-    .project-card.expanded {
-        order: -1;
-    }
 }
 
 /* Testimonial styles */
