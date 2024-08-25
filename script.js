@@ -61,10 +61,19 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Navigation menu toggle
 document.addEventListener('DOMContentLoaded', function() {
+    // Mobile menu toggle
     const menuToggle = document.querySelector('.menu-toggle');
     const navMenu = document.querySelector('.nav-menu');
 
     menuToggle.addEventListener('click', function() {
         navMenu.classList.toggle('active');
+    });
+
+    // Close menu when a link is clicked
+    const navLinks = document.querySelectorAll('.nav-menu a');
+    navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            navMenu.classList.remove('active');
+        });
     });
 });

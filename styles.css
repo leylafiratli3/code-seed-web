@@ -700,49 +700,49 @@ footer {
 @media (max-width: 767px) {
     /* Icon section - two icons per row */
     .tech-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr; /* Two columns */
-        gap: 10px;
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 10px !important;
     }
 
     .tech-item {
-        width: 100%;
-        height: auto;
-        min-height: 120px;
-        margin: 0;
-        padding: 10px;
+        width: 100% !important;
+        height: auto !important;
+        min-height: 100px !important;
+        margin: 0 !important;
+        padding: 10px !important;
     }
 
     .tech-item i {
-        font-size: 2rem;
-        margin-bottom: 5px;
+        font-size: 2rem !important;
+        margin-bottom: 5px !important;
     }
 
     .tech-item h3 {
-        font-size: 0.8rem;
-        margin: 0;
-        word-wrap: break-word;
-        overflow-wrap: break-word;
-        hyphens: auto;
+        font-size: 0.8rem !important;
+        margin: 0 !important;
+        word-wrap: break-word !important;
+        overflow-wrap: break-word !important;
+        hyphens: auto !important;
     }
 
     /* Project cards - ONE card per row */
     .project-cards {
         display: flex !important;
         flex-direction: column !important;
-        gap: 20px;
-        padding: 15px;
+        gap: 20px !important;
+        padding: 15px !important;
     }
 
     .project-card {
         width: 100% !important;
         height: auto !important;
-        min-height: 300px;
-        margin-bottom: 20px;
+        min-height: 300px !important;
+        margin-bottom: 20px !important;
     }
 
     .project-image {
-        height: 180px;
+        height: 180px !important;
     }
 
     .project-info {
@@ -751,7 +751,7 @@ footer {
     }
 
     .project-details {
-        display: none;
+        display: none !important;
     }
 
     .project-card:hover,
@@ -768,6 +768,33 @@ footer {
 
     .project-card:hover .project-details,
     .project-card.active .project-details {
-        display: block;
+        display: block !important;
+    }
+
+    .menu-toggle {
+        display: block !important;
+        font-size: 1.5rem !important;
+        background: none !important;
+        border: none !important;
+        cursor: pointer !important;
+    }
+
+    .nav-menu {
+        display: none !important;
+        flex-direction: column !important;
+        width: 100% !important;
+        position: absolute !important;
+        top: 100% !important;
+        left: 0 !important;
+        background-color: #ffffff !important;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1) !important;
+    }
+
+    .nav-menu.active {
+        display: flex !important;
+    }
+
+    .nav-menu li {
+        margin: 10px 0 !important;
     }
 }
