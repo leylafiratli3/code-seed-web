@@ -170,11 +170,17 @@
 
 @media (max-width: 767px) {
     .project-cards {
-        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .project-card {
+        width: 100%;
+        margin-bottom: 2rem;
     }
 
     .project-card.expanded {
-        grid-column: span 1;
+        order: -1;
     }
 }
 

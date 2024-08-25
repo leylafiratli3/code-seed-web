@@ -133,6 +133,17 @@ function handleCardInteraction(cards, isProjectCard = false) {
                     otherCard.querySelector('.absolute.back').style.height = '';
                 }
             });
+
+            // Reorder cards on mobile
+            if (window.innerWidth <= 767) {
+                const projectCardsContainer = card.closest('.project-cards');
+                if (projectCardsContainer) {
+                    const expandedCard = projectCardsContainer.querySelector('.project-card.expanded');
+                    if (expandedCard) {
+                        projectCardsContainer.insertBefore(expandedCard, projectCardsContainer.firstChild);
+                    }
+                }
+            }
         }
 
         if ('ontouchstart' in window || navigator.maxTouchPoints > 0) {
