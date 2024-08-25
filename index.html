@@ -81,7 +81,7 @@
             <div class="hero-card bg-black bg-opacity-60 p-8 rounded-lg shadow-lg">
                 <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">Growing cutting-edge tech solutions with</h1>
                 <h2 class="text-3xl md:text-4xl lg:text-5xl mb-8"><span id="rotating-word" class="text-primary font-bold"></span></h2>
-                <a href="#projects" class="cta-button bg-primary hover:bg-secondary text-white font-bold py-3 px-6 rounded-full transition-colors duration-300">Explore Our Project Garden</a>
+                <a href="#projects" class="cta-button bg-primary hover:bg-secondary text-white font-bold py-3 px-6 rounded-full transition-colors duration-300 inline-block w-full sm:w-auto text-base sm:text-lg whitespace-normal sm:whitespace-nowrap">Explore Our Project Garden</a>
             </div>
         </div>
     </section>
@@ -130,11 +130,14 @@
         <div class="container mx-auto px-4">
             <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-secondary">Project Garden</h2>
             <div class="project-cards grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="project-card bg-gray-100 rounded-lg overflow-hidden shadow-md transition-all duration-300 hover:shadow-xl">
-                    <div class="project-image h-64 bg-cover bg-center" style="background-image: url('assets/harman.png');"></div>
-                    <div class="project-info p-6">
-                        <h3 class="text-xl font-bold mb-4">Custom Cloud-Based Automated Operations Management Suite for Harman International Industries</h3>
-                        <div class="project-details hidden">
+                <div class="project-card group h-96 [perspective:1000px]">
+                    <div class="relative h-full w-full transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+                        <div class="absolute inset-0 bg-white rounded-lg shadow-md p-4 [backface-visibility:hidden]">
+                            <div class="project-image h-64 bg-contain bg-center bg-no-repeat" style="background-image: url('assets/harman.png');"></div>
+                            <h3 class="text-xl font-bold mt-4">Custom Cloud-Based Automated Operations Management Suite for Harman International Industries</h3>
+                        </div>
+                        <div class="absolute inset-0 bg-primary text-white rounded-lg shadow-md p-4 [transform:rotateY(180deg)] [backface-visibility:hidden] overflow-y-auto">
+                            <h3 class="text-xl font-bold mb-4">Custom Cloud-Based Automated Operations Management Suite for Harman International Industries</h3>
                             <p class="mb-4">Designed, developed, and implemented this system for multiple regions as a cross-functional source of truth by providing each team with tailored deliverables (data slices/visualizations) and input methods.</p>
                             <ul class="list-disc list-inside">
                                 <li>Automates optimized allocation decision-making and predicts daily allocation and other operational statuses 6+ months into the future.</li>
@@ -144,11 +147,14 @@
                         </div>
                     </div>
                 </div>
-                <div class="project-card bg-gray-100 rounded-lg overflow-hidden shadow-md transition-all duration-300 hover:shadow-xl">
-                    <div class="project-image h-64 bg-cover bg-center" style="background-image: url('assets/coflow.png');"></div>
-                    <div class="project-info p-6">
-                        <h3 class="text-xl font-bold mb-4">CoFlow: Advanced AI-Powered Community Management Bot</h3>
-                        <div class="project-details hidden">
+                <div class="project-card group h-96 [perspective:1000px]">
+                    <div class="relative h-full w-full transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+                        <div class="absolute inset-0 bg-white rounded-lg shadow-md p-4 [backface-visibility:hidden]">
+                            <div class="project-image h-64 bg-contain bg-center bg-no-repeat" style="background-image: url('assets/coflow.png');"></div>
+                            <h3 class="text-xl font-bold mt-4">CoFlow: Advanced AI-Powered Community Management Bot</h3>
+                        </div>
+                        <div class="absolute inset-0 bg-primary text-white rounded-lg shadow-md p-4 [transform:rotateY(180deg)] [backface-visibility:hidden] overflow-y-auto">
+                            <h3 class="text-xl font-bold mb-4">CoFlow: Advanced AI-Powered Community Management Bot</h3>
                             <p class="mb-4">Developed a sophisticated Discord bot leveraging cutting-edge AI technologies to enhance community engagement and streamline management tasks.</p>
                             <ul class="list-disc list-inside">
                                 <li>Implemented advanced NLP using GPT models for context-aware communication, increasing community engagement by 40%.</li>
@@ -158,11 +164,14 @@
                         </div>
                     </div>
                 </div>
-                <div class="project-card bg-gray-100 rounded-lg overflow-hidden shadow-md transition-all duration-300 hover:shadow-xl">
-                    <div class="project-image h-64 bg-cover bg-center" style="background-image: url('assets/dimmak.png');"></div>
-                    <div class="project-info p-6">
-                        <h3 class="text-xl font-bold mb-4">Data Migration and Infrastructure - Dim Mak Records</h3>
-                        <div class="project-details hidden">
+                <div class="project-card group h-96 [perspective:1000px]">
+                    <div class="relative h-full w-full transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+                        <div class="absolute inset-0 bg-white rounded-lg shadow-md p-4 [backface-visibility:hidden]">
+                            <div class="project-image h-64 bg-contain bg-center bg-no-repeat" style="background-image: url('assets/dimmak.png');"></div>
+                            <h3 class="text-xl font-bold mt-4">Data Migration and Infrastructure - Dim Mak Records</h3>
+                        </div>
+                        <div class="absolute inset-0 bg-primary text-white rounded-lg shadow-md p-4 [transform:rotateY(180deg)] [backface-visibility:hidden] overflow-y-auto">
+                            <h3 class="text-xl font-bold mb-4">Data Migration and Infrastructure - Dim Mak Records</h3>
                             <p class="mb-4">Led a comprehensive data migration project for Dim Mak Records, streamlining their digital asset management and enhancing operational efficiency.</p>
                             <ul class="list-disc list-inside">
                                 <li>Spearheaded the migration of over 3,500 tracks across multiple DSPs using Python Pandas, ensuring data integrity and completeness.</li>
@@ -172,11 +181,14 @@
                         </div>
                     </div>
                 </div>
-                <div class="project-card bg-gray-100 rounded-lg overflow-hidden shadow-md transition-all duration-300 hover:shadow-xl">
-                    <div class="project-image h-64 bg-cover bg-center" style="background-image: url('assets/sema-yoga.png');"></div>
-                    <div class="project-info p-6">
-                        <h3 class="text-xl font-bold mb-4">Video Hosting Website and Member Platform - Sema Yoga</h3>
-                        <div class="project-details hidden">
+                <div class="project-card group h-96 [perspective:1000px]">
+                    <div class="relative h-full w-full transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+                        <div class="absolute inset-0 bg-white rounded-lg shadow-md p-4 [backface-visibility:hidden]">
+                            <div class="project-image h-64 bg-contain bg-center bg-no-repeat" style="background-image: url('assets/sema-yoga.png');"></div>
+                            <h3 class="text-xl font-bold mt-4">Video Hosting Website and Member Platform - Sema Yoga</h3>
+                        </div>
+                        <div class="absolute inset-0 bg-primary text-white rounded-lg shadow-md p-4 [transform:rotateY(180deg)] [backface-visibility:hidden] overflow-y-auto">
+                            <h3 class="text-xl font-bold mb-4">Video Hosting Website and Member Platform - Sema Yoga</h3>
                             <p class="mb-4">Engineered a high-performance video hosting platform for Semayoga.com, revolutionizing member engagement through unlimited content access and intelligent content management.</p>
                             <ul class="list-disc list-inside">
                                 <li>Implemented unlimited video hosting for members with robust custom filtering options, optimizing user experience and content discovery.</li>
@@ -194,11 +206,14 @@
         <div class="container mx-auto px-4">
             <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-secondary">Sprouting Ventures</h2>
             <div class="project-cards grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="bg-white rounded-lg overflow-hidden shadow-md transition-all duration-300 hover:shadow-xl">
-                    <div class="h-64 bg-cover bg-center" style="background-image: url('assets/backgammon.png');"></div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-4">Multi-Player Backgammon Member Platform</h3>
-                        <div class="hidden">
+                <div class="project-card group h-96 [perspective:1000px]">
+                    <div class="relative h-full w-full transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+                        <div class="absolute inset-0 bg-white rounded-lg shadow-md p-4 [backface-visibility:hidden]">
+                            <div class="project-image h-64 bg-contain bg-center bg-no-repeat" style="background-image: url('assets/backgammon.png');"></div>
+                            <h3 class="text-xl font-bold mt-4">Multi-Player Backgammon Member Platform</h3>
+                        </div>
+                        <div class="absolute inset-0 bg-primary text-white rounded-lg shadow-md p-4 [transform:rotateY(180deg)] [backface-visibility:hidden] overflow-y-auto">
+                            <h3 class="text-xl font-bold mb-4">Multi-Player Backgammon Member Platform</h3>
                             <p class="mb-4">An innovative online platform for backgammon enthusiasts, featuring multi-player functionality and a robust membership system.</p>
                             <ul class="list-disc list-inside">
                                 <li>Real-time multiplayer gameplay</li>
@@ -208,11 +223,14 @@
                         </div>
                     </div>
                 </div>
-                <div class="bg-white rounded-lg overflow-hidden shadow-md transition-all duration-300 hover:shadow-xl">
-                    <div class="h-64 bg-cover bg-center" style="background-image: url('assets/crypto-trading.png');"></div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-4">Automated Cryptocurrency Trading System</h3>
-                        <div class="hidden">
+                <div class="project-card group h-96 [perspective:1000px]">
+                    <div class="relative h-full w-full transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+                        <div class="absolute inset-0 bg-white rounded-lg shadow-md p-4 [backface-visibility:hidden]">
+                            <div class="project-image h-64 bg-contain bg-center bg-no-repeat" style="background-image: url('assets/crypto-trading.png');"></div>
+                            <h3 class="text-xl font-bold mt-4">Automated Cryptocurrency Trading System</h3>
+                        </div>
+                        <div class="absolute inset-0 bg-primary text-white rounded-lg shadow-md p-4 [transform:rotateY(180deg)] [backface-visibility:hidden] overflow-y-auto">
+                            <h3 class="text-xl font-bold mb-4">Automated Cryptocurrency Trading System</h3>
                             <p class="mb-4">A sophisticated system leveraging AI and machine learning to automate cryptocurrency trading strategies.</p>
                             <ul class="list-disc list-inside">
                                 <li>Real-time market data analysis</li>
@@ -237,7 +255,7 @@
                             <h3 class="text-xl font-semibold text-center">Bryce Merrill</h3>
                             <p class="text-center text-gray-600">Principal Software Engineer</p>
                         </div>
-                        <div class="absolute inset-0 bg-primary text-white rounded-lg shadow-md p-4 [transform:rotateY(180deg)] [backface-visibility:hidden]">
+                        <div class="absolute inset-0 bg-primary text-white rounded-lg shadow-md p-4 [transform:rotateY(180deg)] [backface-visibility:hidden] overflow-y-auto">
                             <h3 class="text-xl font-semibold text-center mb-4">Bryce Merrill</h3>
                             <p class="text-center">Bryce is an exceptional engineer with a passion for intelligent systems and automation.</p>
                         </div>
@@ -250,7 +268,7 @@
                             <h3 class="text-xl font-semibold text-center">Leyla Firatli</h3>
                             <p class="text-center text-gray-600">Data Architect + Web Developer</p>
                         </div>
-                        <div class="absolute inset-0 bg-primary text-white rounded-lg shadow-md p-4 [transform:rotateY(180deg)] [backface-visibility:hidden]">
+                        <div class="absolute inset-0 bg-primary text-white rounded-lg shadow-md p-4 [transform:rotateY(180deg)] [backface-visibility:hidden] overflow-y-auto">
                             <h3 class="text-xl font-semibold text-center mb-4">Leyla Firatli</h3>
                             <p class="text-center">Leyla is a seasoned data architect with 7+ years of experience in data infrastructure, migrations and web development.</p>
                         </div>
@@ -263,7 +281,7 @@
                             <h3 class="text-xl font-semibold text-center">Deanna Patelis</h3>
                             <p class="text-center text-gray-600">Machine Learning Engineer</p>
                         </div>
-                        <div class="absolute inset-0 bg-primary text-white rounded-lg shadow-md p-4 [transform:rotateY(180deg)] [backface-visibility:hidden]">
+                        <div class="absolute inset-0 bg-primary text-white rounded-lg shadow-md p-4 [transform:rotateY(180deg)] [backface-visibility:hidden] overflow-y-auto">
                             <h3 class="text-xl font-semibold text-center mb-4">Deanna Patelis</h3>
                             <p class="text-center">Deanna is an expert in machine learning with a focus on applied LLM solutions.</p>
                         </div>
@@ -276,7 +294,7 @@
                             <h3 class="text-xl font-semibold text-center">Isaac Vandyne</h3>
                             <p class="text-center text-gray-600">Product Designer + Creative Tactician</p>
                         </div>
-                        <div class="absolute inset-0 bg-primary text-white rounded-lg shadow-md p-4 [transform:rotateY(180deg)] [backface-visibility:hidden]">
+                        <div class="absolute inset-0 bg-primary text-white rounded-lg shadow-md p-4 [transform:rotateY(180deg)] [backface-visibility:hidden] overflow-y-auto">
                             <h3 class="text-xl font-semibold text-center mb-4">Isaac Vandyne</h3>
                             <p class="text-center">With a colorful background in graphic and motion design, and 7+ years of experience building complex b2b software platforms, Isaac has both the imagination and technical ability to craft world class products that solve users problems.</p>
                         </div>
@@ -357,19 +375,6 @@
 
     // Project cards, Testimonial Slider, and Tech Grid
     document.addEventListener('DOMContentLoaded', function() {
-        // Project cards
-        const projectCards = document.querySelectorAll('.project-card');
-        projectCards.forEach(card => {
-            card.addEventListener('click', function() {
-                this.querySelector('.project-details').classList.toggle('hidden');
-                projectCards.forEach(otherCard => {
-                    if (otherCard !== this) {
-                        otherCard.querySelector('.project-details').classList.add('hidden');
-                    }
-                });
-            });
-        });
-
         // Testimonial Slider
         const testimonials = document.querySelectorAll('.testimonial');
         let currentTestimonial = 0;
@@ -404,50 +409,60 @@
     });
 
     // Mobile menu toggle
-    const menuToggle = document.querySelector('[aria-label="Toggle menu"]');
-    const navMenu = document.querySelector('nav ul');
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
 
-    if (menuToggle && navMenu) {
-        menuToggle.addEventListener('click', function(e) {
-            e.preventDefault();
-            navMenu.classList.toggle('hidden');
-            navMenu.classList.toggle('flex');
+    mobileMenuButton.addEventListener('click', function() {
+        mobileMenu.classList.toggle('hidden');
+    });
+
+    // Close mobile menu when a link is clicked
+    const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+    mobileMenuLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            mobileMenu.classList.add('hidden');
         });
+    });
 
-        // Close menu when a link is clicked
-        navMenu.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', function() {
-                navMenu.classList.add('hidden');
-                navMenu.classList.remove('flex');
-            });
-        });
-    }
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', function(event) {
+        const isClickInsideMenu = mobileMenu.contains(event.target);
+        const isClickOnMenuButton = mobileMenuButton.contains(event.target);
+        if (!isClickInsideMenu && !isClickOnMenuButton && !mobileMenu.classList.contains('hidden')) {
+            mobileMenu.classList.add('hidden');
+        }
+    });
 
-    // Project card and team member card toggle for mobile
-    if (window.innerWidth <= 767) {
-        const projectCards = document.querySelectorAll('.project-card');
-        projectCards.forEach(card => {
-            card.addEventListener('click', function(e) {
-                e.preventDefault();
-                this.classList.toggle('active');
-                this.querySelector('.project-details').classList.toggle('hidden');
-                projectCards.forEach(otherCard => {
-                    if (otherCard !== this) {
-                        otherCard.classList.remove('active');
-                        otherCard.querySelector('.project-details').classList.add('hidden');
-                    }
+    // Project cards and team member cards
+    const projectCards = document.querySelectorAll('.project-card');
+    const teamMembers = document.querySelectorAll('.team-member');
+
+    function handleCardInteraction(cards) {
+        cards.forEach(card => {
+            if ('ontouchstart' in window || navigator.maxTouchPoints > 0) {
+                // Mobile interaction
+                card.addEventListener('click', function() {
+                    this.querySelector('.relative').classList.toggle('rotate-y-180');
+                    cards.forEach(otherCard => {
+                        if (otherCard !== this) {
+                            otherCard.querySelector('.relative').classList.remove('rotate-y-180');
+                        }
+                    });
                 });
-            });
-        });
-
-        const teamMembers = document.querySelectorAll('.team-member');
-        teamMembers.forEach(member => {
-            member.addEventListener('click', function(e) {
-                e.preventDefault();
-                this.querySelector('.relative').classList.toggle('rotate-y-180');
-            });
+            } else {
+                // Desktop interaction
+                card.addEventListener('mouseenter', function() {
+                    this.querySelector('.relative').classList.add('rotate-y-180');
+                });
+                card.addEventListener('mouseleave', function() {
+                    this.querySelector('.relative').classList.remove('rotate-y-180');
+                });
+            }
         });
     }
+
+    handleCardInteraction(projectCards);
+    handleCardInteraction(teamMembers);
     </script>
 </body>
 </html>

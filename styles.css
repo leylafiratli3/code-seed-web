@@ -124,61 +124,26 @@
 /* Project card styles */
 .project-cards {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
     padding: 2rem;
 }
 
 .project-card {
-    position: relative;
-    height: 350px;
-    overflow: hidden;
-    transition: all 0.3s ease;
-    border-radius: 15px;
+    cursor: pointer;
 }
 
 .project-image {
-    height: 180px;
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
     background-color: transparent;
 }
 
-.project-info {
-    padding: 1.5rem;
-    height: 170px;
-}
-
-.project-info h3 {
-    margin: 0 0 0.75rem 0;
-    font-size: 1.3rem;
-    color: #333;
-}
-
-.project-details {
-    display: none;
-}
-
-.project-details ul {
-    list-style-type: disc;
-    padding-left: 1.5rem;
-    margin-top: 0.75rem;
-}
-
-.project-details li {
-    margin-bottom: 0.5rem;
-}
-
-.project-card:hover {
-    height: auto;
-    max-height: 1000px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    z-index: 1;
-}
-
-.project-card:hover .project-info {
-    height: auto;
+@media (max-width: 767px) {
+    .project-cards {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* Testimonial styles */
@@ -228,18 +193,6 @@
 
 /* Mobile-specific styles */
 @media (max-width: 767px) {
-    .project-cards {
-        grid-template-columns: 1fr;
-    }
-
-    .project-card {
-        height: auto;
-    }
-
-    .project-info {
-        height: auto;
-    }
-
     .project-details {
         display: none !important;
     }
