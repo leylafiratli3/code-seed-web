@@ -111,32 +111,37 @@ const teamMembers = document.querySelectorAll('.team-member');
 
 function handleCardInteraction(cards, isProjectCard = false) {
     cards.forEach(card => {
+        const cardInner = card.querySelector('.relative');
+        const cardBack = card.querySelector('.absolute.back');
+
+        function toggleCard() {
+            card.classList.toggle('expanded');
+            cardInner.classList.toggle('rotate-y-180');
+            
+            if (cardInner.classList.contains('rotate-y-180')) {
+                setTimeout(() => {
+                    cardBack.style.height = `${cardBack.scrollHeight}px`;
+                }, 300);
+            } else {
+                cardBack.style.height = '';
+            }
+
+            cards.forEach(otherCard => {
+                if (otherCard !== card) {
+                    otherCard.classList.remove('expanded');
+                    otherCard.querySelector('.relative').classList.remove('rotate-y-180');
+                    otherCard.querySelector('.absolute.back').style.height = '';
+                }
+            });
+        }
+
         if ('ontouchstart' in window || navigator.maxTouchPoints > 0) {
             // Mobile interaction
-            card.addEventListener('click', function() {
-                this.classList.toggle('expanded');
-                this.querySelector('.relative').classList.toggle('rotate-y-180');
-                cards.forEach(otherCard => {
-                    if (otherCard !== this) {
-                        otherCard.classList.remove('expanded');
-                        otherCard.querySelector('.relative').classList.remove('rotate-y-180');
-                    }
-                });
-            });
+            card.addEventListener('click', toggleCard);
         } else {
             // Desktop interaction
-            card.addEventListener('mouseenter', function() {
-                if (isProjectCard) {
-                    this.classList.add('expanded');
-                }
-                this.querySelector('.relative').classList.add('rotate-y-180');
-            });
-            card.addEventListener('mouseleave', function() {
-                if (isProjectCard) {
-                    this.classList.remove('expanded');
-                }
-                this.querySelector('.relative').classList.remove('rotate-y-180');
-            });
+            card.addEventListener('mouseenter', toggleCard);
+            card.addEventListener('mouseleave', toggleCard);
         }
     });
 }
