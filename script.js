@@ -106,6 +106,7 @@ if (menuToggle && navMenu) {
 }
 
 // Project cards and team member cards
+// Project cards and team member cards
 const projectCards = document.querySelectorAll('.project-card');
 const teamMembers = document.querySelectorAll('.team-member');
 
@@ -121,9 +122,11 @@ function handleCardInteraction(cards, isProjectCard = false) {
             if (cardInner.classList.contains('rotate-y-180')) {
                 setTimeout(() => {
                     cardBack.style.height = `${cardBack.scrollHeight}px`;
+                    card.style.height = `${cardBack.scrollHeight}px`;
                 }, 300);
             } else {
                 cardBack.style.height = '';
+                card.style.height = '';
             }
 
             cards.forEach(otherCard => {
@@ -131,8 +134,12 @@ function handleCardInteraction(cards, isProjectCard = false) {
                     otherCard.classList.remove('expanded');
                     otherCard.querySelector('.relative').classList.remove('rotate-y-180');
                     otherCard.querySelector('.absolute.back').style.height = '';
+                    otherCard.style.height = '';
                 }
             });
+
+            // Force layout recalculation
+            card.offsetHeight;
         }
 
         if ('ontouchstart' in window || navigator.maxTouchPoints > 0) {

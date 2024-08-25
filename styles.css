@@ -123,8 +123,8 @@
 
 /* Project card styles */
 .project-cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    display: flex;
+    flex-direction: column;
     gap: 2rem;
     padding: 2rem;
 }
@@ -168,15 +168,10 @@
     min-height: 100%;
 }
 
-@media (max-width: 767px) {
+@media (min-width: 768px) {
     .project-cards {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .project-card {
-        width: 100%;
-        margin-bottom: 2rem;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     }
 }
 
