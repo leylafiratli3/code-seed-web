@@ -42,18 +42,16 @@ document.addEventListener('DOMContentLoaded', function() {
     const projectCards = document.querySelectorAll('.project-card');
 
     projectCards.forEach(card => {
-        card.addEventListener('click', function(e) {
-            // Check if it's a mobile device
-            if (window.innerWidth <= 767) {
-                e.preventDefault(); // Prevent default link behavior if there's any
-                this.classList.toggle('active');
+        card.addEventListener('click', function() {
+            // Check if this card is already active
+            const isActive = this.classList.contains('active');
 
-                // Close other cards when one is opened
-                projectCards.forEach(otherCard => {
-                    if (otherCard !== this) {
-                        otherCard.classList.remove('active');
-                    }
-                });
+            // Remove 'active' class from all cards
+            projectCards.forEach(c => c.classList.remove('active'));
+
+            // If this card wasn't active before, make it active
+            if (!isActive) {
+                this.classList.add('active');
             }
         });
     });
