@@ -133,6 +133,11 @@
     cursor: pointer;
 }
 
+.project-card.expanded {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
 .project-image {
     background-size: contain;
     background-position: center;
@@ -143,6 +148,10 @@
 @media (max-width: 767px) {
     .project-cards {
         grid-template-columns: 1fr;
+    }
+    .project-card.expanded {
+        grid-column: span 1;
+        grid-row: span 2;
     }
 }
 
