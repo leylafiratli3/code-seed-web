@@ -264,3 +264,32 @@
         display: block;
     }
 }
+
+/* Add these styles to your existing CSS */
+@media (max-width: 767px) {
+    header nav ul {
+        display: none !important;
+    }
+
+    #mobile-menu-button {
+        display: block;
+    }
+
+    #mobile-menu {
+        display: none;
+    }
+
+    #mobile-menu.show {
+        display: block;
+    }
+}
+
+@media (min-width: 768px) {
+    #mobile-menu-button {
+        display: none;
+    }
+
+    #mobile-menu {
+        display: none !important;
+    }
+}
