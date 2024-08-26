@@ -14,6 +14,7 @@
                         primary: '#8dba90',
                         secondary: '#5a7d5c',
                         accent: '#D2B48C',
+                        tan: '#D2B48C',
                     },
                     fontFamily: {
                         'fira': ['"Fira Code"', 'monospace'],
@@ -59,7 +60,6 @@
                 </ul>
             </div>
         </nav>
-        <!-- Mobile menu, show/hide based on menu state -->
         <div id="mobile-menu" class="md:hidden hidden">
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                 <a href="#home" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">Home</a>
@@ -126,17 +126,17 @@
         </div>
     </section>
 
-    <section id="projects" class="projects-section bg-white py-16">
+    <section id="projects" class="projects-section bg-green py-16">
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-secondary">Project Garden</h2>
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-white">Project Garden</h2>
             <div class="project-cards flex flex-col md:grid md:grid-cols-2 gap-8">
                 <div class="project-card group [perspective:1000px] transition-all duration-500 ease-in-out">
                     <div class="relative h-full w-full transition-all duration-500 [transform-style:preserve-3d]">
                         <div class="absolute inset-0 bg-white rounded-lg shadow-md p-4 [backface-visibility:hidden]">
                             <div class="project-image h-64 bg-contain bg-center bg-no-repeat" style="background-image: url('assets/harman.png');"></div>
-                            <h3 class="text-xl font-bold mt-4">Commander System: Automated Operations for Harman International</h3>
+                            <h3 class="text-xl font-bold mt-4">Commander System: Automated Operations - Harman International</h3>
                         </div>
-                        <div class="absolute back inset-0 bg-primary text-white rounded-lg shadow-md p-4 [transform:rotateY(180deg)] [backface-visibility:hidden] overflow-y-auto">
+                        <div class="absolute back inset-0 bg-white text-black rounded-lg shadow-md p-4 [transform:rotateY(180deg)] [backface-visibility:hidden] overflow-y-auto">
                             <h3 class="text-xl font-bold mb-4">Custom Cloud-Based Automated Operations Management Suite for Harman International Industries</h3>
                             <p class="mb-4">Designed, developed, and implemented custom cloud-based automated operations management system for multiple regions.</p>
                             <ul class="list-disc list-inside">
@@ -153,7 +153,7 @@
                             <div class="project-image h-64 bg-contain bg-center bg-no-repeat" style="background-image: url('assets/coflow.png');"></div>
                             <h3 class="text-xl font-bold mt-4">CoFlow: Advanced AI-Powered Community Management Bot</h3>
                         </div>
-                        <div class="absolute back inset-0 bg-primary text-white rounded-lg shadow-md p-4 [transform:rotateY(180deg)] [backface-visibility:hidden] overflow-y-auto">
+                        <div class="absolute back inset-0 bg-white text-black rounded-lg shadow-md p-4 [transform:rotateY(180deg)] [backface-visibility:hidden] overflow-y-auto">
                             <h3 class="text-xl font-bold mb-4">CoFlow: Advanced AI-Powered Community Management Bot</h3>
                             <p class="mb-4">Developed a sophisticated Discord bot leveraging cutting-edge AI technologies to enhance community engagement and streamline management tasks.</p>
                             <ul class="list-disc list-inside">
@@ -170,7 +170,7 @@
                             <div class="project-image h-64 bg-contain bg-center bg-no-repeat" style="background-image: url('assets/dimmak.png');"></div>
                             <h3 class="text-xl font-bold mt-4">Data Migration and Infrastructure - Dim Mak Records</h3>
                         </div>
-                        <div class="absolute back inset-0 bg-primary text-white rounded-lg shadow-md p-4 [transform:rotateY(180deg)] [backface-visibility:hidden] overflow-y-auto">
+                        <div class="absolute back inset-0 bg-white text-black rounded-lg shadow-md p-4 [transform:rotateY(180deg)] [backface-visibility:hidden] overflow-y-auto">
                             <h3 class="text-xl font-bold mb-4">Data Migration and Infrastructure - Dim Mak Records</h3>
                             <p class="mb-4">Led a comprehensive data migration project for Dim Mak Records, streamlining their digital asset management and enhancing operational efficiency.</p>
                             <ul class="list-disc list-inside">
@@ -187,7 +187,7 @@
                             <div class="project-image h-64 bg-contain bg-center bg-no-repeat" style="background-image: url('assets/sema-yoga.png');"></div>
                             <h3 class="text-xl font-bold mt-4">Video Hosting Website and Member Platform - Sema Yoga</h3>
                         </div>
-                        <div class="absolute back inset-0 bg-primary text-white rounded-lg shadow-md p-4 [transform:rotateY(180deg)] [backface-visibility:hidden] overflow-y-auto">
+                        <div class="absolute back inset-0 bg-white text-black rounded-lg shadow-md p-4 [transform:rotateY(180deg)] [backface-visibility:hidden] overflow-y-auto">
                             <h3 class="text-xl font-bold mb-4">Video Hosting Website and Member Platform - Sema Yoga</h3>
                             <p class="mb-4">Engineered a high-performance video hosting platform for Semayoga.com, revolutionizing member engagement through unlimited content access and intelligent content management.</p>
                             <ul class="list-disc list-inside">
@@ -208,9 +208,9 @@
             <div class="project-cards flex flex-col md:grid md:grid-cols-2 gap-8">
                 <div class="project-card group [perspective:1000px] transition-all duration-500 ease-in-out">
                     <div class="relative h-full w-full transition-all duration-500 [transform-style:preserve-3d]">
-                        <div class="absolute inset-0 bg-white rounded-lg shadow-md p-4 [backface-visibility:hidden]">
-                            <div class="project-image h-64 bg-contain bg-center bg-no-repeat" style="background-image: url('assets/backgammon.png');"></div>
-                            <h3 class="text-xl font-bold mt-4">Multi-Player Backgammon Member Platform</h3>
+                        <div class="absolute inset-0 bg-primary rounded-lg shadow-md p-4 [backface-visibility:hidden]">
+                            <div class="project-image h-64 bg-contain bg-center bg-no-repeat rounded-sm overflow-hidden" style="background-image: url('assets/backgammon.png');"></div>
+                            <h3 class="text-xl font-bold text-white mt-4">Multi-Player Backgammon Member Platform</h3>
                         </div>
                         <div class="absolute back inset-0 bg-primary text-white rounded-lg shadow-md p-4 [transform:rotateY(180deg)] [backface-visibility:hidden] overflow-y-auto">
                             <h3 class="text-xl font-bold mb-4">Multi-Player Backgammon Member Platform</h3>
@@ -225,9 +225,9 @@
                 </div>
                 <div class="project-card group [perspective:1000px] transition-all duration-500 ease-in-out">
                     <div class="relative h-full w-full transition-all duration-500 [transform-style:preserve-3d]">
-                        <div class="absolute back inset-0 bg-white rounded-lg shadow-md p-4 [backface-visibility:hidden]">
-                            <div class="project-image h-64 bg-contain bg-center bg-no-repeat" style="background-image: url('assets/crypto-trading.png');"></div>
-                            <h3 class="text-xl font-bold mt-4">Automated Cryptocurrency Trading System</h3>
+                        <div class="absolute back inset-0 bg-primary rounded-lg shadow-md p-4 [backface-visibility:hidden]">
+                            <div class="project-image h-64 bg-contain bg-center bg-no-repeat rounded-sm overflow-hidden" style="background-image: url('assets/robotrade.png');"></div>
+                            <h3 class="text-xl font-bold text-white mt-4">Automated Cryptocurrency Trading System</h3>
                         </div>
                         <div class="absolute inset-0 bg-primary text-white rounded-lg shadow-md p-4 [transform:rotateY(180deg)] [backface-visibility:hidden] overflow-y-auto">
                             <h3 class="text-xl font-bold mb-4">Automated Cryptocurrency Trading System</h3>
@@ -244,9 +244,9 @@
         </div>
     </section>
 
-    <section id="team" class="bg-white py-16">
+    <section id="team" class="bg-primary py-16">
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-secondary">Our Team</h2>
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-white">Our Team</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <div class="team-member group h-64 [perspective:1000px]">
                     <div class="relative h-full w-full transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
@@ -255,9 +255,8 @@
                             <h3 class="text-xl font-semibold text-center">Bryce Merrill</h3>
                             <p class="text-center text-gray-600">Principal Software Engineer</p>
                         </div>
-                        <div class="absolute inset-0 bg-primary text-white rounded-lg shadow-md p-4 [transform:rotateY(180deg)] [backface-visibility:hidden] overflow-y-auto">
-                            <h3 class="text-xl font-semibold text-center mb-4">Bryce Merrill</h3>
-                            <p class="text-center">Bryce is an exceptional engineer with a passion for intelligent systems and automation.</p>
+                        <div class="absolute inset-0 bg-white text-black rounded-lg shadow-md p-4 [transform:rotateY(180deg)] [backface-visibility:hidden] overflow-y-auto">
+                            <p class="text-center">Bryce is an adaptive engineer with a passion for intelligent systems and automations that transform processes and deliver huge value. He specializes in backend systems, but isn't afraid to get his hands dirty with frontend, API, and data intergrations.</p>
                         </div>
                     </div>
                 </div>
@@ -268,9 +267,8 @@
                             <h3 class="text-xl font-semibold text-center">Leyla Firatli</h3>
                             <p class="text-center text-gray-600">Data Architect + Web Developer</p>
                         </div>
-                        <div class="absolute inset-0 bg-primary text-white rounded-lg shadow-md p-4 [transform:rotateY(180deg)] [backface-visibility:hidden] overflow-y-auto">
-                            <h3 class="text-xl font-semibold text-center mb-4">Leyla Firatli</h3>
-                            <p class="text-center">Leyla is a seasoned data architect with 7+ years of experience in data infrastructure, migrations and web development.</p>
+                        <div class="absolute inset-0 bg-white text-black rounded-lg shadow-md p-4 [transform:rotateY(180deg)] [backface-visibility:hidden] overflow-y-auto">
+                            <p class="text-center">Leyla is a seasoned data architect with 7+ years of experience in data infrastructure and migrations for clients like Google, Headway, and Accenture. She's also a creative web developer with a knack for building fun and intuitive experiences.</p>
                         </div>
                     </div>
                 </div>
@@ -281,9 +279,8 @@
                             <h3 class="text-xl font-semibold text-center">Deanna Patelis</h3>
                             <p class="text-center text-gray-600">Machine Learning Engineer</p>
                         </div>
-                        <div class="absolute inset-0 bg-primary text-white rounded-lg shadow-md p-4 [transform:rotateY(180deg)] [backface-visibility:hidden] overflow-y-auto">
-                            <h3 class="text-xl font-semibold text-center mb-4">Deanna Patelis</h3>
-                            <p class="text-center">Deanna is an expert in machine learning with a focus on applied LLM solutions.</p>
+                        <div class="absolute inset-0 bg-white text-black rounded-lg shadow-md p-4 [transform:rotateY(180deg)] [backface-visibility:hidden] overflow-y-auto">
+                            <p class="text-center">Deanna is an expert in machine learning with a focus on applied cutting-edge LLM solutions. Additionally, she wields DevOps magic to ensure projects are efficiently deployed and improved.</p>
                         </div>
                     </div>
                 </div>
@@ -292,10 +289,9 @@
                         <div class="absolute inset-0 bg-white rounded-lg shadow-md p-4 [backface-visibility:hidden]">
                             <img src="assets/team-member-4.png" alt="Isaac Vandyne" class="w-32 h-32 mx-auto rounded-full mb-4">
                             <h3 class="text-xl font-semibold text-center">Isaac Vandyne</h3>
-                            <p class="text-center text-gray-600">Product Designer + Creative Tactician</p>
+                            <p class="text-center text-gray-600">Product Designer/Creative Tactician</p>
                         </div>
-                        <div class="absolute inset-0 bg-primary text-white rounded-lg shadow-md p-4 [transform:rotateY(180deg)] [backface-visibility:hidden] overflow-y-auto">
-                            <h3 class="text-xl font-semibold text-center mb-4">Isaac Vandyne</h3>
+                        <div class="absolute inset-0 bg-white text-black rounded-lg shadow-md p-4 [transform:rotateY(180deg)] [backface-visibility:hidden] overflow-y-auto">
                             <p class="text-center">With a colorful background in graphic and motion design, and 7+ years of experience building complex b2b software platforms, Isaac has both the imagination and technical ability to craft world class products that solve users problems.</p>
                         </div>
                     </div>
@@ -303,26 +299,9 @@
             </div>
         </div>
     </section>
-
-    <section id="testimonials" class="testimonials-section bg-gray-100 py-16">
+    <section id="contact" class="contact-section bg-black py-16">
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-secondary">What Our Clients Say</h2>
-            <div class="testimonial-slider">
-                <div class="testimonial bg-white rounded-lg shadow-md p-6 mb-4">
-                    <p class="quote text-lg italic mb-4">"CodeSeed's AI-powered analytics platform has transformed our decision-making process. It's been a game-changer for our business."</p>
-                    <p class="author font-semibold">- Sarah Johnson, CEO of TechCorp</p>
-                </div>
-                <div class="testimonial bg-white rounded-lg shadow-md p-6 mb-4">
-                    <p class="quote text-lg italic mb-4">"The team at CodeSeed delivered our IoT solution on time and exceeded our expectations. Their expertise is unmatched."</p>
-                    <p class="author font-semibold">- Michael Chen, CTO of SmartCity Solutions</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact" class="contact-section bg-white py-16">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-secondary">Work with us</h2>
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-white">Work with us</h2>
             <form id="contact-form" action="https://formspree.io/f/mnnaoeoa" method="POST" class="max-w-lg mx-auto">
                 <input type="text" name="name" placeholder="Your Name" required class="w-full mb-4 p-2 border border-gray-300 rounded">
                 <input type="email" name="_replyto" placeholder="Your Email" required class="w-full mb-4 p-2 border border-gray-300 rounded">

@@ -227,8 +227,8 @@
 
 /* Team member card styles */
 .team-member img {
-    width: 160px;
-    height: 160px;
+    width: 128px;
+    height: 128px;
     margin: 0 auto 1rem;
     border-radius: 50%;
     object-fit: cover;
@@ -240,8 +240,8 @@
 
 @media (max-width: 767px) {
     .team-member img {
-        width: 140px;
-        height: 140px;
+        width: 112px;
+        height: 112px;
     }
 
     .team-member {
