@@ -106,64 +106,64 @@ if (menuToggle && navMenu) {
 }
 
 // Project cards and team member cards
-const projectCards = document.querySelectorAll('.project-card');
-const teamMembers = document.querySelectorAll('.team-member');
-
-function handleCardInteraction(cards, isProjectCard = false) {
-    cards.forEach(card => {
-        const cardInner = card.querySelector('.relative');
-        const cardBack = card.querySelector('.absolute.back');
-
-        function toggleCard() {
-            card.classList.toggle('expanded');
-            cardInner.classList.toggle('rotate-y-180');
-            
-            if (cardInner.classList.contains('rotate-y-180')) {
-                setTimeout(() => {
-                    cardBack.style.height = `${cardBack.scrollHeight}px`;
-                    card.style.height = `${cardBack.scrollHeight}px`;
-                }, 300);
-            } else {
-                cardBack.style.height = '';
-                card.style.height = '';
-            }
-
-            if (isProjectCard) {
-                cards.forEach(otherCard => {
-                    if (otherCard !== card) {
-                        otherCard.classList.remove('expanded');
-                        otherCard.querySelector('.relative').classList.remove('rotate-y-180');
-                        otherCard.querySelector('.absolute.back').style.height = '';
-                        otherCard.style.height = '';
-                    }
-                });
-            }
-
-            // Force layout recalculation
-            card.offsetHeight;
-        }
-
-        if ('ontouchstart' in window || navigator.maxTouchPoints > 0) {
-            // Mobile interaction
-            card.addEventListener('click', toggleCard);
-        } else {
-            // Desktop interaction
-            if (isProjectCard) {
-                card.addEventListener('mouseenter', toggleCard);
-                card.addEventListener('mouseleave', toggleCard);
-            } else {
-                // For team members, only toggle on click for both mobile and desktop
-                card.addEventListener('click', toggleCard);
-            }
-        }
-    });
-}
-
-handleCardInteraction(projectCards, true);
-handleCardInteraction(teamMembers, false);
-
-// Mobile Menu
 document.addEventListener('DOMContentLoaded', function() {
+    const projectCards = document.querySelectorAll('.project-card');
+    const teamMembers = document.querySelectorAll('.team-member');
+
+    function handleCardInteraction(cards, isProjectCard = false) {
+        cards.forEach(card => {
+            const cardInner = card.querySelector('.relative');
+            const cardBack = card.querySelector('.absolute.back');
+
+            function toggleCard() {
+                card.classList.toggle('expanded');
+                cardInner.classList.toggle('rotate-y-180');
+                
+                if (cardInner.classList.contains('rotate-y-180')) {
+                    setTimeout(() => {
+                        cardBack.style.height = `${cardBack.scrollHeight}px`;
+                        card.style.height = `${cardBack.scrollHeight}px`;
+                    }, 300);
+                } else {
+                    cardBack.style.height = '';
+                    card.style.height = '';
+                }
+
+                if (isProjectCard) {
+                    cards.forEach(otherCard => {
+                        if (otherCard !== card) {
+                            otherCard.classList.remove('expanded');
+                            otherCard.querySelector('.relative').classList.remove('rotate-y-180');
+                            otherCard.querySelector('.absolute.back').style.height = '';
+                            otherCard.style.height = '';
+                        }
+                    });
+                }
+
+                // Force layout recalculation
+                card.offsetHeight;
+            }
+
+            if ('ontouchstart' in window || navigator.maxTouchPoints > 0) {
+                // Mobile interaction
+                card.addEventListener('click', toggleCard);
+            } else {
+                // Desktop interaction
+                if (isProjectCard) {
+                    card.addEventListener('mouseenter', toggleCard);
+                    card.addEventListener('mouseleave', toggleCard);
+                } else {
+                    // For team members, only toggle on click for both mobile and desktop
+                    card.addEventListener('click', toggleCard);
+                }
+            }
+        });
+    }
+
+    handleCardInteraction(projectCards, true);
+    handleCardInteraction(teamMembers, false);
+
+    // Mobile menu functionality
     const mobileMenuButton = document.getElementById('mobile-menu-button');
     const mobileMenu = document.getElementById('mobile-menu');
 
