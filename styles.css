@@ -322,3 +322,18 @@
         display: none !important;
     }
 }
+
+[data-active="true"] {
+    background-color: #5a7d5c; /* secondary color */
+    color: white;
+}
+
+[data-active="false"] {
+    background-color: transparent;
+    color: #5a7d5c;
+}
+
+#language-toggle {
+    background-color: #5a7d5c; /* secondary color */
+    color: white;
+}

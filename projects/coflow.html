@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CoFlow Project - Code Seed</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#8dba90',
+                        secondary: '#5a7d5c',
+                        accent: '#D2B48C',
+                        tan: '#D2B48C',
+                    },
+                    fontFamily: {
+                        'fira': ['"Fira Code"', 'monospace'],
+                    },
+                }
+            }
+        }
+    </script>
+    <script src="../script.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="../styles.css" rel="stylesheet">
+</head>
+<body class="font-fira bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-md fixed w-full z-50">
+        <nav class="container mx-auto px-4 py-5">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center transition-transform duration-300 ease-in-out hover:scale-105">
+                    <img src="../assets/codeseed-logo.png" alt="CodeSeed Logo" id="header-logo" class="h-20 w-auto mr-4">
+                    <span class="text-2xl font-bold text-primary lowercase tracking-wide">code-seed</span>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-500 hover:text-gray-600 focus:outline-none focus:text-gray-600" aria-label="Toggle menu">
+                        <svg viewBox="0 0 24 24" class="h-6 w-6 fill-current">
+                            <path fill-rule="evenodd" d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"></path>
+                        </svg>
+                    </button>
+                </div>
+                <ul class="hidden md:flex space-x-6">
+                    <li><a href="../index.html#home" class="text-gray-800 hover:text-primary transition-colors duration-300">Home</a></li>
+                    <li><a href="../index.html#projects" class="text-gray-800 hover:text-primary transition-colors duration-300">Project Garden</a></li>
+                    <li><a href="../index.html#team" class="text-gray-800 hover:text-primary transition-colors duration-300">Our Team</a></li>
+                    <li><a href="../index.html#contact" class="text-gray-800 hover:text-primary transition-colors duration-300">Work with Us</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div id="mobile-menu" class="md:hidden hidden">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="../index.html#home" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">Home</a>
+                <a href="../index.html#projects" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">Project Garden</a>
+                <a href="../index.html#team" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">Our Team</a>
+                <a href="../index.html#contact" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">Work with Us</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Project Content -->
+    <main class="pt-32 pb-16">
+        <div class="container mx-auto px-4">
+            <article class="max-w-4xl mx-auto">
+                <!-- Project Header -->
+                <section class="bg-white p-8 rounded-lg shadow-sm mb-12">
+                    <h1 class="text-4xl font-bold mb-4 text-secondary text-center">CoFlow: Advanced AI-Powered Community Management Bot</h1>
+                    <p class="text-xl text-gray-600 text-center">Automated Discord Community Management</p>
+                </section>
+
+                <!-- Project Details -->
+                <div class="space-y-8">
+                    <!-- Overview Section -->
+                    <section class="bg-white p-8 rounded-lg shadow-sm">
+                        <h2 class="text-2xl font-bold text-secondary mb-4">Project Overview</h2>
+                        <p class="text-gray-700 mb-4">
+                            Developed a sophisticated Discord bot that leverages cutting-edge AI technologies to revolutionize 
+                            community management. CoFlow seamlessly integrates natural language processing with community 
+                            engagement tools, creating an intelligent system that both moderates and enhances user interaction.
+                        </p>
+                        <p class="text-gray-700">
+                            This solution transforms how communities are managed by automating routine tasks while maintaining 
+                            a natural, context-aware interaction style that community members find engaging and helpful.
+                        </p>
+                    </section>
+
+                    <!-- Challenge Section -->
+                    <section class="bg-white p-8 rounded-lg shadow-sm">
+                        <h2 class="text-2xl font-bold text-secondary mb-4">Technical Challenge</h2>
+                        <p class="text-gray-700 mb-4">
+                            The primary challenge was developing a system capable of:
+                        </p>
+                        <ul class="list-disc list-inside space-y-2 text-gray-700 mb-4">
+                            <li>Implementing context-aware AI responses that maintain conversation coherence</li>
+                            <li>Managing high-volume real-time message processing while maintaining low latency</li>
+                            <li>Creating scalable event management systems that work across different time zones</li>
+                            <li>Developing intelligent moderation that balances community safety with engagement</li>
+                        </ul>
+                    </section>
+
+                    <!-- Solution Section -->
+                    <section class="bg-white p-8 rounded-lg shadow-sm">
+                        <h2 class="text-2xl font-bold text-secondary mb-4">Solution Architecture</h2>
+                        <div class="space-y-6">
+                            <div>
+                                <h3 class="font-bold text-primary mb-2">Core System Components</h3>
+                                <ul class="space-y-3 text-gray-700">
+                                    <li class="flex items-start">
+                                        <span class="text-primary mr-2">•</span>
+                                        Advanced NLP engine using Claude models for context-aware communication
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="text-primary mr-2">•</span>
+                                        Intelligent event scheduling system with timezone optimization
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="text-primary mr-2">•</span>
+                                        Smart polling system with automated result analysis
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="text-primary mr-2">•</span>
+                                        Real-time analytics dashboard for community insights
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                            <div>
+                                <h3 class="font-bold text-primary mb-2">Infrastructure Design</h3>
+                                <ul class="space-y-3 text-gray-700">
+                                    <li class="flex items-start">
+                                        <span class="text-primary mr-2">•</span>
+                                        Microservices architecture deployed on Heroku for scalability
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="text-primary mr-2">•</span>
+                                        PostgreSQL database for robust data persistence
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="text-primary mr-2">•</span>
+                                        Redis cache layer for high-performance message processing
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Tech Stack Section -->
+                    <section class="bg-white p-8 rounded-lg shadow-sm">
+                        <h2 class="text-2xl font-bold text-secondary mb-4">Technology Stack</h2>
+                        <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                            <div class="flex items-center space-x-2 p-3 border border-gray-200 rounded-lg">
+                                <i class="fas fa-code text-primary"></i>
+                                <span>Python</span>
+                            </div>
+                            <div class="flex items-center space-x-2 p-3 border border-gray-200 rounded-lg">
+                                <i class="fas fa-robot text-primary"></i>
+                                <span>LLM Models</span>
+                            </div>
+                            <div class="flex items-center space-x-2 p-3 border border-gray-200 rounded-lg">
+                                <i class="fas fa-server text-primary"></i>
+                                <span>Heroku</span>
+                            </div>
+                            <div class="flex items-center space-x-2 p-3 border border-gray-200 rounded-lg">
+                                <i class="fas fa-database text-primary"></i>
+                                <span>PostgreSQL</span>
+                            </div>
+                            <div class="flex items-center space-x-2 p-3 border border-gray-200 rounded-lg">
+                                <i class="fas fa-bolt text-primary"></i>
+                                <span>Redis</span>
+                            </div>
+                            <div class="flex items-center space-x-2 p-3 border border-gray-200 rounded-lg">
+                                <i class="fas fa-comments text-primary"></i>
+                                <span>Discord API</span>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <!-- Contact Section -->
+    <section class="bg-black py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-8 text-white">Interested in similar solutions?</h2>
+            <div class="text-center">
+                <a href="../index.html#contact" class="inline-block bg-primary hover:bg-secondary text-white font-bold py-3 px-8 rounded-full transition-colors duration-300">
+                    Let's Talk
+                </a>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

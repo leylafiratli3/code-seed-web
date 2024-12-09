@@ -44,74 +44,174 @@
                     </button>
                 </div>
                 <ul class="hidden md:flex space-x-6">
-                    <li><a href="#home" class="text-gray-800 hover:text-primary transition-colors duration-300">Home</a></li>
-                    <li><a href="#projects" class="text-gray-800 hover:text-primary transition-colors duration-300">Project Garden</a></li>
-                    <li><a href="#team" class="text-gray-800 hover:text-primary transition-colors duration-300">Our Team</a></li>
-                    <li><a href="#contact" class="text-gray-800 hover:text-primary transition-colors duration-300">Work with Us</a></li>
+                    <li><a href="#home" class="text-gray-800 hover:text-primary transition-colors duration-300">
+                        <span data-lang="en">Home</span>
+                        <span data-lang="tr" class="hidden">Ana Sayfa</span>
+                    </a></li>
+                    <li><a href="#projects" class="text-gray-800 hover:text-primary transition-colors duration-300">
+                        <span data-lang="en">Case Studies</span>
+                        <span data-lang="tr" class="hidden">Örnek Çalışmalar</span>
+                    </a></li>
+                    <li><a href="#team" class="text-gray-800 hover:text-primary transition-colors duration-300">
+                        <span data-lang="en">Our Team</span>
+                        <span data-lang="tr" class="hidden">Ekibimiz</span>
+                    </a></li>
+                    <li><a href="#contact" class="text-gray-800 hover:text-primary transition-colors duration-300">
+                        <span data-lang="en">Work with Us</span>
+                        <span data-lang="tr" class="hidden">Bizimle Çalışın</span>
+                    </a></li>
+                    <li>
+                        <button id="language-toggle" class="text-white bg-secondary hover:bg-primary transition-colors duration-300 px-3 py-1 rounded-full">
+                            <span data-lang="en">TR</span>
+                            <span data-lang="tr" class="hidden">EN</span>
+                        </button>
+                    </li>
                 </ul>
             </div>
         </nav>
         <div id="mobile-menu" class="md:hidden hidden">
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <a href="#home" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">Home</a>
-                <a href="#projects" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">Project Garden</a>
-                <a href="#team" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">Our Team</a>
-                <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">Work with Us</a>
+                <a href="#home" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">
+                    <span data-lang="en">Home</span>
+                    <span data-lang="tr" class="hidden">Ana Sayfa</span>
+                </a>
+                <a href="#projects" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">
+                    <span data-lang="en">Project Garden</span>
+                    <span data-lang="tr" class="hidden">Proje Bahçesi</span>
+                </a>
+                <a href="#team" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">
+                    <span data-lang="en">Our Team</span>
+                    <span data-lang="tr" class="hidden">Ekibimiz</span>
+                </a>
+                <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">
+                    <span data-lang="en">Work with Us</span>
+                    <span data-lang="tr" class="hidden">Bizimle Çalışın</span>
+                </a>
+                <button id="mobile-language-toggle" class="block w-full text-left px-3 py-2 rounded-md text-base font-medium text-white bg-secondary hover:bg-primary transition duration-150 ease-in-out">
+                    <span data-lang="en">Türkçe</span>
+                    <span data-lang="tr" class="hidden">English</span>
+                </button>
             </div>
         </div>
     </header>
 
     <section class="hero relative h-screen overflow-hidden">
         <div class="video-background absolute inset-0 overflow-hidden">
-            <video autoplay loop muted playsinline class="min-w-full min-h-full object-cover absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+            <video autoplay loop muted playsinline class="min-w-full min-h-full object-cover absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-40">
                 <source src="assets/codeseed-background.mp4" type="video/mp4">
             </video>
-            <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+            <div class="absolute inset-0 bg-black bg-opacity-60"></div>
         </div>
         <div class="hero-content container mx-auto px-4 h-full flex items-center justify-center text-center text-white relative z-10">
-            <div class="hero-card bg-black bg-opacity-60 p-8 rounded-lg shadow-lg">
-                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">Growing cutting-edge tech solutions with</h1>
-                <h2 class="text-3xl md:text-4xl lg:text-5xl mb-8"><span id="rotating-word" class="text-primary font-bold"></span></h2>
-                <a href="#projects" class="cta-button bg-primary hover:bg-secondary text-white font-bold py-3 px-6 rounded-full transition-colors duration-300 inline-block w-full sm:w-auto text-base sm:text-lg whitespace-normal sm:whitespace-nowrap">Explore Our Project Garden</a>
+            <div class="hero-card bg-black bg-opacity-60 p-8 rounded-lg shadow-lg max-w-4xl">
+                <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+                    <span data-lang="en">Growing cutting-edge tech solutions with</span>
+                    <span data-lang="tr" class="hidden">En yeni teknoloji çözümlerini geliştiriyoruz:</span>
+                </h1>
+                <h2 class="text-2xl md:text-3xl lg:text-4xl mb-6"><span id="rotating-word" class="text-primary font-bold"></span></h2>
+                <p class="text-lg md:text-xl mb-8 text-gray-200">
+                    <span data-lang="en">We build powerful digital solutions using advanced technologies. Our team of expert engineers delivers sophisticated web applications, data architectures, and custom software, powered by cutting-edge cloud computing and machine learning capabilities.</span>
+                    <span data-lang="tr" class="hidden">Gelişmiş teknolojiler kullanarak güçlü dijital çözümler inşa ediyoruz. Uzman yazılımclılardan oluşan ekibimiz, gelişmiş bulut bilişim ve makine öğrenimi yetenekleriyle desteklenen sofistike web uygulamaları, appler, veri mimarileri ve özel yazılımlar sunuyor.</span>
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="#projects" class="bg-transparent hover:bg-primary border-2 border-primary text-white font-bold py-3 px-6 rounded-full transition-colors duration-300 text-base">
+                        <span data-lang="en">Case Studies</span>
+                        <span data-lang="tr" class="hidden">Örnek Çalışmalarımız</span>
+                    </a>
+                    <a href="#contact" class="bg-transparent hover:bg-primary border-2 border-primary text-white font-bold py-3 px-6 rounded-full transition-colors duration-300 text-base">
+                        <span data-lang="en">Work With Us</span>
+                        <span data-lang="tr" class="hidden">Bizimle Çalışın</span>
+                    </a>
+                </div>
             </div>
         </div>
     </section>
 
     <section id="about" class="about-section bg-gray-100 py-16">
         <div class="container mx-auto px-4">
-            <p class="about-intro text-center max-w-3xl mx-auto mb-12 text-xl">We seed innovation with advanced technologies, cultivating tailored solutions that bloom into transformative results</p>
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-secondary">
+                <span data-lang="en">Our Services</span>
+                <span data-lang="tr" class="hidden">Hizmetlerimiz</span>
+            </h2>
             <div class="tech-grid grid grid-cols-2 md:grid-cols-4 gap-6">
                 <div class="tech-item bg-white rounded-lg p-6 text-center shadow-md transition-all duration-300 transform hover:scale-105">
                     <i class="fas fa-brain text-5xl text-primary mb-4"></i>
-                    <h3 class="text-lg font-semibold">Integrated LLM Solutions</h3>
+                    <h3 class="text-lg font-semibold">
+                        <span data-lang="en">Integrated LLM Solutions</span>
+                        <span data-lang="tr" class="hidden">Entegre LLM Çözümleri</span>
+                    </h3>
                 </div>
                 <div class="tech-item bg-white rounded-lg p-6 text-center shadow-md transition-all duration-300 transform hover:scale-105">
                     <i class="fas fa-code text-5xl text-primary mb-4"></i>
-                    <h3 class="text-lg font-semibold">Software Development</h3>
+                    <h3 class="text-lg font-semibold">
+                        <span data-lang="en">Software Development</span>
+                        <span data-lang="tr" class="hidden">Yazılım Geliştirme</span>
+                    </h3>
                 </div>
                 <div class="tech-item bg-white rounded-lg p-6 text-center shadow-md transition-all duration-300 transform hover:scale-105">
                     <i class="fas fa-cloud text-5xl text-primary mb-4"></i>
-                    <h3 class="text-lg font-semibold">Cloud Computing</h3>
+                    <h3 class="text-lg font-semibold">
+                        <span data-lang="en">Cloud Computing</span>
+                        <span data-lang="tr" class="hidden">Bulut Bilişim</span>
+                    </h3>
                 </div>
                 <div class="tech-item bg-white rounded-lg p-6 text-center shadow-md transition-all duration-300 transform hover:scale-105">
                     <i class="fas fa-database text-5xl text-primary mb-4"></i>
-                    <h3 class="text-lg font-semibold">Data Analytics & Engineering</h3>
+                    <h3 class="text-lg font-semibold">
+                        <span data-lang="en">Data Analytics & Engineering</span>
+                        <span data-lang="tr" class="hidden">Veri Analitiği ve Mühendisliği</span>
+                    </h3>
                 </div>
                 <div class="tech-item bg-white rounded-lg p-6 text-center shadow-md transition-all duration-300 transform hover:scale-105">
                     <i class="fas fa-globe text-5xl text-primary mb-4"></i>
-                    <h3 class="text-lg font-semibold">Web Development</h3>
+                    <h3 class="text-lg font-semibold">
+                        <span data-lang="en">Web Development</span>
+                        <span data-lang="tr" class="hidden">Web Geliştirme</span>
+                    </h3>
                 </div>
                 <div class="tech-item bg-white rounded-lg p-6 text-center shadow-md transition-all duration-300 transform hover:scale-105">
                     <i class="fas fa-pencil-ruler text-5xl text-primary mb-4"></i>
-                    <h3 class="text-lg font-semibold">Product Design</h3>
+                    <h3 class="text-lg font-semibold">
+                        <span data-lang="en">Product Design</span>
+                        <span data-lang="tr" class="hidden">Ürün Tasarımı</span>
+                    </h3>
                 </div>
                 <div class="tech-item bg-white rounded-lg p-6 text-center shadow-md transition-all duration-300 transform hover:scale-105">
                     <i class="fas fa-robot text-5xl text-primary mb-4"></i>
-                    <h3 class="text-lg font-semibold">Applied Machine Learning</h3>
+                    <h3 class="text-lg font-semibold">
+                        <span data-lang="en">Applied Machine Learning</span>
+                        <span data-lang="tr" class="hidden">Uygulamalı Makine Öğrenimi</span>
+                    </h3>
                 </div>
                 <div class="tech-item bg-white rounded-lg p-6 text-center shadow-md transition-all duration-300 transform hover:scale-105">
                     <i class="fas fa-cogs text-5xl text-primary mb-4"></i>
-                    <h3 class="text-lg font-semibold">Adaptive Automation</h3>
+                    <h3 class="text-lg font-semibold">
+                        <span data-lang="en">Adaptive Automation</span>
+                        <span data-lang="tr" class="hidden">Adaptif Otomasyon</span>
+                    </h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="clients-section bg-white py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-secondary">
+                <span data-lang="en">We've Worked With</span>
+                <span data-lang="tr" class="hidden">Birlikte Çalıştığımız Firmalar</span>
+            </h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 items-center justify-items-center">
+                <div class="client-logo w-56 h-32 flex items-center justify-center bg-white rounded-lg p-4 transition-all duration-300 hover:grayscale-0">
+                    <img src="assets/google.png" alt="Google" class="object-contain w-full h-full grayscale">
+                </div>
+                <div class="client-logo w-56 h-32 flex items-center justify-center bg-white rounded-lg p-4 transition-all duration-300 hover:grayscale-0">
+                    <img src="assets/harman.png" alt="Harman International" class="object-contain w-full h-full grayscale">
+                </div>
+                <div class="client-logo w-56 h-32 flex items-center justify-center bg-white rounded-lg p-4 transition-all duration-300 hover:grayscale-0">
+                    <img src="assets/accenture.png" alt="Accenture" class="object-contain w-full h-full grayscale">
+                </div>
+                <div class="client-logo w-56 h-32 flex items-center justify-center bg-white rounded-lg p-4 transition-all duration-300 hover:grayscale-0">
+                    <img src="assets/dimmak.png" alt="Dim Mak Records" class="object-contain w-full h-full grayscale">
                 </div>
             </div>
         </div>
@@ -119,22 +219,53 @@
 
     <section id="projects" class="projects-section bg-green py-16">
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-white">Project Garden</h2>
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-white">
+                <span data-lang="en">Case Studies</span>
+                <span data-lang="tr" class="hidden">Örnek Çalışmalar</span>
+            </h2>
             <div class="project-cards flex flex-col md:grid md:grid-cols-2 gap-8">
                 <div class="project-card group [perspective:1000px] transition-all duration-500 ease-in-out">
                     <div class="relative h-full w-full transition-all duration-500 [transform-style:preserve-3d]">
                         <div class="absolute inset-0 bg-white rounded-lg shadow-md p-4 [backface-visibility:hidden]">
                             <div class="project-image h-64 bg-contain bg-center bg-no-repeat" style="background-image: url('assets/harman.png');"></div>
-                            <h3 class="text-xl font-bold mt-4">Commander System: Automated Operations - Harman International</h3>
+                            <h3 class="text-xl font-bold mt-4">
+                                <span data-lang="en">Commander System: Automated Operations - Harman International</span>
+                                <span data-lang="tr" class="hidden">Komutan Sistemi: Otomatik Operasyonlar - Harman International</span>
+                            </h3>
                         </div>
-                        <div class="absolute back inset-0 bg-white text-black rounded-lg shadow-md p-4 [transform:rotateY(180deg)] [backface-visibility:hidden] overflow-y-auto">
-                            <h3 class="text-xl font-bold mb-4">Custom Cloud-Based Automated Operations Management Suite for Harman International Industries</h3>
-                            <p class="mb-4">Designed, developed, and implemented custom cloud-based automated operations management system for multiple regions.</p>
-                            <ul class="list-disc list-inside">
-                                <li>Automates optimized allocation decision-making and predicts daily allocation and other operational statuses 6+ months into the future.</li>
-                                <li>Processes daily orders worth 1M-10M USD and manages 1B+ USD inventory/revenue annually.</li>
-                                <li>Custom python codebase running on CI/CD-enabled Kubernetes deployment on AWS, interacts with Snowflake data warehouse and various regional ERP systems (SAP and TOTVS)</li>
-                            </ul>
+                        <div class="absolute back inset-0 bg-white text-black rounded-lg shadow-md p-4 [transform:rotateY(180deg)] [backface-visibility:hidden] overflow-y-auto flex flex-col">
+                            <h3 class="text-xl font-bold mb-4">
+                                <span data-lang="en">Custom Cloud-Based Automated Operations Management Suite for Harman International Industries</span>
+                                <span data-lang="tr" class="hidden">Harman International Industries için Özel Bulut Tabanlı Otomatik Operasyon Yönetim Paketi</span>
+                            </h3>
+                            <div class="flex-grow">
+                                <p class="mb-4">
+                                    <span data-lang="en">Designed, developed, and implemented custom cloud-based automated operations management system for multiple regions.</span>
+                                    <span data-lang="tr" class="hidden">Birden fazla bölge için özel bulut tabanlı otomatik operasyon yönetim sistemi tasarlandı, geliştirildi ve uygulandı.</span>
+                                </p>
+                                <ul class="list-disc list-inside">
+                                    <li>
+                                        <span data-lang="en">Automates optimized allocation decision-making and predicts daily allocation and other operational statuses 6+ months into the future.</span>
+                                        <span data-lang="tr" class="hidden">Optimizasyonlu tahsis kararları otomatikleştirildi ve günlük tahsis ve diğer operasyonel durumları 6+ ay öncesinden tahmin edildi.</span>
+                                    </li>
+                                    <li>
+                                        <span data-lang="en">Processes daily orders worth 1M-10M USD and manages 1B+ USD inventory/revenue annually.</span>
+                                        <span data-lang="tr" class="hidden">Günlük 1M-10M USD değerinde siparişleri iilendi ve yıllık 1B+ USD envanter/gelir yönetildi..</span>
+                                    </li>
+                                    <li>
+                                        <span data-lang="en">Custom python codebase running on CI/CD-enabled Kubernetes deployment on AWS, interacts with Snowflake data warehouse and various regional ERP systems (SAP and TOTVS)</span>
+                                        <span data-lang="tr" class="hidden">AWS üzerinde CI/CD etkin Kubernetes dağıtımında çalışan özel python kod tabanı, Snowflake veri ambarı ve çeşitli bölgesel ERP sistemleri (SAP ve TOTVS) ile etkileşimde bulundu.</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="mt-4 text-center">
+                                <a href="/projects/harman.html" data-lang="en" class="inline-block bg-primary hover:bg-secondary text-white font-bold py-2 px-6 rounded transition-colors duration-300">
+                                    See Project Details
+                                </a>
+                                <a href="/projects/harmantr.html" data-lang="tr" class="hidden inline-block bg-primary hover:bg-secondary text-white font-bold py-2 px-6 rounded transition-colors duration-300">
+                                    Proje Detaylarını Gör
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -142,16 +273,44 @@
                     <div class="relative h-full w-full transition-all duration-500 [transform-style:preserve-3d]">
                         <div class="absolute inset-0 bg-white rounded-lg shadow-md p-4 [backface-visibility:hidden]">
                             <div class="project-image h-64 bg-contain bg-center bg-no-repeat" style="background-image: url('assets/coflow.png');"></div>
-                            <h3 class="text-xl font-bold mt-4">CoFlow: Advanced AI-Powered Community Management Bot</h3>
+                            <h3 class="text-xl font-bold mt-4">
+                                <span data-lang="en">CoFlow: Advanced AI-Powered Community Management Bot</span>
+                                <span data-lang="tr" class="hidden">CoFlow: Gelişmiş AI Destekli Topluluk Yönetim Botu</span>
+                            </h3>
                         </div>
-                        <div class="absolute back inset-0 bg-white text-black rounded-lg shadow-md p-4 [transform:rotateY(180deg)] [backface-visibility:hidden] overflow-y-auto">
-                            <h3 class="text-xl font-bold mb-4">CoFlow: Advanced AI-Powered Community Management Bot</h3>
-                            <p class="mb-4">Developed a sophisticated Discord bot leveraging cutting-edge AI technologies to enhance community engagement and streamline management tasks.</p>
-                            <ul class="list-disc list-inside">
-                                <li>Implemented advanced NLP using GPT models for context-aware communication, increasing community engagement by 40%.</li>
-                                <li>Designed robust event scheduling and smart polling systems, reducing administrative overhead by 60%.</li>
-                                <li>Utilized Python, Discord API, Heroku, PostgreSQL, and Perplexity API to create a scalable, modular solution managing multiple community channels.</li>
-                            </ul>
+                        <div class="absolute back inset-0 bg-white text-black rounded-lg shadow-md p-4 [transform:rotateY(180deg)] [backface-visibility:hidden] overflow-y-auto flex flex-col">
+                            <h3 class="text-xl font-bold mb-4">
+                                <span data-lang="en">CoFlow: Advanced AI-Powered Community Management Bot</span>
+                                <span data-lang="tr" class="hidden">CoFlow: Gelişmiş AI Destekli Topluluk Yönetim Botu</span>
+                            </h3>
+                            <div class="flex-grow">
+                                <p class="mb-4">
+                                    <span data-lang="en">Developed a sophisticated Discord bot leveraging cutting-edge AI technologies to enhance community engagement and streamline management tasks.</span>
+                                    <span data-lang="tr" class="hidden">Topluluk katılımını artırmak ve yönetim görevlerini kolaylaştırmak için en son AI teknolojilerinden yararlanan sofistike bir Discord botu geliştirdi.</span>
+                                </p>
+                                <ul class="list-disc list-inside">
+                                    <li>
+                                        <span data-lang="en">Implemented advanced NLP using Claude models for context-aware communication, increasing community engagement by 40%.</span>
+                                        <span data-lang="tr" class="hidden">Bağlam farkındalığı olan iletişim icin Claude modellerini kullanarak gelişmiş NLP uyguladı, topluluk katılımını %40 artırdı.</span>
+                                    </li>
+                                    <li>
+                                        <span data-lang="en">Designed robust event scheduling and smart polling systems, reducing administrative overhead by 60%.</span>
+                                        <span data-lang="tr" class="hidden">Güçlü etkinlik planlama ve akıllı anket sistemleri tasarladı, idari yükü %60 azalttı.</span>
+                                    </li>
+                                    <li>
+                                        <span data-lang="en">Utilized Python, Discord API, Heroku, PostgreSQL, and Perplexity API to create a scalable, modular solution managing multiple community channels.</span>
+                                        <span data-lang="tr" class="hidden">Python, Discord API, Heroku, PostgreSQL ve Perplexity API kullanarak birden fazla topluluk kanalını yöneten ölçeklenebilir, modüler bir çözüm oluşturdu.</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="mt-4 text-center">
+                                <a href="/projects/coflow.html" data-lang="en" class="inline-block bg-primary hover:bg-secondary text-white font-bold py-2 px-6 rounded transition-colors duration-300">
+                                    See Project Details
+                                </a>
+                                <a href="/projects/coflowtr.html" data-lang="tr" class="hidden inline-block bg-primary hover:bg-secondary text-white font-bold py-2 px-6 rounded transition-colors duration-300">
+                                    Proje Detaylarını Gör
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -159,16 +318,44 @@
                     <div class="relative h-full w-full transition-all duration-500 [transform-style:preserve-3d]">
                         <div class="absolute inset-0 bg-white rounded-lg shadow-md p-4 [backface-visibility:hidden]">
                             <div class="project-image h-64 bg-contain bg-center bg-no-repeat" style="background-image: url('assets/dimmak.png');"></div>
-                            <h3 class="text-xl font-bold mt-4">Data Migration and Infrastructure - Dim Mak Records</h3>
+                            <h3 class="text-xl font-bold mt-4">
+                                <span data-lang="en">Data Migration and Infrastructure - Dim Mak Records</span>
+                                <span data-lang="tr" class="hidden">Veri Geçişi ve İnfrastruktür - Dim Mak Records</span>
+                            </h3>
                         </div>
-                        <div class="absolute back inset-0 bg-white text-black rounded-lg shadow-md p-4 [transform:rotateY(180deg)] [backface-visibility:hidden] overflow-y-auto">
-                            <h3 class="text-xl font-bold mb-4">Data Migration and Infrastructure - Dim Mak Records</h3>
-                            <p class="mb-4">Led a comprehensive data migration project for Dim Mak Records, streamlining their digital asset management and enhancing operational efficiency.</p>
-                            <ul class="list-disc list-inside">
-                                <li>Spearheaded the migration of over 3,500 tracks across multiple DSPs using Python Pandas, ensuring data integrity and completeness.</li>
-                                <li>Orchestrated the consolidation of company-wide systems into a centralized database, improving data accessibility and management.</li>
-                                <li>Managed quality assurance processes, overseeing a team to verify migrated data accuracy and consistency.</li>
-                            </ul>
+                        <div class="absolute back inset-0 bg-white text-black rounded-lg shadow-md p-4 [transform:rotateY(180deg)] [backface-visibility:hidden] overflow-y-auto flex flex-col">
+                            <h3 class="text-xl font-bold mb-4">
+                                <span data-lang="en">Data Migration and Infrastructure - Dim Mak Records</span>
+                                <span data-lang="tr" class="hidden">Veri Geçişi ve İnfrastruktür - Dim Mak Records</span>
+                            </h3>
+                            <div class="flex-grow">
+                                <p class="mb-4">
+                                    <span data-lang="en">Led a comprehensive data migration project for Dim Mak Records, streamlining their digital asset management and enhancing operational efficiency.</span>
+                                    <span data-lang="tr" class="hidden">Dim Mak Records için genişletilmiş veri geçişi projesi liderliği, dijital varlık yönetimi ve işletme verimliliğini artırmak için akıllı bir yöntem uygulandı.</span>
+                                </p>
+                                <ul class="list-disc list-inside">
+                                    <li>
+                                        <span data-lang="en">Spearheaded the migration of over 3,500 tracks across multiple DSPs using Python Pandas, ensuring data integrity and completeness.</span>
+                                        <span data-lang="tr" class="hidden">Python Pandas kullanarak 3,500'den fazla izlemeyi birden fazla DSP'ye geçiş için liderliği, veri bütünlüğü ve tamamlığını sağlandı.</span>
+                                    </li>
+                                    <li>
+                                        <span data-lang="en">Orchestrated the consolidation of company-wide systems into a centralized database, improving data accessibility and management.</span>
+                                        <span data-lang="tr" class="hidden">Şirket genelinde sistemlerin bir merkezli veritabanına entegrasyonu yönetildi, veri erişilebilirliğini ve yönetimini artırıldı.</span>
+                                    </li>
+                                    <li>
+                                        <span data-lang="en">Managed quality assurance processes, overseeing a team to verify migrated data accuracy and consistency.</span>
+                                        <span data-lang="tr" class="hidden">Kalite kontrol süreçleri yönetildi, geçiş veri doğruluğunu ve tutarlılığını doğrulayan bir ekibin liderliği üstlenildi.</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="mt-4 text-center">
+                                <a href="/projects/dimmak.html" data-lang="en" class="inline-block bg-primary hover:bg-secondary text-white font-bold py-2 px-6 rounded transition-colors duration-300">
+                                    See Project Details
+                                </a>
+                                <a href="/projects/dimmaktr.html" data-lang="tr" class="hidden inline-block bg-primary hover:bg-secondary text-white font-bold py-2 px-6 rounded transition-colors duration-300">
+                                    Proje Detaylarını Gör
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -176,16 +363,44 @@
                     <div class="relative h-full w-full transition-all duration-500 [transform-style:preserve-3d]">
                         <div class="absolute inset-0 bg-white rounded-lg shadow-md p-4 [backface-visibility:hidden]">
                             <div class="project-image h-64 bg-contain bg-center bg-no-repeat" style="background-image: url('assets/sema-yoga.png');"></div>
-                            <h3 class="text-xl font-bold mt-4">Video Hosting Website and Member Platform - Sema Yoga</h3>
+                            <h3 class="text-xl font-bold mt-4">
+                                <span data-lang="en">Video Hosting Website and Member Platform - Sema Yoga</span>
+                                <span data-lang="tr" class="hidden">Video Barındırma Web Sitesi ve Üye Platformu - Sema Yoga</span>
+                            </h3>
                         </div>
-                        <div class="absolute back inset-0 bg-white text-black rounded-lg shadow-md p-4 [transform:rotateY(180deg)] [backface-visibility:hidden] overflow-y-auto">
-                            <h3 class="text-xl font-bold mb-4">Video Hosting Website and Member Platform - Sema Yoga</h3>
-                            <p class="mb-4">Engineered a high-performance video hosting platform for Semayoga.com, revolutionizing member engagement through unlimited content access and intelligent content management.</p>
-                            <ul class="list-disc list-inside">
-                                <li>Implemented unlimited video hosting for members with robust custom filtering options, optimizing user experience and content discovery.</li>
-                                <li>Engineered an automated video management system, streamlining content delivery and improving operational efficiency.</li>
-                                <li>Developed a scalable infrastructure capable of handling daily video uploads and high traffic volumes, ensuring seamless performance and high availability.</li>
-                            </ul>
+                        <div class="absolute back inset-0 bg-white text-black rounded-lg shadow-md p-4 [transform:rotateY(180deg)] [backface-visibility:hidden] overflow-y-auto flex flex-col">
+                            <h3 class="text-xl font-bold mb-4">
+                                <span data-lang="en">Video Hosting Website and Member Platform - Sema Yoga</span>
+                                <span data-lang="tr" class="hidden">Video Barındırma Web Sitesi ve Üye Platformu - Sema Yoga</span>
+                            </h3>
+                            <div class="flex-grow">
+                                <p class="mb-4">
+                                    <span data-lang="en">Engineered a high-performance video hosting platform for Semayoga.com, revolutionizing member engagement through unlimited content access and intelligent content management.</span>
+                                    <span data-lang="tr" class="hidden">Semayoga.com için yüksek performanslı video barındırma platformu tasarlandı, üye katılımını sınırsız içerik erişimi ve akıllı içerik yönetimi ile yeniden tanımlandı.</span>
+                                </p>
+                                <ul class="list-disc list-inside">
+                                    <li>
+                                        <span data-lang="en">Implemented unlimited video hosting for members with robust custom filtering options, optimizing user experience and content discovery.</span>
+                                        <span data-lang="tr" class="hidden">Üye için sınırsız video barındırma için robust ��zel filtreleme seçenekleri uyguladı, kullanıcı deneyimi ve içerik keşifini optimize edildi.</span>
+                                    </li>
+                                    <li>
+                                        <span data-lang="en">Engineered an automated video management system, streamlining content delivery and improving operational efficiency.</span>
+                                        <span data-lang="tr" class="hidden">Video yönetim sistemi tasarladı, içerik teslimatını ve işletme verimliliğini arttırıldı.</span>
+                                    </li>
+                                    <li>
+                                        <span data-lang="en">Developed a scalable infrastructure capable of handling daily video uploads and high traffic volumes, ensuring seamless performance and high availability.</span>
+                                        <span data-lang="tr" class="hidden">Günlük video yükleme ve yüksek trafik hacmi için ölçeklenebilir bir altyapı oluşturuldu, performansı ve yüksek kullanılabilirliği garanti edildi.</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="mt-4 text-center">
+                                <a href="/projects/semayoga.html" data-lang="en" class="inline-block bg-primary hover:bg-secondary text-white font-bold py-2 px-6 rounded transition-colors duration-300">
+                                    See Project Details
+                                </a>
+                                <a href="/projects/semayogatr.html" data-lang="tr" class="hidden inline-block bg-primary hover:bg-secondary text-white font-bold py-2 px-6 rounded transition-colors duration-300">
+                                    Proje Detaylarını Gör
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -195,21 +410,47 @@
     
     <section class="sprouting-ventures-section bg-gray-100 py-16">
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-secondary">Sprouting Ventures</h2>
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-secondary">
+                <span data-lang="en">Currently Working On</span>
+                <span data-lang="tr" class="hidden">Üzerinde Çalıştığımız Projeler</span>
+            </h2>
             <div class="project-cards flex flex-col md:grid md:grid-cols-2 gap-8">
                 <div class="project-card group [perspective:1000px] transition-all duration-500 ease-in-out">
                     <div class="relative h-full w-full transition-all duration-500 [transform-style:preserve-3d]">
                         <div class="absolute inset-0 bg-primary rounded-lg shadow-md p-4 [backface-visibility:hidden]">
-                            <div class="project-image h-64 bg-contain bg-center bg-no-repeat rounded-sm overflow-hidden" style="background-image: url('assets/backgammon.png');"></div>
-                            <h3 class="text-xl font-bold text-white mt-4">Multi-Player Backgammon Member Platform</h3>
+                            <div class="project-image h-64 bg-contain bg-center bg-no-repeat rounded-lg overflow-hidden" 
+                                 style="background-image: url('assets/backgammon.png');"></div>
+                            <h3 class="text-xl font-bold text-white mt-4 text-center">
+                                <span data-lang="en">Vido: Advanced Multiplayer Backgammon Platform</span>
+                                <span data-lang="tr" class="hidden">Vido: Gelişmiş Çok Oyunculu Tavla Platformu</span>
+                            </h3>
                         </div>
                         <div class="absolute back inset-0 bg-primary text-white rounded-lg shadow-md p-4 [transform:rotateY(180deg)] [backface-visibility:hidden] overflow-y-auto">
-                            <h3 class="text-xl font-bold mb-4">Multi-Player Backgammon Member Platform</h3>
-                            <p class="mb-4">An innovative online platform for backgammon enthusiasts, featuring multi-player functionality and a robust membership system.</p>
+                            <h3 class="text-xl font-bold mb-4 text-center">
+                                <span data-lang="en">Vido: Advanced Multiplayer Backgammon Platform</span>
+                                <span data-lang="tr" class="hidden">Vido: Gelişmiş Çok Oyunculu Tavla Platformu</span>
+                            </h3>
+                            <p class="mb-4">
+                                <span data-lang="en">A sophisticated online gaming platform that combines traditional backgammon with modern technology, delivering an immersive multiplayer experience with advanced features and competitive gameplay.</span>
+                                <span data-lang="tr" class="hidden">Geleneksel tavlayı modern teknolojiyle birleştiren, gelişmiş özellikler ve rekabetçi oyun deneyimi sunan sofistike bir çevrimiçi oyun platformu.</span>
+                            </p>
                             <ul class="list-disc list-inside">
-                                <li>Real-time multiplayer gameplay</li>
-                                <li>Advanced matchmaking algorithm</li>
-                                <li>Integrated member profiles and leaderboards</li>
+                                <li>
+                                    <span data-lang="en">Real-time multiplayer system with WebSocket integration</span>
+                                    <span data-lang="tr" class="hidden">WebSocket entegrasyonu ile gerçek zamanlı çok oyunculu sistem</span>
+                                </li>
+                                <li>
+                                    <span data-lang="en">AI-powered matchmaking for optimal player pairing</span>
+                                    <span data-lang="tr" class="hidden">Optimum oyuncu eşleştirmesi için AI destekli eşleştirme</span>
+                                </li>
+                                <li>
+                                    <span data-lang="en">Comprehensive statistics and ranking system</span>
+                                    <span data-lang="tr" class="hidden">Kapsamlı istatistikler ve sıralama sistemi</span>
+                                </li>
+                                <li>
+                                    <span data-lang="en">Cross-platform compatibility with responsive design</span>
+                                    <span data-lang="tr" class="hidden">Duyarlı tasarımla çapraz platform uyumluluğu</span>
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -217,16 +458,42 @@
                 <div class="project-card group [perspective:1000px] transition-all duration-500 ease-in-out">
                     <div class="relative h-full w-full transition-all duration-500 [transform-style:preserve-3d]">
                         <div class="absolute back inset-0 bg-primary rounded-lg shadow-md p-4 [backface-visibility:hidden]">
-                            <div class="project-image h-64 bg-contain bg-center bg-no-repeat rounded-sm overflow-hidden" style="background-image: url('assets/robotrade.png');"></div>
-                            <h3 class="text-xl font-bold text-white mt-4">List Building Application for Gaming Communities</h3>
+                            <div class="h-64 flex items-center justify-center">
+                                <img src="assets/LISTFORGE.png" 
+                                     alt="ListForge Logo" 
+                                     class="h-full w-auto object-contain rounded-2xl">
+                            </div>
+                            <h3 class="text-xl font-bold text-white mt-4 text-center">
+                                <span data-lang="en">ListForge: List Building Application for Gaming Communities</span>
+                                <span data-lang="tr" class="hidden">ListForge: Oyun Toplulukları için List Oluşturma Uygulaması</span>
+                            </h3>
                         </div>
                         <div class="absolute inset-0 bg-primary text-white rounded-lg shadow-md p-4 [transform:rotateY(180deg)] [backface-visibility:hidden] overflow-y-auto">
-                            <h3 class="text-xl font-bold mb-4">List Building Application for Gaming Communities</h3>
-                            <p class="mb-4">A tool that allows gamers to view and interact with data from their favorite games.</p>
+                            <h3 class="text-xl font-bold mb-4 text-center">
+                                <span data-lang="en">ListForge: List Building Application for Gaming Communities</span>
+                                <span data-lang="tr" class="hidden">ListForge: Oyun Toplulukları için List Oluşturma Uygulaması</span>
+                            </h3>
+                            <p class="mb-4">
+                                <span data-lang="en">A sophisticated army building platform designed for tabletop gaming enthusiasts, combining powerful data management with an intuitive interface to streamline the army creation process.</span>
+                                <span data-lang="tr" class="hidden">Oyun tutkunları için tasarlanmış güçlü veri yönetimi ve kullanıcı deneyimi ile oyun ekibi oluşturma işlemi kolaylaştıran bir uygulama.</span>
+                            </p>
                             <ul class="list-disc list-inside">
-                                <li>Complex data management</li>
-                                <li>Customizable data views</li>
-                                <li>Mobile-native app design</li>
+                                <li>
+                                    <span data-lang="en">Advanced data management system with real-time validation</span>
+                                    <span data-lang="tr" class="hidden">Gerçek zamanlı doğrulama ile gelişmiş veri yönetimi</span>
+                                </li>
+                                <li>
+                                    <span data-lang="en">Customizable view layouts with drag-and-drop functionality</span>
+                                    <span data-lang="tr" class="hidden">Özel görünüm düzenlemeleri ve sürükleme işlevi</span>
+                                </li>
+                                <li>
+                                    <span data-lang="en">Cross-platform mobile-first architecture</span>
+                                    <span data-lang="tr" class="hidden">Çapraz platform mobil ilk mimarisi</span>
+                                </li>
+                                <li>
+                                    <span data-lang="en">Collaborative features for sharing and community engagement</span>
+                                    <span data-lang="tr" class="hidden">Topluluk katılımı ve paylaşım için işbirliği özellikleri</span>
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -237,17 +504,26 @@
 
     <section id="team" class="bg-primary py-16">
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-white">Our Team</h2>
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-white">
+                <span data-lang="en">Our Team</span>
+                <span data-lang="tr" class="hidden">Ekibimiz</span>
+            </h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <div class="team-member group h-64 [perspective:1000px]">
                     <div class="relative h-full w-full transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
                         <div class="absolute inset-0 bg-white rounded-lg shadow-md p-4 [backface-visibility:hidden]">
                             <img src="assets/team-member-1.png" alt="Bryce Merrill" class="w-32 h-32 mx-auto rounded-full mb-4">
                             <h3 class="text-xl font-semibold text-center">Bryce Merrill</h3>
-                            <p class="text-center text-gray-600">Principal Software Engineer</p>
+                            <p class="text-center text-gray-600">
+                                <span data-lang="en">Principal Software Engineer</span>
+                                <span data-lang="tr" class="hidden">Baş Yazılım Mühendisi</span>
+                            </p>
                         </div>
                         <div class="absolute inset-0 bg-white text-black rounded-lg shadow-md p-4 [transform:rotateY(180deg)] [backface-visibility:hidden] overflow-y-auto">
-                            <p class="text-center">Bryce is an adaptive engineer with a passion for intelligent systems and automations that transform processes and deliver huge value. He specializes in backend systems, but isn't afraid to get his hands dirty with frontend, API, and data intergrations.</p>
+                            <p class="text-center">
+                                <span data-lang="en">Bryce is an adaptive engineer with a passion for intelligent systems and automations that transform processes and deliver huge value. He specializes in backend systems, but isn't afraid to get his hands dirty with frontend, API, and data integrations.</span>
+                                <span data-lang="tr" class="hidden">Bryce, süreçleri dönüştüren ve büyük değer yaratan akıllı sistemler ve otomasyonlara tutkuyla bağlı, uyumlu bir mühendistir. Backend sistemlerinde uzmanlaşmıştır, ancak frontend, API ve veri entegrasyonlarıyla uğraşmaktan da çekinmez.</span>
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -255,11 +531,17 @@
                     <div class="relative h-full w-full transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
                         <div class="absolute inset-0 bg-white rounded-lg shadow-md p-4 [backface-visibility:hidden]">
                             <img src="assets/team-member-2.png" alt="Leyla Firatli" class="w-32 h-32 mx-auto rounded-full mb-4">
-                            <h3 class="text-xl font-semibold text-center">Leyla Firatli</h3>
-                            <p class="text-center text-gray-600">Data Architect + Web Developer</p>
+                            <h3 class="text-xl font-semibold text-center">Leyla Fıratlı</h3>
+                            <p class="text-center text-gray-600">
+                                <span data-lang="en">Data Architect + Web Developer</span>
+                                <span data-lang="tr" class="hidden">Veri Mimarı + Web Geliştirici</span>
+                            </p>
                         </div>
                         <div class="absolute inset-0 bg-white text-black rounded-lg shadow-md p-4 [transform:rotateY(180deg)] [backface-visibility:hidden] overflow-y-auto">
-                            <p class="text-center">Leyla is a seasoned data architect with 7+ years of experience in data infrastructure and migrations for clients like Google, Headway, and Accenture. She's also a creative web developer with a knack for building fun and intuitive experiences.</p>
+                            <p class="text-center">
+                                <span data-lang="en">Leyla is a seasoned data architect with 7+ years of experience in data infrastructure and migrations for clients like Google, Headway, and Accenture. She's also a creative web developer with a knack for building fun and intuitive experiences.</span>
+                                <span data-lang="tr" class="hidden">Leyla, Google, Headway ve Accenture gibi müşteriler için veri altyapısı ve geçişlerde 7+ yıl deneyimi olan, kreatif bir web geliştiricidir ve eğlenceli ve akıllı deneyimler oluşturmak için uzmanlaşmıştır.</span>
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -268,10 +550,16 @@
                         <div class="absolute inset-0 bg-white rounded-lg shadow-md p-4 [backface-visibility:hidden]">
                             <img src="assets/team-member-3.png" alt="Deanna Patelis" class="w-32 h-32 mx-auto rounded-full mb-4">
                             <h3 class="text-xl font-semibold text-center">Deanna Patelis</h3>
-                            <p class="text-center text-gray-600">Machine Learning Engineer</p>
+                            <p class="text-center text-gray-600">
+                                <span data-lang="en">Machine Learning Engineer</span>
+                                <span data-lang="tr" class="hidden">Makine Öğrenimi Mühendisi</span>
+                            </p>
                         </div>
                         <div class="absolute inset-0 bg-white text-black rounded-lg shadow-md p-4 [transform:rotateY(180deg)] [backface-visibility:hidden] overflow-y-auto">
-                            <p class="text-center">Deanna is an expert in machine learning with a focus on applied cutting-edge LLM solutions. Additionally, she wields DevOps magic to ensure projects are efficiently deployed and improved.</p>
+                            <p class="text-center">
+                                <span data-lang="en">Deanna is an expert in machine learning with a focus on applied cutting-edge LLM solutions. Additionally, she wields DevOps magic to ensure projects are efficiently deployed and improved.</span>
+                                <span data-lang="tr" class="hidden">Deanna, en son LLM çözümlerine odaklanan makine öğrenimi konusunda bir uzmandır. Ayrıca, projelerin verimli bir şekilde dağıtılmasını ve geliştirilmesini sağlamak için DevOps sihirini kullanır.</span>
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -280,10 +568,16 @@
                         <div class="absolute inset-0 bg-white rounded-lg shadow-md p-4 [backface-visibility:hidden]">
                             <img src="assets/team-member-4.png" alt="Isaac Vandyne" class="w-32 h-32 mx-auto rounded-full mb-4">
                             <h3 class="text-xl font-semibold text-center">Isaac Vandyne</h3>
-                            <p class="text-center text-gray-600">Product Designer/Creative Tactician</p>
+                            <p class="text-center text-gray-600">
+                                <span data-lang="en">Product Designer/Creative Tactician</span>
+                                <span data-lang="tr" class="hidden">Ürün Tasarımcısı/Yaratıcı Taktisyen</span>
+                            </p>
                         </div>
                         <div class="absolute inset-0 bg-white text-black rounded-lg shadow-md p-4 [transform:rotateY(180deg)] [backface-visibility:hidden] overflow-y-auto">
-                            <p class="text-center">With a colorful background in graphic and motion design, and 7+ years of experience building complex b2b software platforms, Isaac has both the imagination and technical ability to craft world class products that solve users problems.</p>
+                            <p class="text-center">
+                                <span data-lang="en">With a colorful background in graphic and motion design, and 7+ years of experience building complex b2b software platforms, Isaac has both the imagination and technical ability to craft world class products that solve users problems.</span>
+                                <span data-lang="tr" class="hidden">Grafik ve hareket tasarımında renkli bir geçmişe ve karmaşık b2b yazılım platformları oluşturmada 7+ yıllık deneyime sahip olan Isaac, kullanıcıların sorunlarını çözen dünya çapında ürünler yaratmak için hem hayal gücüne hem de teknik yeteneğe sahiptir.</span>
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -292,17 +586,30 @@
     </section>
     <section id="contact" class="contact-section bg-black py-16">
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-white">Work with us</h2>
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-white">
+                <span data-lang="en">Work with us</span>
+                <span data-lang="tr" class="hidden">Bizimle Çalışın</span>
+            </h2>
             <form id="contact-form" action="https://formspree.io/f/mnnaoeoa" method="POST" class="max-w-lg mx-auto">
-                <input type="text" name="name" placeholder="Your Name" required class="w-full mb-4 p-2 border border-gray-300 rounded">
-                <input type="email" name="_replyto" placeholder="Your Email" required class="w-full mb-4 p-2 border border-gray-300 rounded">
-                <textarea name="message" placeholder="Your Message" required class="w-full mb-4 p-2 border border-gray-300 rounded h-32"></textarea>
+                <input type="text" name="name" class="w-full mb-4 p-2 border border-gray-300 rounded" required
+                    data-placeholder-en="Your Name"
+                    data-placeholder-tr="Adınız"
+                    placeholder="Your Name">
+                <input type="email" name="_replyto" class="w-full mb-4 p-2 border border-gray-300 rounded" required
+                    data-placeholder-en="Your Email"
+                    data-placeholder-tr="E-posta Adresiniz"
+                    placeholder="Your Email">
+                <textarea name="message" class="w-full mb-4 p-2 border border-gray-300 rounded h-32" required
+                    data-placeholder-en="Your Message"
+                    data-placeholder-tr="Mesajınız"
+                    placeholder="Your Message"></textarea>
                 <input type="text" name="_gotcha" style="display:none" class="hidden">
-                <button type="submit" class="w-full bg-primary hover:bg-secondary text-white font-bold py-2 px-4 rounded transition-colors duration-300">Plant the Seed</button>
+                <button type="submit" class="w-full bg-primary hover:bg-secondary text-white font-bold py-2 px-4 rounded transition-colors duration-300">
+                    <span data-lang="en">Plant the Seed</span>
+                    <span data-lang="tr" class="hidden">İletişime Geç</span>
+                </button>
             </form>
         </div>
     </section>
-
-    <script src="script.js"></script>
 </body>
 </html>

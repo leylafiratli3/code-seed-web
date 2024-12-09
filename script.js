@@ -1,35 +1,37 @@
 console.log('Script loaded');
-
-// Loading screen
-window.addEventListener('load', function() {
-    setTimeout(() => {
-        document.querySelector('.loading-screen').classList.add('opacity-0');
-        setTimeout(() => {
-            document.querySelector('.loading-screen').classList.add('hidden');
-        }, 500);
-    }, 1500);
-});
+let currentLang = 'en';
 
 // Rotating words functionality
 document.addEventListener('DOMContentLoaded', function() {
     const rotatingWord = document.getElementById('rotating-word');
-    const words = [
-        'data-driven solutions',
-        'scalable infrastructure',
-        'intelligent automation',
-        'innovative engineering',
-        'LLM-driven solutions',
-        'predictive analytics',
-        'adaptive algorithms'
-    ];
+    const words = {
+        en: [
+            'data-driven solutions',
+            'scalable infrastructure',
+            'intelligent automation',
+            'innovative engineering',
+            'LLM-driven solutions',
+            'predictive analytics',
+            'adaptive algorithms'
+        ],
+        tr: [
+            'veri odaklı çözümler',
+            'ölçeklenebilir altyapı',
+            'akıllı otomasyon',
+            'yenilikçi mühendislik',
+            'LLM odaklı çözümler',
+            'öngörücü analiz',
+            'uyarlanabilir algoritmalar'
+        ]
+    };
     let currentIndex = 0;
 
     function changeWord() {
         rotatingWord.classList.add('opacity-0');
         setTimeout(() => {
-            rotatingWord.textContent = words[currentIndex];
+            rotatingWord.textContent = words[currentLang][currentIndex];
             rotatingWord.classList.remove('opacity-0');
-            currentIndex = (currentIndex + 1) % words.length;
+            currentIndex = (currentIndex + 1) % words[currentLang].length;
         }, 500);
     }
 
@@ -83,6 +85,12 @@ document.addEventListener('DOMContentLoaded', function() {
     }, { threshold: 0.1 });
 
     techItems.forEach(item => observer.observe(item));
+
+    // Mobile language toggle
+    const mobileLangToggle = document.getElementById('mobile-language-toggle');
+    if (mobileLangToggle) {
+        mobileLangToggle.addEventListener('click', toggleLanguage);
+    }
 });
 
 // Mobile menu toggle
@@ -189,5 +197,61 @@ document.addEventListener('DOMContentLoaded', function() {
                 mobileMenu.classList.remove('show');
             }
         });
+    }
+});
+
+// At the top of your script.js
+
+
+function updateButtonStates(lang) {
+    const enButton = document.getElementById('en-toggle');
+    const trButton = document.getElementById('tr-toggle');
+    
+    if (lang === 'en') {
+        enButton.setAttribute('data-active', 'true');
+        trButton.setAttribute('data-active', 'false');
+    } else {
+        enButton.setAttribute('data-active', 'false');
+        trButton.setAttribute('data-active', 'true');
+    }
+}
+
+function updateLanguageDisplay() {
+    console.log('Updating language to:', currentLang); // Debug log
+    
+    document.querySelectorAll('[data-lang]').forEach(element => {
+        if (element.getAttribute('data-lang') === currentLang) {
+            element.classList.remove('hidden');
+        } else {
+            element.classList.add('hidden');
+        }
+    });
+
+    // Update form placeholders
+    document.querySelectorAll('[data-placeholder-en]').forEach(element => {
+        element.placeholder = currentLang === 'en' 
+            ? element.getAttribute('data-placeholder-en')
+            : element.getAttribute('data-placeholder-tr');
+    });
+
+    document.documentElement.lang = currentLang;
+}
+
+function toggleLanguage() {
+    console.log('Toggle language clicked'); // Debug log
+    currentLang = currentLang === 'en' ? 'tr' : 'en';
+    localStorage.setItem('preferredLanguage', currentLang);
+    updateLanguageDisplay();
+}
+
+// Initialize language on page load
+document.addEventListener('DOMContentLoaded', () => {
+    console.log('DOM loaded'); // Debug log
+    
+    const languageToggle = document.getElementById('language-toggle');
+    console.log('Found language toggle button:', languageToggle); // Debug log
+    
+    if (languageToggle) {
+        languageToggle.addEventListener('click', toggleLanguage);
     }
 });

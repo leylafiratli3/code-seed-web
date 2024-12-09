@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dim Mak Records Projesi - Code Seed</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#8dba90',
+                        secondary: '#5a7d5c',
+                        accent: '#D2B48C',
+                        tan: '#D2B48C',
+                    },
+                    fontFamily: {
+                        'fira': ['"Fira Code"', 'monospace'],
+                    },
+                }
+            }
+        }
+    </script>
+    <script src="../script.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="../styles.css" rel="stylesheet">
+</head>
+<body class="font-fira bg-gray-50">
+    <header class="bg-white shadow-md fixed w-full z-50">
+        <nav class="container mx-auto px-4 py-5">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center transition-transform duration-300 ease-in-out hover:scale-105">
+                    <img src="../assets/codeseed-logo.png" alt="CodeSeed Logo" id="header-logo" class="h-20 w-auto mr-4">
+                    <span class="text-2xl font-bold text-primary lowercase tracking-wide">code-seed</span>
+                </div>
+                <ul class="hidden md:flex space-x-6">
+                    <li><a href="../index.html#home" class="text-gray-800 hover:text-primary transition-colors duration-300">Ana Sayfa</a></li>
+                    <li><a href="../index.html#projects" class="text-gray-800 hover:text-primary transition-colors duration-300">Proje Bahçesi</a></li>
+                    <li><a href="../index.html#team" class="text-gray-800 hover:text-primary transition-colors duration-300">Ekibimiz</a></li>
+                    <li><a href="../index.html#contact" class="text-gray-800 hover:text-primary transition-colors duration-300">Bizimle Çalışın</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="pt-32 pb-16">
+        <div class="container mx-auto px-4">
+            <article class="max-w-4xl mx-auto">
+                <section class="bg-white p-8 rounded-lg shadow-sm mb-12">
+                    <h1 class="text-4xl font-bold mb-4 text-secondary text-center">Dim Mak Records: Dijital Varlık Göçü</h1>
+                    <p class="text-xl text-gray-600 text-center">Kapsamlı Veri Göçü ve Varlık Yönetimi</p>
+                </section>
+
+                <div class="space-y-8">
+                    <section class="bg-white p-8 rounded-lg shadow-sm">
+                        <h2 class="text-2xl font-bold text-secondary mb-4">Proje Genel Bakış</h2>
+                        <p class="text-gray-700 mb-4">
+                            Dim Mak Records için kapsamlı bir veri göçü projesine liderlik ederek dijital varlık yönetim sistemlerini dönüştürdük. Proje, geniş müzik kataloğunu ve ilgili meta verilerini daha verimli ve düzenli bir dijital altyapıya taşımayı içeriyordu.
+                        </p>
+                        <p class="text-gray-700">
+                            Bu göç, operasyonel verimliliklerini önemli ölçüde artırdı ve dijital varlıklarının daha iyi organize edilmesini ve erişilebilirliğini sağladı.
+                        </p>
+                    </section>
+
+                    <section class="bg-white p-8 rounded-lg shadow-sm">
+                        <h2 class="text-2xl font-bold text-secondary mb-4">Teknik Zorluk</h2>
+                        <p class="text-gray-700 mb-4">
+                            Ana zorluklar şunlardı:
+                        </p>
+                        <ul class="list-disc list-inside space-y-2 text-gray-700 mb-4">
+                            <li>Veri bütünlüğünü koruyarak büyük hacimli müzik dosyalarını taşımak</li>
+                            <li>Karmaşık meta veri yapılarının korunması ve düzenlenmesi</li>
+                            <li>Göç sürecinde sıfır veri kaybı sağlamak</li>
+                            <li>Göç sırasında iş operasyonlarını sürdürmek</li>
+                            <li>Verimli yeni bir organizasyon yapısı oluşturmak</li>
+                        </ul>
+                    </section>
+
+                    <section class="bg-white p-8 rounded-lg shadow-sm">
+                        <h2 class="text-2xl font-bold text-secondary mb-4">Çözüm Mimarisi</h2>
+                        <div class="space-y-6">
+                            <div>
+                                <h3 class="font-bold text-primary mb-2">Ana Sistem Bileşenleri</h3>
+                                <ul class="space-y-3 text-gray-700">
+                                    <li class="flex items-start">
+                                        <span class="text-primary mr-2">•</span>
+                                        Doğrulama kontrolleri ile özel veri göçü hattı
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="text-primary mr-2">•</span>
+                                        Meta veri doğrulama ve geliştirme sistemi
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="text-primary mr-2">•</span>
+                                        Varlık organizasyonu ve kategorilendirme çerçevesi
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="text-primary mr-2">•</span>
+                                        Kalite güvencesi ve doğrulama araçları
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                            <div>
+                                <h3 class="font-bold text-primary mb-2">Altyapı Tasarımı</h3>
+                                <ul class="space-y-3 text-gray-700">
+                                    <li class="flex items-start">
+                                        <span class="text-primary mr-2">•</span>
+                                        Dijital varlıklar için güvenli bulut depolama mimarisi
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="text-primary mr-2">•</span>
+                                        Otomatik yedekleme ve doğrulama sistemleri
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="text-primary mr-2">•</span>
+                                        Gelecekteki büyüme için ölçeklenebilir depolama çözümü
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="bg-white p-8 rounded-lg shadow-sm">
+                        <h2 class="text-2xl font-bold text-secondary mb-4">Teknoloji Yığını</h2>
+                        <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                            <div class="flex items-center space-x-2 p-3 border border-gray-200 rounded-lg">
+                                <i class="fas fa-code text-primary"></i>
+                                <span>Python</span>
+                            </div>
+                            <div class="flex items-center space-x-2 p-3 border border-gray-200 rounded-lg">
+                                <i class="fas fa-cloud text-primary"></i>
+                                <span>AWS S3</span>
+                            </div>
+                            <div class="flex items-center space-x-2 p-3 border border-gray-200 rounded-lg">
+                                <i class="fas fa-database text-primary"></i>
+                                <span>PostgreSQL</span>
+                            </div>
+                            <div class="flex items-center space-x-2 p-3 border border-gray-200 rounded-lg">
+                                <i class="fas fa-file-audio text-primary"></i>
+                                <span>Ses İşleme</span>
+                            </div>
+                            <div class="flex items-center space-x-2 p-3 border border-gray-200 rounded-lg">
+                                <i class="fas fa-tasks text-primary"></i>
+                                <span>ETL Hattı</span>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="bg-white p-8 rounded-lg shadow-sm">
+                        <h2 class="text-2xl font-bold text-secondary mb-4">İş Etkisi</h2>
+                        <div class="grid md:grid-cols-3 gap-6">
+                            <div class="p-6 border border-gray-200 rounded-lg">
+                                <h3 class="font-bold text-primary mb-2">Veri Kalitesi</h3>
+                                <p class="text-gray-700">%100 veri bütünlüğü korundu</p>
+                            </div>
+                            <div class="p-6 border border-gray-200 rounded-lg">
+                                <h3 class="font-bold text-primary mb-2">Verimlilik</h3>
+                                <p class="text-gray-700">%50 daha hızlı varlık erişimi</p>
+                            </div>
+                            <div class="p-6 border border-gray-200 rounded-lg">
+                                <h3 class="font-bold text-primary mb-2">Ölçek</h3>
+                                <p class="text-gray-700">10,000+ varlık taşındı</p>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <section class="bg-black py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-8 text-white">Benzer çözümlerle ilgileniyor musunuz?</h2>
+            <div class="text-center">
+                <a href="../index.html#contact" class="inline-block bg-primary hover:bg-secondary text-white font-bold py-3 px-8 rounded-full">Bizimle Çalışın</a>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
