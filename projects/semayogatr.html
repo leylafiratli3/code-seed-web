@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sema Yoga Projesi - Code Seed</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#8dba90',
+                        secondary: '#5a7d5c',
+                        accent: '#D2B48C',
+                        tan: '#D2B48C',
+                    },
+                    fontFamily: {
+                        'fira': ['"Fira Code"', 'monospace'],
+                    },
+                }
+            }
+        }
+    </script>
+    <script src="../script.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="../styles.css" rel="stylesheet">
+</head>
+<body class="font-fira bg-gray-50">
+    <header class="bg-white shadow-md fixed w-full z-50">
+        <nav class="container mx-auto px-4 py-5">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center transition-transform duration-300 ease-in-out hover:scale-105">
+                    <img src="../assets/codeseed-logo.png" alt="CodeSeed Logo" id="header-logo" class="h-20 w-auto mr-4">
+                    <span class="text-2xl font-bold text-primary lowercase tracking-wide">code-seed</span>
+                </div>
+                <ul class="hidden md:flex space-x-6">
+                    <li><a href="../index.html#home" class="text-gray-800 hover:text-primary transition-colors duration-300">Ana Sayfa</a></li>
+                    <li><a href="../index.html#projects" class="text-gray-800 hover:text-primary transition-colors duration-300">Proje Bahçesi</a></li>
+                    <li><a href="../index.html#team" class="text-gray-800 hover:text-primary transition-colors duration-300">Ekibimiz</a></li>
+                    <li><a href="../index.html#contact" class="text-gray-800 hover:text-primary transition-colors duration-300">Bizimle Çalışın</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div id="mobile-menu" class="md:hidden hidden">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="../index.html#home" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">Ana Sayfa</a>
+                <a href="../index.html#projects" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">Proje Bahçesi</a>
+                <a href="../index.html#team" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">Ekibimiz</a>
+                <a href="../index.html#contact" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">Bizimle Çalışın</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-32 pb-16">
+        <div class="container mx-auto px-4">
+            <article class="max-w-4xl mx-auto">
+                <section class="bg-white p-8 rounded-lg shadow-sm mb-12">
+                    <h1 class="text-4xl font-bold mb-4 text-secondary text-center">Video Barındırma Web Sitesi ve Üye Platformu</h1>
+                    <p class="text-xl text-gray-600 text-center mb-8">Sema Yoga</p>
+                    <div class="text-center">
+                        <a href="https://semayoga.com" target="_blank" rel="noopener noreferrer" 
+                           class="inline-flex items-center bg-primary hover:bg-secondary text-white font-bold py-3 px-8 rounded-full transition-colors duration-300">
+                            <span>Canlı Web Sitesini Görüntüle</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
+                                <path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z" />
+                                <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z" />
+                            </svg>
+                        </a>
+                    </div>
+                </section>
+
+                <div class="space-y-8">
+                    <section class="bg-white p-8 rounded-lg shadow-sm">
+                        <h2 class="text-2xl font-bold text-secondary mb-4">Proje Genel Bakış</h2>
+                        <p class="text-gray-700 mb-4">
+                            Semayoga.com için sınırsız içerik erişimi ve akıllı içerik yönetimi aracılığıyla üye 
+                            katılımını devrimleştiren yüksek performanslı bir video barındırma platformu tasarladık.
+                        </p>
+                        <p class="text-gray-700">
+                            Platform, üyelere yoga içeriğinin sorunsuz bir şekilde sunulmasını sağlarken, içerik yönetimi 
+                            ve kullanıcı etkileşimi takibi için güçlü yönetim araçları sunmaktadır.
+                        </p>
+                    </section>
+
+                    <section class="bg-white p-8 rounded-lg shadow-sm">
+                        <h2 class="text-2xl font-bold text-secondary mb-4">Teknik Zorluk</h2>
+                        <p class="text-gray-700 mb-4">
+                            Temel zorluklar şunlardı:
+                        </p>
+                        <ul class="list-disc list-inside space-y-2 text-gray-700 mb-4">
+                            <li>Güçlü özel filtreleme seçenekleriyle sınırsız video barındırma uygulaması</li>
+                            <li>İçerik dağıtımı için otomatik video yönetim sistemi oluşturma</li>
+                            <li>Günlük video yüklemeleri için ölçeklenebilir altyapı geliştirme</li>
+                            <li>Farklı cihazlarda yüksek kaliteli video akışı sağlama</li>
+                            <li>Hem üyeler hem de yöneticiler için sezgisel bir arayüz oluşturma</li>
+                        </ul>
+                    </section>
+
+                    <section class="bg-white p-8 rounded-lg shadow-sm">
+                        <h2 class="text-2xl font-bold text-secondary mb-4">Çözüm Mimarisi</h2>
+                        <div class="space-y-6">
+                            <div>
+                                <h3 class="font-bold text-primary mb-2">Temel Özellikler</h3>
+                                <ul class="space-y-3 text-gray-700">
+                                    <li class="flex items-start">
+                                        <span class="text-primary mr-2">•</span>
+                                        Uyarlanabilir akış yeteneklerine sahip özel video oynatıcı
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="text-primary mr-2">•</span>
+                                        Gelişmiş içerik filtreleme ve arama işlevselliği
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="text-primary mr-2">•</span>
+                                        Otomatik video işleme ve optimizasyon hattı
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="text-primary mr-2">•</span>
+                                        Üye yönetimi ve erişim kontrol sistemi
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="bg-white p-8 rounded-lg shadow-sm">
+                        <h2 class="text-2xl font-bold text-secondary mb-4">Teknoloji Yığını</h2>
+                        <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                            <div class="flex items-center space-x-2 p-3 border border-gray-200 rounded-lg">
+                                <i class="fas fa-code text-primary"></i>
+                                <span>React.js</span>
+                            </div>
+                            <div class="flex items-center space-x-2 p-3 border border-gray-200 rounded-lg">
+                                <i class="fas fa-server text-primary"></i>
+                                <span>Node.js</span>
+                            </div>
+                            <div class="flex items-center space-x-2 p-3 border border-gray-200 rounded-lg">
+                                <i class="fas fa-cloud text-primary"></i>
+                                <span>AWS S3</span>
+                            </div>
+                            <div class="flex items-center space-x-2 p-3 border border-gray-200 rounded-lg">
+                                <i class="fas fa-video text-primary"></i>
+                                <span>CloudFront</span>
+                            </div>
+                            <div class="flex items-center space-x-2 p-3 border border-gray-200 rounded-lg">
+                                <i class="fas fa-database text-primary"></i>
+                                <span>MongoDB</span>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="bg-white p-8 rounded-lg shadow-sm">
+                        <h2 class="text-2xl font-bold text-secondary mb-4">İş Etkisi</h2>
+                        <div class="grid md:grid-cols-3 gap-6">
+                            <div class="p-6 border border-gray-200 rounded-lg">
+                                <h3 class="font-bold text-primary mb-2">İçerik Dağıtımı</h3>
+                                <p class="text-gray-700">Optimize edilmiş akışla sınırsız video barındırma</p>
+                            </div>
+                            <div class="p-6 border border-gray-200 rounded-lg">
+                                <h3 class="font-bold text-primary mb-2">Kullanıcı Deneyimi</h3>
+                                <p class="text-gray-700">Gelişmiş filtreleme ve içerik keşfi</p>
+                            </div>
+                            <div class="p-6 border border-gray-200 rounded-lg">
+                                <h3 class="font-bold text-primary mb-2">Ölçeklenebilirlik</h3>
+                                <p class="text-gray-700">Günlük video yüklemelerini ve yoğun trafiği yönetir</p>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <section class="bg-black py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-8 text-white">Benzer çözümlerle ilgileniyor musunuz?</h2>
+            <div class="text-center">
+                <a href="../index.html#contact" class="inline-block bg-primary hover:bg-secondary text-white font-bold py-3 px-8 rounded-full transition-colors duration-300">
+                    Konuşalım
+                </a>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

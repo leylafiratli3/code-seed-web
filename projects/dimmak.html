@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Same head section as others -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dim Mak Records Project - Code Seed</title>
+    <!-- Same styling imports as Harman/CoFlow pages -->
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#8dba90',
+                        secondary: '#5a7d5c',
+                        accent: '#D2B48C',
+                        tan: '#D2B48C',
+                    },
+                    fontFamily: {
+                        'fira': ['"Fira Code"', 'monospace'],
+                    },
+                }
+            }
+        }
+    </script>
+    <script src="../script.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="../styles.css" rel="stylesheet">
+</head>
+<body class="font-fira bg-gray-50">
+    <!-- Same header as others -->
+    <header class="bg-white shadow-md fixed w-full z-50">
+        <!-- Same navigation structure as Harman/CoFlow -->
+        <nav class="container mx-auto px-4 py-5">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center transition-transform duration-300 ease-in-out hover:scale-105">
+                    <img src="../assets/codeseed-logo.png" alt="CodeSeed Logo" id="header-logo" class="h-20 w-auto mr-4">
+                    <span class="text-2xl font-bold text-primary lowercase tracking-wide">code-seed</span>
+                </div>
+                <!-- Same navigation items -->
+                <ul class="hidden md:flex space-x-6">
+                    <li><a href="../index.html#home" class="text-gray-800 hover:text-primary transition-colors duration-300">Home</a></li>
+                    <li><a href="../index.html#projects" class="text-gray-800 hover:text-primary transition-colors duration-300">Project Garden</a></li>
+                    <li><a href="../index.html#team" class="text-gray-800 hover:text-primary transition-colors duration-300">Our Team</a></li>
+                    <li><a href="../index.html#contact" class="text-gray-800 hover:text-primary transition-colors duration-300">Work with Us</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Project Content -->
+    <main class="pt-32 pb-16">
+        <div class="container mx-auto px-4">
+            <article class="max-w-4xl mx-auto">
+                <!-- Project Header -->
+                <section class="bg-white p-8 rounded-lg shadow-sm mb-12">
+                    <h1 class="text-4xl font-bold mb-4 text-secondary text-center">Dim Mak Records: Digital Asset Migration</h1>
+                    <p class="text-xl text-gray-600 text-center">Comprehensive Data Migration & Asset Management</p>
+                </section>
+
+                <!-- Project Details -->
+                <div class="space-y-8">
+                    <!-- Overview Section -->
+                    <section class="bg-white p-8 rounded-lg shadow-sm">
+                        <h2 class="text-2xl font-bold text-secondary mb-4">Project Overview</h2>
+                        <p class="text-gray-700 mb-4">
+                            Led a comprehensive data migration project for Dim Mak Records, transforming their digital asset management 
+                            system. The project involved migrating their extensive music catalog and associated metadata to a more 
+                            efficient and organized digital infrastructure.
+                        </p>
+                        <p class="text-gray-700">
+                            This migration significantly improved their operational efficiency and provided better organization and 
+                            accessibility of their digital assets.
+                        </p>
+                    </section>
+
+                    <!-- Challenge Section -->
+                    <section class="bg-white p-8 rounded-lg shadow-sm">
+                        <h2 class="text-2xl font-bold text-secondary mb-4">Technical Challenge</h2>
+                        <p class="text-gray-700 mb-4">
+                            Key challenges included:
+                        </p>
+                        <ul class="list-disc list-inside space-y-2 text-gray-700 mb-4">
+                            <li>Migrating large volumes of music files while maintaining data integrity</li>
+                            <li>Preserving and organizing complex metadata structures</li>
+                            <li>Ensuring zero data loss during the migration process</li>
+                            <li>Maintaining business operations during the migration</li>
+                            <li>Creating an efficient new organizational structure</li>
+                        </ul>
+                    </section>
+
+                    <!-- Solution Section -->
+                    <section class="bg-white p-8 rounded-lg shadow-sm">
+                        <h2 class="text-2xl font-bold text-secondary mb-4">Solution Architecture</h2>
+                        <div class="space-y-6">
+                            <div>
+                                <h3 class="font-bold text-primary mb-2">Core System Components</h3>
+                                <ul class="space-y-3 text-gray-700">
+                                    <li class="flex items-start">
+                                        <span class="text-primary mr-2">•</span>
+                                        Custom data migration pipeline with verification checks
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="text-primary mr-2">•</span>
+                                        Metadata validation and enhancement system
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="text-primary mr-2">•</span>
+                                        Asset organization and categorization framework
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="text-primary mr-2">•</span>
+                                        Quality assurance and verification tools
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                            <div>
+                                <h3 class="font-bold text-primary mb-2">Infrastructure Design</h3>
+                                <ul class="space-y-3 text-gray-700">
+                                    <li class="flex items-start">
+                                        <span class="text-primary mr-2">•</span>
+                                        Secure cloud storage architecture for digital assets
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="text-primary mr-2">•</span>
+                                        Automated backup and verification systems
+                                    </li>
+                                    <li class="flex items-start">
+                                        <span class="text-primary mr-2">•</span>
+                                        Scalable storage solution for future growth
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Tech Stack Section -->
+                    <section class="bg-white p-8 rounded-lg shadow-sm">
+                        <h2 class="text-2xl font-bold text-secondary mb-4">Technology Stack</h2>
+                        <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                            <div class="flex items-center space-x-2 p-3 border border-gray-200 rounded-lg">
+                                <i class="fas fa-code text-primary"></i>
+                                <span>Python</span>
+                            </div>
+                            <div class="flex items-center space-x-2 p-3 border border-gray-200 rounded-lg">
+                                <i class="fas fa-cloud text-primary"></i>
+                                <span>AWS S3</span>
+                            </div>
+                            <div class="flex items-center space-x-2 p-3 border border-gray-200 rounded-lg">
+                                <i class="fas fa-database text-primary"></i>
+                                <span>PostgreSQL</span>
+                            </div>
+                            <div class="flex items-center space-x-2 p-3 border border-gray-200 rounded-lg">
+                                <i class="fas fa-file-audio text-primary"></i>
+                                <span>Audio Processing</span>
+                            </div>
+                            <div class="flex items-center space-x-2 p-3 border border-gray-200 rounded-lg">
+                                <i class="fas fa-tasks text-primary"></i>
+                                <span>ETL Pipeline</span>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Results Section -->
+                    <section class="bg-white p-8 rounded-lg shadow-sm">
+                        <h2 class="text-2xl font-bold text-secondary mb-4">Business Impact</h2>
+                        <div class="grid md:grid-cols-3 gap-6">
+                            <div class="p-6 border border-gray-200 rounded-lg">
+                                <h3 class="font-bold text-primary mb-2">Data Quality</h3>
+                                <p class="text-gray-700">100% data integrity maintained</p>
+                            </div>
+                            <div class="p-6 border border-gray-200 rounded-lg">
+                                <h3 class="font-bold text-primary mb-2">Efficiency</h3>
+                                <p class="text-gray-700">50% faster asset retrieval</p>
+                            </div>
+                            <div class="p-6 border border-gray-200 rounded-lg">
+                                <h3 class="font-bold text-primary mb-2">Scale</h3>
+                                <p class="text-gray-700">10,000+ assets migrated</p>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <!-- Contact Section -->
+    <section class="bg-black py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-8 text-white">Interested in similar solutions?</h2>
+            <div class="text-center">
+                <a href="../index.html#contact" class="inline-block bg-primary hover:bg-secondary text-white font-bold py-3 px-8 rounded-full transition-colors duration-300">
+                    Let's Talk
+                </a>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
