@@ -337,3 +337,128 @@
     background-color: #5a7d5c; /* secondary color */
     color: white;
 }
+
+/* Add these styles for mobile responsiveness */
+@media (max-width: 767px) {
+    .hero {
+        padding-top: 80px; /* Adjust based on your header height */
+    }
+    
+    .hero-content {
+        padding-top: 2rem;
+    }
+
+    .client-logo {
+        width: 100% !important;
+        max-width: 200px;
+        margin: 0 auto;
+    }
+
+    .clients-section .grid {
+        gap: 2rem;
+    }
+
+    /* Adjust hero card padding for better mobile display */
+    .hero-card {
+        padding: 1rem;
+        margin: 1rem;
+    }
+
+    /* Ensure text is readable on mobile */
+    .hero h1 {
+        font-size: 1.75rem;
+        line-height: 2rem;
+    }
+
+    .hero h2 {
+        font-size: 1.5rem;
+        line-height: 1.75rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+}
+
+/* Additional mobile optimizations */
+@media (max-width: 767px) {
+    header {
+        height: auto;
+    }
+
+    .container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    /* Ensure mobile menu appears above other content */
+    #mobile-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: white;
+        z-index: 50;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Adjust section spacing */
+    section {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+
+    /* Ensure images don't overflow their containers */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+/* Base logo styles */
+.client-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    transition: all 0.3s;
+}
+
+.client-logo img {
+    object-fit: contain;
+    transition: all 0.3s;
+}
+
+/* Desktop view (768px and above) */
+@media (min-width: 768px) {
+    .client-logo {
+        width: 200px;
+        height: 120px;
+    }
+
+    .client-logo img {
+        max-height: 90px;
+        width: auto;
+    }
+}
+
+/* Mobile view (below 768px) */
+@media (max-width: 767px) {
+    .client-logo {
+        width: 150px !important;
+        height: 100px !important;
+        margin: 0 auto;
+    }
+
+    .client-logo img {
+        max-height: 70px;
+        width: auto;
+    }
+
+    .clients-section .grid {
+        gap: 1rem;
+    }
+}
