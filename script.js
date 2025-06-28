@@ -115,61 +115,32 @@ if (menuToggle && navMenu) {
 
 // Project cards and team member cards
 document.addEventListener('DOMContentLoaded', function() {
-    const projectCards = document.querySelectorAll('.project-card');
     const teamMembers = document.querySelectorAll('.team-member');
 
-    function handleCardInteraction(cards, isProjectCard = false) {
+    function handleTeamMemberInteraction(cards) {
         cards.forEach(card => {
             const cardInner = card.querySelector('.relative');
-            const cardBack = card.querySelector('.absolute.back');
 
             function toggleCard() {
-                card.classList.toggle('expanded');
-                cardInner.classList.toggle('rotate-y-180');
+                const isFlipped = cardInner.classList.contains('rotate-y-180');
                 
-                if (cardInner.classList.contains('rotate-y-180')) {
-                    setTimeout(() => {
-                        cardBack.style.height = `${cardBack.scrollHeight}px`;
-                        card.style.height = `${cardBack.scrollHeight}px`;
-                    }, 300);
+                if (!isFlipped) {
+                    // Flip the card
+                    card.classList.add('expanded');
+                    cardInner.classList.add('rotate-y-180');
                 } else {
-                    cardBack.style.height = '';
-                    card.style.height = '';
+                    // Unflip the card
+                    card.classList.remove('expanded');
+                    cardInner.classList.remove('rotate-y-180');
                 }
-
-                if (isProjectCard) {
-                    cards.forEach(otherCard => {
-                        if (otherCard !== card) {
-                            otherCard.classList.remove('expanded');
-                            otherCard.querySelector('.relative').classList.remove('rotate-y-180');
-                            otherCard.querySelector('.absolute.back').style.height = '';
-                            otherCard.style.height = '';
-                        }
-                    });
-                }
-
-                // Force layout recalculation
-                card.offsetHeight;
             }
 
-            if ('ontouchstart' in window || navigator.maxTouchPoints > 0) {
-                // Mobile interaction
-                card.addEventListener('click', toggleCard);
-            } else {
-                // Desktop interaction
-                if (isProjectCard) {
-                    card.addEventListener('mouseenter', toggleCard);
-                    card.addEventListener('mouseleave', toggleCard);
-                } else {
-                    // For team members, only toggle on click for both mobile and desktop
-                    card.addEventListener('click', toggleCard);
-                }
-            }
+            // For team members, only toggle on click for both mobile and desktop
+            card.addEventListener('click', toggleCard);
         });
     }
 
-    handleCardInteraction(projectCards, true);
-    handleCardInteraction(teamMembers, false);
+    handleTeamMemberInteraction(teamMembers);
 
     // Mobile menu functionality
     const mobileMenuButton = document.getElementById('mobile-menu-button');
@@ -234,12 +205,53 @@ function updateLanguageDisplay() {
             : element.getAttribute('data-placeholder-tr');
     });
 
+    // Update project links based on language
+    const projectLinks = {
+        'soulseedfestival': {
+            en: '/projects/soulseedfestival.html',
+            tr: '/projects/soulseedfestivaltr.html'
+        },
+        'listforge': {
+            en: '/projects/listforge.html',
+            tr: '/projects/listforgetr.html'
+        },
+        'harman': {
+            en: '/projects/harman.html',
+            tr: '/projects/harmantr.html'
+        },
+        'coflow': {
+            en: '/projects/coflow.html',
+            tr: '/projects/coflowtr.html'
+        },
+        'dimmak': {
+            en: '/projects/dimmak.html',
+            tr: '/projects/dimmaktr.html'
+        },
+        'semayoga': {
+            en: '/projects/semayoga.html',
+            tr: '/projects/semayogatr.html'
+        }
+    };
+
+    // Update all project links using data attributes
+    Object.keys(projectLinks).forEach(project => {
+        const links = document.querySelectorAll(`a[data-project="${project}"]`);
+        console.log(`Found ${links.length} links for project: ${project}`); // Debug log
+        
+        links.forEach(link => {
+            const newHref = projectLinks[project][currentLang];
+            console.log(`Updating ${project} link to ${newHref}`); // Debug log
+            link.setAttribute('href', newHref);
+        });
+    });
+
     document.documentElement.lang = currentLang;
 }
 
 function toggleLanguage() {
-    console.log('Toggle language clicked'); // Debug log
+    console.log('Toggle language clicked - current language:', currentLang); // Debug log
     currentLang = currentLang === 'en' ? 'tr' : 'en';
+    console.log('Language changed to:', currentLang); // Debug log
     localStorage.setItem('preferredLanguage', currentLang);
     updateLanguageDisplay();
 }
@@ -247,6 +259,15 @@ function toggleLanguage() {
 // Initialize language on page load
 document.addEventListener('DOMContentLoaded', () => {
     console.log('DOM loaded'); // Debug log
+    
+    // Check for stored language preference
+    const storedLang = localStorage.getItem('preferredLanguage');
+    if (storedLang) {
+        currentLang = storedLang;
+    }
+    
+    // Update the display immediately
+    updateLanguageDisplay();
     
     const languageToggle = document.getElementById('language-toggle');
     console.log('Found language toggle button:', languageToggle); // Debug log

@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Basic Meta Tags -->
+    <title>ListForge - CodeSeed Project | Intuitive List Building App for Tabletop Games</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ListForge is an intuitive list building application for tabletop gaming enthusiasts with over 10,000 users across 4 platforms. Built by CodeSeed.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/codeseed-logo.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/codeseed-logo.png">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://code-seed.io/projects/listforge.html">
+    <meta property="og:site_name" content="CodeSeed">
+    <meta property="og:title" content="ListForge - Intuitive List Building App for Tabletop Games">
+    <meta property="og:description" content="ListForge is an intuitive list building application for tabletop gaming enthusiasts with over 10,000 users across 4 platforms.">
+    <meta property="og:image" content="https://code-seed.io/assets/LISTFORGE.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="ListForge App">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://code-seed.io/projects/listforge.html">
+    <meta name="twitter:title" content="ListForge - Intuitive List Building App for Tabletop Games">
+    <meta name="twitter:description" content="ListForge is an intuitive list building application for tabletop gaming enthusiasts with over 10,000 users across 4 platforms.">
+    <meta name="twitter:image" content="https://code-seed.io/assets/LISTFORGE.png">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "ListForge",
+      "description": "Intuitive list building application for tabletop gaming enthusiasts",
+      "url": "https://listforge.club",
+      "applicationCategory": "Game",
+      "operatingSystem": ["iOS", "macOS", "Android", "Windows", "Linux"],
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "creator": {
+        "@type": "Organization",
+        "name": "CodeSeed"
+      }
+    }
+    </script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#8dba90',
+                        secondary: '#5a7d5c',
+                        accent: '#D2B48C',
+                        tan: '#D2B48C',
+                    },
+                    fontFamily: {
+                        'fira': ['"Fira Code"', 'monospace'],
+                    },
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="../styles.css" rel="stylesheet">
+    <script src="../script.js" defer></script>
+</head>
+<body class="font-fira bg-white">
+    <!-- Header -->
+    <header class="bg-white fixed w-full z-50">
+        <nav class="container mx-auto px-4 py-5">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center transition-transform duration-300 ease-in-out hover:scale-105">
+                    <a href="../index.html#home" class="flex items-center transition-transform duration-300 ease-in-out hover:scale-105">
+                        <img src="../assets/codeseed-logo.png" alt="CodeSeed Logo" id="header-logo" class="h-20 w-auto mr-4">
+                        <span class="text-2xl font-bold text-primary lowercase tracking-wide">code-seed</span>
+                    </a>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-500 hover:text-gray-600 focus:outline-none focus:text-gray-600" aria-label="Toggle menu">
+                        <svg viewBox="0 0 24 24" class="h-6 w-6 fill-current">
+                            <path fill-rule="evenodd" d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"></path>
+                        </svg>
+                    </button>
+                </div>
+                <ul class="hidden md:flex space-x-6">
+                    <li><a href="../index.html#home" class="text-gray-800 hover:text-primary transition-colors duration-300">Home</a></li>
+                    <li><a href="../index.html#projects" class="text-gray-800 hover:text-primary transition-colors duration-300">Project Garden</a></li>
+                    <li><a href="../index.html#team" class="text-gray-800 hover:text-primary transition-colors duration-300">Our Team</a></li>
+                    <li><a href="../index.html#contact" class="text-gray-800 hover:text-primary transition-colors duration-300">Work with Us</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div id="mobile-menu" class="md:hidden hidden">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="../index.html#home" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">Home</a>
+                <a href="../index.html#projects" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">Project Garden</a>
+                <a href="../index.html#team" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">Our Team</a>
+                <a href="../index.html#contact" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">Work with Us</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Project Content -->
+    <main class="pt-20 md:pt-32">
+        <!-- Hero Section -->
+        <section class="hero-section bg-gradient-to-br from-primary to-secondary py-32">
+            <div class="container mx-auto px-4">
+                <div class="max-w-4xl mx-auto text-center text-white">
+                    <div class="mb-8">
+                        <img src="../assets/LISTFORGE.png" alt="ListForge Logo" class="h-32 w-auto mx-auto mb-8">
+                    </div>
+                    <h1 class="text-4xl md:text-6xl font-bold mb-6">
+                        ListForge
+                    </h1>
+                    <p class="text-xl md:text-2xl mb-8 text-gray-100">
+                        Intuitive List Building Application for Tabletop Gaming Enthusiasts
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                        <a href="https://listforge.club" target="_blank" class="bg-white text-primary hover:bg-gray-100 font-bold py-4 px-8 rounded-full transition-colors duration-300 text-lg">
+                            Visit ListForge
+                        </a>
+                        <a href="../index.html#projects" class="bg-transparent border-2 border-white text-white hover:bg-white hover:text-primary font-bold py-4 px-8 rounded-full transition-colors duration-300 text-lg">
+                            View All Projects
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Project Overview -->
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="max-w-4xl mx-auto">
+                    <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-secondary">Project Overview</h2>
+                    <div class="grid md:grid-cols-2 gap-12">
+                        <div>
+                            <h3 class="text-2xl font-bold mb-4 text-primary">The Challenge</h3>
+                            <p class="text-gray-600 mb-6 leading-relaxed">
+                                Tabletop gaming enthusiasts needed a more intuitive and efficient way to build and manage their army lists. Traditional methods were cumbersome, time-consuming, and often led to errors in point calculations and rule compliance.
+                            </p>
+                            <p class="text-gray-600 leading-relaxed">
+                                The challenge was to create a cross-platform solution that could handle complex game mechanics while remaining user-friendly for both casual and competitive players.
+                            </p>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold mb-4 text-primary">Our Solution</h3>
+                            <p class="text-gray-600 mb-6 leading-relaxed">
+                                ListForge is a sophisticated army building platform that combines powerful data management with an intuitive interface. The app streamlines the army creation process while ensuring accuracy and compliance with game rules.
+                            </p>
+                            <p class="text-gray-600 leading-relaxed">
+                                Built with a mobile-first approach, ListForge provides a seamless experience across all major platforms, allowing players to build and manage their lists anywhere, anytime.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Key Features -->
+        <section class="py-16 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <div class="max-w-6xl mx-auto">
+                    <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-secondary">Key Features</h2>
+                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <div class="bg-white rounded-lg p-6 shadow-md">
+                            <div class="text-primary text-4xl mb-4">
+                                <i class="fas fa-database"></i>
+                            </div>
+                            <h3 class="text-xl font-bold mb-3">Advanced Data Management</h3>
+                            <p class="text-gray-600">
+                                Real-time validation and comprehensive data management system that ensures accuracy and prevents rule violations.
+                            </p>
+                        </div>
+                        <div class="bg-white rounded-lg p-6 shadow-md">
+                            <div class="text-primary text-4xl mb-4">
+                                <i class="fas fa-mobile-alt"></i>
+                            </div>
+                            <h3 class="text-xl font-bold mb-3">Cross-Platform Support</h3>
+                            <p class="text-gray-600">
+                                Available on iOS, macOS, Android, Windows, and Linux with synchronized data across all devices.
+                            </p>
+                        </div>
+                        <div class="bg-white rounded-lg p-6 shadow-md">
+                            <div class="text-primary text-4xl mb-4">
+                                <i class="fas fa-palette"></i>
+                            </div>
+                            <h3 class="text-xl font-bold mb-3">Clean Design & Intuitive Interface</h3>
+                            <p class="text-gray-600">
+                                User-friendly interface with clean design principles that make army building simple and enjoyable for users.
+                            </p>
+                        </div>
+                        <div class="bg-white rounded-lg p-6 shadow-md">
+                            <div class="text-primary text-4xl mb-4">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <h3 class="text-xl font-bold mb-3">Community Features</h3>
+                            <p class="text-gray-600">
+                                Collaborative features for sharing lists and engaging with the gaming community.
+                            </p>
+                        </div>
+                        <div class="bg-white rounded-lg p-6 shadow-md">
+                            <div class="text-primary text-4xl mb-4">
+                                <i class="fas fa-sync"></i>
+                            </div>
+                            <h3 class="text-xl font-bold mb-3">Real-Time Sync</h3>
+                            <p class="text-gray-600">
+                                Automatic synchronization across all devices ensures your lists are always up to date.
+                            </p>
+                        </div>
+                        <div class="bg-white rounded-lg p-6 shadow-md">
+                            <div class="text-primary text-4xl mb-4">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <h3 class="text-xl font-bold mb-3">Rule Compliance</h3>
+                            <p class="text-gray-600">
+                                Built-in validation ensures all army lists comply with game rules and point limits.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Statistics -->
+        <section class="py-16 bg-primary">
+            <div class="container mx-auto px-4">
+                <div class="max-w-4xl mx-auto text-center text-white">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-12">Impact & Reach</h2>
+                    <div class="grid md:grid-cols-3 gap-8">
+                        <div>
+                            <div class="text-4xl md:text-5xl font-bold mb-2">10,000+</div>
+                            <div class="text-lg">Active Users</div>
+                        </div>
+                        <div>
+                            <div class="text-4xl md:text-5xl font-bold mb-2">4</div>
+                            <div class="text-lg">Platforms</div>
+                        </div>
+                        <div>
+                            <div class="text-4xl md:text-5xl font-bold mb-2">100%</div>
+                            <div class="text-lg">Cross-Platform</div>
+                        </div>
+                    </div>
+                    <div class="mt-8 text-lg text-gray-100">
+                        <p>Available on iOS, macOS, Android, Windows, and Linux</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Details -->
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="max-w-4xl mx-auto">
+                    <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-secondary">Technical Implementation</h2>
+                    <div class="grid md:grid-cols-2 gap-12">
+                        <div>
+                            <h3 class="text-2xl font-bold mb-4 text-primary">Architecture</h3>
+                            <ul class="text-gray-600 space-y-2">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-primary mt-1 mr-3"></i>
+                                    <span>Mobile-first responsive design</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-primary mt-1 mr-3"></i>
+                                    <span>Cross-platform compatibility</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-primary mt-1 mr-3"></i>
+                                    <span>Real-time data synchronization</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-primary mt-1 mr-3"></i>
+                                    <span>Scalable cloud infrastructure</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold mb-4 text-primary">Technologies</h3>
+                            <ul class="text-gray-600 space-y-2">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-primary mt-1 mr-3"></i>
+                                    <span>Advanced data validation systems</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-primary mt-1 mr-3"></i>
+                                    <span>Intuitive user interface design</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-primary mt-1 mr-3"></i>
+                                    <span>Offline-first capabilities</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-primary mt-1 mr-3"></i>
+                                    <span>Performance optimization</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="py-16 bg-secondary">
+            <div class="container mx-auto px-4">
+                <div class="max-w-4xl mx-auto text-center text-white">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Build Your Army?</h2>
+                    <p class="text-xl mb-8 text-gray-100">
+                        Join over 10,000 tabletop gaming enthusiasts who trust ListForge for their army building needs.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                        <a href="https://listforge.club" target="_blank" class="bg-white text-secondary hover:bg-gray-100 font-bold py-4 px-8 rounded-full transition-colors duration-300 text-lg">
+                            Get Started with ListForge
+                        </a>
+                        <a href="../index.html#contact" class="bg-transparent border-2 border-white text-white hover:bg-white hover:text-secondary font-bold py-4 px-8 rounded-full transition-colors duration-300 text-lg">
+                            Work With Us
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html> 
