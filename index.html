@@ -139,30 +139,30 @@
         </div>
     </header>
 
-    <section id="hero" class="hero relative h-screen overflow-hidden">
+    <section id="hero" class="hero relative min-h-screen overflow-hidden">
         <div class="video-background absolute inset-0 overflow-hidden">
             <video autoplay loop muted playsinline class="min-w-full min-h-full object-cover absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-40">
                 <source src="assets/codeseed-background.mp4" type="video/mp4">
             </video>
             <div class="absolute inset-0 bg-black bg-opacity-60"></div>
         </div>
-        <div class="hero-content container mx-auto px-4 h-full flex items-center justify-center text-center text-white relative z-10">
-            <div class="hero-card bg-black bg-opacity-60 p-8 rounded-lg shadow-lg max-w-4xl">
-                <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+        <div class="hero-content container mx-auto px-4 min-h-screen flex items-center justify-center text-center text-white relative z-10 py-20">
+            <div class="hero-card bg-black bg-opacity-60 p-4 md:p-8 rounded-lg shadow-lg max-w-4xl w-full mx-4">
+                <h1 class="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mb-4">
                     <span data-lang="en">Growing cutting-edge tech solutions with</span>
                     <span data-lang="tr" class="hidden">En yeni teknoloji çözümlerini geliştiriyoruz:</span>
                 </h1>
-                <h2 class="text-2xl md:text-3xl lg:text-4xl mb-6"><span id="rotating-word" class="text-primary font-bold"></span></h2>
-                <p class="text-lg md:text-xl mb-8 text-gray-200">
+                <h2 class="text-xl md:text-2xl lg:text-3xl xl:text-4xl mb-4 md:mb-6"><span id="rotating-word" class="text-primary font-bold"></span></h2>
+                <p class="text-base md:text-lg lg:text-xl mb-6 md:mb-8 text-gray-200">
                     <span data-lang="en">We build powerful digital solutions using advanced technologies. Our team of expert engineers delivers sophisticated mobile/web applications, data architectures, and custom software, powered by cutting-edge cloud computing and machine learning capabilities.</span>
                     <span data-lang="tr" class="hidden">Gelişmiş teknolojiler kullanarak güçlü dijital çözümler inşa ediyoruz. Uzman yazılımclılardan oluşan ekibimiz, gelişmiş bulut bilişim ve makine öğrenimi yetenekleriyle desteklenen sofistike mobile ve web uygulamaları, appler, veri mimarileri ve özel yazılımlar sunuyor.</span>
                 </p>
-                <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <a href="#recent-projects" class="bg-transparent hover:bg-primary border-2 border-primary text-white font-bold py-3 px-6 rounded-full transition-colors duration-300 text-base">
+                <div class="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center">
+                    <a href="#recent-projects" class="bg-transparent hover:bg-primary border-2 border-primary text-white font-bold py-2 md:py-3 px-4 md:px-6 rounded-full transition-colors duration-300 text-sm md:text-base">
                         <span data-lang="en">Recent Projects</span>
                         <span data-lang="tr" class="hidden">Son Projeler</span>
                     </a>
-                    <a href="#contact" class="bg-transparent hover:bg-primary border-2 border-primary text-white font-bold py-3 px-6 rounded-full transition-colors duration-300 text-base">
+                    <a href="#contact" class="bg-transparent hover:bg-primary border-2 border-primary text-white font-bold py-2 md:py-3 px-4 md:px-6 rounded-full transition-colors duration-300 text-sm md:text-base">
                         <span data-lang="en">Work With Us</span>
                         <span data-lang="tr" class="hidden">Bizimle Çalışın</span>
                     </a>
