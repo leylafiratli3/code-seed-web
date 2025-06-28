@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SoulSeed Festival Website Project | CodeSeed</title>
+    <meta name="description" content="Case study: Building the SoulSeed Festival website. UX, design, technical stack, and solutions for a modern, immersive festival web experience.">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/codeseed-logo.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/codeseed-logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#8dba90',
+                        secondary: '#5a7d5c',
+                        accent: '#D2B48C',
+                        tan: '#D2B48C',
+                    },
+                    fontFamily: {
+                        'fira': ['"Fira Code"', 'monospace'],
+                    },
+                }
+            }
+        }
+    </script>
+    <script src="../script.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="../styles.css" rel="stylesheet">
+</head>
+<body class="font-fira bg-white">
+    <!-- Header -->
+    <header class="bg-white fixed w-full z-50">
+        <nav class="container mx-auto px-4 py-5">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center transition-transform duration-300 ease-in-out hover:scale-105">
+                    <a href="../index.html#home" class="flex items-center transition-transform duration-300 ease-in-out hover:scale-105">
+                        <img src="../assets/codeseed-logo.png" alt="CodeSeed Logo" id="header-logo" class="h-20 w-auto mr-4">
+                        <span class="text-2xl font-bold text-primary lowercase tracking-wide">code-seed</span>
+                    </a>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-500 hover:text-gray-600 focus:outline-none focus:text-gray-600" aria-label="Toggle menu">
+                        <svg viewBox="0 0 24 24" class="h-6 w-6 fill-current">
+                            <path fill-rule="evenodd" d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"></path>
+                        </svg>
+                    </button>
+                </div>
+                <ul class="hidden md:flex space-x-6">
+                    <li><a href="../index.html#home" class="text-gray-800 hover:text-primary transition-colors duration-300">Home</a></li>
+                    <li><a href="../index.html#projects" class="text-gray-800 hover:text-primary transition-colors duration-300">Project Garden</a></li>
+                    <li><a href="../index.html#team" class="text-gray-800 hover:text-primary transition-colors duration-300">Our Team</a></li>
+                    <li><a href="../index.html#contact" class="text-gray-800 hover:text-primary transition-colors duration-300">Work with Us</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div id="mobile-menu" class="md:hidden hidden">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="../index.html#home" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">Home</a>
+                <a href="../index.html#projects" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">Project Garden</a>
+                <a href="../index.html#team" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">Our Team</a>
+                <a href="../index.html#contact" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">Work with Us</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-12 md:pt-32 pb-0">
+        <!-- Hero Section -->
+        <section class="bg-gradient-to-br from-primary to-secondary py-20 text-white text-center">
+            <div class="container mx-auto px-4">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">SoulSeed Festival Website</h1>
+                <p class="text-xl mb-2 font-semibold">A Modern, Immersive Web Experience for a Transformative Festival</p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center mt-8">
+                    <a href="https://soulseedfestival.com" target="_blank" class="bg-white text-primary hover:bg-gray-100 font-bold py-3 px-8 rounded-full transition-colors duration-300 text-lg">Visit Website</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Project Overview -->
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-4 max-w-4xl">
+                <h2 class="text-3xl font-bold text-center mb-8 text-secondary">Project Overview</h2>
+                <p class="text-gray-700 text-lg mb-6 text-center">
+                    The SoulSeed Festival team needed a visually striking, easy-to-update website to showcase their unique music and healing arts festival. The site had to communicate the festival's spirit, provide clear program and ticketing info, and work beautifully on all devices.
+                </p>
+                <p class="text-gray-700 text-lg text-center">
+                    Our goal: deliver a fast, immersive, and accessible web experience that inspires visitors to join the journey.
+                </p>
+            </div>
+        </section>
+
+        <!-- Design & UX Approach -->
+        <section class="py-16 bg-gray-50">
+            <div class="container mx-auto px-4 max-w-4xl">
+                <h2 class="text-3xl font-bold text-center mb-8 text-secondary">Design & UX Approach</h2>
+                <ul class="list-disc list-inside text-gray-700 space-y-3">
+                    <li><strong>Design-to-Code Collaboration:</strong> The visual and UX design for soulseedfestival.com was provided by the client's creative team. CodeSeed's role was to faithfully translate these Figma/Sketch layouts into pixel-perfect, responsive code.</li>
+                    <li><strong>Close communication:</strong> Worked closely with designers to clarify intent, resolve edge cases, and ensure the final site matched the original vision across all devices.</li>
+                    <li><strong>Mobile-first layout:</strong> Implemented a responsive grid and flexible sections for seamless experience on any screen size.</li>
+                    <li><strong>Immersive visuals:</strong> Used gradients, iconography, and section alternation as specified in the design system.</li>
+                    <li><strong>Accessible, maintainable code:</strong> Ensured all design elements were implemented with semantic HTML and scalable CSS for future updates.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Technical Implementation -->
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-4 max-w-4xl">
+                <h2 class="text-3xl font-bold text-center mb-8 text-secondary">Technical Implementation</h2>
+                <ul class="list-disc list-inside text-gray-700 space-y-3">
+                    <li><strong>HTML5 & Tailwind CSS:</strong> Semantic markup and utility-first styling for rapid, maintainable development.</li>
+                    <li><strong>Custom JavaScript:</strong> For mobile menu, smooth scrolling, and interactive elements.</li>
+                    <li><strong>Performance optimized:</strong> Minimal dependencies, lazy loading, and compressed assets.</li>
+                    <li><strong>SEO & accessibility:</strong> Meta tags, alt text, and keyboard navigation support.</li>
+                    <li><strong>Easy content updates:</strong> Modular section structure for quick edits and future expansion.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Key Features -->
+        <section class="py-16 bg-gray-50">
+            <div class="container mx-auto px-4 max-w-5xl">
+                <h2 class="text-3xl font-bold text-center mb-12 text-secondary">Key Features</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-white rounded-lg p-6 shadow-md text-center">
+                        <div class="text-primary text-4xl mb-4"><i class="fas fa-mobile-alt"></i></div>
+                        <h3 class="text-xl font-bold mb-2">Design-to-Code Implementation</h3>
+                        <p class="text-gray-600">Converted provided Figma/Sketch designs into pixel-perfect, responsive HTML/CSS/JS.</p>
+                    </div>
+                    <div class="bg-white rounded-lg p-6 shadow-md text-center">
+                        <div class="text-primary text-4xl mb-4"><i class="fas fa-palette"></i></div>
+                        <h3 class="text-xl font-bold mb-2">Custom Visual Identity</h3>
+                        <p class="text-gray-600">Soulful color scheme, iconography, and modern typography as specified by the design team.</p>
+                    </div>
+                    <div class="bg-white rounded-lg p-6 shadow-md text-center">
+                        <div class="text-primary text-4xl mb-4"><i class="fas fa-bolt"></i></div>
+                        <h3 class="text-xl font-bold mb-2">Fast & Lightweight</h3>
+                        <p class="text-gray-600">Minimal dependencies, fast load times, and smooth navigation.</p>
+                    </div>
+                    <div class="bg-white rounded-lg p-6 shadow-md text-center">
+                        <div class="text-primary text-4xl mb-4"><i class="fas fa-globe"></i></div>
+                        <h3 class="text-xl font-bold mb-2">SEO & Accessibility</h3>
+                        <p class="text-gray-600">Meta tags, alt text, and keyboard navigation for broad reach.</p>
+                    </div>
+                    <div class="bg-white rounded-lg p-6 shadow-md text-center">
+                        <div class="text-primary text-4xl mb-4"><i class="fas fa-edit"></i></div>
+                        <h3 class="text-xl font-bold mb-2">Easy to Update</h3>
+                        <p class="text-gray-600">Modular HTML sections for quick content changes and future growth.</p>
+                    </div>
+                    <div class="bg-white rounded-lg p-6 shadow-md text-center">
+                        <div class="text-primary text-4xl mb-4"><i class="fas fa-envelope"></i></div>
+                        <h3 class="text-xl font-bold mb-2">Clear Contact & CTA</h3>
+                        <p class="text-gray-600">Prominent ticketing and contact options for maximum engagement.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Challenges & Solutions -->
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-4 max-w-4xl">
+                <h2 class="text-3xl font-bold text-center mb-8 text-secondary">Challenges & Solutions</h2>
+                <ul class="list-disc list-inside text-gray-700 space-y-3">
+                    <li><strong>Multilingual content:</strong> Designed for easy future addition of Turkish/English toggle.</li>
+                    <li><strong>Festival spirit online:</strong> Used gradients, icons, and alternating backgrounds to evoke the event's energy.</li>
+                    <li><strong>Mobile navigation:</strong> Custom JS for a smooth, accessible mobile menu.</li>
+                    <li><strong>Content flexibility:</strong> Modular HTML lets organizers update program, tickets, and info with minimal dev work.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Outcome & Impact -->
+        <section class="py-16 bg-secondary">
+            <div class="container mx-auto px-4 max-w-3xl text-center text-white">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">Outcome & Impact</h2>
+                <p class="text-xl mb-8 text-gray-100">
+                    The new SoulSeed Festival website launched on time and received praise for its clarity, beauty, and ease of use. Organizers can now update content quickly, and visitors enjoy a fast, immersive experience on any device.
+                </p>
+                <a href="../index.html#contact" class="inline-block bg-white text-secondary hover:bg-gray-100 font-bold py-3 px-8 rounded-full transition-colors duration-300 text-lg">
+                    Contact Us About Your Project
+                </a>
+            </div>
+        </section>
+    </main>
+</body>
+</html> 
