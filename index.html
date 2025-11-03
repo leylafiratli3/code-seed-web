@@ -46,6 +46,9 @@
     }
     </script>
 
+    <!-- Satoshi Font from Fontshare -->
+    <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,600,700,900&display=swap" rel="stylesheet">
+    <!-- Keep Fira Code for code/technical elements if needed -->
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -59,6 +62,7 @@
                         tan: '#D2B48C',
                     },
                     fontFamily: {
+                        'sans': ['Satoshi', 'sans-serif'],
                         'fira': ['"Fira Code"', 'monospace'],
                     },
                 }
@@ -70,7 +74,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link href="styles.css" rel="stylesheet">
 </head>
-<body class="font-fira bg-primary text-gray-800 loading">
+<body class="font-sans bg-primary text-gray-800 loading">
     <header class="bg-white shadow-md fixed w-full z-50">
         <nav class="container mx-auto px-4 py-5">
             <div class="flex justify-between items-center">
@@ -105,7 +109,7 @@
                         <span data-lang="tr" class="hidden">Bizimle Çalışın</span>
                     </a></li>
                     <li>
-                        <button id="language-toggle" class="text-white bg-secondary hover:bg-primary transition-colors duration-300 px-3 py-1 rounded-full">
+                        <button id="language-toggle" class="text-white bg-secondary hover:bg-primary transition-colors duration-300 px-3 py-1 rounded-full -mt-1">
                             <span data-lang="en">TR</span>
                             <span data-lang="tr" class="hidden">EN</span>
                         </button>
@@ -147,7 +151,7 @@
             <div class="absolute inset-0 bg-black bg-opacity-60"></div>
         </div>
         <div class="hero-content container mx-auto px-4 min-h-screen flex items-center justify-center text-center text-white relative z-10 py-20">
-            <div class="hero-card bg-black bg-opacity-60 p-4 md:p-8 rounded-lg shadow-lg max-w-4xl w-full mx-4">
+            <div class="hero-card bg-black bg-opacity-60 p-4 md:p-8 rounded-lg shadow-lg max-w-[64.4rem] w-full mx-4">
                 <h1 class="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mb-4">
                     <span data-lang="en">Growing cutting-edge tech solutions with</span>
                     <span data-lang="tr" class="hidden">En yeni teknoloji çözümlerini geliştiriyoruz:</span>
@@ -171,68 +175,216 @@
         </div>
     </section>
 
-    <section id="about" class="about-section bg-primary py-16">
+    <section id="about" class="about-section bg-secondary py-16">
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-white">
+            <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold text-center mb-16 md:mb-20 text-white">
                 <span data-lang="en">Our Services</span>
                 <span data-lang="tr" class="hidden">Hizmetlerimiz</span>
             </h2>
-            <div class="tech-grid grid grid-cols-2 md:grid-cols-4 gap-6">
-                <div class="tech-item bg-white rounded-lg p-6 text-center shadow-md transition-all duration-300 transform hover:scale-105">
-                    <i class="fas fa-brain text-5xl text-primary mb-4"></i>
-                    <h3 class="text-lg font-semibold">
-                        <span data-lang="en">Integrated LLM Solutions</span>
-                        <span data-lang="tr" class="hidden">Entegre LLM Çözümleri</span>
-                    </h3>
+            <div class="services-tabs max-w-7xl mx-auto">
+                <div class="flex flex-col md:flex-row gap-6">
+                    <!-- Tab Navigation - Left Sidebar -->
+                    <div class="w-full md:w-1/4 lg:w-1/3">
+                        <div class="flex flex-row md:flex-col gap-1.5 overflow-x-auto md:overflow-x-visible pb-2 md:pb-0 md:pr-2">
+                            <button class="service-tab-btn active group relative w-full text-left px-5 py-3.5 rounded-xl transition-all duration-300 font-medium text-sm md:text-base whitespace-nowrap md:whitespace-normal" data-service="app-development">
+                                <div class="flex items-center">
+                                    <i class="fas fa-mobile-alt mr-3 text-base w-5 flex-shrink-0 transition-transform duration-300 group-hover:scale-110"></i>
+                                    <span data-lang="en">App Development</span>
+                                    <span data-lang="tr" class="hidden">Uygulama Geliştirme</span>
+                                </div>
+                            </button>
+                            <button class="service-tab-btn group relative w-full text-left px-5 py-3.5 rounded-xl transition-all duration-300 font-medium text-sm md:text-base whitespace-nowrap md:whitespace-normal hover:shadow-md" data-service="software-development">
+                                <div class="flex items-center">
+                                    <i class="fas fa-code mr-3 text-base w-5 flex-shrink-0 transition-transform duration-300 group-hover:scale-110"></i>
+                                    <span data-lang="en">Software Development</span>
+                                    <span data-lang="tr" class="hidden">Yazılım Geliştirme</span>
+                                </div>
+                            </button>
+                            <button class="service-tab-btn group relative w-full text-left px-5 py-3.5 text-white/80 hover:text-white hover:bg-white/10 rounded-xl transition-all duration-300 font-medium text-sm md:text-base whitespace-nowrap md:whitespace-normal hover:shadow-md" data-service="cloud-computing">
+                                <div class="flex items-center">
+                                    <i class="fas fa-cloud mr-3 text-base w-5 flex-shrink-0 transition-transform duration-300 group-hover:scale-110"></i>
+                                    <span data-lang="en">Cloud Computing</span>
+                                    <span data-lang="tr" class="hidden">Bulut Bilişim</span>
+                                </div>
+                            </button>
+                            <button class="service-tab-btn group relative w-full text-left px-5 py-3.5 text-white/80 hover:text-white hover:bg-white/10 rounded-xl transition-all duration-300 font-medium text-sm md:text-base whitespace-nowrap md:whitespace-normal hover:shadow-md" data-service="data-analytics">
+                                <div class="flex items-center">
+                                    <i class="fas fa-database mr-3 text-base w-5 flex-shrink-0 transition-transform duration-300 group-hover:scale-110"></i>
+                                    <span data-lang="en">Data Analytics & Engineering</span>
+                                    <span data-lang="tr" class="hidden">Veri Analitiği ve Mühendisliği</span>
+                                </div>
+                            </button>
+                            <button class="service-tab-btn group relative w-full text-left px-5 py-3.5 text-white/80 hover:text-white hover:bg-white/10 rounded-xl transition-all duration-300 font-medium text-sm md:text-base whitespace-nowrap md:whitespace-normal hover:shadow-md" data-service="web-development">
+                                <div class="flex items-center">
+                                    <i class="fas fa-globe mr-3 text-base w-5 flex-shrink-0 transition-transform duration-300 group-hover:scale-110"></i>
+                                    <span data-lang="en">Web Development</span>
+                                    <span data-lang="tr" class="hidden">Web Geliştirme</span>
+                                </div>
+                            </button>
+                            <button class="service-tab-btn group relative w-full text-left px-5 py-3.5 text-white/80 hover:text-white hover:bg-white/10 rounded-xl transition-all duration-300 font-medium text-sm md:text-base whitespace-nowrap md:whitespace-normal hover:shadow-md" data-service="product-design">
+                                <div class="flex items-center">
+                                    <i class="fas fa-pencil-ruler mr-3 text-base w-5 flex-shrink-0 transition-transform duration-300 group-hover:scale-110"></i>
+                                    <span data-lang="en">Product Design</span>
+                                    <span data-lang="tr" class="hidden">Ürün Tasarımı</span>
+                                </div>
+                            </button>
+                            <button class="service-tab-btn group relative w-full text-left px-5 py-3.5 text-white/80 hover:text-white hover:bg-white/10 rounded-xl transition-all duration-300 font-medium text-sm md:text-base whitespace-nowrap md:whitespace-normal hover:shadow-md" data-service="machine-learning">
+                                <div class="flex items-center">
+                                    <i class="fas fa-robot mr-3 text-base w-5 flex-shrink-0 transition-transform duration-300 group-hover:scale-110"></i>
+                                    <span data-lang="en">Applied Machine Learning</span>
+                                    <span data-lang="tr" class="hidden">Uygulamalı Makine Öğrenimi</span>
+                                </div>
+                            </button>
+                            <button class="service-tab-btn group relative w-full text-left px-5 py-3.5 text-white/80 hover:text-white hover:bg-white/10 rounded-xl transition-all duration-300 font-medium text-sm md:text-base whitespace-nowrap md:whitespace-normal hover:shadow-md" data-service="automation">
+                                <div class="flex items-center">
+                                    <i class="fas fa-cogs mr-3 text-base w-5 flex-shrink-0 transition-transform duration-300 group-hover:scale-110"></i>
+                                    <span data-lang="en">Adaptive Automation</span>
+                                    <span data-lang="tr" class="hidden">Adaptif Otomasyon</span>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Tab Content - Right Side -->
+                    <div class="flex-1">
+                <div class="service-content bg-white rounded-xl shadow-xl p-8 md:p-10 min-h-[450px] border border-gray-100">
+                    <!-- App Development -->
+                    <div class="service-panel active" data-panel="app-development">
+                        <h3 class="text-3xl md:text-4xl font-bold text-secondary mb-6">
+                            <span data-lang="en">App Development</span>
+                            <span data-lang="tr" class="hidden">Uygulama Geliştirme</span>
+                        </h3>
+                        <p class="text-gray-700 text-lg md:text-xl mb-8 leading-relaxed">
+                            <span data-lang="en">We build powerful, cross-platform mobile applications for iOS and Android. Our apps feature intuitive interfaces, seamless user experiences, and robust backend integrations. From native apps to progressive web apps, we deliver solutions that engage users and drive business growth.</span>
+                            <span data-lang="tr" class="hidden">iOS ve Android için güçlü, çok platformlu mobil uygulamalar geliştiriyoruz. Uygulamalarımız sezgisel arayüzler, sorunsuz kullanıcı deneyimleri ve güçlü backend entegrasyonları içerir. Yerel uygulamalardan ilerici web uygulamalarına kadar, kullanıcıları etkileyen ve iş büyümesini destekleyen çözümler sunuyoruz.</span>
+                        </p>
+                        <a href="/projects/listforge.html" data-project="listforge" class="group inline-flex items-center gap-2 bg-transparent border-2 border-primary text-primary hover:bg-primary hover:text-white font-semibold py-3 px-8 rounded-full transition-all duration-300 hover:shadow-lg hover:scale-105">
+                            <span data-lang="en">View Example Project</span>
+                            <span data-lang="tr" class="hidden">Örnek Projeyi Görüntüle</span>
+                            <i class="fas fa-arrow-right text-sm transition-transform duration-300 group-hover:translate-x-1"></i>
+                        </a>
+                    </div>
+
+                    <!-- Software Development -->
+                    <div class="service-panel hidden" data-panel="software-development">
+                        <h3 class="text-3xl md:text-4xl font-bold text-secondary mb-6">
+                            <span data-lang="en">Software Development</span>
+                            <span data-lang="tr" class="hidden">Yazılım Geliştirme</span>
+                        </h3>
+                        <p class="text-gray-700 text-lg md:text-xl mb-8 leading-relaxed">
+                            <span data-lang="en">Custom software solutions tailored to your business needs. We develop scalable, maintainable, and efficient applications using modern technologies and best practices. Our full-stack development approach ensures end-to-end solutions that integrate seamlessly with your existing infrastructure.</span>
+                            <span data-lang="tr" class="hidden">İş ihtiyaçlarınıza özel yazılım çözümleri. Modern teknolojiler ve en iyi uygulamalar kullanarak ölçeklenebilir, sürdürülebilir ve verimli uygulamalar geliştiriyoruz. Tam yığın geliştirme yaklaşımımız, mevcut altyapınızla sorunsuz entegre olan uçtan uca çözümler sağlar.</span>
+                        </p>
+                        <a href="/projects/trustclient.html" data-project="trustclient" class="group inline-flex items-center gap-2 bg-transparent border-2 border-primary text-primary hover:bg-primary hover:text-white font-semibold py-3 px-8 rounded-full transition-all duration-300 hover:shadow-lg hover:scale-105">
+                            <span data-lang="en">View Example Project</span>
+                            <span data-lang="tr" class="hidden">Örnek Projeyi Görüntüle</span>
+                            <i class="fas fa-arrow-right text-sm transition-transform duration-300 group-hover:translate-x-1"></i>
+                        </a>
+                    </div>
+
+                    <!-- Cloud Computing -->
+                    <div class="service-panel hidden" data-panel="cloud-computing">
+                        <h3 class="text-3xl md:text-4xl font-bold text-secondary mb-6">
+                            <span data-lang="en">Cloud Computing</span>
+                            <span data-lang="tr" class="hidden">Bulut Bilişim</span>
+                        </h3>
+                        <p class="text-gray-700 text-lg md:text-xl mb-8 leading-relaxed">
+                            <span data-lang="en">Scalable cloud infrastructure solutions that grow with your business. We design and deploy cloud architectures on AWS, Azure, and GCP, ensuring high availability, security, and cost optimization. From cloud migration to serverless architectures, we help you leverage the cloud's full potential.</span>
+                            <span data-lang="tr" class="hidden">İşletmenizle birlikte büyüyen ölçeklenebilir bulut altyapı çözümleri. AWS, Azure ve GCP üzerinde yüksek kullanılabilirlik, güvenlik ve maliyet optimizasyonu sağlayan bulut mimarileri tasarlıyor ve dağıtıyoruz. Bulut geçişinden sunucusuz mimarilere kadar, bulutun tam potansiyelini kullanmanıza yardımcı oluyoruz.</span>
+                        </p>
+                        <a href="/projects/harman.html" data-project="harman" class="group inline-flex items-center gap-2 bg-transparent border-2 border-primary text-primary hover:bg-primary hover:text-white font-semibold py-3 px-8 rounded-full transition-all duration-300 hover:shadow-lg hover:scale-105">
+                            <span data-lang="en">View Example Project</span>
+                            <span data-lang="tr" class="hidden">Örnek Projeyi Görüntüle</span>
+                            <i class="fas fa-arrow-right text-sm transition-transform duration-300 group-hover:translate-x-1"></i>
+                        </a>
+                    </div>
+
+                    <!-- Data Analytics & Engineering -->
+                    <div class="service-panel hidden" data-panel="data-analytics">
+                        <h3 class="text-3xl md:text-4xl font-bold text-secondary mb-6">
+                            <span data-lang="en">Data Analytics & Engineering</span>
+                            <span data-lang="tr" class="hidden">Veri Analitiği ve Mühendisliği</span>
+                        </h3>
+                        <p class="text-gray-700 text-lg md:text-xl mb-8 leading-relaxed">
+                            <span data-lang="en">Transform raw data into actionable insights. We build robust data pipelines, design data warehouses, and create analytics dashboards that help you make informed decisions. Our data engineering solutions ensure data quality, integrity, and accessibility across your organization.</span>
+                            <span data-lang="tr" class="hidden">Ham verileri eyleme dönüştürülebilir içgörülere dönüştürün. Güçlü veri boru hatları oluşturuyor, veri ambarları tasarlıyor ve bilinçli kararlar vermenize yardımcı olan analitik panolar oluşturuyoruz. Veri mühendisliği çözümlerimiz, organizasyonunuz genelinde veri kalitesi, bütünlüğü ve erişilebilirliğini sağlar.</span>
+                        </p>
+                        <a href="/projects/dimmak.html" data-project="dimmak" class="group inline-flex items-center gap-2 bg-transparent border-2 border-primary text-primary hover:bg-primary hover:text-white font-semibold py-3 px-8 rounded-full transition-all duration-300 hover:shadow-lg hover:scale-105">
+                            <span data-lang="en">View Example Project</span>
+                            <span data-lang="tr" class="hidden">Örnek Projeyi Görüntüle</span>
+                            <i class="fas fa-arrow-right text-sm transition-transform duration-300 group-hover:translate-x-1"></i>
+                        </a>
+                    </div>
+
+                    <!-- Web Development -->
+                    <div class="service-panel hidden" data-panel="web-development">
+                        <h3 class="text-3xl md:text-4xl font-bold text-secondary mb-6">
+                            <span data-lang="en">Web Development</span>
+                            <span data-lang="tr" class="hidden">Web Geliştirme</span>
+                        </h3>
+                        <p class="text-gray-700 text-lg md:text-xl mb-8 leading-relaxed">
+                            <span data-lang="en">Modern, responsive web applications that deliver exceptional user experiences. We build fast, scalable web solutions using cutting-edge technologies. From simple landing pages to complex web platforms, we create digital experiences that engage and convert visitors.</span>
+                            <span data-lang="tr" class="hidden">Olağanüstü kullanıcı deneyimleri sunan modern, duyarlı web uygulamaları. En son teknolojileri kullanarak hızlı, ölçeklenebilir web çözümleri oluşturuyoruz. Basit açılış sayfalarından karmaşık web platformlarına kadar, ziyaretçileri etkileyen ve dönüştüren dijital deneyimler yaratıyoruz.</span>
+                        </p>
+                        <a href="/projects/soulseedfestival.html" data-project="soulseedfestival" class="group inline-flex items-center gap-2 bg-transparent border-2 border-primary text-primary hover:bg-primary hover:text-white font-semibold py-3 px-8 rounded-full transition-all duration-300 hover:shadow-lg hover:scale-105">
+                            <span data-lang="en">View Example Project</span>
+                            <span data-lang="tr" class="hidden">Örnek Projeyi Görüntüle</span>
+                            <i class="fas fa-arrow-right text-sm transition-transform duration-300 group-hover:translate-x-1"></i>
+                        </a>
+                    </div>
+
+                    <!-- Product Design -->
+                    <div class="service-panel hidden" data-panel="product-design">
+                        <h3 class="text-3xl md:text-4xl font-bold text-secondary mb-6">
+                            <span data-lang="en">Product Design</span>
+                            <span data-lang="tr" class="hidden">Ürün Tasarımı</span>
+                        </h3>
+                        <p class="text-gray-700 text-lg md:text-xl mb-8 leading-relaxed">
+                            <span data-lang="en">User-centered design that combines aesthetics with functionality. We create intuitive interfaces and engaging user experiences through research, prototyping, and iterative design. Our design process ensures your product not only looks great but also solves real user problems effectively.</span>
+                            <span data-lang="tr" class="hidden">Estetiği işlevsellikle birleştiren kullanıcı odaklı tasarım. Araştırma, prototipleme ve yinelemeli tasarım aracılığıyla sezgisel arayüzler ve etkileyici kullanıcı deneyimleri oluşturuyoruz. Tasarım sürecimiz, ürününüzün sadece harika görünmesini değil, aynı zamanda gerçek kullanıcı sorunlarını etkili bir şekilde çözmesini sağlar.</span>
+                        </p>
+                        <a href="https://mindbodyhealingwithleyla.com" target="_blank" class="group inline-flex items-center gap-2 bg-transparent border-2 border-primary text-primary hover:bg-primary hover:text-white font-semibold py-3 px-8 rounded-full transition-all duration-300 hover:shadow-lg hover:scale-105">
+                            <span data-lang="en">View Example Project</span>
+                            <span data-lang="tr" class="hidden">Örnek Projeyi Görüntüle</span>
+                            <i class="fas fa-arrow-right text-sm transition-transform duration-300 group-hover:translate-x-1"></i>
+                        </a>
+                    </div>
+
+                    <!-- Applied Machine Learning -->
+                    <div class="service-panel hidden" data-panel="machine-learning">
+                        <h3 class="text-3xl md:text-4xl font-bold text-secondary mb-6">
+                            <span data-lang="en">Applied Machine Learning</span>
+                            <span data-lang="tr" class="hidden">Uygulamalı Makine Öğrenimi</span>
+                        </h3>
+                        <p class="text-gray-700 text-lg md:text-xl mb-8 leading-relaxed">
+                            <span data-lang="en">Intelligent solutions powered by machine learning and AI. We develop custom ML models that enhance your products and automate complex processes. From natural language processing to computer vision, we help you leverage AI to gain competitive advantages and improve user experiences.</span>
+                            <span data-lang="tr" class="hidden">Makine öğrenimi ve AI ile desteklenen akıllı çözümler. Ürünlerinizi geliştiren ve karmaşık süreçleri otomatikleştiren özel ML modelleri geliştiriyoruz. Doğal dil işlemeden bilgisayarlı görüye kadar, rekabet avantajları kazanmanıza ve kullanıcı deneyimlerini iyileştirmenize yardımcı oluyoruz.</span>
+                        </p>
+                        <a href="/projects/coflow.html" data-project="coflow" class="group inline-flex items-center gap-2 bg-transparent border-2 border-primary text-primary hover:bg-primary hover:text-white font-semibold py-3 px-8 rounded-full transition-all duration-300 hover:shadow-lg hover:scale-105">
+                            <span data-lang="en">View Example Project</span>
+                            <span data-lang="tr" class="hidden">Örnek Projeyi Görüntüle</span>
+                            <i class="fas fa-arrow-right text-sm transition-transform duration-300 group-hover:translate-x-1"></i>
+                        </a>
+                    </div>
+
+                    <!-- Adaptive Automation -->
+                    <div class="service-panel hidden" data-panel="automation">
+                        <h3 class="text-3xl md:text-4xl font-bold text-secondary mb-6">
+                            <span data-lang="en">Adaptive Automation</span>
+                            <span data-lang="tr" class="hidden">Adaptif Otomasyon</span>
+                        </h3>
+                        <p class="text-gray-700 text-lg md:text-xl mb-8 leading-relaxed">
+                            <span data-lang="en">Streamline operations with intelligent automation systems. We build custom automation solutions that adapt to your business processes, reducing manual work and increasing efficiency. Our automation systems integrate seamlessly with existing workflows and scale as your needs grow.</span>
+                            <span data-lang="tr" class="hidden">Akıllı otomasyon sistemleriyle operasyonları kolaylaştırın. İş süreçlerinize uyum sağlayan, manuel çalışmayı azaltan ve verimliliği artıran özel otomasyon çözümleri oluşturuyoruz. Otomasyon sistemlerimiz mevcut iş akışlarıyla sorunsuz entegre olur ve ihtiyaçlarınız büyüdükçe ölçeklenir.</span>
+                        </p>
+                        <a href="/projects/harman.html" data-project="harman" class="group inline-flex items-center gap-2 bg-transparent border-2 border-primary text-primary hover:bg-primary hover:text-white font-semibold py-3 px-8 rounded-full transition-all duration-300 hover:shadow-lg hover:scale-105">
+                            <span data-lang="en">View Example Project</span>
+                            <span data-lang="tr" class="hidden">Örnek Projeyi Görüntüle</span>
+                            <i class="fas fa-arrow-right text-sm transition-transform duration-300 group-hover:translate-x-1"></i>
+                        </a>
+                    </div>
                 </div>
-                <div class="tech-item bg-white rounded-lg p-6 text-center shadow-md transition-all duration-300 transform hover:scale-105">
-                    <i class="fas fa-code text-5xl text-primary mb-4"></i>
-                    <h3 class="text-lg font-semibold">
-                        <span data-lang="en">Software Development</span>
-                        <span data-lang="tr" class="hidden">Yazılım Geliştirme</span>
-                    </h3>
-                </div>
-                <div class="tech-item bg-white rounded-lg p-6 text-center shadow-md transition-all duration-300 transform hover:scale-105">
-                    <i class="fas fa-cloud text-5xl text-primary mb-4"></i>
-                    <h3 class="text-lg font-semibold">
-                        <span data-lang="en">Cloud Computing</span>
-                        <span data-lang="tr" class="hidden">Bulut Bilişim</span>
-                    </h3>
-                </div>
-                <div class="tech-item bg-white rounded-lg p-6 text-center shadow-md transition-all duration-300 transform hover:scale-105">
-                    <i class="fas fa-database text-5xl text-primary mb-4"></i>
-                    <h3 class="text-lg font-semibold">
-                        <span data-lang="en">Data Analytics & Engineering</span>
-                        <span data-lang="tr" class="hidden">Veri Analitiği ve Mühendisliği</span>
-                    </h3>
-                </div>
-                <div class="tech-item bg-white rounded-lg p-6 text-center shadow-md transition-all duration-300 transform hover:scale-105">
-                    <i class="fas fa-globe text-5xl text-primary mb-4"></i>
-                    <h3 class="text-lg font-semibold">
-                        <span data-lang="en">Web Development</span>
-                        <span data-lang="tr" class="hidden">Web Geliştirme</span>
-                    </h3>
-                </div>
-                <div class="tech-item bg-white rounded-lg p-6 text-center shadow-md transition-all duration-300 transform hover:scale-105">
-                    <i class="fas fa-pencil-ruler text-5xl text-primary mb-4"></i>
-                    <h3 class="text-lg font-semibold">
-                        <span data-lang="en">Product Design</span>
-                        <span data-lang="tr" class="hidden">Ürün Tasarımı</span>
-                    </h3>
-                </div>
-                <div class="tech-item bg-white rounded-lg p-6 text-center shadow-md transition-all duration-300 transform hover:scale-105">
-                    <i class="fas fa-robot text-5xl text-primary mb-4"></i>
-                    <h3 class="text-lg font-semibold">
-                        <span data-lang="en">Applied Machine Learning</span>
-                        <span data-lang="tr" class="hidden">Uygulamalı Makine Öğrenimi</span>
-                    </h3>
-                </div>
-                <div class="tech-item bg-white rounded-lg p-6 text-center shadow-md transition-all duration-300 transform hover:scale-105">
-                    <i class="fas fa-cogs text-5xl text-primary mb-4"></i>
-                    <h3 class="text-lg font-semibold">
-                        <span data-lang="en">Adaptive Automation</span>
-                        <span data-lang="tr" class="hidden">Adaptif Otomasyon</span>
-                    </h3>
+                    </div>
                 </div>
             </div>
         </div>
@@ -240,7 +392,7 @@
 
     <section class="clients-section bg-white py-16">
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-secondary">
+            <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold text-center mb-12 text-secondary">
                 <span data-lang="en">We've Worked With</span>
                 <span data-lang="tr" class="hidden">Birlikte Çalıştığımız Firmalar</span>
             </h2>
@@ -261,59 +413,169 @@
         </div>
     </section>
 
-    <section id="recent-projects" class="recent-projects-section bg-primary py-16">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-white">
+    <section id="recent-projects" class="recent-projects-section bg-primary py-20 md:py-28">
+        <div class="container mx-auto px-4 max-w-7xl">
+            <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold text-center mb-20 md:mb-24 text-white">
                 <span data-lang="en">Recent Projects</span>
                 <span data-lang="tr" class="hidden">Son Projeler</span>
             </h2>
-            <div class="project-cards flex flex-col md:grid md:grid-cols-2 gap-8">
-                <div class="project-card bg-white rounded-lg shadow-md p-6 transition-all duration-300 hover:shadow-lg hover:scale-105">
-                    <div class="h-64 flex items-center justify-center mb-6">
-                        <img src="assets/LISTFORGE.png" 
-                             alt="ListForge Logo" 
-                             class="h-full w-auto object-contain rounded-2xl">
-                    </div>
-                    <h3 class="text-xl font-bold mb-4 text-center">
-                        <span data-lang="en">ListForge: Intuitive List Building App for Tabletop Games</span>
-                        <span data-lang="tr" class="hidden">ListForge: Masaüstü Oyunlar için Sezgisel Liste Oluşturma Uygulaması</span>
-                    </h3>
-                    <p class="text-gray-600 mb-6 text-center">
-                        <span data-lang="en">An intuitive, cross-platform army building application trusted by 10,000+ tabletop gaming enthusiasts. ListForge features cross platform syncing, clean design, and seamless list management across iOS, macOS, Android, Windows, and Linux.</span>
-                        <span data-lang="tr" class="hidden">10.000'den fazla masaüstü oyun tutkunu tarafından güvenilen, sezgisel ve çok platformlu bir ordu oluşturma uygulaması. ListForge, gerçek zamanlı doğrulama, temiz tasarım ve tüm cihazlarda sorunsuz liste yönetimi sunar.</span>
-                    </p>
-                    <div class="flex flex-col md:flex-row gap-4 justify-center">
-                        <a href="https://listforge.club" target="_blank" class="inline-block bg-primary hover:bg-secondary text-white font-bold py-3 px-6 rounded-full transition-colors duration-300">
-                            <span data-lang="en">Visit Project</span>
-                            <span data-lang="tr" class="hidden">Projeyi Ziyaret Et</span>
-                        </a>
-                        <a href="/projects/listforge.html" data-project="listforge" class="inline-block bg-transparent border-2 border-primary text-primary hover:bg-primary hover:text-white font-bold py-3 px-6 rounded-full transition-colors duration-300">
-                            <span data-lang="en">Learn More</span>
-                            <span data-lang="tr" class="hidden">Daha Fazla Bilgi</span>
-                        </a>
+            <div class="space-y-8 md:space-y-10">
+                <!-- ListForge Project -->
+                <div class="project-container bg-secondary rounded-2xl overflow-hidden border-2 border-secondary/50 hover:border-white/30 hover:shadow-2xl transition-all duration-300">
+                    <div class="flex flex-col md:flex-row items-center gap-8 md:gap-12 p-8 md:p-10">
+                        <div class="project-image flex-shrink-0 w-full md:w-1/3 flex items-center justify-center">
+                            <img src="assets/LISTFORGE.png" 
+                                 alt="ListForge Logo" 
+                                 class="w-full max-w-[375px] h-auto object-contain">
+                        </div>
+                        <div class="project-content flex-1 text-white">
+                            <div class="inline-block px-4 py-1.5 bg-white/20 backdrop-blur-sm border border-white/30 rounded-full text-xs md:text-sm font-medium mb-4 text-white tracking-wide uppercase">
+                                <span data-lang="en">Cross Platform Application</span>
+                                <span data-lang="tr" class="hidden">Çok Platformlu Uygulama</span>
+                            </div>
+                            <h3 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-3 leading-tight text-white">
+                                <span data-lang="en">ListForge</span>
+                                <span data-lang="tr" class="hidden">ListForge</span>
+                            </h3>
+                            <p class="text-lg md:text-xl text-white/95 mb-3 font-medium">
+                                <span data-lang="en">Intuitive List Building App</span>
+                                <span data-lang="tr" class="hidden">Sezgisel Liste Oluşturma Uygulaması</span>
+                            </p>
+                            <p class="text-base md:text-lg text-white/85 mb-8 leading-relaxed">
+                                <span data-lang="en">Trusted by 20,000+ tabletop gaming enthusiasts. Cross-platform syncing across iOS, macOS, Android, Windows, and Linux.</span>
+                                <span data-lang="tr" class="hidden">20.000+ masaüstü oyun tutkunu tarafından güveniliyor. iOS, macOS, Android, Windows ve Linux'ta çok platformlu senkronizasyon.</span>
+                            </p>
+                            <div class="flex flex-wrap gap-4">
+                                <a href="https://listforge.club" target="_blank" class="group inline-flex items-center gap-2 bg-white text-secondary hover:bg-white/95 font-semibold py-2.5 px-6 rounded-full transition-all duration-300 hover:shadow-lg">
+                                    <span data-lang="en">Visit Project</span>
+                                    <span data-lang="tr" class="hidden">Projeyi Ziyaret Et</span>
+                                    <i class="fas fa-arrow-right text-sm transition-transform duration-300 group-hover:translate-x-1"></i>
+                                </a>
+                                <a href="/projects/listforge.html" data-project="listforge" class="group inline-flex items-center gap-2 border-2 border-white/60 text-white hover:bg-white/10 hover:border-white font-semibold py-2.5 px-6 rounded-full transition-all duration-300">
+                                    <span data-lang="en">Learn More</span>
+                                    <span data-lang="tr" class="hidden">Daha Fazla Bilgi</span>
+                                    <i class="fas fa-arrow-right text-sm transition-transform duration-300 group-hover:translate-x-1"></i>
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="project-card bg-white rounded-lg shadow-md p-6 transition-all duration-300 hover:shadow-lg hover:scale-105">
-                    <div class="h-64 flex items-center justify-center mb-6">
-                        <img src="assets/soulseed.png" alt="SoulSeed Festival Logo" class="h-full w-auto object-contain rounded-2xl">
+
+                <!-- TrustClient Project -->
+                <div class="project-container bg-secondary rounded-2xl overflow-hidden border-2 border-secondary/50 hover:border-white/30 hover:shadow-2xl transition-all duration-300">
+                    <div class="flex flex-col md:flex-row items-center gap-8 md:gap-12 p-8 md:p-10">
+                        <div class="project-image flex-shrink-0 w-full md:w-1/3 flex items-center justify-center">
+                            <img src="assets/trustclient.png" 
+                                 alt="TrustClient Logo" 
+                                 class="w-full max-w-[317px] h-auto object-contain rounded-xl">
+                        </div>
+                        <div class="project-content flex-1 text-white">
+                            <div class="inline-block px-4 py-1.5 bg-white/20 backdrop-blur-sm border border-white/30 rounded-full text-xs md:text-sm font-medium mb-4 text-white tracking-wide uppercase">
+                                <span data-lang="en">Web Application</span>
+                                <span data-lang="tr" class="hidden">Web Application</span>
+                            </div>
+                            <h3 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-3 leading-tight text-white">
+                                <span data-lang="en">TrustClient</span>
+                                <span data-lang="tr" class="hidden">TrustClient</span>
+                            </h3>
+                            <p class="text-lg md:text-xl text-white/95 mb-3 font-medium">
+                                <span data-lang="en">License Verification & Review Management System</span>
+                                <span data-lang="tr" class="hidden">Lisans Doğrulama ve İnceleme Yönetim Sistemi</span>
+                            </p>
+                            <p class="text-base md:text-lg text-white/85 mb-8 leading-relaxed">
+                                <span data-lang="en">Built a secure web platform with license verification, advanced search algorithms, review moderation systems, and risk assessment analytics. Implemented robust authentication, data privacy compliance, and scalable cloud infrastructure.</span>
+                                <span data-lang="tr" class="hidden">Lisans doğrulama, gelişmiş arama algoritmaları, inceleme moderasyon sistemleri ve risk değerlendirme analitiği ile güvenli bir web platformu geliştirildi. Güçlü kimlik doğrulama, veri gizliliği uyumluluğu ve ölçeklenebilir bulut altyapısı uygulandı.</span>
+                            </p>
+                            <div class="flex flex-wrap gap-4">
+                                <a href="https://trust-client.com" target="_blank" class="group inline-flex items-center gap-2 bg-white text-secondary hover:bg-white/95 font-semibold py-2.5 px-6 rounded-full transition-all duration-300 hover:shadow-lg">
+                                    <span data-lang="en">Visit Project</span>
+                                    <span data-lang="tr" class="hidden">Projeyi Ziyaret Et</span>
+                                    <i class="fas fa-arrow-right text-sm transition-transform duration-300 group-hover:translate-x-1"></i>
+                                </a>
+                                <a href="/projects/trustclient.html" data-project="trustclient" class="group inline-flex items-center gap-2 border-2 border-white/60 text-white hover:bg-white/10 hover:border-white font-semibold py-2.5 px-6 rounded-full transition-all duration-300">
+                                    <span data-lang="en">Learn More</span>
+                                    <span data-lang="tr" class="hidden">Daha Fazla Bilgi</span>
+                                    <i class="fas fa-arrow-right text-sm transition-transform duration-300 group-hover:translate-x-1"></i>
+                                </a>
+                            </div>
+                        </div>
                     </div>
-                    <h3 class="text-xl font-bold mb-4 text-center">
-                        <span data-lang="en">SoulSeed Festival: Design-to-Code Web Implementation</span>
-                        <span data-lang="tr" class="hidden">SoulSeed Festival: Tasarımdan Koda Web Uygulaması</span>
-                    </h3>
-                    <p class="text-gray-600 mb-6 text-center">
-                        <span data-lang="en">CodeSeed converted the provided creative team's designs into a pixel-perfect, responsive, and accessible website for soulseedfestival.com. The result is a fast, modern, and easy-to-update web presence that brings the festival's vision to life online.</span>
-                        <span data-lang="tr" class="hidden">CodeSeed, yaratıcı ekipten gelen tasarımları soulseedfestival.com için pikselle kusursuz, duyarlı ve erişilebilir bir web sitesine dönüştürdü. Sonuç: festivali çevrimiçi ortamda hayata geçiren hızlı, modern ve kolay güncellenebilir bir web deneyimi.</span>
-                    </p>
-                    <div class="flex flex-col md:flex-row gap-4 justify-center">
-                        <a href="https://soulseedfestival.com" target="_blank" class="inline-block bg-primary hover:bg-secondary text-white font-bold py-3 px-6 rounded-full transition-colors duration-300">
-                            <span data-lang="en">Visit Project</span>
-                            <span data-lang="tr" class="hidden">Projeyi Ziyaret Et</span>
-                        </a>
-                        <a href="/projects/soulseedfestival.html" data-project="soulseedfestival" class="inline-block bg-transparent border-2 border-primary text-primary hover:bg-primary hover:text-white font-bold py-3 px-6 rounded-full transition-colors duration-300">
-                            <span data-lang="en">Learn More</span>
-                            <span data-lang="tr" class="hidden">Daha Fazla Bilgi</span>
-                        </a>
+                </div>
+
+                <!-- SoulSeed Festival Project -->
+                <div class="project-container bg-secondary rounded-2xl overflow-hidden border-2 border-secondary/50 hover:border-white/30 hover:shadow-2xl transition-all duration-300">
+                    <div class="flex flex-col md:flex-row items-center gap-8 md:gap-12 p-8 md:p-10">
+                        <div class="project-image flex-shrink-0 w-full md:w-1/3 flex items-center justify-center">
+                            <img src="assets/soulseedss.png" 
+                                 alt="SoulSeed Festival Logo" 
+                                 class="w-full max-w-[288px] h-auto object-contain">
+                        </div>
+                        <div class="project-content flex-1 text-white">
+                            <div class="inline-block px-4 py-1.5 bg-white/20 backdrop-blur-sm border border-white/30 rounded-full text-xs md:text-sm font-medium mb-4 text-white tracking-wide uppercase">
+                                <span data-lang="en">Web Development</span>
+                                <span data-lang="tr" class="hidden">Web Sitesi</span>
+                            </div>
+                            <h3 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-3 leading-tight text-white">
+                                <span data-lang="en">SoulSeed Festival</span>
+                                <span data-lang="tr" class="hidden">SoulSeed Festival</span>
+                            </h3>
+                            <p class="text-lg md:text-xl text-white/95 mb-3 font-medium">
+                                <span data-lang="en">Design-to-Code Web Implementation</span>
+                                <span data-lang="tr" class="hidden">Tasarımdan Koda Web Uygulaması</span>
+                            </p>
+                            <p class="text-base md:text-lg text-white/85 mb-8 leading-relaxed">
+                                <span data-lang="en">Pixel-perfect, responsive website that brings the festival's vision to life with fast, modern design.</span>
+                                <span data-lang="tr" class="hidden">Festival vizyonunu hızlı, modern tasarımla hayata geçiren pikselle kusursuz, duyarlı web sitesi.</span>
+                            </p>
+                            <div class="flex flex-wrap gap-4">
+                                <a href="https://soulseedfestival.com" target="_blank" class="group inline-flex items-center gap-2 bg-white text-secondary hover:bg-white/95 font-semibold py-2.5 px-6 rounded-full transition-all duration-300 hover:shadow-lg">
+                                    <span data-lang="en">Visit Project</span>
+                                    <span data-lang="tr" class="hidden">Projeyi Ziyaret Et</span>
+                                    <i class="fas fa-arrow-right text-sm transition-transform duration-300 group-hover:translate-x-1"></i>
+                                </a>
+                                <a href="/projects/soulseedfestival.html" data-project="soulseedfestival" class="group inline-flex items-center gap-2 border-2 border-white/60 text-white hover:bg-white/10 hover:border-white font-semibold py-2.5 px-6 rounded-full transition-all duration-300">
+                                    <span data-lang="en">Learn More</span>
+                                    <span data-lang="tr" class="hidden">Daha Fazla Bilgi</span>
+                                    <i class="fas fa-arrow-right text-sm transition-transform duration-300 group-hover:translate-x-1"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MindBody Healing Project -->
+                <div class="project-container bg-secondary rounded-2xl overflow-hidden border-2 border-secondary/50 hover:border-white/30 hover:shadow-2xl transition-all duration-300">
+                    <div class="flex flex-col md:flex-row items-center gap-8 md:gap-12 p-8 md:p-10">
+                        <div class="project-image flex-shrink-0 w-full md:w-1/3 flex items-center justify-center">
+                            <img src="assets/mindbodylogo.png" 
+                                 alt="MindBody Healing Logo" 
+                                 class="w-full max-w-[288px] h-auto object-contain rounded-xl">
+                        </div>
+                        <div class="project-content flex-1 text-white">
+                            <div class="inline-block px-4 py-1.5 bg-white/20 backdrop-blur-sm border border-white/30 rounded-full text-xs md:text-sm font-medium mb-4 text-white tracking-wide uppercase">
+                                <span data-lang="en">Web Development</span>
+                                <span data-lang="tr" class="hidden">Web Development</span>
+                            </div>
+                            <h3 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-3 leading-tight text-white">
+                                <span data-lang="en">MindBody Healing</span>
+                                <span data-lang="tr" class="hidden">Mind-Body Healing Website</span>
+                            </h3>
+                            <p class="text-lg md:text-xl text-white/95 mb-3 font-medium">
+                                <span data-lang="en">Healing & Wellness Website</span>
+                                <span data-lang="tr" class="hidden">İyileştirme ve Sağlık Web Sitesi</span>
+                            </p>
+                            <p class="text-base md:text-lg text-white/85 mb-8 leading-relaxed">
+                                <span data-lang="en">A responsive, modern website built with clean design principles and optimized user experience. Features intuitive navigation, mobile-first design, and seamless performance.</span>
+                                <span data-lang="tr" class="hidden">Temiz tasarım ilkeleri ve optimize edilmiş kullanıcı deneyimi ile oluşturulmuş duyarlı, modern bir web sitesi. Sezgisel navigasyon, mobil öncelikli tasarım ve sorunsuz performans özellikleri içerir.</span>
+                            </p>
+                            <div class="flex flex-wrap gap-4">
+                                <a href="https://mindbodyhealingwithleyla.com" target="_blank" class="group inline-flex items-center gap-2 bg-white text-secondary hover:bg-white/95 font-semibold py-2.5 px-6 rounded-full transition-all duration-300 hover:shadow-lg">
+                                    <span data-lang="en">Visit Project</span>
+                                    <span data-lang="tr" class="hidden">Projeyi Ziyaret Et</span>
+                                    <i class="fas fa-arrow-right text-sm transition-transform duration-300 group-hover:translate-x-1"></i>
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -322,11 +584,11 @@
 
     <section id="projects" class="projects-section bg-white py-16">
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-secondary">
-                <span data-lang="en">Case Studies</span>
-                <span data-lang="tr" class="hidden">Örnek Çalışmalar</span>
+            <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold text-center mb-12 text-secondary">
+                <span data-lang="en">Past Projects</span>
+                <span data-lang="tr" class="hidden">Geçmiş Projeler</span>
             </h2>
-            <div class="project-cards flex flex-col md:grid md:grid-cols-2 gap-8">
+            <div class="project-cards flex flex-col md:grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
                 <div class="project-card bg-white rounded-lg shadow-md p-6 transition-all duration-300 hover:shadow-lg hover:scale-105">
                     <div class="project-image h-64 bg-contain bg-center bg-no-repeat mb-6" style="background-image: url('assets/harman.png');"></div>
                     <h3 class="text-xl font-bold mb-4 text-center">
@@ -361,47 +623,13 @@
                         </a>
                     </div>
                 </div>
-                <div class="project-card bg-white rounded-lg shadow-md p-6 transition-all duration-300 hover:shadow-lg hover:scale-105">
-                    <div class="project-image h-64 bg-contain bg-center bg-no-repeat mb-6" style="background-image: url('assets/dimmak.png');"></div>
-                    <h3 class="text-xl font-bold mb-4 text-center">
-                        <span data-lang="en">Data Migration and Infrastructure - Dim Mak Records</span>
-                        <span data-lang="tr" class="hidden">Veri Geçişi ve İnfrastruktür - Dim Mak Records</span>
-                    </h3>
-                    <p class="text-gray-600 mb-6 text-center">
-                        <span data-lang="en">Comprehensive data migration project migrating over 3,500 tracks across multiple DSPs using Python Pandas, ensuring data integrity and completeness.</span>
-                        <span data-lang="tr" class="hidden">Python Pandas kullanarak 3,500'den fazla izlemeyi birden fazla DSP'ye geçiren kapsamlı veri geçişi projesi, veri bütünlüğü ve tamamlığını sağlar.</span>
-                    </p>
-                    <div class="flex justify-center">
-                        <a href="/projects/dimmak.html" data-project="dimmak" class="inline-block bg-primary hover:bg-secondary text-white font-bold py-3 px-6 rounded-full transition-colors duration-300">
-                            <span data-lang="en">Learn More</span>
-                            <span data-lang="tr" class="hidden">Daha Fazla Bilgi</span>
-                        </a>
-                    </div>
-                </div>
-                <div class="project-card bg-white rounded-lg shadow-md p-6 transition-all duration-300 hover:shadow-lg hover:scale-105">
-                    <div class="project-image h-64 bg-contain bg-center bg-no-repeat mb-6" style="background-image: url('assets/sema-yoga.png');"></div>
-                    <h3 class="text-xl font-bold mb-4 text-center">
-                        <span data-lang="en">Video Hosting Website and Member Platform for Yoga Studio</span>
-                        <span data-lang="tr" class="hidden">Video Barındırma Web Sitesi ve Üye Platformu</span>
-                    </h3>
-                    <p class="text-gray-600 mb-6 text-center">
-                        <span data-lang="en">High-performance video hosting platform with unlimited content access and intelligent content management, capable of handling daily video uploads and high traffic volumes.</span>
-                        <span data-lang="tr" class="hidden">Sınırsız içerik erişimi ve akıllı içerik yönetimi ile yüksek performanslı video barındırma platformu, günlük video yükleme ve yüksek trafik hacmini destekler.</span>
-                    </p>
-                    <div class="flex justify-center">
-                        <a href="/projects/semayoga.html" data-project="semayoga" class="inline-block bg-primary hover:bg-secondary text-white font-bold py-3 px-6 rounded-full transition-colors duration-300">
-                            <span data-lang="en">Learn More</span>
-                            <span data-lang="tr" class="hidden">Daha Fazla Bilgi</span>
-                        </a>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
     
     <section id="team" class="bg-primary py-16">
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-white">
+            <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold text-center mb-12 text-white">
                 <span data-lang="en">Our Team</span>
                 <span data-lang="tr" class="hidden">Ekibimiz</span>
             </h2>
@@ -416,7 +644,7 @@
                                 <span data-lang="tr" class="hidden">Baş Yazılım Mühendisi</span>
                             </p>
                         </div>
-                        <div class="absolute inset-0 bg-white text-black rounded-lg shadow-md p-4 [transform:rotateY(180deg)] [backface-visibility:hidden] overflow-y-auto">
+                        <div class="absolute inset-0 bg-white text-black rounded-lg shadow-md p-4 [transform:rotateY(180deg)] [backface-visibility:hidden] overflow-y-auto flex items-center justify-center">
                             <p class="text-center">
                                 <span data-lang="en">Bryce is an adaptive engineer with a passion for intelligent systems and automations that transform processes and deliver huge value. He specializes in backend systems, but isn't afraid to get his hands dirty with frontend, API, and data integrations.</span>
                                 <span data-lang="tr" class="hidden">Bryce, süreçleri dönüştüren ve büyük değer yaratan akıllı sistemler ve otomasyonlara tutkuyla bağlı, uyumlu bir mühendistir. Backend sistemlerinde uzmanlaşmıştır, ancak frontend, API ve veri entegrasyonlarıyla uğraşmaktan da çekinmez.</span>
@@ -434,7 +662,7 @@
                                 <span data-lang="tr" class="hidden">Veri Mimarı + Web Geliştirici</span>
                             </p>
                         </div>
-                        <div class="absolute inset-0 bg-white text-black rounded-lg shadow-md p-4 [transform:rotateY(180deg)] [backface-visibility:hidden] overflow-y-auto">
+                        <div class="absolute inset-0 bg-white text-black rounded-lg shadow-md p-4 [transform:rotateY(180deg)] [backface-visibility:hidden] overflow-y-auto flex items-center justify-center">
                             <p class="text-center">
                                 <span data-lang="en">Leyla is a seasoned data architect with 7+ years of experience in data infrastructure and migrations for clients like Google, Headway, and Accenture. She's also a creative web developer with a knack for building fun and intuitive experiences.</span>
                                 <span data-lang="tr" class="hidden">Leyla, Google, Headway ve Accenture gibi müşteriler için veri altyapısı ve geçişlerde 7+ yıl deneyimi olan, kreatif bir web geliştiricidir ve eğlenceli ve akıllı deneyimler oluşturmak için uzmanlaşmıştır.</span>
@@ -452,7 +680,7 @@
                                 <span data-lang="tr" class="hidden">Makine Öğrenimi Mühendisi</span>
                             </p>
                         </div>
-                        <div class="absolute inset-0 bg-white text-black rounded-lg shadow-md p-4 [transform:rotateY(180deg)] [backface-visibility:hidden] overflow-y-auto">
+                        <div class="absolute inset-0 bg-white text-black rounded-lg shadow-md p-4 [transform:rotateY(180deg)] [backface-visibility:hidden] overflow-y-auto flex items-center justify-center">
                             <p class="text-center">
                                 <span data-lang="en">Deanna is an expert in machine learning with a focus on applied cutting-edge LLM solutions. Additionally, she wields DevOps magic to ensure projects are efficiently deployed and improved.</span>
                                 <span data-lang="tr" class="hidden">Deanna, en son LLM çözümlerine odaklanan makine öğrenimi konusunda bir uzmandır. Ayrıca, projelerin verimli bir şekilde dağıtılmasını ve geliştirilmesini sağlamak için DevOps sihirini kullanır.</span>
@@ -470,7 +698,7 @@
                                 <span data-lang="tr" class="hidden">Ürün Tasarımcısı/Yaratıcı Taktisyen</span>
                             </p>
                         </div>
-                        <div class="absolute inset-0 bg-white text-black rounded-lg shadow-md p-4 [transform:rotateY(180deg)] [backface-visibility:hidden] overflow-y-auto">
+                        <div class="absolute inset-0 bg-white text-black rounded-lg shadow-md p-4 [transform:rotateY(180deg)] [backface-visibility:hidden] overflow-y-auto flex items-center justify-center">
                             <p class="text-center">
                                 <span data-lang="en">With a colorful background in graphic and motion design, and 7+ years of experience building complex b2b software platforms, Isaac has both the imagination and technical ability to craft world class products that solve users problems.</span>
                                 <span data-lang="tr" class="hidden">Grafik ve hareket tasarımında renkli bir geçmişe ve karmaşık b2b yazılım platformları oluşturmada 7+ yıllık deneyime sahip olan Isaac, kullanıcıların sorunlarını çözen dünya çapında ürünler yaratmak için hem hayal gücüne hem de teknik yeteneğe sahiptir.</span>
@@ -483,7 +711,7 @@
     </section>
     <section id="contact" class="contact-section bg-black py-16">
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-white">
+            <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold text-center mb-12 text-white">
                 <span data-lang="en">Work with us</span>
                 <span data-lang="tr" class="hidden">Bizimle Çalışın</span>
             </h2>

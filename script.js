@@ -91,6 +91,53 @@ document.addEventListener('DOMContentLoaded', function() {
     if (mobileLangToggle) {
         mobileLangToggle.addEventListener('click', toggleLanguage);
     }
+
+    // Services tabs functionality
+    function initServiceTabs() {
+        const serviceTabBtns = document.querySelectorAll('.service-tab-btn');
+        const servicePanels = document.querySelectorAll('.service-panel');
+
+        if (serviceTabBtns.length > 0 && servicePanels.length > 0) {
+            serviceTabBtns.forEach((btn) => {
+                btn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    const targetService = this.getAttribute('data-service');
+
+                    if (!targetService) return;
+
+                    // Get fresh references to ensure we have all elements
+                    const allBtns = document.querySelectorAll('.service-tab-btn');
+                    const allPanels = document.querySelectorAll('.service-panel');
+
+                    // Remove active class from all buttons
+                    allBtns.forEach(b => {
+                        b.classList.remove('active');
+                    });
+
+                    // Add active class to clicked button
+                    this.classList.add('active');
+
+                    // Hide all panels using both hidden class and display style
+                    allPanels.forEach(panel => {
+                        panel.classList.add('hidden');
+                        panel.classList.remove('active');
+                        panel.style.display = 'none';
+                    });
+
+                    // Show target panel using both class removal and display style
+                    const targetPanel = document.querySelector(`.service-panel[data-panel="${targetService}"]`);
+                    if (targetPanel) {
+                        targetPanel.classList.remove('hidden');
+                        targetPanel.classList.add('active');
+                        targetPanel.style.display = 'block';
+                    }
+                });
+            });
+        }
+    }
+
+    initServiceTabs();
 });
 
 // Mobile menu toggle
