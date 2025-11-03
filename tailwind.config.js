@@ -11,6 +11,7 @@ module.exports = {
         accent: '#D2B48C',
       },
       fontFamily: {
+        'sans': ['Satoshi', 'sans-serif'],
         'fira': ['"Fira Code"', 'monospace'],
       },
     },

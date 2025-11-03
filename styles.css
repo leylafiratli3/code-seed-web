@@ -402,6 +402,62 @@
     }
 }
 
+/* Recent Projects Horizontal Scrolling */
+.projects-scroll-container {
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+}
+
+.projects-scroll-container::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+}
+
+.projects-scroll {
+    padding-bottom: 1rem;
+}
+
+.project-item {
+    scroll-snap-align: start;
+}
+
+.projects-scroll-container {
+    scroll-snap-type: x mandatory;
+}
+
+/* Services tabs styling */
+.service-tab-btn.active {
+    background-color: var(--primary-color);
+    color: white;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    font-weight: 600;
+}
+
+.service-tab-btn.active::before {
+    display: none;
+}
+
+.service-tab-btn:not(.active) {
+    background-color: transparent;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.service-tab-btn:not(.active):hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    transform: translateX(2px);
+}
+
+.service-tab-btn {
+    position: relative;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.service-tab-btn::before {
+    display: none;
+}
+
 /* Base logo styles */
 .client-logo {
     display: flex;
@@ -421,12 +477,12 @@
 /* Desktop view (768px and above) */
 @media (min-width: 768px) {
     .client-logo {
-        width: 200px;
-        height: 120px;
+        width: 220px;
+        height: 132px;
     }
 
     .client-logo img {
-        max-height: 90px;
+        max-height: 99px;
         width: auto;
     }
 }
@@ -434,13 +490,13 @@
 /* Mobile view (below 768px) */
 @media (max-width: 767px) {
     .client-logo {
-        width: 150px !important;
-        height: 100px !important;
+        width: 165px !important;
+        height: 110px !important;
         margin: 0 auto;
     }
 
     .client-logo img {
-        max-height: 70px;
+        max-height: 77px;
         width: auto;
     }
 
