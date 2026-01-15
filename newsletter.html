@@ -13,7 +13,7 @@
             font-family: 'Poppins', sans-serif;
             line-height: 1.7;
             color: #2d3748;
-            background: #0a0e27;
+            background: #ffffff;
             padding: 25px;
             overflow-x: hidden;
         }
@@ -25,39 +25,25 @@
             background: #ffffff;
             border-radius: 12px;
             overflow: hidden;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
         }
-        
-        .header {
-            background: linear-gradient(135deg, #1a1f3a 0%, #0a0e27 100%);
-            padding: 45px;
-            text-align: center;
-        }
-        
-        .logo-container {
-            display: inline-block;
-            margin-bottom: 8px;
-        }
-        
-        .logo-img {
-            height: 1em;
-            width: auto;
-            vertical-align: middle;
-            margin-right: 12px;
-        }
-        
-        .logo-text {
-            font-size: 2.8em;
-            font-weight: 700;
-            color: #ffffff;
-            vertical-align: middle;
-        }
-        
-        .tagline { color: #cbd5e0; font-size: 1.1em; }
         
         .content { padding: 50px; }
         
-        h1 { font-size: 2em; color: #1a202c; margin-bottom: 25px; font-weight: 700; }
+        h1 { 
+            font-size: 2em; 
+            color: #1a202c; 
+            margin-bottom: 25px; 
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .header-logo {
+            height: 60px;
+            width: auto;
+        }
         
         h2 {
             font-size: 1.5em;
@@ -190,25 +176,19 @@
                 border-radius: 8px;
             }
             
-            .header {
-                padding: 30px 20px;
-            }
-            
-            .logo-img {
-                height: 1em;
-                margin-right: 8px;
-            }
-            
-            .logo-text {
-                font-size: 2em;
-            }
-            
             .content {
                 padding: 30px 20px;
             }
             
             h1 {
                 font-size: 1.75em;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+            
+            .header-logo {
+                height: 45px;
             }
             
             h2 {
@@ -238,20 +218,16 @@
                 padding: 5px;
             }
             
-            .header {
-                padding: 25px 15px;
-            }
-            
-            .logo-text {
-                font-size: 1.75em;
-            }
-            
             .content {
                 padding: 25px 15px;
             }
             
             h1 {
                 font-size: 1.5em;
+            }
+            
+            .header-logo {
+                height: 40px;
             }
             
             h2 {
@@ -262,16 +238,11 @@
 </head>
 <body>
     <div class="container">
-        <div class="header">
-            <div class="logo-container">
-                <img src="assets/codeseed-logo-no-background.png" alt="CodeSeed Logo" class="logo-img">
-                <div class="logo-text">CodeSeed</div>
-            </div>
-            <div class="tagline">Growing cutting-edge tech solutions</div>
-        </div>
-        
         <div class="content">
-            <h1>Happy New Year from CodeSeed!</h1>
+            <h1>
+                <img src="assets/codeseed-logo-no-background.png" alt="CodeSeed Logo" class="header-logo">
+                Happy New Year from CodeSeed!
+            </h1>
             
             <p class="greeting">Hey friends and family,</p>
             
@@ -292,7 +263,7 @@
             
             <div class="project">
                 <strong>TrustClient</strong>
-                <p>Built a secure web platform featuring license verification, advanced search algorithms, and risk assessment analytics to help users make informed decisions.</p>
+                <p>Built a secure web platform featuring comprehensive reviews, advanced search algorithms, and risk assessment analytics to help users make informed decisions.</p>
             </div>
             
             <div class="project">
@@ -311,12 +282,12 @@
             
             <div class="cta">
                 <h2>Let's Build Something Together</h2>
-                <p>If you or anyone you know needs help with a software project—whether it's a mobile app, website, data solution, or custom automation—we'd love to chat! We're always excited to take on new challenges and work with great people.</p>
+                <p>If you or anyone you know needs help with a software project—whether it's a mobile app, website, data solution, or custom automation—we'd love to chat! We're always excited to take on new projects and work with great people.</p>
                 <p>Feel free to reach out anytime:</p>
                 <a href="mailto:codeseedtech@gmail.com" class="email">codeseedtech@gmail.com</a>
             </div>
             
-            <p>Wishing you all a creative, healthy, and prosperous 2026!</p>
+            <p>Wishing you all a creative and healthy 2026!</p>
             
             <p class="signature">Warmly,<br><strong>Leyla & Bryce</strong></p>
             
