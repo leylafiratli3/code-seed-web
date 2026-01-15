@@ -15,10 +15,12 @@
             color: #2d3748;
             background: #0a0e27;
             padding: 25px;
+            overflow-x: hidden;
         }
         
         .container {
             max-width: 800px;
+            width: 100%;
             margin: 0 auto;
             background: #ffffff;
             border-radius: 12px;
@@ -32,8 +34,26 @@
             text-align: center;
         }
         
-        .logo { font-size: 2.8em; font-weight: 700; color: #ffffff; margin-bottom: 8px; }
-        .logo-accent { color: #10b981; }
+        .logo-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 8px;
+        }
+        
+        .logo-img {
+            height: 50px;
+            width: auto;
+            max-width: 100%;
+        }
+        
+        .logo-text {
+            font-size: 2.8em;
+            font-weight: 700;
+            color: #ffffff;
+        }
+        
         .tagline { color: #cbd5e0; font-size: 1.1em; }
         
         .content { padding: 50px; }
@@ -122,6 +142,7 @@
             height: 200px;
             object-fit: cover;
             display: block;
+            object-position: center;
         }
         
         .gallery-caption {
@@ -162,16 +183,95 @@
         }
         
         @media (max-width: 768px) {
-            .content { padding: 35px; }
-            .gallery-grid { grid-template-columns: 1fr; gap: 20px; }
-            .gallery-item img { height: 250px; }
+            body {
+                padding: 10px;
+            }
+            
+            .container {
+                border-radius: 8px;
+            }
+            
+            .header {
+                padding: 30px 20px;
+            }
+            
+            .logo-container {
+                flex-direction: column;
+                gap: 8px;
+            }
+            
+            .logo-img {
+                height: 40px;
+            }
+            
+            .logo-text {
+                font-size: 2em;
+            }
+            
+            .content {
+                padding: 30px 20px;
+            }
+            
+            h1 {
+                font-size: 1.75em;
+            }
+            
+            h2 {
+                font-size: 1.3em;
+            }
+            
+            .gallery-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .gallery-item img {
+                height: 250px;
+            }
+            
+            .project {
+                padding: 15px 20px;
+            }
+            
+            .cta {
+                padding: 25px 20px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            body {
+                padding: 5px;
+            }
+            
+            .header {
+                padding: 25px 15px;
+            }
+            
+            .logo-text {
+                font-size: 1.75em;
+            }
+            
+            .content {
+                padding: 25px 15px;
+            }
+            
+            h1 {
+                font-size: 1.5em;
+            }
+            
+            h2 {
+                font-size: 1.2em;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="header">
-            <div class="logo"><span class="logo-accent">🌱</span> CodeSeed</div>
+            <div class="logo-container">
+                <img src="assets/codeseed-logo.png" alt="CodeSeed Logo" class="logo-img">
+                <div class="logo-text">CodeSeed</div>
+            </div>
             <div class="tagline">Growing cutting-edge tech solutions</div>
         </div>
         
@@ -250,7 +350,7 @@
         </div>
         
         <div class="footer">
-            <p><strong><span class="seedling">🌱</span> CodeSeed</strong> | Growing cutting-edge tech solutions</p>
+            <p><strong>CodeSeed</strong> | Growing cutting-edge tech solutions</p>
             <p>code-seed.io | codeseedtech@gmail.com</p>
         </div>
     </div>
