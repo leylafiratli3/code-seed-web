@@ -175,6 +175,10 @@
     color: var(--text-color);
 }
 
+#testimonials.testimonials-section .testimonial .quote {
+    color: #ffffff !important;
+}
+
 .testimonial .author {
     color: var(--primary-color);
     font-style: italic;

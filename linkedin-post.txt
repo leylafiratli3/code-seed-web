@@ -1,0 +1,32 @@
+Happy 2026! 🎉
+
+We're Leyla and Bryce from CodeSeed—a small team that builds apps, websites, and custom software solutions. We've had a busy year working on some really meaningful projects, and we wanted to share a few of them with you:
+
+✨ TrustClient
+We brought our client's idea to life through TrustClient, a platform that allows contractors to rate and review clients, creating accountability in an industry where non-payment, discrimination, and unfair treatment are all too common. When a client doesn't pay, engages in racist behavior, or mistreats workers, contractors can report it here—helping others avoid similar situations and building a safer, more equitable marketplace for everyone.
+👉 trust-client.com
+
+✨ ReadyAI
+We transformed ReadyAI's website into an enterprise-grade platform that truly reflects their expertise in AI transformation, complete with premium design and a custom content management system.
+👉 readyai.dev
+
+✨ SoulSeed Festival
+SoulSeed Festival is a beautiful celebration of cultural exchange that brings together the Yawanawa indigenous tribe from the Amazon and Sufi culture through the practice of sema (whirling dervish ceremonies) and music in Muğla, Türkiye. We created a website that captures the spirit of this unique gathering—where ancient traditions meet, stories are shared, and communities connect across continents.
+👉 soulseedfestival.com
+
+✨ ListForge
+Our lead developer Bryce has been playing Warhammer since childhood. When he returned to the hobby after years away, he discovered that players still lacked the right tools to create and manage their army lists efficiently. So, we created ListForge—a cross-platform app that syncs seamlessly across iOS, macOS, Android, Windows, and Linux. ListForge has now grown into a trusted tool for over 20,000 tabletop gaming enthusiasts worldwide.
+👉 listforge.club
+
+We specialize in app development, web solutions, data engineering, and intelligent automation. We're passionate about building software that solves real problems and delivers genuine value.
+
+If you or anyone you know needs help with a software project—whether it's a mobile app, website, data solution, or custom automation—we'd love to chat! We're always excited to take on new projects and work with great people.
+
+Feel free to reach out: codeseedtech@gmail.com
+
+Check out more of our work at code-seed.io
+
+Wishing you all a creative and healthy 2026!
+
+#WebDevelopment #AppDevelopment #SoftwareDevelopment #TechSolutions #StartupLife
+
