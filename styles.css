@@ -83,7 +83,7 @@
     }
 }
 
-/* Hero section video background styles */
+/* Hero section — video background + card */
 .hero {
     position: relative;
     height: 100vh;
@@ -348,21 +348,15 @@
         gap: 2rem;
     }
 
-    /* Adjust hero card padding for better mobile display */
+    /* Hero card and text on mobile */
     .hero-card {
         padding: 1rem;
         margin: 1rem;
     }
 
-    /* Ensure text is readable on mobile */
     .hero h1 {
         font-size: 1.75rem;
         line-height: 2rem;
-    }
-
-    .hero h2 {
-        font-size: 1.5rem;
-        line-height: 1.75rem;
     }
 
     .hero p {

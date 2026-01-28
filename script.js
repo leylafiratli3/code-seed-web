@@ -1,44 +1,6 @@
 console.log('Script loaded');
 let currentLang = 'en';
 
-// Rotating words functionality
-document.addEventListener('DOMContentLoaded', function() {
-    const rotatingWord = document.getElementById('rotating-word');
-    const words = {
-        en: [
-            'data-driven solutions',
-            'scalable infrastructure',
-            'intelligent automation',
-            'innovative engineering',
-            'LLM-driven solutions',
-            'predictive analytics',
-            'adaptive algorithms'
-        ],
-        tr: [
-            'veri odaklı çözümler',
-            'ölçeklenebilir altyapı',
-            'akıllı otomasyon',
-            'yenilikçi mühendislik',
-            'LLM odaklı çözümler',
-            'öngörücü analiz',
-            'uyarlanabilir algoritmalar'
-        ]
-    };
-    let currentIndex = 0;
-
-    function changeWord() {
-        rotatingWord.classList.add('opacity-0');
-        setTimeout(() => {
-            rotatingWord.textContent = words[currentLang][currentIndex];
-            rotatingWord.classList.remove('opacity-0');
-            currentIndex = (currentIndex + 1) % words[currentLang].length;
-        }, 500);
-    }
-
-    changeWord();
-    setInterval(changeWord, 3000);
-});
-
 // Project cards, Testimonial Slider, and Tech Grid
 document.addEventListener('DOMContentLoaded', function() {
     // Project cards
@@ -138,6 +100,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     initServiceTabs();
+
 });
 
 // Mobile menu toggle
