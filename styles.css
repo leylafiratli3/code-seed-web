@@ -158,7 +158,11 @@
     }
 }
 
-/* Testimonial styles */
+/* Testimonial styles - both cards always visible, no carousel */
+#testimonials .testimonial,
+#testimonials .testimonial.hidden {
+    display: block !important;
+}
 .testimonial {
     background-color: var(--light-text);
     border-radius: 10px;

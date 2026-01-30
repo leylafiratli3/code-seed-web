@@ -1,7 +1,7 @@
 console.log('Script loaded');
 let currentLang = 'en';
 
-// Project cards, Testimonial Slider, and Tech Grid
+// Project cards and Tech Grid
 document.addEventListener('DOMContentLoaded', function() {
     // Project cards
     const projectCards = document.querySelectorAll('.project-card');
@@ -15,24 +15,6 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
     });
-
-    // Testimonial Slider
-    const testimonials = document.querySelectorAll('.testimonial');
-    let currentTestimonial = 0;
-
-    function showTestimonial(index) {
-        testimonials.forEach((testimonial, i) => {
-            testimonial.classList.toggle('hidden', i !== index);
-        });
-    }
-
-    function nextTestimonial() {
-        currentTestimonial = (currentTestimonial + 1) % testimonials.length;
-        showTestimonial(currentTestimonial);
-    }
-
-    showTestimonial(currentTestimonial);
-    setInterval(nextTestimonial, 5000);
 
     // Tech Grid
     const techItems = document.querySelectorAll('.tech-item');
