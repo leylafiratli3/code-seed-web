@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Book a Free AI Consultation - CodeSeed</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Book a free AI consultation with CodeSeed. Tell us about your workflow and we'll find the right AI tools for you.">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/codeseed-logo.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/codeseed-logo.png">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://code-seed.io/services/ai-contact.html">
+    <meta property="og:site_name" content="CodeSeed">
+    <meta property="og:title" content="Book a Free AI Consultation - CodeSeed">
+    <meta property="og:description" content="Tell us about your workflow and we'll find the right AI tools for you.">
+    <meta property="og:image" content="https://code-seed.io/assets/codeseed-logo.png">
+
+    <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,600,700,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400,500,700&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#8dba90',
+                        secondary: '#5a7d5c',
+                        accent: '#D2B48C',
+                        tan: '#D2B48C',
+                    },
+                    fontFamily: {
+                        'sans': ['Satoshi', 'sans-serif'],
+                        'fira': ['"Fira Code"', 'monospace'],
+                        'serif': ['"DM Serif Display"', 'Georgia', 'serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="../styles.css" rel="stylesheet">
+    <style>
+        .form-input {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border: 1px solid #e5e7eb;
+            border-radius: 6px;
+            font-size: 0.95rem;
+            background: white;
+            transition: border-color 0.2s, box-shadow 0.2s;
+            font-family: 'Satoshi', sans-serif;
+            color: #1f2937;
+        }
+        .form-input:focus {
+            outline: none;
+            border-color: #8dba90;
+            box-shadow: 0 0 0 3px rgba(141, 186, 144, 0.15);
+        }
+        .form-label {
+            display: block;
+            font-weight: 600;
+            font-size: 0.875rem;
+            color: #374151;
+            margin-bottom: 0.4rem;
+        }
+        .form-hint {
+            font-size: 0.8rem;
+            color: #9ca3af;
+            margin-top: 0.25rem;
+        }
+        select.form-input {
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%239ca3af'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 0.75rem center;
+            background-size: 1.1rem;
+            padding-right: 2.5rem;
+        }
+        .radio-option {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            padding: 0.75rem 1rem;
+            border: 1px solid #e5e7eb;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: border-color 0.2s, background-color 0.2s;
+            font-size: 0.9rem;
+            color: #374151;
+            font-weight: 500;
+        }
+        .radio-option:has(input:checked) {
+            border-color: #8dba90;
+            background-color: rgba(141, 186, 144, 0.06);
+        }
+        .radio-option input[type="radio"] {
+            accent-color: #8dba90;
+            width: 1rem;
+            height: 1rem;
+            flex-shrink: 0;
+        }
+        .submit-btn {
+            background-color: #8dba90;
+            color: white;
+            font-weight: 600;
+            padding: 0.9rem 2rem;
+            border-radius: 9999px;
+            font-size: 1rem;
+            transition: background-color 0.2s, transform 0.15s;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            border: none;
+            cursor: pointer;
+            font-family: 'Satoshi', sans-serif;
+        }
+        .submit-btn:hover {
+            background-color: #5a7d5c;
+            transform: translateY(-1px);
+        }
+        .submit-btn:active {
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="font-sans bg-white">
+
+    <!-- Header -->
+    <header class="bg-white/95 backdrop-blur-sm fixed w-full z-50 shadow-sm">
+        <nav class="container mx-auto px-4 py-5">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center transition-transform duration-300 ease-in-out hover:scale-105">
+                    <a href="../index.html#home" class="flex items-center">
+                        <img src="../assets/codeseed-logo.png" alt="CodeSeed Logo" id="header-logo" class="h-20 w-auto mr-4">
+                        <span class="text-2xl font-bold text-primary lowercase tracking-wide">code-seed</span>
+                    </a>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-500 hover:text-gray-600 focus:outline-none" aria-label="Toggle menu">
+                        <svg viewBox="0 0 24 24" class="h-6 w-6 fill-current">
+                            <path fill-rule="evenodd" d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"></path>
+                        </svg>
+                    </button>
+                </div>
+                                <ul class="hidden md:flex space-x-6 items-center">
+                    <li><a href="../index.html#hero" class="text-gray-800 hover:text-primary transition-colors duration-300 font-medium">Home</a></li>
+                    <li><a href="../index.html#about-us" class="text-gray-800 hover:text-primary transition-colors duration-300 font-medium">About Us</a></li>
+                    <li><a href="../index.html#about" class="text-gray-800 hover:text-primary transition-colors duration-300 font-medium">Services</a></li>
+                    <li class="relative group">
+                        <button class="text-gray-800 hover:text-primary transition-colors duration-300 font-medium flex items-center gap-1">
+                            AI Setup &amp; Strategy
+                            <i class="fas fa-chevron-down text-xs opacity-50 ml-0.5"></i>
+                        </button>
+                        <div class="absolute top-full left-0 pt-2 hidden group-hover:block z-50">
+                            <div class="bg-white rounded-xl shadow-lg border border-gray-100 py-2 min-w-[200px]">
+                                <a href="ai-setup-and-strategy.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:text-primary hover:bg-gray-50 font-medium transition-colors border-b border-gray-100">Overview</a>
+                                <a href="ai-for-personal-use.html" class="block px-4 py-2 text-sm text-gray-700 hover:text-primary hover:bg-gray-50 transition-colors">For Personal Use</a>
+                                <a href="ai-for-traders.html" class="block px-4 py-2 text-sm text-gray-700 hover:text-primary hover:bg-gray-50 transition-colors">For Traders</a>
+                                <a href="ai-for-business-owners.html" class="block px-4 py-2 text-sm text-gray-700 hover:text-primary hover:bg-gray-50 transition-colors">For Business Owners</a>
+                                <a href="ai-for-construction.html" class="block px-4 py-2 text-sm text-gray-700 hover:text-primary hover:bg-gray-50 transition-colors">For Construction</a>
+                                <a href="ai-for-law-firms.html" class="block px-4 py-2 text-sm text-gray-700 hover:text-primary hover:bg-gray-50 transition-colors">For Law Firms</a>
+                                <a href="ai-for-real-estate.html" class="block px-4 py-2 text-sm text-gray-700 hover:text-primary hover:bg-gray-50 transition-colors">For Real Estate</a>
+                                <a href="ai-for-ecommerce.html" class="block px-4 py-2 text-sm text-gray-700 hover:text-primary hover:bg-gray-50 transition-colors">For E&#8209;Commerce</a>
+                                <a href="ai-for-accounting.html" class="block px-4 py-2 text-sm text-gray-700 hover:text-primary hover:bg-gray-50 transition-colors">For Accounting</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="../index.html#recent-projects" class="text-gray-800 hover:text-primary transition-colors duration-300 font-medium">Project Garden</a></li>
+                    <li><a href="../index.html#team" class="text-gray-800 hover:text-primary transition-colors duration-300 font-medium">Our Team</a></li>
+                    <li><a href="../index.html#contact" class="text-gray-800 hover:text-primary transition-colors duration-300 font-medium">Work with Us</a></li>
+                </ul>
+            </div>
+        </nav>
+                <div id="mobile-menu" class="md:hidden hidden">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t">
+                <a href="../index.html#hero" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">Home</a>
+                <a href="../index.html#about-us" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">About Us</a>
+                <a href="../index.html#about" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">Services</a>
+                <p class="px-3 pt-3 pb-1 text-xs font-semibold text-gray-400 uppercase tracking-wider">AI Setup &amp; Strategy</p>
+                <a href="ai-setup-and-strategy.html" class="block px-5 py-1.5 rounded-md text-sm text-gray-600 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out font-medium">Overview</a>
+                <a href="ai-for-personal-use.html" class="block px-5 py-1.5 rounded-md text-sm text-gray-500 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">For Personal Use</a>
+                <a href="ai-for-traders.html" class="block px-5 py-1.5 rounded-md text-sm text-gray-500 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">For Traders</a>
+                <a href="ai-for-business-owners.html" class="block px-5 py-1.5 rounded-md text-sm text-gray-500 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">For Business Owners</a>
+                <a href="ai-for-construction.html" class="block px-5 py-1.5 rounded-md text-sm text-gray-500 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">For Construction</a>
+                <a href="ai-for-law-firms.html" class="block px-5 py-1.5 rounded-md text-sm text-gray-500 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">For Law Firms</a>
+                <a href="ai-for-real-estate.html" class="block px-5 py-1.5 rounded-md text-sm text-gray-500 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">For Real Estate</a>
+                <a href="ai-for-ecommerce.html" class="block px-5 py-1.5 rounded-md text-sm text-gray-500 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">For E&#8209;Commerce</a>
+                <a href="ai-for-accounting.html" class="block px-5 py-1.5 rounded-md text-sm text-gray-500 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">For Accounting</a>
+                <a href="../index.html#recent-projects" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">Project Garden</a>
+                <a href="../index.html#team" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">Our Team</a>
+                <a href="../index.html#contact" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">Work with Us</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-20 md:pt-28">
+
+        <!-- Hero -->
+        <section class="relative py-16 md:py-24 overflow-hidden bg-gray-950">
+            <div class="absolute inset-0 pointer-events-none" style="background-image: radial-gradient(circle, #ffffff 1px, transparent 1px); background-size: 28px 28px; -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,0.06) 0%, rgba(0,0,0,0.06) 40%, transparent 100%); mask-image: linear-gradient(to bottom, rgba(0,0,0,0.06) 0%, rgba(0,0,0,0.06) 40%, transparent 100%);"></div>
+            <div class="absolute bottom-0 right-0 w-[400px] h-[400px] bg-primary/10 rounded-full blur-3xl pointer-events-none"></div>
+            <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-primary/60 via-primary/20 to-transparent"></div>
+
+            <div class="container mx-auto px-4 relative z-10">
+                <div class="text-center max-w-2xl mx-auto">
+                    <div class="flex items-center justify-center gap-3 mb-5">
+                        <div class="w-8 h-px bg-primary"></div>
+                        <span class="font-fira text-primary text-xs tracking-[0.2em] uppercase">Free Consultation</span>
+                        <div class="w-8 h-px bg-primary"></div>
+                    </div>
+                    <h1 class="font-serif italic font-normal text-primary mb-5 whitespace-nowrap" style="font-size: clamp(1.5rem, 5.5vw, 5rem); line-height: 1.1;">
+                        Let's set up your AI.
+                    </h1>
+                    <p class="text-gray-300 font-medium text-lg md:text-xl mx-auto leading-relaxed max-w-xl">
+                        Tell us about your workflow. We'll look at where AI can actually help and come back with a clear plan.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Form Section -->
+        <section class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="max-w-2xl mx-auto">
+
+                    <form id="ai-contact-form" action="https://formspree.io/f/mnnaoeoa" method="POST">
+
+                        <!-- Hidden field to identify this as AI inquiry -->
+                        <input type="hidden" name="_subject" value="AI Services Inquiry - CodeSeed">
+                        <input type="hidden" name="form_source" value="AI Services Contact Page">
+
+                        <!-- Name + Email -->
+                        <div class="grid sm:grid-cols-2 gap-5 mb-5">
+                            <div>
+                                <label class="form-label" for="name">Your Name <span class="text-red-400">*</span></label>
+                                <input type="text" id="name" name="name" class="form-input" placeholder="Jane Smith" required>
+                            </div>
+                            <div>
+                                <label class="form-label" for="email">Email Address <span class="text-red-400">*</span></label>
+                                <input type="email" id="email" name="_replyto" class="form-input" placeholder="jane@example.com" required>
+                            </div>
+                        </div>
+
+                        <!-- Personal vs Business -->
+                        <div class="mb-5">
+                            <label class="form-label">Are you setting this up for yourself or a team? <span class="text-red-400">*</span></label>
+                            <div class="grid sm:grid-cols-2 gap-3 mt-1">
+                                <label class="radio-option">
+                                    <input type="radio" name="setup_type" value="Personal" required>
+                                    Personal use
+                                </label>
+                                <label class="radio-option">
+                                    <input type="radio" name="setup_type" value="Business / Team">
+                                    Business / Team
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Industry -->
+                        <div class="mb-5">
+                            <label class="form-label" for="industry">What industry are you in?</label>
+                            <select id="industry" name="industry" class="form-input">
+                                <option value="" disabled selected>Select your industry</option>
+                                <option value="Trading / Finance">Trading / Finance</option>
+                                <option value="Real Estate">Real Estate</option>
+                                <option value="Law / Legal">Law / Legal</option>
+                                <option value="E-Commerce / Retail">E-Commerce / Retail</option>
+                                <option value="Construction">Construction</option>
+                                <option value="Accounting / Bookkeeping">Accounting / Bookkeeping</option>
+                                <option value="Marketing / Agency">Marketing / Agency</option>
+                                <option value="Healthcare / Medical">Healthcare / Medical</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+
+                        <!-- Team size (shown for business) -->
+                        <div class="mb-5">
+                            <label class="form-label" for="team_size">Team size (if applicable)</label>
+                            <select id="team_size" name="team_size" class="form-input">
+                                <option value="" disabled selected>Select team size</option>
+                                <option value="Just me">Just me</option>
+                                <option value="2–5 people">2–5 people</option>
+                                <option value="6–15 people">6–15 people</option>
+                                <option value="16–50 people">16–50 people</option>
+                                <option value="50+ people">50+ people</option>
+                            </select>
+                        </div>
+
+                        <!-- Current AI tools -->
+                        <div class="mb-5">
+                            <label class="form-label" for="current_tools">Are you already using any AI tools?</label>
+                            <input type="text" id="current_tools" name="current_tools" class="form-input" placeholder="e.g. ChatGPT, Notion AI, Zapier — or none yet">
+                            <p class="form-hint">Leave blank if you're starting from scratch.</p>
+                        </div>
+
+                        <!-- What to automate -->
+                        <div class="mb-5">
+                            <label class="form-label" for="automate">What tasks are eating the most time right now? <span class="text-red-400">*</span></label>
+                            <textarea id="automate" name="automate" class="form-input h-28 resize-none" placeholder="e.g. I spend hours every week manually writing product descriptions, answering the same customer questions, and updating spreadsheets…" required></textarea>
+                            <p class="form-hint">The more specific, the better. We use this to identify where AI can actually help.</p>
+                        </div>
+
+                        <!-- Budget -->
+                        <div class="mb-5">
+                            <label class="form-label" for="budget">Rough monthly budget for AI tools?</label>
+                            <select id="budget" name="budget" class="form-input">
+                                <option value="" disabled selected>Select a range</option>
+                                <option value="Under $50/mo">Under $50/mo</option>
+                                <option value="$50–$200/mo">$50–$200/mo</option>
+                                <option value="$200–$500/mo">$200–$500/mo</option>
+                                <option value="$500+/mo">$500+/mo</option>
+                                <option value="Not sure yet">Not sure yet</option>
+                            </select>
+                            <p class="form-hint">Helps us recommend tools that fit what you're willing to spend.</p>
+                        </div>
+
+                        <!-- Anything else -->
+                        <div class="mb-8">
+                            <label class="form-label" for="message">Anything else we should know?</label>
+                            <textarea id="message" name="message" class="form-input h-24 resize-none" placeholder="Questions, specific tools you've heard about, timeline, etc."></textarea>
+                        </div>
+
+                        <!-- Honeypot -->
+                        <input type="text" name="_gotcha" class="hidden" style="display:none">
+
+                        <div class="flex flex-col sm:flex-row sm:items-center gap-4">
+                            <button type="submit" class="submit-btn">
+                                <span>Send My Request</span>
+                                <i class="fas fa-arrow-right text-sm"></i>
+                            </button>
+                            <p class="text-gray-400 text-sm">We usually reply within one business day.</p>
+                        </div>
+
+                    </form>
+
+                    <!-- Success message (hidden by default) -->
+                    <div id="success-message" class="hidden mt-8 bg-primary/10 border border-primary/30 rounded-xl p-6 text-center">
+                        <div class="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-3">
+                            <i class="fas fa-check text-primary text-lg"></i>
+                        </div>
+                        <h3 class="font-bold text-secondary text-lg mb-1">Got it — we'll be in touch.</h3>
+                        <p class="text-gray-600 text-sm">We'll review your workflow details and come back with a clear plan. Usually within one business day.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Why this is free -->
+        <section class="py-16 md:py-20 bg-gray-950">
+            <div class="container mx-auto px-4">
+                <div class="max-w-4xl mx-auto grid md:grid-cols-3 gap-8 text-center">
+                    <div>
+                        <div class="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center mx-auto mb-3">
+                            <i class="fas fa-search text-primary text-sm"></i>
+                        </div>
+                        <h3 class="text-white font-semibold mb-2">We audit your workflow</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed">We look at how you actually work and find where AI can have the biggest impact.</p>
+                    </div>
+                    <div>
+                        <div class="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center mx-auto mb-3">
+                            <i class="fas fa-tools text-primary text-sm"></i>
+                        </div>
+                        <h3 class="text-white font-semibold mb-2">We recommend the right tools</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed">No upsells, no vendor bias. Just the tools that fit your use case and budget.</p>
+                    </div>
+                    <div>
+                        <div class="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center mx-auto mb-3">
+                            <i class="fas fa-graduation-cap text-primary text-sm"></i>
+                        </div>
+                        <h3 class="text-white font-semibold mb-2">We set it up and train you</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed">Full configuration, plus training so you and your team actually know how to use it.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-10 md:py-12">
+        <div class="container mx-auto px-4">
+            <div class="text-center">
+                <p class="text-gray-400 text-sm md:text-base leading-relaxed max-w-md mx-auto">&copy; 2025 CodeSeed. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        if (mobileMenuButton && mobileMenu) {
+            mobileMenuButton.addEventListener('click', (e) => {
+                e.preventDefault();
+                mobileMenu.classList.toggle('show');
+            });
+            mobileMenu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => mobileMenu.classList.remove('show'));
+            });
+            document.addEventListener('click', (event) => {
+                if (!mobileMenu.contains(event.target) && !mobileMenuButton.contains(event.target) && mobileMenu.classList.contains('show')) {
+                    mobileMenu.classList.remove('show');
+                }
+            });
+        }
+
+        // Form submission with success state
+        const form = document.getElementById('ai-contact-form');
+        const successMsg = document.getElementById('success-message');
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const data = new FormData(form);
+            try {
+                const res = await fetch(form.action, {
+                    method: 'POST',
+                    body: data,
+                    headers: { 'Accept': 'application/json' }
+                });
+                if (res.ok) {
+                    form.classList.add('hidden');
+                    successMsg.classList.remove('hidden');
+                    window.scrollTo({ top: successMsg.offsetTop - 100, behavior: 'smooth' });
+                } else {
+                    form.submit();
+                }
+            } catch {
+                form.submit();
+            }
+        });
+    </script>
+</body>
+</html>

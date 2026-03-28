@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <title>Yapay Zeka Kurulumu ve Danışmanlığı - CodeSeed | Doğru AI Araçlarını Bulun, Kurun ve Öğrenin</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CodeSeed Yapay Zeka Kurulumu ve Danışmanlığı: İş akışınızı değerlendirir, doğru AI araçlarını bulur, kurar ve ekibinizi eğitiriz. Otomatik trading botlarından iş akışı optimizasyonuna kadar.">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="../../assets/codeseed-logo.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../assets/codeseed-logo.png">
+
+    <link rel="alternate" hreflang="en" href="https://code-seed.io/services/ai-setup-and-strategy.html">
+    <link rel="alternate" hreflang="tr" href="https://code-seed.io/tr/hizmetler/yapay-zeka-kurulumu.html">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://code-seed.io/tr/hizmetler/yapay-zeka-kurulumu.html">
+    <meta property="og:site_name" content="CodeSeed">
+    <meta property="og:title" content="Yapay Zeka Kurulumu ve Danışmanlığı - CodeSeed">
+    <meta property="og:description" content="İş akışınızı değerlendirir, doğru AI araçlarını bulur, kurar ve ekibinizi eğitiriz. Otomatik trading botlarından iş akışı optimizasyonuna kadar.">
+    <meta property="og:image" content="https://code-seed.io/assets/codeseed-logo.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://code-seed.io/tr/hizmetler/yapay-zeka-kurulumu.html">
+    <meta name="twitter:title" content="Yapay Zeka Kurulumu ve Danışmanlığı - CodeSeed">
+    <meta name="twitter:description" content="İş akışınızı değerlendirir, doğru AI araçlarını bulur, kurar ve ekibinizi eğitiriz.">
+    <meta name="twitter:image" content="https://code-seed.io/assets/codeseed-logo.png">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Yapay Zeka Kurulumu ve Danışmanlığı",
+      "description": "Bireyler ve işletmeler için AI araç değerlendirmesi, kurulum ve eğitim hizmetleri",
+      "url": "https://code-seed.io/tr/hizmetler/yapay-zeka-kurulumu.html",
+      "provider": {
+        "@type": "Organization",
+        "name": "CodeSeed",
+        "url": "https://code-seed.io"
+      },
+      "offers": [
+        {
+          "@type": "Offer",
+          "name": "Bireysel AI Kurulumu",
+          "price": "0",
+          "priceCurrency": "USD",
+          "description": "Fiyat bilgisi için iletişime geçin"
+        },
+        {
+          "@type": "Offer",
+          "name": "Kurumsal AI Entegrasyonu",
+          "price": "0",
+          "priceCurrency": "USD",
+          "description": "Fiyat bilgisi için iletişime geçin"
+        }
+      ]
+    }
+    </script>
+
+    <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,600,700,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400,500,700&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#8dba90',
+                        secondary: '#5a7d5c',
+                        accent: '#D2B48C',
+                        tan: '#D2B48C',
+                    },
+                    fontFamily: {
+                        'sans': ['Satoshi', 'sans-serif'],
+                        'fira': ['"Fira Code"', 'monospace'],
+                        'serif': ['"DM Serif Display"', 'Georgia', 'serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="../../styles.css" rel="stylesheet">
+    <style>
+        .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out; }
+        .faq-item.active .faq-answer { max-height: 500px; }
+        .faq-item.active .faq-icon { transform: rotate(45deg); }
+        .faq-icon { transition: transform 0.3s ease; }
+        .hero-cta-btn { background-color: #7ab87e; }
+        .hero-cta-btn:hover { background-color: #5a7d5c; }
+    </style>
+</head>
+<body class="font-sans bg-white">
+    <!-- Header -->
+    <header class="bg-white/95 backdrop-blur-sm fixed w-full z-50 shadow-sm">
+        <nav class="container mx-auto px-4 py-5">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center transition-transform duration-300 ease-in-out hover:scale-105">
+                    <a href="../index.html#anasayfa" class="flex items-center">
+                        <img src="../../assets/codeseed-logo.png" alt="CodeSeed Logo" id="header-logo" class="h-20 w-auto mr-4">
+                        <span class="text-2xl font-bold text-primary lowercase tracking-wide">code-seed</span>
+                    </a>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-500 hover:text-gray-600 focus:outline-none focus:text-gray-600" aria-label="Menüyü aç/kapat">
+                        <svg viewBox="0 0 24 24" class="h-6 w-6 fill-current">
+                            <path fill-rule="evenodd" d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"></path>
+                        </svg>
+                    </button>
+                </div>
+                <ul class="hidden md:flex space-x-6 items-center">
+    <li><a href="../index.html#anasayfa" class="text-gray-800 hover:text-primary transition-colors duration-300 font-medium">Ana Sayfa</a></li>
+    <li><a href="../index.html#hakkimizda" class="text-gray-800 hover:text-primary transition-colors duration-300 font-medium">Hakkımızda</a></li>
+    <li class="relative group">
+        <button class="text-gray-800 hover:text-primary transition-colors duration-300 font-medium flex items-center gap-1">
+            Hizmetler
+            <i class="fas fa-chevron-down text-xs opacity-50 ml-0.5"></i>
+        </button>
+        <div class="absolute top-full left-0 pt-2 hidden group-hover:block z-50">
+            <div class="bg-white rounded-xl shadow-lg border border-gray-100 py-2 min-w-[260px]">
+                <div class="relative group/ai">
+                    <a href="yapay-zeka-kurulumu.html" class="flex items-center justify-between px-4 py-2.5 text-sm text-gray-700 hover:text-primary hover:bg-gray-50 font-medium transition-colors">
+                        Yapay Zeka Kurulumu
+                        <i class="fas fa-chevron-right text-xs opacity-40 ml-3 flex-shrink-0"></i>
+                    </a>
+                    <div class="absolute top-0 left-full pl-1 hidden group-hover/ai:block z-50">
+                        <div class="bg-white rounded-xl shadow-lg border border-gray-100 py-2 min-w-[240px]">
+                            <a href="isletme-sahipleri.html" class="block px-4 py-2 text-sm text-gray-700 hover:text-primary hover:bg-gray-50 transition-colors">İşletme Sahipleri İçin AI</a>
+                            <a href="yatirimcilar.html" class="block px-4 py-2 text-sm text-gray-700 hover:text-primary hover:bg-gray-50 transition-colors">Yatırımcılar İçin AI</a>
+                            <a href="hukuk-burolari.html" class="block px-4 py-2 text-sm text-gray-700 hover:text-primary hover:bg-gray-50 transition-colors">Hukuk Büroları İçin AI</a>
+                            <a href="gayrimenkul.html" class="block px-4 py-2 text-sm text-gray-700 hover:text-primary hover:bg-gray-50 transition-colors">Gayrimenkul İçin AI</a>
+                            <a href="insaat.html" class="block px-4 py-2 text-sm text-gray-700 hover:text-primary hover:bg-gray-50 transition-colors">İnşaat İçin AI</a>
+                            <a href="muhasebe.html" class="block px-4 py-2 text-sm text-gray-700 hover:text-primary hover:bg-gray-50 transition-colors">Muhasebe İçin AI</a>
+                            <a href="saglik.html" class="block px-4 py-2 text-sm text-gray-700 hover:text-primary hover:bg-gray-50 transition-colors">Sağlık İçin AI</a>
+                            <a href="pazarlama-ajanslari.html" class="block px-4 py-2 text-sm text-gray-700 hover:text-primary hover:bg-gray-50 transition-colors">Pazarlama Ajansları İçin AI</a>
+                            <a href="e-ticaret.html" class="block px-4 py-2 text-sm text-gray-700 hover:text-primary hover:bg-gray-50 transition-colors">E&#8209;Ticaret İçin AI</a>
+                            <a href="bireysel-kullanim.html" class="block px-4 py-2 text-sm text-gray-700 hover:text-primary hover:bg-gray-50 transition-colors">Bireysel Kullanım İçin AI</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </li>
+    <li><a href="../index.html#projeler" class="text-gray-800 hover:text-primary transition-colors duration-300 font-medium">Projeler</a></li>
+    <li><a href="../index.html#ekibimiz" class="text-gray-800 hover:text-primary transition-colors duration-300 font-medium">Ekibimiz</a></li>
+    <li><a href="iletisim.html" class="text-gray-800 hover:text-primary transition-colors duration-300 font-medium">İletişim</a></li>
+</ul>
+            </div>
+        </nav>
+        <div id="mobile-menu" class="md:hidden hidden">
+    <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t">
+        <a href="../index.html#anasayfa" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">Ana Sayfa</a>
+        <a href="../index.html#hakkimizda" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">Hakkımızda</a>
+        <p class="px-3 pt-3 pb-1 text-xs font-semibold text-gray-400 uppercase tracking-wider">Hizmetler</p>
+        <a href="yapay-zeka-kurulumu.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">Yapay Zeka Kurulumu</a>
+        <a href="isletme-sahipleri.html" class="block px-5 py-1.5 rounded-md text-sm text-gray-500 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">İşletme Sahipleri İçin AI</a>
+        <a href="yatirimcilar.html" class="block px-5 py-1.5 rounded-md text-sm text-gray-500 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">Yatırımcılar İçin AI</a>
+        <a href="hukuk-burolari.html" class="block px-5 py-1.5 rounded-md text-sm text-gray-500 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">Hukuk Büroları İçin AI</a>
+        <a href="gayrimenkul.html" class="block px-5 py-1.5 rounded-md text-sm text-gray-500 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">Gayrimenkul İçin AI</a>
+        <a href="insaat.html" class="block px-5 py-1.5 rounded-md text-sm text-gray-500 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">İnşaat İçin AI</a>
+        <a href="muhasebe.html" class="block px-5 py-1.5 rounded-md text-sm text-gray-500 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">Muhasebe İçin AI</a>
+        <a href="saglik.html" class="block px-5 py-1.5 rounded-md text-sm text-gray-500 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">Sağlık İçin AI</a>
+        <a href="pazarlama-ajanslari.html" class="block px-5 py-1.5 rounded-md text-sm text-gray-500 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">Pazarlama Ajansları İçin AI</a>
+        <a href="e-ticaret.html" class="block px-5 py-1.5 rounded-md text-sm text-gray-500 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">E&#8209;Ticaret İçin AI</a>
+        <a href="bireysel-kullanim.html" class="block px-5 py-1.5 rounded-md text-sm text-gray-500 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">Bireysel Kullanım İçin AI</a>
+        <a href="../index.html#projeler" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">Projeler</a>
+        <a href="../index.html#ekibimiz" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">Ekibimiz</a>
+        <a href="iletisim.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">İletişim</a>
+    </div>
+</div>
+    </header>
+
+    <main class="pt-20 md:pt-28">
+        <!-- Hero Section -->
+        <section class="relative py-20 md:py-32 overflow-hidden bg-gray-950">
+            <div class="absolute inset-0 pointer-events-none" style="background-image: radial-gradient(circle, #ffffff 1px, transparent 1px); background-size: 28px 28px; -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,0.06) 0%, rgba(0,0,0,0.06) 40%, transparent 100%); mask-image: linear-gradient(to bottom, rgba(0,0,0,0.06) 0%, rgba(0,0,0,0.06) 40%, transparent 100%);"></div>
+            <div class="absolute bottom-0 right-0 w-[500px] h-[500px] bg-primary/10 rounded-full blur-3xl pointer-events-none"></div>
+            <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-primary/60 via-primary/20 to-transparent"></div>
+
+            <div class="container mx-auto px-4 relative z-10">
+                <div class="text-center max-w-3xl mx-auto">
+                    <div class="flex items-center justify-center gap-3 mb-5">
+                        <div class="w-8 h-px bg-primary"></div>
+                        <span class="font-fira text-primary text-xs tracking-[0.2em] uppercase">CodeSeed Hizmetleri</span>
+                        <div class="w-8 h-px bg-primary"></div>
+                    </div>
+
+                    <h1 class="font-serif italic font-normal text-primary mb-5" style="font-size: clamp(3rem, 8vw, 6rem); line-height: 1.1;">
+                        Yapay Zeka Kurulumu ve Danışmanlığı
+                    </h1>
+
+                    <p class="text-gray-300 font-medium text-lg md:text-xl mx-auto mb-8 leading-relaxed max-w-xl">
+                        İş akışınızı analiz eder, doğru AI araçlarını bulur, kurar ve ekibinizi eğitiriz — tek başınıza çözmeye çalışmak zorunda kalmazsınız.
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row gap-4 items-center justify-center">
+                        <a href="#paketler" class="hero-cta-btn text-white font-semibold py-3.5 px-7 transition-colors duration-300 text-base rounded-[4px]">
+                            Paketleri İncele
+                        </a>
+                        <a href="iletisim.html" class="group text-gray-300 hover:text-primary font-medium py-3.5 inline-flex items-center gap-2 transition-colors duration-300 text-base">
+                            Ücretsiz Görüşme
+                            <i class="fas fa-arrow-right text-sm transition-transform duration-300 group-hover:translate-x-1"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Problem Statement -->
+        <section class="py-20 md:py-28" style="background-color: #f9f7f4;">
+            <div class="container mx-auto px-4">
+                <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 md:gap-20 items-start">
+                    <div class="border-l-2 border-primary pl-7">
+                        <h2 class="text-3xl md:text-4xl font-bold text-secondary leading-snug">
+                            AI araçları<br>
+                            <em class="font-serif italic font-normal text-secondary/80">çok hızlı</em> değişiyor.<br>
+                            Biz takip ediyoruz,<br>
+                            siz etmek zorunda değilsiniz.
+                        </h2>
+                    </div>
+                    <div class="md:pt-1">
+                        <p class="text-lg text-gray-700 leading-relaxed">
+                            Size haftada saatler kazandırabilecek AI araçları var — ama çoğu kişi hangisini kullanacağını, nasıl yapılandıracağını ya da kendi iş akışına nasıl entegre edeceğini bilmiyor. İşte biz tam burada devreye giriyoruz. CodeSeed, iş akışınıza uygun araçları bulur, kurar ve nasıl kullanacağınızı öğretir.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works -->
+        <section class="py-20 md:py-28 bg-gray-900">
+            <div class="container mx-auto px-4">
+                <div class="max-w-7xl mx-auto">
+                    <div class="text-center mb-16">
+                        <h2 class="font-serif italic font-normal text-4xl md:text-5xl lg:text-6xl mb-6 text-white">Nasıl Çalışıyoruz</h2>
+                    </div>
+                    <div class="max-w-4xl mx-auto space-y-8">
+                        <div class="flex gap-6 items-start">
+                            <span class="text-primary font-fira font-bold text-lg mt-1 shrink-0">01</span>
+                            <div>
+                                <h3 class="text-xl font-bold mb-2 text-white">Keşif ve Analiz</h3>
+                                <p class="text-gray-400 leading-relaxed">Mevcut çalışma şeklinizi inceler, zamanın nerede boşa gittiğini tespit eder ve AI'ın gerçekten fayda sağlayabileceği noktaları belirleriz.</p>
+                            </div>
+                        </div>
+                        <div class="border-t border-gray-700"></div>
+                        <div class="flex gap-6 items-start">
+                            <span class="text-primary font-fira font-bold text-lg mt-1 shrink-0">02</span>
+                            <div>
+                                <h3 class="text-xl font-bold mb-2 text-white">Araç Seçimi ve Kurulum</h3>
+                                <p class="text-gray-400 leading-relaxed">Durumunuza uygun araçları seçeriz — maliyet, yetenek ve kullanım kolaylığını değerlendirerek — ardından tüm teknik kurulumu biz yaparız.</p>
+                            </div>
+                        </div>
+                        <div class="border-t border-gray-700"></div>
+                        <div class="flex gap-6 items-start">
+                            <span class="text-primary font-fira font-bold text-lg mt-1 shrink-0">03</span>
+                            <div>
+                                <h3 class="text-xl font-bold mb-2 text-white">Eğitim ve Destek</h3>
+                                <p class="text-gray-400 leading-relaxed">Size ve ekibinize her şeyi nasıl kullanacağınızı öğretiriz. Araçlar geliştikçe ve yeni özellikler çıktıkça yanınızda olmaya devam ederiz.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Tool: OpenClaw -->
+        <section class="py-20 md:py-28 bg-secondary">
+            <div class="container mx-auto px-4">
+                <div class="max-w-5xl mx-auto">
+                    <div class="text-center mb-12">
+                        <h2 class="font-serif italic font-normal text-4xl md:text-5xl lg:text-6xl mb-6 text-white">Araçlarımızdan Biri: OpenClaw</h2>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 md:p-12 border border-white/20">
+                        <div class="mb-6">
+                            <h3 class="text-3xl md:text-4xl font-bold text-white">Açık kaynak AI ajanı, kendi sunucunuzda çalışır</h3>
+                        </div>
+                        <p class="text-white/90 text-lg leading-relaxed mb-6">
+                            OpenClaw, kendi donanımınızda çalışan açık kaynaklı, self-hosted bir AI ajanıdır. Doğal dil komutlarını kabul eder ve "skill" adı verilen modüler eklentiler aracılığıyla çalıştırır — otomatik kripto trading ve portföy takibinden piyasa analizine ve uyarılara kadar. Özellikle bulut bağımlılığı olmadan 7/24 AI destekli piyasa operasyonları isteyen yatırımcılar için güçlü bir araçtır.
+                        </p>
+                        <div class="mb-6">
+                            <h4 class="text-white font-semibold text-lg mb-3">OpenClaw ile neler yapıyoruz:</h4>
+                            <ul class="space-y-2">
+                                <li class="flex items-start text-white/85"><i class="fas fa-check-circle text-primary mt-1 mr-3 flex-shrink-0"></i>Tam kurulum ve yapılandırma</li>
+                                <li class="flex items-start text-white/85"><i class="fas fa-check-circle text-primary mt-1 mr-3 flex-shrink-0"></i>Skill seçimi ve kurulumu (trading, izleme, uyarılar)</li>
+                                <li class="flex items-start text-white/85"><i class="fas fa-check-circle text-primary mt-1 mr-3 flex-shrink-0"></i>Borsa API entegrasyonu (Binance, Coinbase vb.)</li>
+                                <li class="flex items-start text-white/85"><i class="fas fa-check-circle text-primary mt-1 mr-3 flex-shrink-0"></i>Risk yönetimi yapılandırması</li>
+                                <li class="flex items-start text-white/85"><i class="fas fa-check-circle text-primary mt-1 mr-3 flex-shrink-0"></i>Sürekli optimizasyon</li>
+                            </ul>
+                        </div>
+                        <div class="bg-white/10 rounded-xl p-6 border border-white/10">
+                            <p class="text-white/80 text-sm leading-relaxed italic">
+                                OpenClaw, cephaneliğimizdeki birçok araçtan sadece biri. Belirli bir markaya bağlı değiliz — sizin durumunuz için en iyi çalışanı seçeriz.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Industry Use Cases -->
+        <section class="py-20 md:py-28 bg-gray-900">
+            <div class="container mx-auto px-4">
+                <div class="max-w-4xl mx-auto">
+                    <h2 class="font-serif italic font-normal text-4xl md:text-5xl text-white mb-10">Kimler için</h2>
+                    <div class="border-t border-gray-700">
+                        <a href="bireysel-kullanim.html" class="group flex items-center justify-between gap-6 py-5 border-b border-gray-700 hover:bg-primary/5 transition-all duration-200 -mx-4 px-4">
+                            <div>
+                                <p class="text-gray-100 group-hover:text-primary font-medium text-xl transition-colors duration-200">Bireysel Kullanım</p>
+                                <p class="text-gray-500 text-sm mt-1">Daha akıllı çalışmanız, daha hızlı yazmanız ve düzenli kalmanız için AI araçları kuruyoruz — öğrenme sürecini siz yaşamak zorunda kalmadan.</p>
+                            </div>
+                            <div class="shrink-0 w-9 h-9 rounded-full border border-primary flex items-center justify-center group-hover:bg-primary transition-all duration-200">
+                                <i class="fas fa-arrow-right text-primary group-hover:text-gray-900 text-xs transition-colors duration-200"></i>
+                            </div>
+                        </a>
+                        <a href="yatirimcilar.html" class="group flex items-center justify-between gap-6 py-5 border-b border-gray-700 hover:bg-primary/5 transition-all duration-200 -mx-4 px-4">
+                            <div>
+                                <p class="text-gray-100 group-hover:text-primary font-medium text-xl transition-colors duration-200">Yatırımcılar</p>
+                                <p class="text-gray-500 text-sm mt-1">Siz uyurken çalışan otomatik trading ajanları ve piyasa izleme araçları kuruyoruz.</p>
+                            </div>
+                            <div class="shrink-0 w-9 h-9 rounded-full border border-primary flex items-center justify-center group-hover:bg-primary transition-all duration-200">
+                                <i class="fas fa-arrow-right text-primary group-hover:text-gray-900 text-xs transition-colors duration-200"></i>
+                            </div>
+                        </a>
+                        <a href="isletme-sahipleri.html" class="group flex items-center justify-between gap-6 py-5 border-b border-gray-700 hover:bg-primary/5 transition-all duration-200 -mx-4 px-4">
+                            <div>
+                                <p class="text-gray-100 group-hover:text-primary font-medium text-xl transition-colors duration-200">İşletme Sahipleri</p>
+                                <p class="text-gray-500 text-sm mt-1">Ekibinizin zaman kaybettiği noktaları tespit eder, bunu çözen AI araçlarını kurar ve herkesi eğitiriz.</p>
+                            </div>
+                            <div class="shrink-0 w-9 h-9 rounded-full border border-primary flex items-center justify-center group-hover:bg-primary transition-all duration-200">
+                                <i class="fas fa-arrow-right text-primary group-hover:text-gray-900 text-xs transition-colors duration-200"></i>
+                            </div>
+                        </a>
+                        <a href="insaat.html" class="group flex items-center justify-between gap-6 py-5 border-b border-gray-700 hover:bg-primary/5 transition-all duration-200 -mx-4 px-4">
+                            <div>
+                                <p class="text-gray-100 group-hover:text-primary font-medium text-xl transition-colors duration-200">İnşaat</p>
+                                <p class="text-gray-500 text-sm mt-1">Projelerinizi, tekliflerinizi ve şantiye iletişiminizi daha verimli yönetmeniz için AI araçları kuruyoruz.</p>
+                            </div>
+                            <div class="shrink-0 w-9 h-9 rounded-full border border-primary flex items-center justify-center group-hover:bg-primary transition-all duration-200">
+                                <i class="fas fa-arrow-right text-primary group-hover:text-gray-900 text-xs transition-colors duration-200"></i>
+                            </div>
+                        </a>
+                        <a href="hukuk-burolari.html" class="group flex items-center justify-between gap-6 py-5 border-b border-gray-700 hover:bg-primary/5 transition-all duration-200 -mx-4 px-4">
+                            <div>
+                                <p class="text-gray-100 group-hover:text-primary font-medium text-xl transition-colors duration-200">Hukuk Büroları</p>
+                                <p class="text-gray-500 text-sm mt-1">Daha hızlı taslak hazırlamanız, belge yönetimi yapmanız ve rutin araştırmada zaman kazanmanız için AI araçları kuruyoruz.</p>
+                            </div>
+                            <div class="shrink-0 w-9 h-9 rounded-full border border-primary flex items-center justify-center group-hover:bg-primary transition-all duration-200">
+                                <i class="fas fa-arrow-right text-primary group-hover:text-gray-900 text-xs transition-colors duration-200"></i>
+                            </div>
+                        </a>
+                        <a href="gayrimenkul.html" class="group flex items-center justify-between gap-6 py-5 border-b border-gray-700 hover:bg-primary/5 transition-all duration-200 -mx-4 px-4">
+                            <div>
+                                <p class="text-gray-100 group-hover:text-primary font-medium text-xl transition-colors duration-200">Gayrimenkul</p>
+                                <p class="text-gray-500 text-sm mt-1">İlanlarınızı yönetmeniz, müşteri adaylarınızı takip etmeniz ve pipeline'ınızı kontrol altında tutmanız için AI araçları kuruyoruz.</p>
+                            </div>
+                            <div class="shrink-0 w-9 h-9 rounded-full border border-primary flex items-center justify-center group-hover:bg-primary transition-all duration-200">
+                                <i class="fas fa-arrow-right text-primary group-hover:text-gray-900 text-xs transition-colors duration-200"></i>
+                            </div>
+                        </a>
+                        <a href="e-ticaret.html" class="group flex items-center justify-between gap-6 py-5 border-b border-gray-700 hover:bg-primary/5 transition-all duration-200 -mx-4 px-4">
+                            <div>
+                                <p class="text-gray-100 group-hover:text-primary font-medium text-xl transition-colors duration-200">E-Ticaret</p>
+                                <p class="text-gray-500 text-sm mt-1">Ürün açıklamaları, müşteri desteği ve stok yönetimi için AI araçları kuruyoruz — siz büyümeye odaklanın.</p>
+                            </div>
+                            <div class="shrink-0 w-9 h-9 rounded-full border border-primary flex items-center justify-center group-hover:bg-primary transition-all duration-200">
+                                <i class="fas fa-arrow-right text-primary group-hover:text-gray-900 text-xs transition-colors duration-200"></i>
+                            </div>
+                        </a>
+                        <a href="muhasebe.html" class="group flex items-center justify-between gap-6 py-5 border-b border-gray-700 hover:bg-primary/5 transition-all duration-200 -mx-4 px-4">
+                            <div>
+                                <p class="text-gray-100 group-hover:text-primary font-medium text-xl transition-colors duration-200">Muhasebe</p>
+                                <p class="text-gray-500 text-sm mt-1">Veri girişi, raporlama ve müşteri iletişimini kolaylaştıran AI araçları kuruyoruz — asıl işinize odaklanmanız için.</p>
+                            </div>
+                            <div class="shrink-0 w-9 h-9 rounded-full border border-primary flex items-center justify-center group-hover:bg-primary transition-all duration-200">
+                                <i class="fas fa-arrow-right text-primary group-hover:text-gray-900 text-xs transition-colors duration-200"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Plans -->
+        <section id="paketler" class="py-20 md:py-28 bg-gradient-to-b from-gray-50 to-white">
+            <div class="container mx-auto px-4">
+                <div class="max-w-5xl mx-auto">
+                    <div class="text-center mb-16">
+                        <h2 class="font-serif italic font-normal text-4xl md:text-5xl lg:text-6xl mb-6 text-secondary">Paketler</h2>
+                    </div>
+                    <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                        <!-- Personal -->
+                        <div class="bg-white rounded-2xl p-8 md:p-10 border border-gray-200 flex flex-col">
+                            <h3 class="text-xl font-bold text-secondary mb-1">Bireysel</h3>
+                            <p class="text-gray-500 text-sm mb-6">Bireysel kullanıcılar için</p>
+                            <ul class="space-y-3 mb-8 flex-1 text-sm">
+                                <li class="flex items-start"><span class="text-primary mr-2 mt-0.5">&mdash;</span><span class="text-gray-700">1 saatlik keşif görüşmesi</span></li>
+                                <li class="flex items-start"><span class="text-primary mr-2 mt-0.5">&mdash;</span><span class="text-gray-700">Araç değerlendirmesi ve öneriler</span></li>
+                                <li class="flex items-start"><span class="text-primary mr-2 mt-0.5">&mdash;</span><span class="text-gray-700">Tam kurulum ve yapılandırma</span></li>
+                                <li class="flex items-start"><span class="text-primary mr-2 mt-0.5">&mdash;</span><span class="text-gray-700">1 saatlik eğitim oturumu</span></li>
+                                <li class="flex items-start"><span class="text-primary mr-2 mt-0.5">&mdash;</span><span class="text-gray-700">30 gün e-posta desteği</span></li>
+                                <li class="flex items-start"><span class="text-primary mr-2 mt-0.5">&mdash;</span><span class="text-gray-700">Bir takip görüşmesi</span></li>
+                            </ul>
+                            <a href="iletisim.html" class="group inline-flex items-center justify-center gap-2 bg-primary hover:bg-secondary text-white font-semibold py-3 px-6 rounded-full transition-all duration-300 text-base">
+                                <span>Başlayalım</span>
+                                <i class="fas fa-arrow-right text-sm transition-transform duration-300 group-hover:translate-x-1"></i>
+                            </a>
+                        </div>
+                        <!-- Business -->
+                        <div class="bg-secondary rounded-2xl p-8 md:p-10 flex flex-col text-white">
+                            <h3 class="text-xl font-bold mb-1">Kurumsal</h3>
+                            <p class="text-white/60 text-sm mb-6">Ekipler için</p>
+                            <ul class="space-y-3 mb-8 flex-1 text-sm">
+                                <li class="flex items-start"><span class="text-primary mr-2 mt-0.5">&mdash;</span><span class="text-white/85">Departmanlar arası iş akışı analizi</span></li>
+                                <li class="flex items-start"><span class="text-primary mr-2 mt-0.5">&mdash;</span><span class="text-white/85">Çoklu araç değerlendirmesi ve maliyet analizi</span></li>
+                                <li class="flex items-start"><span class="text-primary mr-2 mt-0.5">&mdash;</span><span class="text-white/85">Ekibiniz için tam kurulum</span></li>
+                                <li class="flex items-start"><span class="text-primary mr-2 mt-0.5">&mdash;</span><span class="text-white/85">Ekip eğitimi (10 kişiye kadar)</span></li>
+                                <li class="flex items-start"><span class="text-primary mr-2 mt-0.5">&mdash;</span><span class="text-white/85">90 gün öncelikli destek</span></li>
+                                <li class="flex items-start"><span class="text-primary mr-2 mt-0.5">&mdash;</span><span class="text-white/85">Aylık kontrol görüşmeleri</span></li>
+                                <li class="flex items-start"><span class="text-primary mr-2 mt-0.5">&mdash;</span><span class="text-white/85">Gerektiğinde özel otomasyon</span></li>
+                            </ul>
+                            <a href="iletisim.html" class="group inline-flex items-center justify-center gap-2 bg-white text-secondary hover:bg-white/95 font-semibold py-3 px-6 rounded-full transition-all duration-300 text-base">
+                                <span>Görüşme Ayarla</span>
+                                <i class="fas fa-arrow-right text-sm transition-transform duration-300 group-hover:translate-x-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <p class="text-center text-gray-500 mt-8 text-sm">
+                        Hangi paketin size uygun olduğundan emin değil misiniz? <a href="iletisim.html" class="text-primary hover:text-secondary font-semibold transition-colors">15 dakikalık ücretsiz bir görüşme ayarlayın</a>, sizi doğru yönlendirelim.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="py-20 md:py-28 bg-secondary">
+            <div class="container mx-auto px-4">
+                <div class="max-w-6xl mx-auto">
+                    <div class="text-center mb-16">
+                        <h2 class="font-serif italic font-normal text-4xl md:text-5xl lg:text-6xl mb-6 text-white">Müşterilerimiz Ne Diyor</h2>
+                    </div>
+                    <div class="grid md:grid-cols-3 gap-8">
+                        <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+                            <p class="text-white/90 leading-relaxed mb-6">"OpenClaw'u trading bilgisayarıma bir öğleden sonrada kurdular. Öncesinde her saat başı grafikleri manuel kontrol ediyordum — şimdi sadece sabah raporunu inceliyorum."</p>
+                            <p class="text-primary font-semibold text-sm">— Tarık F., Kripto Yatırımcısı</p>
+                        </div>
+                        <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+                            <p class="text-white/90 leading-relaxed mb-6">"Nereden başlayacağımızı bilmiyorduk. Nasıl çalıştığımızı incelediler, üç araç önerdiler ve bir hafta içinde her şey çalışır hale geldi. Muhtemelen haftada 15 saat kazandırıyor."</p>
+                            <p class="text-primary font-semibold text-sm">— Ayşe M., Pazarlama Ajansı Sahibi</p>
+                        </div>
+                        <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+                            <p class="text-white/90 leading-relaxed mb-6">"Kurulum sorunsuz geçti, ama beklemediğim şey takip oldu. Araçlarımızdan birinin yeni sürümü çıktığında, ben daha haberi almadan iletişime geçip güncellemeyi yaptılar."</p>
+                            <p class="text-primary font-semibold text-sm">— Kier.E, E-Ticaret İşletmecisi</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="py-20 md:py-28 bg-gray-900">
+            <div class="container mx-auto px-4">
+                <div class="max-w-3xl mx-auto">
+                    <div class="text-center mb-16">
+                        <h2 class="font-serif italic font-normal text-4xl md:text-5xl lg:text-6xl mb-6 text-white">Sıkça Sorulan Sorular</h2>
+                    </div>
+                    <div class="space-y-0">
+                        <div class="faq-item border-b border-gray-700">
+                            <button class="faq-toggle w-full text-left py-5 flex items-center justify-between hover:text-primary transition-colors" aria-expanded="false">
+                                <span class="font-semibold text-gray-200 pr-4">Teknik bilgiye ihtiyacım var mı?</span>
+                                <i class="fas fa-plus faq-icon text-primary/50 flex-shrink-0 text-sm"></i>
+                            </button>
+                            <div class="faq-answer">
+                                <p class="pb-5 text-gray-400 leading-relaxed">Hayır. Teknik işleri biz hallederiz ve her şeyi basit arayüzler üzerinden kullanmanızı öğretiriz. Terminal veya kod gerektiren bir şey varsa, sizin dokunmanıza gerek kalmayacak şekilde kurarız.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item border-b border-gray-700">
+                            <button class="faq-toggle w-full text-left py-5 flex items-center justify-between hover:text-primary transition-colors" aria-expanded="false">
+                                <span class="font-semibold text-gray-200 pr-4">Zaten AI araçlarım var ama iyi çalışmıyor.</span>
+                                <i class="fas fa-plus faq-icon text-primary/50 flex-shrink-0 text-sm"></i>
+                            </button>
+                            <div class="faq-answer">
+                                <p class="pb-5 text-gray-400 leading-relaxed">Mevcut araçlarınızı inceleyebilir, neyin çalışmadığını tespit edebilir ve ya düzeltebilir ya da daha iyi bir alternatif önerebiliriz. Sadece analiz çalışmaları da yapıyoruz.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item border-b border-gray-700">
+                            <button class="faq-toggle w-full text-left py-5 flex items-center justify-between hover:text-primary transition-colors" aria-expanded="false">
+                                <span class="font-semibold text-gray-200 pr-4">Araçları nasıl seçiyorsunuz?</span>
+                                <i class="fas fa-plus faq-icon text-primary/50 flex-shrink-0 text-sm"></i>
+                            </button>
+                            <div class="faq-answer">
+                                <p class="pb-5 text-gray-400 leading-relaxed">Kullanım amacınıza, bütçenize ve teknik seviyenize göre seçiyoruz. Hiçbir tedarikçiyle bağlantımız yok — sadece işe yarayan şeyleri seçiyoruz.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item border-b border-gray-700">
+                            <button class="faq-toggle w-full text-left py-5 flex items-center justify-between hover:text-primary transition-colors" aria-expanded="false">
+                                <span class="font-semibold text-gray-200 pr-4">Verilerim güvende mi?</span>
+                                <i class="fas fa-plus faq-icon text-primary/50 flex-shrink-0 text-sm"></i>
+                            </button>
+                            <div class="faq-answer">
+                                <p class="pb-5 text-gray-400 leading-relaxed">Evet. Kullandığımız araçların çoğu (OpenClaw gibi) self-hosted'tır, yani verileriniz kendi makinenizde kalır. Bulut araçları için güçlü gizlilik politikalarına sahip olanları seçer ve buna göre yapılandırırız.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item border-b border-gray-700">
+                            <button class="faq-toggle w-full text-left py-5 flex items-center justify-between hover:text-primary transition-colors" aria-expanded="false">
+                                <span class="font-semibold text-gray-200 pr-4">Kurulumdan sonra ne olur?</span>
+                                <i class="fas fa-plus faq-icon text-primary/50 flex-shrink-0 text-sm"></i>
+                            </button>
+                            <div class="faq-answer">
+                                <p class="pb-5 text-gray-400 leading-relaxed">Paketinize bir destek süresi dahildir. Bunun ardından, araçlar geliştikçe güncellemeler, optimizasyon ve yeni özellikler için aylık retainer seçenekleri sunuyoruz.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bottom CTA -->
+        <section id="contact-cta" class="py-20 md:py-28 bg-gradient-to-br from-primary to-secondary">
+            <div class="container mx-auto px-4">
+                <div class="max-w-5xl mx-auto text-center text-white">
+                    <h2 class="font-serif italic font-normal text-4xl md:text-5xl lg:text-6xl mb-8">Yapay zekanızı kuralım.</h2>
+                    <p class="text-xl md:text-2xl mb-12 text-white/95 leading-relaxed">
+                        Ücretsiz keşif görüşmesi. İş akışınızı inceler ve neyin otomatikleştirmeye değer olduğunu söyleriz.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                        <a href="iletisim.html" class="group bg-white text-secondary hover:bg-white/95 font-semibold py-4 px-8 rounded-full transition-all duration-300 text-lg shadow-lg hover:shadow-xl hover:scale-105 inline-flex items-center gap-2">
+                            <span>Ücretsiz Görüşme Ayarla</span>
+                            <i class="fas fa-arrow-right transition-transform duration-300 group-hover:translate-x-1"></i>
+                        </a>
+                        <a href="../index.html#hakkimizda" class="bg-transparent border-2 border-white text-white hover:bg-white hover:text-secondary font-semibold py-4 px-8 rounded-full transition-all duration-300 text-lg">
+                            Tüm Hizmetleri Gör
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-10 md:py-12">
+        <div class="container mx-auto px-4">
+            <div class="text-center">
+                <p class="footer-copyright text-gray-400 text-sm md:text-base leading-relaxed max-w-md mx-auto">&copy; 2025 CodeSeed. Tüm hakları saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ accordion
+        document.querySelectorAll('.faq-toggle').forEach(button => {
+            button.addEventListener('click', () => {
+                const item = button.closest('.faq-item');
+                const isActive = item.classList.contains('active');
+                document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
+                if (!isActive) item.classList.add('active');
+                button.setAttribute('aria-expanded', !isActive);
+            });
+        });
+
+        // Mobile menu
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        if (mobileMenuButton && mobileMenu) {
+            mobileMenuButton.addEventListener('click', (e) => {
+                e.preventDefault();
+                mobileMenu.classList.toggle('show');
+            });
+            mobileMenu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => mobileMenu.classList.remove('show'));
+            });
+            document.addEventListener('click', (event) => {
+                if (!mobileMenu.contains(event.target) && !mobileMenuButton.contains(event.target) && mobileMenu.classList.contains('show')) {
+                    mobileMenu.classList.remove('show');
+                }
+            });
+        }
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            });
+        });
+    </script>
+</body>
+</html>

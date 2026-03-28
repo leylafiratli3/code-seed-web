@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>AI Setup & Strategy - CodeSeed | Find, Set Up & Master the Right AI Tools</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CodeSeed AI Setup & Strategy: We evaluate your workflow, find the right AI tools, set them up, and train your team. From automated trading agents to business workflow optimization.">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/codeseed-logo.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/codeseed-logo.png">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://code-seed.io/services/ai-setup-and-strategy.html">
+    <meta property="og:site_name" content="CodeSeed">
+    <meta property="og:title" content="AI Setup & Strategy - CodeSeed">
+    <meta property="og:description" content="We evaluate your workflow, find the right AI tools, set them up, and train your team. From automated trading agents to business workflow optimization.">
+    <meta property="og:image" content="https://code-seed.io/assets/codeseed-logo.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://code-seed.io/services/ai-setup-and-strategy.html">
+    <meta name="twitter:title" content="AI Setup & Strategy - CodeSeed">
+    <meta name="twitter:description" content="We evaluate your workflow, find the right AI tools, set them up, and train your team.">
+    <meta name="twitter:image" content="https://code-seed.io/assets/codeseed-logo.png">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "AI Setup & Strategy",
+      "description": "AI tool evaluation, setup, and training services for individuals and businesses",
+      "url": "https://code-seed.io/services/ai-setup-and-strategy.html",
+      "provider": {
+        "@type": "Organization",
+        "name": "CodeSeed",
+        "url": "https://code-seed.io"
+      },
+      "offers": [
+        {
+          "@type": "Offer",
+          "name": "Personal AI Setup",
+          "price": "0",
+          "priceCurrency": "USD",
+          "description": "Contact us for pricing"
+        },
+        {
+          "@type": "Offer",
+          "name": "Business AI Integration",
+          "price": "0",
+          "priceCurrency": "USD",
+          "description": "Contact us for pricing"
+        }
+      ]
+    }
+    </script>
+
+    <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,600,700,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400,500,700&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#8dba90',
+                        secondary: '#5a7d5c',
+                        accent: '#D2B48C',
+                        tan: '#D2B48C',
+                    },
+                    fontFamily: {
+                        'sans': ['Satoshi', 'sans-serif'],
+                        'fira': ['"Fira Code"', 'monospace'],
+                        'serif': ['"DM Serif Display"', 'Georgia', 'serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="../styles.css" rel="stylesheet">
+    <style>
+        .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out; }
+        .faq-item.active .faq-answer { max-height: 500px; }
+        .faq-item.active .faq-icon { transform: rotate(45deg); }
+        .faq-icon { transition: transform 0.3s ease; }
+        .hero-cta-btn { background-color: #7ab87e; }
+        .hero-cta-btn:hover { background-color: #5a7d5c; }
+    </style>
+</head>
+<body class="font-sans bg-white">
+    <!-- Header -->
+    <header class="bg-white/95 backdrop-blur-sm fixed w-full z-50 shadow-sm">
+        <nav class="container mx-auto px-4 py-5">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center transition-transform duration-300 ease-in-out hover:scale-105">
+                    <a href="../index.html#home" class="flex items-center">
+                        <img src="../assets/codeseed-logo.png" alt="CodeSeed Logo" id="header-logo" class="h-20 w-auto mr-4">
+                        <span class="text-2xl font-bold text-primary lowercase tracking-wide">code-seed</span>
+                    </a>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-500 hover:text-gray-600 focus:outline-none focus:text-gray-600" aria-label="Toggle menu">
+                        <svg viewBox="0 0 24 24" class="h-6 w-6 fill-current">
+                            <path fill-rule="evenodd" d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"></path>
+                        </svg>
+                    </button>
+                </div>
+                                <ul class="hidden md:flex space-x-6 items-center">
+                    <li><a href="../index.html#hero" class="text-gray-800 hover:text-primary transition-colors duration-300 font-medium">Home</a></li>
+                    <li><a href="../index.html#about-us" class="text-gray-800 hover:text-primary transition-colors duration-300 font-medium">About Us</a></li>
+                    <li><a href="../index.html#about" class="text-gray-800 hover:text-primary transition-colors duration-300 font-medium">Services</a></li>
+                    <li class="relative group">
+                        <button class="text-gray-800 hover:text-primary transition-colors duration-300 font-medium flex items-center gap-1">
+                            AI Setup &amp; Strategy
+                            <i class="fas fa-chevron-down text-xs opacity-50 ml-0.5"></i>
+                        </button>
+                        <div class="absolute top-full left-0 pt-2 hidden group-hover:block z-50">
+                            <div class="bg-white rounded-xl shadow-lg border border-gray-100 py-2 min-w-[200px]">
+                                <a href="ai-setup-and-strategy.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:text-primary hover:bg-gray-50 font-medium transition-colors border-b border-gray-100">Overview</a>
+                                <a href="ai-for-personal-use.html" class="block px-4 py-2 text-sm text-gray-700 hover:text-primary hover:bg-gray-50 transition-colors">For Personal Use</a>
+                                <a href="ai-for-traders.html" class="block px-4 py-2 text-sm text-gray-700 hover:text-primary hover:bg-gray-50 transition-colors">For Traders</a>
+                                <a href="ai-for-business-owners.html" class="block px-4 py-2 text-sm text-gray-700 hover:text-primary hover:bg-gray-50 transition-colors">For Business Owners</a>
+                                <a href="ai-for-construction.html" class="block px-4 py-2 text-sm text-gray-700 hover:text-primary hover:bg-gray-50 transition-colors">For Construction</a>
+                                <a href="ai-for-law-firms.html" class="block px-4 py-2 text-sm text-gray-700 hover:text-primary hover:bg-gray-50 transition-colors">For Law Firms</a>
+                                <a href="ai-for-real-estate.html" class="block px-4 py-2 text-sm text-gray-700 hover:text-primary hover:bg-gray-50 transition-colors">For Real Estate</a>
+                                <a href="ai-for-ecommerce.html" class="block px-4 py-2 text-sm text-gray-700 hover:text-primary hover:bg-gray-50 transition-colors">For E&#8209;Commerce</a>
+                                <a href="ai-for-accounting.html" class="block px-4 py-2 text-sm text-gray-700 hover:text-primary hover:bg-gray-50 transition-colors">For Accounting</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="../index.html#recent-projects" class="text-gray-800 hover:text-primary transition-colors duration-300 font-medium">Project Garden</a></li>
+                    <li><a href="../index.html#team" class="text-gray-800 hover:text-primary transition-colors duration-300 font-medium">Our Team</a></li>
+                    <li><a href="../index.html#contact" class="text-gray-800 hover:text-primary transition-colors duration-300 font-medium">Work with Us</a></li>
+                </ul>
+            </div>
+        </nav>
+                <div id="mobile-menu" class="md:hidden hidden">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t">
+                <a href="../index.html#hero" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">Home</a>
+                <a href="../index.html#about-us" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">About Us</a>
+                <a href="../index.html#about" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">Services</a>
+                <p class="px-3 pt-3 pb-1 text-xs font-semibold text-gray-400 uppercase tracking-wider">AI Setup &amp; Strategy</p>
+                <a href="ai-setup-and-strategy.html" class="block px-5 py-1.5 rounded-md text-sm text-gray-600 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out font-medium">Overview</a>
+                <a href="ai-for-personal-use.html" class="block px-5 py-1.5 rounded-md text-sm text-gray-500 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">For Personal Use</a>
+                <a href="ai-for-traders.html" class="block px-5 py-1.5 rounded-md text-sm text-gray-500 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">For Traders</a>
+                <a href="ai-for-business-owners.html" class="block px-5 py-1.5 rounded-md text-sm text-gray-500 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">For Business Owners</a>
+                <a href="ai-for-construction.html" class="block px-5 py-1.5 rounded-md text-sm text-gray-500 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">For Construction</a>
+                <a href="ai-for-law-firms.html" class="block px-5 py-1.5 rounded-md text-sm text-gray-500 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">For Law Firms</a>
+                <a href="ai-for-real-estate.html" class="block px-5 py-1.5 rounded-md text-sm text-gray-500 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">For Real Estate</a>
+                <a href="ai-for-ecommerce.html" class="block px-5 py-1.5 rounded-md text-sm text-gray-500 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">For E&#8209;Commerce</a>
+                <a href="ai-for-accounting.html" class="block px-5 py-1.5 rounded-md text-sm text-gray-500 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">For Accounting</a>
+                <a href="../index.html#recent-projects" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">Project Garden</a>
+                <a href="../index.html#team" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">Our Team</a>
+                <a href="../index.html#contact" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">Work with Us</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-20 md:pt-28">
+        <!-- Hero Section -->
+        <section class="relative py-20 md:py-32 overflow-hidden bg-gray-950">
+            <!-- Dot grid fading out toward bottom -->
+            <div class="absolute inset-0 pointer-events-none" style="background-image: radial-gradient(circle, #ffffff 1px, transparent 1px); background-size: 28px 28px; -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,0.06) 0%, rgba(0,0,0,0.06) 40%, transparent 100%); mask-image: linear-gradient(to bottom, rgba(0,0,0,0.06) 0%, rgba(0,0,0,0.06) 40%, transparent 100%);"></div>
+            <!-- Green atmospheric glow -->
+            <div class="absolute bottom-0 right-0 w-[500px] h-[500px] bg-primary/10 rounded-full blur-3xl pointer-events-none"></div>
+            <!-- Thin top accent line -->
+            <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-primary/60 via-primary/20 to-transparent"></div>
+
+            <div class="container mx-auto px-4 relative z-10">
+                <div class="text-center max-w-3xl mx-auto">
+                    <!-- Eyebrow -->
+                    <div class="flex items-center justify-center gap-3 mb-5">
+                        <div class="w-8 h-px bg-primary"></div>
+                        <span class="font-fira text-primary text-xs tracking-[0.2em] uppercase">CodeSeed Services</span>
+                        <div class="w-8 h-px bg-primary"></div>
+                    </div>
+
+                    <!-- Heading -->
+                    <h1 class="font-serif italic font-normal text-primary mb-5" style="font-size: clamp(3rem, 8vw, 6rem); line-height: 1.1;">
+                        AI Setup & Strategy
+                    </h1>
+
+                    <p class="text-gray-300 font-medium text-lg md:text-xl mx-auto mb-8 leading-relaxed max-w-xl">
+                        We evaluate your workflow, find the right AI tools, set them up, and train your team — so you're not left figuring it out alone.
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row gap-4 items-center justify-center">
+                        <a href="#plans" class="hero-cta-btn text-white font-semibold py-3.5 px-7 transition-colors duration-300 text-base rounded-[4px]">
+                            See Pricing
+                        </a>
+                        <a href="ai-contact.html" class="group text-gray-300 hover:text-primary font-medium py-3.5 inline-flex items-center gap-2 transition-colors duration-300 text-base">
+                            Book a Consultation
+                            <i class="fas fa-arrow-right text-sm transition-transform duration-300 group-hover:translate-x-1"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Problem Statement -->
+        <section class="py-20 md:py-28" style="background-color: #f9f7f4;">
+            <div class="container mx-auto px-4">
+                <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 md:gap-20 items-start">
+                    <div class="border-l-2 border-primary pl-7">
+                        <h2 class="text-3xl md:text-4xl font-bold text-secondary leading-snug">
+                            AI tools are<br>
+                            changing <em class="font-serif italic font-normal text-secondary/80">really fast.</em><br>
+                            We keep up so<br>
+                            you don't have to.
+                        </h2>
+                    </div>
+                    <div class="md:pt-1">
+                        <p class="text-lg text-gray-700 leading-relaxed">
+                            There are AI tools that can save you hours every week — but most people don't know which ones to use, how to configure them, or how to fit them into the way they actually work. That's what we do. CodeSeed finds the right tools for your workflow, sets them up, and teaches you how to use them.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works -->
+        <section class="py-20 md:py-28 bg-gray-900">
+            <div class="container mx-auto px-4">
+                <div class="max-w-7xl mx-auto">
+                    <div class="text-center mb-16">
+                        <h2 class="font-serif italic font-normal text-4xl md:text-5xl lg:text-6xl mb-6 text-white">How It Works</h2>
+                    </div>
+                    <div class="max-w-4xl mx-auto space-y-8">
+                        <div class="flex gap-6 items-start">
+                            <span class="text-primary font-fira font-bold text-lg mt-1 shrink-0">01</span>
+                            <div>
+                                <h3 class="text-xl font-bold mb-2 text-white">Discovery & Audit</h3>
+                                <p class="text-gray-400 leading-relaxed">We look at how you currently work, find where time is being wasted, and figure out where AI can actually help.</p>
+                            </div>
+                        </div>
+                        <div class="border-t border-gray-700"></div>
+                        <div class="flex gap-6 items-start">
+                            <span class="text-primary font-fira font-bold text-lg mt-1 shrink-0">02</span>
+                            <div>
+                                <h3 class="text-xl font-bold mb-2 text-white">Tool Selection & Setup</h3>
+                                <p class="text-gray-400 leading-relaxed">We pick the right tools for your situation — weighing cost, capability, and ease of use — then handle the full technical setup.</p>
+                            </div>
+                        </div>
+                        <div class="border-t border-gray-700"></div>
+                        <div class="flex gap-6 items-start">
+                            <span class="text-primary font-fira font-bold text-lg mt-1 shrink-0">03</span>
+                            <div>
+                                <h3 class="text-xl font-bold mb-2 text-white">Training & Support</h3>
+                                <p class="text-gray-400 leading-relaxed">We teach you and your team how to use everything, and stick around as tools evolve and new capabilities come out.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Tool: OpenClaw -->
+        <section class="py-20 md:py-28 bg-secondary">
+            <div class="container mx-auto px-4">
+                <div class="max-w-5xl mx-auto">
+                    <div class="text-center mb-12">
+                        <h2 class="font-serif italic font-normal text-4xl md:text-5xl lg:text-6xl mb-6 text-white">One of Our Tools: OpenClaw</h2>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 md:p-12 border border-white/20">
+                        <div class="mb-6">
+                            <h3 class="text-3xl md:text-4xl font-bold text-white">Open-source AI agent, self-hosted</h3>
+                        </div>
+                        <p class="text-white/90 text-lg leading-relaxed mb-6">
+                            OpenClaw is an open-source, self-hosted AI agent that runs on your own hardware. It accepts natural-language commands and executes them through modular plugins called "skills" — from automated crypto trading and portfolio monitoring to market analysis and alerts. It's particularly powerful for traders who want 24/7 AI-powered market operations without cloud dependencies.
+                        </p>
+                        <div class="mb-6">
+                            <h4 class="text-white font-semibold text-lg mb-3">What we do with it:</h4>
+                            <ul class="space-y-2">
+                                <li class="flex items-start text-white/85"><i class="fas fa-check-circle text-primary mt-1 mr-3 flex-shrink-0"></i>Full installation and configuration</li>
+                                <li class="flex items-start text-white/85"><i class="fas fa-check-circle text-primary mt-1 mr-3 flex-shrink-0"></i>Skill selection and setup (trading, monitoring, alerts)</li>
+                                <li class="flex items-start text-white/85"><i class="fas fa-check-circle text-primary mt-1 mr-3 flex-shrink-0"></i>Exchange API integration (Binance, Coinbase, etc.)</li>
+                                <li class="flex items-start text-white/85"><i class="fas fa-check-circle text-primary mt-1 mr-3 flex-shrink-0"></i>Risk management configuration</li>
+                                <li class="flex items-start text-white/85"><i class="fas fa-check-circle text-primary mt-1 mr-3 flex-shrink-0"></i>Ongoing optimization</li>
+                            </ul>
+                        </div>
+                        <div class="bg-white/10 rounded-xl p-6 border border-white/10">
+                            <p class="text-white/80 text-sm leading-relaxed italic">
+                                OpenClaw is one of many tools in our arsenal. We're tool-agnostic — we find what works best for your specific situation.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Industry Use Cases -->
+        <section class="py-20 md:py-28 bg-gray-900">
+            <div class="container mx-auto px-4">
+                <div class="max-w-4xl mx-auto">
+                    <h2 class="font-serif italic font-normal text-4xl md:text-5xl text-white mb-10">Who it's for</h2>
+                    <div class="border-t border-gray-700">
+                        <a href="ai-for-personal-use.html" class="group flex items-center justify-between gap-6 py-5 border-b border-gray-700 hover:bg-primary/5 transition-all duration-200 -mx-4 px-4">
+                            <div>
+                                <p class="text-gray-100 group-hover:text-primary font-medium text-xl transition-colors duration-200">Personal Use</p>
+                                <p class="text-gray-500 text-sm mt-1">We set up AI tools to help you work smarter, write faster, and stay organized — without the learning curve.</p>
+                            </div>
+                            <div class="shrink-0 w-9 h-9 rounded-full border border-primary flex items-center justify-center group-hover:bg-primary transition-all duration-200">
+                                <i class="fas fa-arrow-right text-primary group-hover:text-gray-900 text-xs transition-colors duration-200"></i>
+                            </div>
+                        </a>
+                        <a href="ai-for-traders.html" class="group flex items-center justify-between gap-6 py-5 border-b border-gray-700 hover:bg-primary/5 transition-all duration-200 -mx-4 px-4">
+                            <div>
+                                <p class="text-gray-100 group-hover:text-primary font-medium text-xl transition-colors duration-200">Traders</p>
+                                <p class="text-gray-500 text-sm mt-1">We configure automated trading agents and market monitoring tools that run while you sleep.</p>
+                            </div>
+                            <div class="shrink-0 w-9 h-9 rounded-full border border-primary flex items-center justify-center group-hover:bg-primary transition-all duration-200">
+                                <i class="fas fa-arrow-right text-primary group-hover:text-gray-900 text-xs transition-colors duration-200"></i>
+                            </div>
+                        </a>
+                        <a href="ai-for-business-owners.html" class="group flex items-center justify-between gap-6 py-5 border-b border-gray-700 hover:bg-primary/5 transition-all duration-200 -mx-4 px-4">
+                            <div>
+                                <p class="text-gray-100 group-hover:text-primary font-medium text-xl transition-colors duration-200">Business Owners</p>
+                                <p class="text-gray-500 text-sm mt-1">We identify where your team is losing time and set up AI tools that fix it — then train everyone to use them.</p>
+                            </div>
+                            <div class="shrink-0 w-9 h-9 rounded-full border border-primary flex items-center justify-center group-hover:bg-primary transition-all duration-200">
+                                <i class="fas fa-arrow-right text-primary group-hover:text-gray-900 text-xs transition-colors duration-200"></i>
+                            </div>
+                        </a>
+                        <a href="ai-for-construction.html" class="group flex items-center justify-between gap-6 py-5 border-b border-gray-700 hover:bg-primary/5 transition-all duration-200 -mx-4 px-4">
+                            <div>
+                                <p class="text-gray-100 group-hover:text-primary font-medium text-xl transition-colors duration-200">Construction</p>
+                                <p class="text-gray-500 text-sm mt-1">We set up AI tools to help you manage projects, bids, and job site communication more efficiently.</p>
+                            </div>
+                            <div class="shrink-0 w-9 h-9 rounded-full border border-primary flex items-center justify-center group-hover:bg-primary transition-all duration-200">
+                                <i class="fas fa-arrow-right text-primary group-hover:text-gray-900 text-xs transition-colors duration-200"></i>
+                            </div>
+                        </a>
+                        <a href="ai-for-law-firms.html" class="group flex items-center justify-between gap-6 py-5 border-b border-gray-700 hover:bg-primary/5 transition-all duration-200 -mx-4 px-4">
+                            <div>
+                                <p class="text-gray-100 group-hover:text-primary font-medium text-xl transition-colors duration-200">Law Firms</p>
+                                <p class="text-gray-500 text-sm mt-1">We set up AI tools to help you draft faster, manage documents, and reduce time on routine research.</p>
+                            </div>
+                            <div class="shrink-0 w-9 h-9 rounded-full border border-primary flex items-center justify-center group-hover:bg-primary transition-all duration-200">
+                                <i class="fas fa-arrow-right text-primary group-hover:text-gray-900 text-xs transition-colors duration-200"></i>
+                            </div>
+                        </a>
+                        <a href="ai-for-real-estate.html" class="group flex items-center justify-between gap-6 py-5 border-b border-gray-700 hover:bg-primary/5 transition-all duration-200 -mx-4 px-4">
+                            <div>
+                                <p class="text-gray-100 group-hover:text-primary font-medium text-xl transition-colors duration-200">Real Estate</p>
+                                <p class="text-gray-500 text-sm mt-1">We configure AI tools to help you manage listings, follow up with leads, and stay on top of your pipeline.</p>
+                            </div>
+                            <div class="shrink-0 w-9 h-9 rounded-full border border-primary flex items-center justify-center group-hover:bg-primary transition-all duration-200">
+                                <i class="fas fa-arrow-right text-primary group-hover:text-gray-900 text-xs transition-colors duration-200"></i>
+                            </div>
+                        </a>
+                        <a href="ai-for-ecommerce.html" class="group flex items-center justify-between gap-6 py-5 border-b border-gray-700 hover:bg-primary/5 transition-all duration-200 -mx-4 px-4">
+                            <div>
+                                <p class="text-gray-100 group-hover:text-primary font-medium text-xl transition-colors duration-200">E-Commerce</p>
+                                <p class="text-gray-500 text-sm mt-1">We set up AI tools to handle product descriptions, customer support, and inventory — so you can focus on growth.</p>
+                            </div>
+                            <div class="shrink-0 w-9 h-9 rounded-full border border-primary flex items-center justify-center group-hover:bg-primary transition-all duration-200">
+                                <i class="fas fa-arrow-right text-primary group-hover:text-gray-900 text-xs transition-colors duration-200"></i>
+                            </div>
+                        </a>
+                        <a href="ai-for-accounting.html" class="group flex items-center justify-between gap-6 py-5 border-b border-gray-700 hover:bg-primary/5 transition-all duration-200 -mx-4 px-4">
+                            <div>
+                                <p class="text-gray-100 group-hover:text-primary font-medium text-xl transition-colors duration-200">Accounting</p>
+                                <p class="text-gray-500 text-sm mt-1">We configure AI tools to streamline data entry, reporting, and client communication so you can focus on the work that matters.</p>
+                            </div>
+                            <div class="shrink-0 w-9 h-9 rounded-full border border-primary flex items-center justify-center group-hover:bg-primary transition-all duration-200">
+                                <i class="fas fa-arrow-right text-primary group-hover:text-gray-900 text-xs transition-colors duration-200"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Plans -->
+        <section id="plans" class="py-20 md:py-28 bg-gradient-to-b from-gray-50 to-white">
+            <div class="container mx-auto px-4">
+                <div class="max-w-5xl mx-auto">
+                    <div class="text-center mb-16">
+                        <h2 class="font-serif italic font-normal text-4xl md:text-5xl lg:text-6xl mb-6 text-secondary">Plans</h2>
+                    </div>
+                    <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                        <!-- Personal -->
+                        <div class="bg-white rounded-2xl p-8 md:p-10 border border-gray-200 flex flex-col">
+                            <h3 class="text-xl font-bold text-secondary mb-1">Personal</h3>
+                            <p class="text-gray-500 text-sm mb-6">For individuals</p>
+                            <ul class="space-y-3 mb-8 flex-1 text-sm">
+                                <li class="flex items-start"><span class="text-primary mr-2 mt-0.5">&mdash;</span><span class="text-gray-700">1-hour discovery call</span></li>
+                                <li class="flex items-start"><span class="text-primary mr-2 mt-0.5">&mdash;</span><span class="text-gray-700">Tool evaluation and recommendation</span></li>
+                                <li class="flex items-start"><span class="text-primary mr-2 mt-0.5">&mdash;</span><span class="text-gray-700">Full setup and configuration</span></li>
+                                <li class="flex items-start"><span class="text-primary mr-2 mt-0.5">&mdash;</span><span class="text-gray-700">1-hour training session</span></li>
+                                <li class="flex items-start"><span class="text-primary mr-2 mt-0.5">&mdash;</span><span class="text-gray-700">30 days email support</span></li>
+                                <li class="flex items-start"><span class="text-primary mr-2 mt-0.5">&mdash;</span><span class="text-gray-700">One follow-up call</span></li>
+                            </ul>
+                            <a href="ai-contact.html" class="group inline-flex items-center justify-center gap-2 bg-primary hover:bg-secondary text-white font-semibold py-3 px-6 rounded-full transition-all duration-300 text-base">
+                                <span>Get Started</span>
+                                <i class="fas fa-arrow-right text-sm transition-transform duration-300 group-hover:translate-x-1"></i>
+                            </a>
+                        </div>
+                        <!-- Business -->
+                        <div class="bg-secondary rounded-2xl p-8 md:p-10 flex flex-col text-white">
+                            <h3 class="text-xl font-bold mb-1">Business</h3>
+                            <p class="text-white/60 text-sm mb-6">For teams</p>
+                            <ul class="space-y-3 mb-8 flex-1 text-sm">
+                                <li class="flex items-start"><span class="text-primary mr-2 mt-0.5">&mdash;</span><span class="text-white/85">Workflow audit across departments</span></li>
+                                <li class="flex items-start"><span class="text-primary mr-2 mt-0.5">&mdash;</span><span class="text-white/85">Multi-tool evaluation and cost analysis</span></li>
+                                <li class="flex items-start"><span class="text-primary mr-2 mt-0.5">&mdash;</span><span class="text-white/85">Full setup for your team</span></li>
+                                <li class="flex items-start"><span class="text-primary mr-2 mt-0.5">&mdash;</span><span class="text-white/85">Team training (up to 10 people)</span></li>
+                                <li class="flex items-start"><span class="text-primary mr-2 mt-0.5">&mdash;</span><span class="text-white/85">90 days priority support</span></li>
+                                <li class="flex items-start"><span class="text-primary mr-2 mt-0.5">&mdash;</span><span class="text-white/85">Monthly check-ins</span></li>
+                                <li class="flex items-start"><span class="text-primary mr-2 mt-0.5">&mdash;</span><span class="text-white/85">Custom automation if needed</span></li>
+                            </ul>
+                            <a href="ai-contact.html" class="group inline-flex items-center justify-center gap-2 bg-white text-secondary hover:bg-white/95 font-semibold py-3 px-6 rounded-full transition-all duration-300 text-base">
+                                <span>Book a Call</span>
+                                <i class="fas fa-arrow-right text-sm transition-transform duration-300 group-hover:translate-x-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <p class="text-center text-gray-500 mt-8 text-sm">
+                        Not sure which plan fits? <a href="ai-contact.html" class="text-primary hover:text-secondary font-semibold transition-colors">Book a free 15-minute call</a> and we'll point you in the right direction.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="py-20 md:py-28 bg-secondary">
+            <div class="container mx-auto px-4">
+                <div class="max-w-6xl mx-auto">
+                    <div class="text-center mb-16">
+                        <h2 class="font-serif italic font-normal text-4xl md:text-5xl lg:text-6xl mb-6 text-white">What Our Clients Say</h2>
+                    </div>
+                    <div class="grid md:grid-cols-3 gap-8">
+                        <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+                            <p class="text-white/90 leading-relaxed mb-6">"They set up OpenClaw on my trading rig in one afternoon. I was manually checking charts every hour before that — now I just review the morning report."</p>
+                            <p class="text-primary font-semibold text-sm">— Tarık F., Crypto Trader</p>
+                        </div>
+                        <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+                            <p class="text-white/90 leading-relaxed mb-6">"We didn't know where to start. They looked at how we worked, suggested three tools, and had everything running within a week. Probably saves us 15 hours a week now."</p>
+                            <p class="text-primary font-semibold text-sm">— Ayse M., Marketing Agency Owner</p>
+                        </div>
+                        <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+                            <p class="text-white/90 leading-relaxed mb-6">"Setup was smooth, but the part I didn't expect was the follow-up. When a new version of one of our tools came out, they reached out and updated it before I even knew about it."</p>
+                            <p class="text-primary font-semibold text-sm">— Kier.E, E-Commerce Operator</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="py-20 md:py-28 bg-gray-900">
+            <div class="container mx-auto px-4">
+                <div class="max-w-3xl mx-auto">
+                    <div class="text-center mb-16">
+                        <h2 class="font-serif italic font-normal text-4xl md:text-5xl lg:text-6xl mb-6 text-white">FAQ</h2>
+                    </div>
+                    <div class="space-y-0">
+                        <div class="faq-item border-b border-gray-700">
+                            <button class="faq-toggle w-full text-left py-5 flex items-center justify-between hover:text-primary transition-colors" aria-expanded="false">
+                                <span class="font-semibold text-gray-200 pr-4">Do I need technical skills?</span>
+                                <i class="fas fa-plus faq-icon text-primary/50 flex-shrink-0 text-sm"></i>
+                            </button>
+                            <div class="faq-answer">
+                                <p class="pb-5 text-gray-400 leading-relaxed">No. We handle the technical work and train you to use everything through simple interfaces. If something requires a terminal or code, we set it up so you never have to touch it.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item border-b border-gray-700">
+                            <button class="faq-toggle w-full text-left py-5 flex items-center justify-between hover:text-primary transition-colors" aria-expanded="false">
+                                <span class="font-semibold text-gray-200 pr-4">I already have AI tools but they're not working well.</span>
+                                <i class="fas fa-plus faq-icon text-primary/50 flex-shrink-0 text-sm"></i>
+                            </button>
+                            <div class="faq-answer">
+                                <p class="pb-5 text-gray-400 leading-relaxed">We can audit what you have, figure out what's not working, and either fix it or suggest something better. We do audit-only engagements too.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item border-b border-gray-700">
+                            <button class="faq-toggle w-full text-left py-5 flex items-center justify-between hover:text-primary transition-colors" aria-expanded="false">
+                                <span class="font-semibold text-gray-200 pr-4">How do you pick which tools to recommend?</span>
+                                <i class="fas fa-plus faq-icon text-primary/50 flex-shrink-0 text-sm"></i>
+                            </button>
+                            <div class="faq-answer">
+                                <p class="pb-5 text-gray-400 leading-relaxed">Based on your use case, budget, and how technical you are. We're not affiliated with any vendor — we just pick what works.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item border-b border-gray-700">
+                            <button class="faq-toggle w-full text-left py-5 flex items-center justify-between hover:text-primary transition-colors" aria-expanded="false">
+                                <span class="font-semibold text-gray-200 pr-4">Is my data safe?</span>
+                                <i class="fas fa-plus faq-icon text-primary/50 flex-shrink-0 text-sm"></i>
+                            </button>
+                            <div class="faq-answer">
+                                <p class="pb-5 text-gray-400 leading-relaxed">Yes. Many tools we use (like OpenClaw) are self-hosted, so your data stays on your machine. For cloud tools, we pick ones with strong privacy policies and configure them accordingly.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item border-b border-gray-700">
+                            <button class="faq-toggle w-full text-left py-5 flex items-center justify-between hover:text-primary transition-colors" aria-expanded="false">
+                                <span class="font-semibold text-gray-200 pr-4">What happens after setup?</span>
+                                <i class="fas fa-plus faq-icon text-primary/50 flex-shrink-0 text-sm"></i>
+                            </button>
+                            <div class="faq-answer">
+                                <p class="pb-5 text-gray-400 leading-relaxed">Your plan includes a support period. After that, we offer monthly retainers for ongoing updates, optimization, and new features as tools evolve.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bottom CTA -->
+        <section id="contact-cta" class="py-20 md:py-28 bg-gradient-to-br from-primary to-secondary">
+            <div class="container mx-auto px-4">
+                <div class="max-w-5xl mx-auto text-center text-white">
+                    <h2 class="font-serif italic font-normal text-4xl md:text-5xl lg:text-6xl mb-8">Let's set up your AI.</h2>
+                    <p class="text-xl md:text-2xl mb-12 text-white/95 leading-relaxed">
+                        Free discovery call. We'll look at your workflow and tell you what's worth automating.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                        <a href="ai-contact.html" class="group bg-white text-secondary hover:bg-white/95 font-semibold py-4 px-8 rounded-full transition-all duration-300 text-lg shadow-lg hover:shadow-xl hover:scale-105 inline-flex items-center gap-2">
+                            <span>Book Your Free Call</span>
+                            <i class="fas fa-arrow-right transition-transform duration-300 group-hover:translate-x-1"></i>
+                        </a>
+                        <a href="../index.html#about" class="bg-transparent border-2 border-white text-white hover:bg-white hover:text-secondary font-semibold py-4 px-8 rounded-full transition-all duration-300 text-lg">
+                            View All Services
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-10 md:py-12">
+        <div class="container mx-auto px-4">
+            <div class="text-center">
+                <p class="footer-copyright text-gray-400 text-sm md:text-base leading-relaxed max-w-md mx-auto">&copy; 2025 CodeSeed. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ accordion
+        document.querySelectorAll('.faq-toggle').forEach(button => {
+            button.addEventListener('click', () => {
+                const item = button.closest('.faq-item');
+                const isActive = item.classList.contains('active');
+                document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
+                if (!isActive) item.classList.add('active');
+                button.setAttribute('aria-expanded', !isActive);
+            });
+        });
+
+        // Mobile menu
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        if (mobileMenuButton && mobileMenu) {
+            mobileMenuButton.addEventListener('click', (e) => {
+                e.preventDefault();
+                mobileMenu.classList.toggle('show');
+            });
+            mobileMenu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => mobileMenu.classList.remove('show'));
+            });
+            document.addEventListener('click', (event) => {
+                if (!mobileMenu.contains(event.target) && !mobileMenuButton.contains(event.target) && mobileMenu.classList.contains('show')) {
+                    mobileMenu.classList.remove('show');
+                }
+            });
+        }
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            });
+        });
+    </script>
+</body>
+</html>

@@ -49,7 +49,7 @@
     <!-- Satoshi Font from Fontshare -->
     <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,600,700,900&display=swap" rel="stylesheet">
     <!-- Keep Fira Code for code/technical elements if needed -->
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -64,6 +64,7 @@
                     fontFamily: {
                         'sans': ['Satoshi', 'sans-serif'],
                         'fira': ['"Fira Code"', 'monospace'],
+                        'serif': ['"DM Serif Display"', 'Georgia', 'serif'],
                     },
                 }
             }
@@ -91,51 +92,62 @@
                         </svg>
                     </button>
                 </div>
-                <ul class="hidden md:flex space-x-6">
-                    <li><a href="#hero" class="text-gray-800 hover:text-primary transition-colors duration-300">
-                        <span data-lang="en">Home</span>
-                        <span data-lang="tr" class="hidden">Ana Sayfa</span>
-                    </a></li>
-                    <li><a href="#about-us" class="text-gray-800 hover:text-primary transition-colors duration-300">
-                        <span data-lang="en">About Us</span>
-                        <span data-lang="tr" class="hidden">Hakkımızda</span>
-                    </a></li>
-                    <li><a href="#recent-projects" class="text-gray-800 hover:text-primary transition-colors duration-300">
-                        <span data-lang="en">Project Garden</span>
-                        <span data-lang="tr" class="hidden">Proje Bahçesi</span>
-                    </a></li>
-                    <li><a href="#team" class="text-gray-800 hover:text-primary transition-colors duration-300">
-                        <span data-lang="en">Our Team</span>
-                        <span data-lang="tr" class="hidden">Ekibimiz</span>
-                    </a></li>
-                    <li><a href="#contact" class="text-gray-800 hover:text-primary transition-colors duration-300">
-                        <span data-lang="en">Work with Us</span>
-                        <span data-lang="tr" class="hidden">Bizimle Çalışın</span>
-                    </a></li>
+                <ul class="hidden md:flex space-x-6 items-center">
+                    <li><a href="#hero" class="text-gray-800 hover:text-primary transition-colors duration-300 font-medium">Home</a></li>
+                    <li><a href="#about-us" class="text-gray-800 hover:text-primary transition-colors duration-300 font-medium">About Us</a></li>
+                    <li><a href="#about" class="text-gray-800 hover:text-primary transition-colors duration-300 font-medium">Services</a></li>
+                    <li class="relative group">
+                        <button class="text-gray-800 hover:text-primary transition-colors duration-300 font-medium flex items-center gap-1">
+                            AI Setup &amp; Strategy
+                            <i class="fas fa-chevron-down text-xs opacity-50 ml-0.5"></i>
+                        </button>
+                        <div class="absolute top-full left-0 pt-2 hidden group-hover:block z-50">
+                            <div class="bg-white rounded-xl shadow-lg border border-gray-100 py-2 min-w-[200px]">
+                                <a href="services/ai-setup-and-strategy.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:text-primary hover:bg-gray-50 font-medium transition-colors border-b border-gray-100">Overview</a>
+                                <a href="services/ai-for-personal-use.html" class="block px-4 py-2 text-sm text-gray-700 hover:text-primary hover:bg-gray-50 transition-colors">For Personal Use</a>
+                                <a href="services/ai-for-traders.html" class="block px-4 py-2 text-sm text-gray-700 hover:text-primary hover:bg-gray-50 transition-colors">For Traders</a>
+                                <a href="services/ai-for-business-owners.html" class="block px-4 py-2 text-sm text-gray-700 hover:text-primary hover:bg-gray-50 transition-colors">For Business Owners</a>
+                                <a href="services/ai-for-construction.html" class="block px-4 py-2 text-sm text-gray-700 hover:text-primary hover:bg-gray-50 transition-colors">For Construction</a>
+                                <a href="services/ai-for-law-firms.html" class="block px-4 py-2 text-sm text-gray-700 hover:text-primary hover:bg-gray-50 transition-colors">For Law Firms</a>
+                                <a href="services/ai-for-real-estate.html" class="block px-4 py-2 text-sm text-gray-700 hover:text-primary hover:bg-gray-50 transition-colors">For Real Estate</a>
+                                <a href="services/ai-for-ecommerce.html" class="block px-4 py-2 text-sm text-gray-700 hover:text-primary hover:bg-gray-50 transition-colors">For E&#8209;Commerce</a>
+                                <a href="services/ai-for-accounting.html" class="block px-4 py-2 text-sm text-gray-700 hover:text-primary hover:bg-gray-50 transition-colors">For Accounting</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="#recent-projects" class="text-gray-800 hover:text-primary transition-colors duration-300 font-medium">Project Garden</a></li>
+                    <li><a href="#team" class="text-gray-800 hover:text-primary transition-colors duration-300 font-medium">Our Team</a></li>
+                    <li><a href="#contact" class="text-gray-800 hover:text-primary transition-colors duration-300 font-medium">Work with Us</a></li>
                 </ul>
             </div>
         </nav>
         <div id="mobile-menu" class="md:hidden hidden">
-            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t">
                 <a href="#hero" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">
-                    <span data-lang="en">Home</span>
-                    <span data-lang="tr" class="hidden">Ana Sayfa</span>
+                    <span data-lang="en">Home</span><span data-lang="tr" class="hidden">Ana Sayfa</span>
                 </a>
                 <a href="#about-us" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">
-                    <span data-lang="en">About Us</span>
-                    <span data-lang="tr" class="hidden">Hakkımızda</span>
+                    <span data-lang="en">About Us</span><span data-lang="tr" class="hidden">Hakkımızda</span>
                 </a>
+                <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">Services</a>
+                <p class="px-3 pt-3 pb-1 text-xs font-semibold text-gray-400 uppercase tracking-wider">AI Setup &amp; Strategy</p>
+                <a href="services/ai-setup-and-strategy.html" class="block px-5 py-1.5 rounded-md text-sm text-gray-600 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out font-medium">Overview</a>
+                <a href="services/ai-for-personal-use.html" class="block px-5 py-1.5 rounded-md text-sm text-gray-500 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">For Personal Use</a>
+                <a href="services/ai-for-traders.html" class="block px-5 py-1.5 rounded-md text-sm text-gray-500 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">For Traders</a>
+                <a href="services/ai-for-business-owners.html" class="block px-5 py-1.5 rounded-md text-sm text-gray-500 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">For Business Owners</a>
+                <a href="services/ai-for-construction.html" class="block px-5 py-1.5 rounded-md text-sm text-gray-500 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">For Construction</a>
+                <a href="services/ai-for-law-firms.html" class="block px-5 py-1.5 rounded-md text-sm text-gray-500 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">For Law Firms</a>
+                <a href="services/ai-for-real-estate.html" class="block px-5 py-1.5 rounded-md text-sm text-gray-500 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">For Real Estate</a>
+                <a href="services/ai-for-ecommerce.html" class="block px-5 py-1.5 rounded-md text-sm text-gray-500 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">For E&#8209;Commerce</a>
+                <a href="services/ai-for-accounting.html" class="block px-5 py-1.5 rounded-md text-sm text-gray-500 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">For Accounting</a>
                 <a href="#recent-projects" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">
-                    <span data-lang="en">Project Garden</span>
-                    <span data-lang="tr" class="hidden">Proje Bahçesi</span>
+                    <span data-lang="en">Project Garden</span><span data-lang="tr" class="hidden">Proje Bahçesi</span>
                 </a>
                 <a href="#team" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">
-                    <span data-lang="en">Our Team</span>
-                    <span data-lang="tr" class="hidden">Ekibimiz</span>
+                    <span data-lang="en">Our Team</span><span data-lang="tr" class="hidden">Ekibimiz</span>
                 </a>
                 <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">
-                    <span data-lang="en">Work with Us</span>
-                    <span data-lang="tr" class="hidden">Bizimle Çalışın</span>
+                    <span data-lang="en">Work with Us</span><span data-lang="tr" class="hidden">Bizimle Çalışın</span>
                 </a>
             </div>
         </div>
@@ -151,12 +163,12 @@
         <div class="hero-content container mx-auto px-4 min-h-screen flex items-center justify-center text-center text-white relative z-10 py-20">
             <div class="hero-card bg-black bg-opacity-60 p-4 md:p-8 rounded-lg shadow-lg max-w-[64.4rem] w-full mx-4">
                 <h1 class="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mb-4">
-                    <span data-lang="en">Professional Software Development. Ethically Sourced.</span>
-                    <span data-lang="tr" class="hidden">Profesyonel Yazılım Geliştirme. Etik Kaynaklı.</span>
+                    <span data-lang="en"><span class="font-serif italic font-normal">Professional Tech.</span> <span class="font-serif italic font-normal text-primary">Ethically Sourced.</span></span>
+                    <span data-lang="tr" class="hidden"><span class="font-serif italic font-normal">Profesyonel Teknoloji.</span> <span class="font-serif italic font-normal text-primary">Etik Kaynaklı.</span></span>
                 </h1>
                 <p class="text-base md:text-lg lg:text-xl mb-6 md:mb-8 text-gray-200">
-                    <span data-lang="en">We offer enterprise-grade software development without enterprise-sized budgets or ethical compromises. Our team combines the technical rigor of Big Tech with the agility and values of independent development.</span>
-                    <span data-lang="tr" class="hidden">Kurumsal bütçeler veya etik ödünler olmadan kurumsal düzeyde yazılım geliştirme sunuyoruz. Ekibimiz Big Tech'in teknik titizliğini bağımsız geliştirmenin çevikliği ve değerleriyle birleştiriyor.</span>
+                    <span data-lang="en">We offer enterprise-grade software development and consulting without enterprise-sized budgets or ethical compromises. Our team combines the technical rigor of Big Tech with the agility and values of independent&nbsp;development.</span>
+                    <span data-lang="tr" class="hidden">Kurumsal bütçeler veya etik ödünler olmadan kurumsal düzeyde yazılım geliştirme ve danışmanlık sunuyoruz. Ekibimiz Big Tech'in teknik titizliğini bağımsız geliştirmenin çevikliği ve değerleriyle birleştiriyor.</span>
                 </p>
                 <div class="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center">
                     <a href="#recent-projects" class="bg-transparent hover:bg-primary border-2 border-primary text-white font-bold py-2 md:py-3 px-4 md:px-6 rounded-full transition-colors duration-300 text-sm md:text-base">
@@ -174,7 +186,7 @@
 
     <section id="about-us" class="bg-white py-16 md:py-24">
         <div class="container mx-auto px-4 max-w-4xl">
-            <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold text-center mb-10 md:mb-14 text-secondary">
+            <h2 class="text-4xl md:text-5xl lg:text-6xl font-serif italic font-normal text-center mb-10 md:mb-14 text-secondary">
                 <span data-lang="en">About Us</span>
                 <span data-lang="tr" class="hidden">Hakkımızda</span>
             </h2>
@@ -185,11 +197,56 @@
         </div>
     </section>
 
+    <!-- AI Setup & Strategy Highlight -->
+    <section class="bg-gray-950 py-16 md:py-24">
+        <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-primary/60 via-primary/20 to-transparent"></div>
+        <div class="container mx-auto px-4">
+            <div class="max-w-5xl mx-auto">
+                <div class="flex flex-col md:flex-row items-center gap-10 md:gap-16">
+                    <div class="flex-1">
+                        <p class="text-primary font-medium text-sm tracking-widest uppercase mb-4">New Service</p>
+                        <h2 class="font-serif italic font-normal text-white mb-5" style="font-size: clamp(2.2rem, 5vw, 3.5rem); line-height: 1.15; text-wrap: balance;">AI Setup &amp; Strategy</h2>
+                        <p class="text-gray-300 text-lg leading-relaxed mb-8">We evaluate your workflow, find the right AI tools, set them up on your hardware, and train you to use them. Whether you're a solo trader or small business owner, we make AI actually work for you.</p>
+                        <a href="services/ai-setup-and-strategy.html" class="inline-flex items-center gap-2 bg-primary hover:bg-secondary text-white font-semibold py-3.5 px-7 rounded-[4px] transition-colors duration-300 text-base">
+                            See AI Services
+                            <i class="fas fa-arrow-right text-sm"></i>
+                        </a>
+                    </div>
+                    <div class="flex-1 space-y-6">
+                        <div class="flex gap-6 items-start">
+                            <span class="text-primary font-fira font-bold text-lg mt-1 shrink-0">01</span>
+                            <div>
+                                <h3 class="text-lg font-bold mb-1 text-white">Discovery & Audit</h3>
+                                <p class="text-gray-400 leading-relaxed text-sm">We look at how you currently work, find where time is being wasted, and figure out where AI can actually help.</p>
+                            </div>
+                        </div>
+                        <div class="border-t border-white/10"></div>
+                        <div class="flex gap-6 items-start">
+                            <span class="text-primary font-fira font-bold text-lg mt-1 shrink-0">02</span>
+                            <div>
+                                <h3 class="text-lg font-bold mb-1 text-white">Tool Selection & Setup</h3>
+                                <p class="text-gray-400 leading-relaxed text-sm">We pick the right tools for your situation — weighing cost, capability, and ease of use — then handle the full technical setup.</p>
+                            </div>
+                        </div>
+                        <div class="border-t border-white/10"></div>
+                        <div class="flex gap-6 items-start">
+                            <span class="text-primary font-fira font-bold text-lg mt-1 shrink-0">03</span>
+                            <div>
+                                <h3 class="text-lg font-bold mb-1 text-white">Training & Support</h3>
+                                <p class="text-gray-400 leading-relaxed text-sm">We teach you and your team how to use everything, and stick around as tools evolve and new capabilities come out.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section id="about" class="about-section bg-secondary py-16">
         <div class="container mx-auto px-4">
-            <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold text-center mb-16 md:mb-20 text-white">
-                <span data-lang="en">Our Services</span>
-                <span data-lang="tr" class="hidden">Hizmetlerimiz</span>
+            <h2 class="text-4xl md:text-5xl lg:text-6xl font-serif italic font-normal text-center mb-16 md:mb-20 text-white">
+                <span data-lang="en">Our Expertise</span>
+                <span data-lang="tr" class="hidden">Uzmanlıklarımız</span>
             </h2>
             <div class="services-tabs max-w-7xl mx-auto">
                 <div class="flex flex-col md:flex-row md:items-stretch gap-6">
@@ -354,7 +411,7 @@
 
     <section class="clients-section bg-white py-16">
         <div class="container mx-auto px-4">
-            <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold text-center mb-12 text-secondary">
+            <h2 class="text-4xl md:text-5xl lg:text-6xl font-serif italic font-normal text-center mb-12 text-secondary">
                 <span data-lang="en">We've Worked With</span>
                 <span data-lang="tr" class="hidden">Birlikte Çalıştığımız Firmalar</span>
             </h2>
@@ -377,7 +434,7 @@
 
     <section id="recent-projects" class="recent-projects-section bg-primary py-20 md:py-28">
         <div class="container mx-auto px-4 max-w-7xl">
-            <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold text-center mb-20 md:mb-24 text-white">
+            <h2 class="text-4xl md:text-5xl lg:text-6xl font-serif italic font-normal text-center mb-20 md:mb-24 text-white">
                 <span data-lang="en">Recent Projects</span>
                 <span data-lang="tr" class="hidden">Son Projeler</span>
             </h2>
@@ -587,7 +644,7 @@
 
     <section id="why-choose-us" class="bg-white py-16 md:py-24">
         <div class="container mx-auto px-4 max-w-6xl">
-            <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold text-center mb-14 md:mb-16 text-secondary">
+            <h2 class="text-4xl md:text-5xl lg:text-6xl font-serif italic font-normal text-center mb-14 md:mb-16 text-secondary">
                 <span data-lang="en">Why Choose CodeSeed</span>
                 <span data-lang="tr" class="hidden">Neden CodeSeed</span>
             </h2>
@@ -614,7 +671,7 @@
 
     <section id="testimonials" class="testimonials-section bg-black py-16">
         <div class="container mx-auto px-4 max-w-6xl">
-            <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold text-center mb-12 text-white">
+            <h2 class="text-4xl md:text-5xl lg:text-6xl font-serif italic font-normal text-center mb-12 text-white">
                 <span data-lang="en">What Our Clients Say</span>
                 <span data-lang="tr" class="hidden">Müşterilerimiz Ne Diyor</span>
             </h2>
@@ -657,7 +714,7 @@
 
     <section id="projects" class="projects-section bg-white py-16">
         <div class="container mx-auto px-4">
-            <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold text-center mb-12 text-secondary">
+            <h2 class="text-4xl md:text-5xl lg:text-6xl font-serif italic font-normal text-center mb-12 text-secondary">
                 <span data-lang="en">Past Projects</span>
                 <span data-lang="tr" class="hidden">Geçmiş Projeler</span>
             </h2>
@@ -702,7 +759,7 @@
     
     <section id="team" class="bg-primary py-16">
         <div class="container mx-auto px-4">
-            <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold text-center mb-12 text-white">
+            <h2 class="text-4xl md:text-5xl lg:text-6xl font-serif italic font-normal text-center mb-12 text-white">
                 <span data-lang="en">Our Team</span>
                 <span data-lang="tr" class="hidden">Ekibimiz</span>
             </h2>
@@ -784,7 +841,7 @@
     </section>
     <section id="contact" class="contact-section bg-black py-16">
         <div class="container mx-auto px-4">
-            <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold text-center mb-12 text-white">
+            <h2 class="text-4xl md:text-5xl lg:text-6xl font-serif italic font-normal text-center mb-12 text-white">
                 <span data-lang="en">Work with us</span>
                 <span data-lang="tr" class="hidden">Bizimle Çalışın</span>
             </h2>
