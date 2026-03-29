@@ -29,7 +29,7 @@
     </style>
 </head>
 <body class="font-sans bg-white">
-    <header class="bg-white/95 backdrop-blur-sm fixed w-full z-50 shadow-sm">
+    <header class="bg-white fixed w-full z-50 shadow-sm">
         <nav class="container mx-auto px-4 py-5"><div class="flex justify-between items-center"><div class="flex items-center transition-transform duration-300 ease-in-out hover:scale-105"><a href="../index.html#anasayfa" class="flex items-center"><img src="../../assets/codeseed-logo.png" alt="CodeSeed Logo" id="header-logo" class="h-20 w-auto mr-4"><span class="text-2xl font-bold text-primary lowercase tracking-wide">code-seed</span></a></div><div class="md:hidden"><button id="mobile-menu-button" class="text-gray-500 hover:text-gray-600 focus:outline-none" aria-label="Menüyü aç/kapat"><svg viewBox="0 0 24 24" class="h-6 w-6 fill-current"><path fill-rule="evenodd" d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"></path></svg></button></div><ul class="hidden md:flex space-x-6 items-center">
     <li><a href="../index.html#anasayfa" class="text-gray-800 hover:text-primary transition-colors duration-300 font-medium">Ana Sayfa</a></li>
     <li><a href="../index.html#hakkimizda" class="text-gray-800 hover:text-primary transition-colors duration-300 font-medium">Hakkımızda</a></li>
@@ -39,53 +39,62 @@
             <i class="fas fa-chevron-down text-xs opacity-50 ml-0.5"></i>
         </button>
         <div class="absolute top-full left-0 pt-2 hidden group-hover:block z-50">
-            <div class="bg-white rounded-xl shadow-lg border border-gray-100 py-2 min-w-[210px]">
-                <div class="relative group/ai">
-                    <a href="yapay-zeka-kurulumu.html" class="flex items-center justify-between px-4 py-2.5 text-sm text-gray-700 hover:text-primary hover:bg-gray-50 font-medium transition-colors">
-                        Yapay Zeka Kurulumu
-                        <i class="fas fa-chevron-right text-xs opacity-40 ml-3 flex-shrink-0"></i>
-                    </a>
-                    <div class="absolute top-0 left-full pl-1 hidden group-hover/ai:block z-50">
-                        <div class="bg-white rounded-xl shadow-lg border border-gray-100 py-2 min-w-[220px]">
-                            <a href="isletme-sahipleri.html" class="block px-4 py-2 text-sm text-gray-700 hover:text-primary hover:bg-gray-50 transition-colors">İşletme Sahipleri İçin AI</a>
-                            <a href="yatirimcilar.html" class="block px-4 py-2 text-sm text-gray-700 hover:text-primary hover:bg-gray-50 transition-colors">Yatırımcılar İçin AI</a>
-                            <a href="hukuk-burolari.html" class="block px-4 py-2 text-sm text-gray-700 hover:text-primary hover:bg-gray-50 transition-colors">Hukuk Büroları İçin AI</a>
-                            <a href="gayrimenkul.html" class="block px-4 py-2 text-sm text-gray-700 hover:text-primary hover:bg-gray-50 transition-colors">Gayrimenkul İçin AI</a>
-                            <a href="insaat.html" class="block px-4 py-2 text-sm text-gray-700 hover:text-primary hover:bg-gray-50 transition-colors">İnşaat İçin AI</a>
-                            <a href="muhasebe.html" class="block px-4 py-2 text-sm text-gray-700 hover:text-primary hover:bg-gray-50 transition-colors">Muhasebe İçin AI</a>
-                            <a href="saglik.html" class="block px-4 py-2 text-sm text-gray-700 hover:text-primary hover:bg-gray-50 transition-colors">Sağlık Sektörü İçin AI</a>
-                            <a href="pazarlama-ajanslari.html" class="block px-4 py-2 text-sm text-gray-700 hover:text-primary hover:bg-gray-50 transition-colors">Pazarlama Ajansları İçin AI</a>
-                            <a href="e-ticaret.html" class="block px-4 py-2 text-sm text-gray-700 hover:text-primary hover:bg-gray-50 transition-colors">E&#8209;Ticaret İçin AI</a>
-                            <a href="bireysel-kullanim.html" class="block px-4 py-2 text-sm text-gray-700 hover:text-primary hover:bg-gray-50 transition-colors">Bireysel Kullanım İçin AI</a>
-                        </div>
-                    </div>
-                </div>
+            <div class="bg-white rounded-xl shadow-lg border border-gray-100 py-2 min-w-[220px]">
+                <a href="../index.html#hizmetler" class="block px-4 py-2.5 text-sm text-gray-700 hover:text-primary hover:bg-gray-50 font-medium transition-colors border-b border-gray-100">Tüm Hizmetler</a>
+                <a href="profesyonel-web-siteleri.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:text-primary hover:bg-gray-50 font-medium transition-colors">Profesyonel Web Siteleri</a>
+            </div>
+        </div>
+    </li>
+    <li class="relative group">
+        <button class="text-gray-800 hover:text-primary transition-colors duration-300 font-medium flex items-center gap-1">
+            Yapay Zeka Kurulumu
+            <i class="fas fa-chevron-down text-xs opacity-50 ml-0.5"></i>
+        </button>
+        <div class="absolute top-full left-0 pt-2 hidden group-hover:block z-50">
+            <div class="bg-white rounded-xl shadow-lg border border-gray-100 py-2 min-w-[240px]">
+                <a href="yapay-zeka-kurulumu.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:text-primary hover:bg-gray-50 font-medium transition-colors border-b border-gray-100">Genel Bilgi</a>
+                <a href="isletme-sahipleri.html" class="block px-4 py-2 text-sm text-gray-700 hover:text-primary hover:bg-gray-50 transition-colors">İşletme Sahipleri</a>
+                <a href="yatirimcilar.html" class="block px-4 py-2 text-sm text-gray-700 hover:text-primary hover:bg-gray-50 transition-colors">Yatırımcılar</a>
+                <a href="hukuk-burolari.html" class="block px-4 py-2 text-sm text-gray-700 hover:text-primary hover:bg-gray-50 transition-colors">Hukuk Büroları</a>
+                <a href="gayrimenkul.html" class="block px-4 py-2 text-sm text-gray-700 hover:text-primary hover:bg-gray-50 transition-colors">Gayrimenkul</a>
+                <a href="insaat.html" class="block px-4 py-2 text-sm text-gray-700 hover:text-primary hover:bg-gray-50 transition-colors">İnşaat</a>
+                <a href="muhasebe.html" class="block px-4 py-2 text-sm text-gray-700 hover:text-primary hover:bg-gray-50 transition-colors">Muhasebe</a>
+                <a href="saglik.html" class="block px-4 py-2 text-sm text-gray-700 hover:text-primary hover:bg-gray-50 transition-colors">Sağlık</a>
+                <a href="pazarlama-ajanslari.html" class="block px-4 py-2 text-sm text-gray-700 hover:text-primary hover:bg-gray-50 transition-colors">Pazarlama Ajansları</a>
+                <a href="e-ticaret.html" class="block px-4 py-2 text-sm text-gray-700 hover:text-primary hover:bg-gray-50 transition-colors">E&#8209;Ticaret</a>
+                <a href="bireysel-kullanim.html" class="block px-4 py-2 text-sm text-gray-700 hover:text-primary hover:bg-gray-50 transition-colors">Bireysel Kullanım</a>
             </div>
         </div>
     </li>
     <li><a href="../index.html#projeler" class="text-gray-800 hover:text-primary transition-colors duration-300 font-medium">Projeler</a></li>
     <li><a href="../index.html#ekibimiz" class="text-gray-800 hover:text-primary transition-colors duration-300 font-medium">Ekibimiz</a></li>
     <li><a href="iletisim.html" class="text-gray-800 hover:text-primary transition-colors duration-300 font-medium">İletişim</a></li>
+<li><a href="/" class="text-xs font-bold border border-primary text-primary px-2.5 py-1 rounded-full hover:bg-primary hover:text-white transition-colors duration-300">EN</a></li>
 </ul></div></nav>
         <div id="mobile-menu" class="md:hidden hidden">
     <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t">
         <a href="../index.html#anasayfa" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">Ana Sayfa</a>
         <a href="../index.html#hakkimizda" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">Hakkımızda</a>
-        <p class="px-3 pt-3 pb-1 text-xs font-semibold text-gray-400 uppercase tracking-wider">Hizmetler</p>
-        <a href="yapay-zeka-kurulumu.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">Yapay Zeka Kurulumu</a>
-        <a href="isletme-sahipleri.html" class="block px-5 py-1.5 rounded-md text-sm text-gray-500 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">İşletme Sahipleri İçin AI</a>
-        <a href="yatirimcilar.html" class="block px-5 py-1.5 rounded-md text-sm text-gray-500 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">Yatırımcılar İçin AI</a>
-        <a href="hukuk-burolari.html" class="block px-5 py-1.5 rounded-md text-sm text-gray-500 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">Hukuk Büroları İçin AI</a>
-        <a href="gayrimenkul.html" class="block px-5 py-1.5 rounded-md text-sm text-gray-500 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">Gayrimenkul İçin AI</a>
-        <a href="insaat.html" class="block px-5 py-1.5 rounded-md text-sm text-gray-500 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">İnşaat İçin AI</a>
-        <a href="muhasebe.html" class="block px-5 py-1.5 rounded-md text-sm text-gray-500 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">Muhasebe İçin AI</a>
-        <a href="saglik.html" class="block px-5 py-1.5 rounded-md text-sm text-gray-500 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">Sağlık Sektörü İçin AI</a>
-        <a href="pazarlama-ajanslari.html" class="block px-5 py-1.5 rounded-md text-sm text-gray-500 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">Pazarlama Ajansları İçin AI</a>
-        <a href="e-ticaret.html" class="block px-5 py-1.5 rounded-md text-sm text-gray-500 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">E&#8209;Ticaret İçin AI</a>
-        <a href="bireysel-kullanim.html" class="block px-5 py-1.5 rounded-md text-sm text-gray-500 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">Bireysel Kullanım İçin AI</a>
+        <a href="../index.html#hizmetler" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">Tüm Hizmetler</a>
+        <a href="profesyonel-web-siteleri.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">Profesyonel Web Siteleri</a>
+        <p class="px-3 pt-3 pb-1 text-xs font-semibold text-gray-400 uppercase tracking-wider">Yapay Zeka Kurulumu</p>
+        <a href="yapay-zeka-kurulumu.html" class="block px-5 py-1.5 rounded-md text-sm text-gray-600 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out font-medium">Genel Bilgi</a>
+        <a href="isletme-sahipleri.html" class="block px-5 py-1.5 rounded-md text-sm text-gray-500 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">İşletme Sahipleri</a>
+        <a href="yatirimcilar.html" class="block px-5 py-1.5 rounded-md text-sm text-gray-500 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">Yatırımcılar</a>
+        <a href="hukuk-burolari.html" class="block px-5 py-1.5 rounded-md text-sm text-gray-500 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">Hukuk Büroları</a>
+        <a href="gayrimenkul.html" class="block px-5 py-1.5 rounded-md text-sm text-gray-500 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">Gayrimenkul</a>
+        <a href="insaat.html" class="block px-5 py-1.5 rounded-md text-sm text-gray-500 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">İnşaat</a>
+        <a href="muhasebe.html" class="block px-5 py-1.5 rounded-md text-sm text-gray-500 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">Muhasebe</a>
+        <a href="saglik.html" class="block px-5 py-1.5 rounded-md text-sm text-gray-500 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">Sağlık</a>
+        <a href="pazarlama-ajanslari.html" class="block px-5 py-1.5 rounded-md text-sm text-gray-500 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">Pazarlama Ajansları</a>
+        <a href="e-ticaret.html" class="block px-5 py-1.5 rounded-md text-sm text-gray-500 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">E&#8209;Ticaret</a>
+        <a href="bireysel-kullanim.html" class="block px-5 py-1.5 rounded-md text-sm text-gray-500 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">Bireysel Kullanım</a>
         <a href="../index.html#projeler" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">Projeler</a>
         <a href="../index.html#ekibimiz" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">Ekibimiz</a>
         <a href="iletisim.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">İletişim</a>
+    <div class="border-t border-gray-200 mt-2 pt-2">
+        <a href="/" class="block px-3 py-2 rounded-md text-base font-bold text-primary hover:bg-primary hover:text-white transition duration-150 ease-in-out">EN - English</a>
+    </div>
     </div>
 </div>
     </header>
@@ -155,14 +164,14 @@
                         <ul class="space-y-4">
                             <li class="flex items-start"><i class="fas fa-check-circle text-primary mt-1 mr-3 flex-shrink-0"></i><span class="text-gray-300">AI destekli sözleşme inceleme ve düzeltme (redline)</span></li>
                             <li class="flex items-start"><i class="fas fa-check-circle text-primary mt-1 mr-3 flex-shrink-0"></i><span class="text-gray-300">Otomatik madde tespiti ve risk işaretleme</span></li>
-                            <li class="flex items-start"><i class="fas fa-check-circle text-primary mt-1 mr-3 flex-shrink-0"></i><span class="text-gray-300">Belge giriş işleme ve sınıflandırma</span></li>
+                            <li class="flex items-start"><i class="fas fa-check-circle text-primary mt-1 mr-3 flex-shrink-0"></i><span class="text-gray-300">Gelen belgelerin işlenmesi ve sınıflandırılması</span></li>
                             <li class="flex items-start"><i class="fas fa-check-circle text-primary mt-1 mr-3 flex-shrink-0"></i><span class="text-gray-300">İçtihat özetleme ve atıf çıkarma</span></li>
                         </ul>
                     </div>
                     <div class="">
                         <h3 class="text-2xl font-bold text-white mb-6">Araştırma & İletişim</h3>
                         <ul class="space-y-4">
-                            <li class="flex items-start"><i class="fas fa-check-circle text-primary mt-1 mr-3 flex-shrink-0"></i><span class="text-gray-300">AI destekli arama ile hukuki araştırma hızlandırma</span></li>
+                            <li class="flex items-start"><i class="fas fa-check-circle text-primary mt-1 mr-3 flex-shrink-0"></i><span class="text-gray-300">AI destekli arama ile hukuki araştırmanın hızlandırılması</span></li>
                             <li class="flex items-start"><i class="fas fa-check-circle text-primary mt-1 mr-3 flex-shrink-0"></i><span class="text-gray-300">Müvekkil iletişim taslakları ve durum raporları</span></li>
                             <li class="flex items-start"><i class="fas fa-check-circle text-primary mt-1 mr-3 flex-shrink-0"></i><span class="text-gray-300">İfade ve toplantı notu özetleme</span></li>
                             <li class="flex items-start"><i class="fas fa-check-circle text-primary mt-1 mr-3 flex-shrink-0"></i><span class="text-gray-300">Emsal analizi ve argüman araştırması</span></li>
@@ -182,7 +191,7 @@
                         </div>
                         <div class="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
                             <h3 class="text-primary font-semibold text-sm uppercase tracking-wider mb-3">Sorun</h3>
-                            <p class="text-white/90 text-base leading-relaxed">Her avukat durum tespiti için haftada 10-15 saatini ilk belge incelemesine harcıyordu. Sözleşme versiyonlarının karşılaştırılması manuel ve hataya açıktı. Stajyer avukatlar, üst düzey beceriler geliştirmek yerine tekrarlayan inceleme işlerinde tükeniyordu.</p>
+                            <p class="text-white/90 text-base leading-relaxed">Her avukat durum tespiti için haftada 10-15 saatini ilk belge incelemesine harcıyordu. Sözleşme versiyonlarının karşılaştırılması manuel ve hataya açıktı. Stajyer avukatlar, mesleki becerilerini geliştirmek yerine tekrarlayan inceleme işleriyle boğuluyordu.</p>
                         </div>
                         <div class="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
                             <h3 class="text-primary font-semibold text-sm uppercase tracking-wider mb-3">Kurulum</h3>
@@ -190,14 +199,14 @@
                                 <li class="flex items-start text-white/90 text-base"><span class="text-primary mr-2 mt-1 flex-shrink-0">—</span>Belgeleri ön taramadan geçirip standart dışı maddeleri işaretleyen AI sözleşme inceleme hattı</li>
                                 <li class="flex items-start text-white/90 text-base"><span class="text-primary mr-2 mt-1 flex-shrink-0">—</span>Sözleşme versiyonları arasında otomatik karşılaştırma raporları</li>
                                 <li class="flex items-start text-white/90 text-base"><span class="text-primary mr-2 mt-1 flex-shrink-0">—</span>İlgili içtihatları özetleyen hukuki araştırma asistanı kurulumu</li>
-                                <li class="flex items-start text-white/90 text-base"><span class="text-primary mr-2 mt-1 flex-shrink-0">—</span>İş akışına müvekkil bilgi notu taslağı oluşturma eklenmesi</li>
+                                <li class="flex items-start text-white/90 text-base"><span class="text-primary mr-2 mt-1 flex-shrink-0">—</span>Müvekkil bilgi notu taslağı oluşturmanın iş akışına entegrasyonu</li>
                             </ul>
                         </div>
                         <div class="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
                             <h3 class="text-primary font-semibold text-sm uppercase tracking-wider mb-3">Sonuç</h3>
                             <ul class="space-y-2">
                                 <li class="flex items-start text-white/90 text-base"><span class="text-primary mr-2 mt-1 flex-shrink-0">—</span>İlk belge inceleme süresi %60 azaldı</li>
-                                <li class="flex items-start text-white/90 text-base"><span class="text-primary mr-2 mt-1 flex-shrink-0">—</span>Stajyer avukatlar madde madde okuma yerine esasa yönelik analize yöneldi</li>
+                                <li class="flex items-start text-white/90 text-base"><span class="text-primary mr-2 mt-1 flex-shrink-0">—</span>Stajyer avukatlar madde madde okumak yerine esasa yönelik analize zaman ayırmaya başladı</li>
                                 <li class="flex items-start text-white/90 text-base"><span class="text-primary mr-2 mt-1 flex-shrink-0">—</span>Müvekkil bilgi notu teslim süresi: 2 gün → aynı gün</li>
                                 <li class="flex items-start text-white/90 text-base"><span class="text-primary mr-2 mt-1 flex-shrink-0">—</span>Kadro artırmadan %30 daha fazla dosya yönetimi</li>
                             </ul>
@@ -218,7 +227,7 @@
         </section>
     </main>
 
-    <footer class="bg-gray-900 text-white py-10 md:py-12"><div class="container mx-auto px-4"><div class="text-center"><p class="footer-copyright text-gray-400 text-sm md:text-base leading-relaxed max-w-md mx-auto">&copy; 2025 CodeSeed. Tüm hakları saklıdır.</p></div></div></footer>
+    <footer class="bg-gray-900 text-white py-10 md:py-12"><div class="container mx-auto px-4"><div class="text-center"><p class="footer-copyright text-gray-400 text-sm md:text-base leading-relaxed max-w-md mx-auto">&copy; 2026 CodeSeed. Tüm hakları saklıdır.</p></div></div></footer>
     <script>const mb=document.getElementById('mobile-menu-button'),mm=document.getElementById('mobile-menu');if(mb&&mm){mb.addEventListener('click',e=>{e.preventDefault();mm.classList.toggle('show')});mm.querySelectorAll('a').forEach(l=>l.addEventListener('click',()=>mm.classList.remove('show')));document.addEventListener('click',e=>{if(!mm.contains(e.target)&&!mb.contains(e.target)&&mm.classList.contains('show'))mm.classList.remove('show')})}</script>
 </body>
 </html>

@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <title>Profesyonel Web Siteleri - CodeSeed | İçerik Panelli Özel Tasarım Web Siteleri</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Özel tasarım, profesyonel web siteleri ve basit bir içerik yönetim paneli. Tek seferlik yatırım, abonelik yok, her şey size ait. CodeSeed mühendisleri tarafından inşa edildi.">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../assets/codeseed-logo.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../assets/codeseed-logo.png">
+    <link rel="alternate" hreflang="en" href="https://code-seed.io/services/professional-websites.html">
+    <link rel="alternate" hreflang="tr" href="https://code-seed.io/tr/hizmetler/profesyonel-web-siteleri.html">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://code-seed.io/tr/hizmetler/profesyonel-web-siteleri.html">
+    <meta property="og:site_name" content="CodeSeed">
+    <meta property="og:title" content="Profesyonel Web Siteleri - CodeSeed">
+    <meta property="og:description" content="Özel tasarım, profesyonel web siteleri ve basit bir içerik yönetim paneli. Tek seferlik yatırım, abonelik yok, her şey size ait.">
+    <meta property="og:image" content="https://code-seed.io/assets/codeseed-logo.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Profesyonel Web Siteleri - CodeSeed">
+    <meta name="twitter:description" content="Özel tasarım, profesyonel web siteleri ve basit bir içerik yönetim paneli. Tek seferlik yatırım, abonelik yok, her şey size ait.">
+    <meta name="twitter:image" content="https://code-seed.io/assets/codeseed-logo.png">
+    <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,600,700,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { primary: '#8dba90', secondary: '#5a7d5c', accent: '#D2B48C', tan: '#D2B48C' },
+                    fontFamily: { 'sans': ['Satoshi', 'sans-serif'], 'fira': ['"Fira Code"', 'monospace'], 'serif': ['"DM Serif Display"', 'Georgia', 'serif'] },
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="../../styles.css" rel="stylesheet">
+    <style>
+        .hero-cta-btn { background-color: #7ab87e; }
+        .hero-cta-btn:hover { background-color: #5a7d5c; }
+        .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1); padding-top: 0 !important; padding-bottom: 0 !important; }
+        .faq-item.open .faq-answer { max-height: 500px; padding-top: 0 !important; padding-bottom: 1.25rem !important; }
+        .faq-item.open .faq-chevron { transform: rotate(180deg); }
+        .faq-chevron { transition: transform 0.3s ease; }
+        .compare-table { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+        .compare-table::-webkit-scrollbar { height: 6px; }
+        .compare-table::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.2); border-radius: 3px; }
+        .scroll-fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
+        .scroll-fade-in.visible { opacity: 1; transform: translateY(0); }
+    </style>
+</head>
+<body class="font-sans bg-white">
+    <header class="bg-white fixed w-full z-50 shadow-sm">
+        <nav class="container mx-auto px-4 py-5">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center transition-transform duration-300 ease-in-out hover:scale-105">
+                    <a href="../index.html#anasayfa" class="flex items-center">
+                        <img src="../../assets/codeseed-logo.png" alt="CodeSeed Logo" id="header-logo" class="h-20 w-auto mr-4">
+                        <span class="text-2xl font-bold text-primary lowercase tracking-wide">code-seed</span>
+                    </a>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-500 hover:text-gray-600 focus:outline-none" aria-label="Menüyü aç/kapat">
+                        <svg viewBox="0 0 24 24" class="h-6 w-6 fill-current"><path fill-rule="evenodd" d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"></path></svg>
+                    </button>
+                </div>
+                <ul class="hidden md:flex space-x-6 items-center">
+                    <li><a href="../index.html#anasayfa" class="text-gray-800 hover:text-primary transition-colors duration-300 font-medium">Ana Sayfa</a></li>
+                    <li><a href="../index.html#hakkimizda" class="text-gray-800 hover:text-primary transition-colors duration-300 font-medium">Hakkımızda</a></li>
+                    <li class="relative group">
+                        <button class="text-gray-800 hover:text-primary transition-colors duration-300 font-medium flex items-center gap-1">
+                            Hizmetler
+                            <i class="fas fa-chevron-down text-xs opacity-50 ml-0.5"></i>
+                        </button>
+                        <div class="absolute top-full left-0 pt-2 hidden group-hover:block z-50">
+                            <div class="bg-white rounded-xl shadow-lg border border-gray-100 py-2 min-w-[220px]">
+                                <a href="../index.html#hizmetler" class="block px-4 py-2.5 text-sm text-gray-700 hover:text-primary hover:bg-gray-50 font-medium transition-colors border-b border-gray-100">Tüm Hizmetler</a>
+                                <a href="profesyonel-web-siteleri.html" class="block px-4 py-2.5 text-sm text-primary hover:bg-gray-50 font-medium transition-colors">Profesyonel Web Siteleri</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="relative group">
+                        <button class="text-gray-800 hover:text-primary transition-colors duration-300 font-medium flex items-center gap-1">
+                            Yapay Zeka Kurulumu
+                            <i class="fas fa-chevron-down text-xs opacity-50 ml-0.5"></i>
+                        </button>
+                        <div class="absolute top-full left-0 pt-2 hidden group-hover:block z-50">
+                            <div class="bg-white rounded-xl shadow-lg border border-gray-100 py-2 min-w-[240px]">
+                                <a href="yapay-zeka-kurulumu.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:text-primary hover:bg-gray-50 font-medium transition-colors border-b border-gray-100">Genel Bilgi</a>
+                                <a href="isletme-sahipleri.html" class="block px-4 py-2 text-sm text-gray-700 hover:text-primary hover:bg-gray-50 transition-colors">İşletme Sahipleri</a>
+                                <a href="yatirimcilar.html" class="block px-4 py-2 text-sm text-gray-700 hover:text-primary hover:bg-gray-50 transition-colors">Yatırımcılar</a>
+                                <a href="hukuk-burolari.html" class="block px-4 py-2 text-sm text-gray-700 hover:text-primary hover:bg-gray-50 transition-colors">Hukuk Büroları</a>
+                                <a href="gayrimenkul.html" class="block px-4 py-2 text-sm text-gray-700 hover:text-primary hover:bg-gray-50 transition-colors">Gayrimenkul</a>
+                                <a href="insaat.html" class="block px-4 py-2 text-sm text-gray-700 hover:text-primary hover:bg-gray-50 transition-colors">İnşaat</a>
+                                <a href="muhasebe.html" class="block px-4 py-2 text-sm text-gray-700 hover:text-primary hover:bg-gray-50 transition-colors">Muhasebe</a>
+                                <a href="saglik.html" class="block px-4 py-2 text-sm text-gray-700 hover:text-primary hover:bg-gray-50 transition-colors">Sağlık</a>
+                                <a href="pazarlama-ajanslari.html" class="block px-4 py-2 text-sm text-gray-700 hover:text-primary hover:bg-gray-50 transition-colors">Pazarlama Ajansları</a>
+                                <a href="e-ticaret.html" class="block px-4 py-2 text-sm text-gray-700 hover:text-primary hover:bg-gray-50 transition-colors">E&#8209;Ticaret</a>
+                                <a href="bireysel-kullanim.html" class="block px-4 py-2 text-sm text-gray-700 hover:text-primary hover:bg-gray-50 transition-colors">Bireysel Kullanım</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="../index.html#projeler" class="text-gray-800 hover:text-primary transition-colors duration-300 font-medium">Projeler</a></li>
+                    <li><a href="../index.html#ekibimiz" class="text-gray-800 hover:text-primary transition-colors duration-300 font-medium">Ekibimiz</a></li>
+                    <li><a href="iletisim.html" class="text-gray-800 hover:text-primary transition-colors duration-300 font-medium">İletişim</a></li>
+                <li><a href="/" class="text-xs font-bold border border-primary text-primary px-2.5 py-1 rounded-full hover:bg-primary hover:text-white transition-colors duration-300">EN</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div id="mobile-menu" class="md:hidden hidden">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t">
+                <a href="../index.html#anasayfa" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">Ana Sayfa</a>
+                <a href="../index.html#hakkimizda" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">Hakkımızda</a>
+                <a href="../index.html#hizmetler" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">Tüm Hizmetler</a>
+                <a href="profesyonel-web-siteleri.html" class="block px-3 py-2 rounded-md text-base font-medium text-primary hover:bg-gray-50 transition duration-150 ease-in-out">Profesyonel Web Siteleri</a>
+                <p class="px-3 pt-3 pb-1 text-xs font-semibold text-gray-400 uppercase tracking-wider">Yapay Zeka Kurulumu</p>
+                <a href="yapay-zeka-kurulumu.html" class="block px-5 py-1.5 rounded-md text-sm text-gray-600 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out font-medium">Genel Bilgi</a>
+                <a href="isletme-sahipleri.html" class="block px-5 py-1.5 rounded-md text-sm text-gray-500 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">İşletme Sahipleri</a>
+                <a href="yatirimcilar.html" class="block px-5 py-1.5 rounded-md text-sm text-gray-500 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">Yatırımcılar</a>
+                <a href="hukuk-burolari.html" class="block px-5 py-1.5 rounded-md text-sm text-gray-500 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">Hukuk Büroları</a>
+                <a href="gayrimenkul.html" class="block px-5 py-1.5 rounded-md text-sm text-gray-500 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">Gayrimenkul</a>
+                <a href="insaat.html" class="block px-5 py-1.5 rounded-md text-sm text-gray-500 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">İnşaat</a>
+                <a href="muhasebe.html" class="block px-5 py-1.5 rounded-md text-sm text-gray-500 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">Muhasebe</a>
+                <a href="saglik.html" class="block px-5 py-1.5 rounded-md text-sm text-gray-500 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">Sağlık</a>
+                <a href="pazarlama-ajanslari.html" class="block px-5 py-1.5 rounded-md text-sm text-gray-500 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">Pazarlama Ajansları</a>
+                <a href="e-ticaret.html" class="block px-5 py-1.5 rounded-md text-sm text-gray-500 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">E&#8209;Ticaret</a>
+                <a href="bireysel-kullanim.html" class="block px-5 py-1.5 rounded-md text-sm text-gray-500 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">Bireysel Kullanım</a>
+                <a href="../index.html#projeler" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">Projeler</a>
+                <a href="../index.html#ekibimiz" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">Ekibimiz</a>
+                <a href="iletisim.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">İletişim</a>
+            <div class="border-t border-gray-200 mt-2 pt-2">
+                <a href="/" class="block px-3 py-2 rounded-md text-base font-bold text-primary hover:bg-primary hover:text-white transition duration-150 ease-in-out">EN - English</a>
+            </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-20 md:pt-32">
+        <!-- Hero -->
+        <section class="relative py-20 md:py-32 overflow-hidden bg-gray-950">
+            <div class="absolute inset-0 pointer-events-none" style="background-image: radial-gradient(circle, #ffffff 1px, transparent 1px); background-size: 28px 28px; -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,0.06) 0%, rgba(0,0,0,0.06) 40%, transparent 100%); mask-image: linear-gradient(to bottom, rgba(0,0,0,0.06) 0%, rgba(0,0,0,0.06) 40%, transparent 100%);"></div>
+            <div class="absolute bottom-0 right-0 w-[500px] h-[500px] bg-primary/10 rounded-full blur-3xl pointer-events-none"></div>
+            <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-primary/60 via-primary/20 to-transparent"></div>
+            <div class="container mx-auto px-4 relative z-10">
+                <div class="text-center max-w-3xl mx-auto">
+                    <div class="flex items-center justify-center gap-3 mb-5">
+                        <div class="w-8 h-px bg-primary"></div>
+                        <span class="font-fira text-primary text-xs tracking-[0.2em] uppercase">Profesyonel Web Siteleri</span>
+                        <div class="w-8 h-px bg-primary"></div>
+                    </div>
+                    <h1 class="font-serif italic font-normal text-primary mb-5" style="font-size: clamp(2.5rem, 7vw, 5rem); line-height: 1.1; text-wrap: balance;">
+                        Hayalinizdeki Web Sitesi.
+                    </h1>
+                    <p class="text-gray-300 font-medium text-lg md:text-xl mx-auto mb-8 leading-relaxed max-w-xl">
+                        Profesyonel tasarım, tamamen özel web siteleri — ajans fiyatları olmadan. Gerçek mühendisler tarafından yapılır, size aittir ve kolayca güncellersiniz.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 items-center justify-center">
+                        <a href="#nasil-calisir" class="hero-cta-btn text-white font-semibold py-3.5 px-7 transition-colors duration-300 text-base rounded-[4px]">
+                            Nasıl Çalışır?
+                        </a>
+                        <a href="web-iletisim.html" class="group text-gray-300 hover:text-primary font-medium py-3.5 inline-flex items-center gap-2 transition-colors duration-300 text-base">
+                            Ücretsiz Görüşme
+                            <i class="fas fa-arrow-right text-sm transition-transform duration-300 group-hover:translate-x-1"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Problem Statement -->
+        <section class="py-20 md:py-28" style="background-color: #f9f7f4;">
+            <div class="container mx-auto px-4">
+                <div class="max-w-4xl mx-auto">
+                    <div class="text-center mb-12">
+                        <h2 class="text-4xl md:text-5xl lg:text-6xl font-serif italic font-normal mb-6 text-secondary">Web Siteniz, İşinizin Kalitesini Yansıtmalı.</h2>
+                    </div>
+                    <div class="text-lg md:text-xl text-gray-700 leading-relaxed space-y-6 max-w-3xl mx-auto">
+                        <p>Çoğu işletme aynı sinir bozucu seçimle karşı karşıya: herkesin sitesine benzeyen ucuz bir template'e para vermek ya da bütçeyi zorlayan bir ajans projesine girişmek. Template yolu hızlıdır ama müşterileriniz bunun hazır olduğunu anlar. Özel tasarım yolu güzel görünür ama büyümeye çalışırken maliyeti ve süreyi haklı çıkarmak zordur.</p>
+                        <p>Arada bir seçenek olmalı. Biz tam olarak bunu yaptık.</p>
+                        <p>CodeSeed, tamamen özel tasarım, modern altyapı ve basit bir içerik paneli ile profesyonel web siteleri tasarlıyor ve geliştiriyor — böylece kendi metinlerinizi, görsellerinizi ve sayfalarınızı kod yazmadan veya bir developer aramadan güncelleyebilirsiniz.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works -->
+        <section id="nasil-calisir" class="py-20 md:py-28 bg-gray-900">
+            <div class="container mx-auto px-4">
+                <div class="max-w-6xl mx-auto">
+                    <div class="text-center mb-16">
+                        <h2 class="text-4xl md:text-5xl lg:text-6xl font-serif italic font-normal mb-6 text-white">Nasıl Çalışır?</h2>
+                    </div>
+                    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                        <div class="scroll-fade-in bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 relative">
+                            <div class="text-primary font-fira text-sm font-bold mb-4 tracking-wider">01</div>
+                            <h3 class="text-xl font-bold text-white mb-4">Keşif Görüşmesi</h3>
+                            <p class="text-gray-300 leading-relaxed">İşinizi, hedef kitlenizi ve web sitenizden ne beklediğinizi öğreniyoruz. Kapsamı çıkarıp net bir teklif sunuyoruz.</p>
+                        </div>
+                        <div class="scroll-fade-in bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 relative">
+                            <div class="text-primary font-fira text-sm font-bold mb-4 tracking-wider">02</div>
+                            <h3 class="text-xl font-bold text-white mb-4">Tasarım & Geliştirme</h3>
+                            <p class="text-gray-300 leading-relaxed">Ekibimiz sitenizi sıfırdan tasarlıyor — template yok, kalıp yok. Her sayfa markanıza uygun ve profesyonel görünecek şekilde hazırlanıyor.</p>
+                        </div>
+                        <div class="scroll-fade-in bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 relative">
+                            <div class="text-primary font-fira text-sm font-bold mb-4 tracking-wider">03</div>
+                            <h3 class="text-xl font-bold text-white mb-4">İçerik Paneli Kurulumu</h3>
+                            <p class="text-gray-300 leading-relaxed">Kendi metinlerinizi, görsellerinizi, blog yazılarınızı, ekip üyelerinizi ve daha fazlasını güncelleyebileceğiniz basit bir düzenleme paneli kuruyoruz. Kod yok, developer gerekmez.</p>
+                        </div>
+                        <div class="scroll-fade-in bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 relative">
+                            <div class="text-primary font-fira text-sm font-bold mb-4 tracking-wider">04</div>
+                            <h3 class="text-xl font-bold text-white mb-4">Yayına Alma & Teslim</h3>
+                            <p class="text-gray-300 leading-relaxed">Sitenizi deploy ediyoruz, paneli nasıl kullanacağınızı gösteriyoruz ve anahtarları size teslim ediyoruz. Her şey sizin.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- What You Get -->
+        <section class="py-20 md:py-28" style="background-color: #f9f7f4;">
+            <div class="container mx-auto px-4">
+                <div class="max-w-6xl mx-auto">
+                    <div class="text-center mb-16">
+                        <h2 class="text-4xl md:text-5xl lg:text-6xl font-serif italic font-normal mb-6 text-secondary">Neler Dahil?</h2>
+                    </div>
+                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <div class="scroll-fade-in bg-white rounded-xl p-7 border border-gray-200 hover:border-primary/40 hover:shadow-md transition-all duration-300">
+                            <div class="text-primary text-2xl mb-4"><i class="fas fa-palette"></i></div>
+                            <h3 class="text-lg font-semibold mb-3 text-gray-800">Özel Tasarım</h3>
+                            <p class="text-gray-600 leading-relaxed">Template yok. Her site, markanıza, hedef kitlenize ve hedeflerinize özel tasarlanır.</p>
+                        </div>
+                        <div class="scroll-fade-in bg-white rounded-xl p-7 border border-gray-200 hover:border-primary/40 hover:shadow-md transition-all duration-300">
+                            <div class="text-primary text-2xl mb-4"><i class="fas fa-pen-to-square"></i></div>
+                            <h3 class="text-lg font-semibold mb-3 text-gray-800">İçeriğiniz Sizin Kontrolünüzde</h3>
+                            <p class="text-gray-600 leading-relaxed">Kendi metinlerinizi, görsellerinizi, blog yazılarınızı, ekip bilgilerinizi ve daha fazlasını basit bir panel üzerinden güncelleyin. Kod yazmaya gerek yok, developer beklemeye gerek yok.</p>
+                        </div>
+                        <div class="scroll-fade-in bg-white rounded-xl p-7 border border-gray-200 hover:border-primary/40 hover:shadow-md transition-all duration-300">
+                            <div class="text-primary text-2xl mb-4"><i class="fas fa-key"></i></div>
+                            <h3 class="text-lg font-semibold mb-3 text-gray-800">Her Şey Size Ait</h3>
+                            <p class="text-gray-600 leading-relaxed">Siteniz kendi hosting'inizde çalışır. Platform bağımlılığı yok, site builder aboneliği yok. Kodunuz, içeriğiniz ve domain'iniz size ait.</p>
+                        </div>
+                        <div class="scroll-fade-in bg-white rounded-xl p-7 border border-gray-200 hover:border-primary/40 hover:shadow-md transition-all duration-300">
+                            <div class="text-primary text-2xl mb-4"><i class="fas fa-mobile-screen-button"></i></div>
+                            <h3 class="text-lg font-semibold mb-3 text-gray-800">Mobile-First & Hızlı</h3>
+                            <p class="text-gray-600 leading-relaxed">Her site responsive ve hız için optimize edilmiştir. Ziyaretçileriniz her cihazda mükemmel bir deneyim yaşar.</p>
+                        </div>
+                        <div class="scroll-fade-in bg-white rounded-xl p-7 border border-gray-200 hover:border-primary/40 hover:shadow-md transition-all duration-300">
+                            <div class="text-primary text-2xl mb-4"><i class="fas fa-user-shield"></i></div>
+                            <h3 class="text-lg font-semibold mb-3 text-gray-800">Gerçek Mühendisler Tarafından Yapıldı</h3>
+                            <p class="text-gray-600 leading-relaxed">Canva hesabı olan bir freelancer değil. Ekibimiz Google, Accenture ve Harman International için sistemler kurdu. Bu kaliteyi alırsınız.</p>
+                        </div>
+                        <div class="scroll-fade-in bg-white rounded-xl p-7 border border-gray-200 hover:border-primary/40 hover:shadow-md transition-all duration-300">
+                            <div class="text-primary text-2xl mb-4"><i class="fas fa-headset"></i></div>
+                            <h3 class="text-lg font-semibold mb-3 text-gray-800">İhtiyacınız Olduğunda Saatlik Destek</h3>
+                            <p class="text-gray-600 leading-relaxed">Yayından sonra ihtiyacınız olduğunda buradayız. Retainer yok, taahhüt yok — ihtiyacınız olduğunda yazın, saatlik faturalandıralım.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How We Compare -->
+        <section class="py-20 md:py-28 relative overflow-hidden bg-secondary">
+            <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-white/5 rounded-full blur-3xl pointer-events-none"></div>
+            <div class="absolute bottom-0 right-0 w-[400px] h-[400px] bg-black/5 rounded-full blur-3xl pointer-events-none"></div>
+            <div class="container mx-auto px-4 relative z-10">
+                <div class="max-w-6xl mx-auto">
+                    <div class="text-center mb-16">
+                        <h2 class="text-4xl md:text-5xl lg:text-6xl font-serif italic font-normal mb-4 text-white">Karşılaştırma</h2>
+                        <p class="text-white/70 text-lg max-w-xl mx-auto">Web sitesi yapmanın üç yolu. Yalnızca biri, özel kaliteyi özel fiyat olmadan sunar.</p>
+                    </div>
+
+                    <!-- Desktop: 3-column card comparison -->
+                    <div class="hidden md:grid md:grid-cols-3 gap-5 items-start">
+                        <!-- Hazır Site Yapıcılar -->
+                        <div class="compare-card group rounded-2xl border border-[#e8dfd3] overflow-hidden transition-all duration-500 hover:border-amber-400/60 hover:shadow-[0_8px_40px_rgba(251,191,36,0.15)] bg-[#f5efe6]">
+                            <div class="p-7 border-b border-[#e8dfd3] relative">
+                                <div class="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-amber-400/0 via-amber-400/60 to-amber-400/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                                <div class="flex items-center gap-3 mb-2">
+                                    <div class="w-9 h-9 rounded-lg bg-amber-50 flex items-center justify-center group-hover:bg-amber-100 transition-colors duration-300">
+                                        <i class="fas fa-puzzle-piece text-amber-500 text-sm"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-lg font-bold text-gray-800 group-hover:text-amber-600 transition-colors duration-300">Hazır Site Yapıcılar</h3>
+                                        <p class="text-xs text-gray-400">Wix, Squarespace</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="p-7 space-y-5">
+                                <div class="compare-row rounded-lg p-3 -mx-1 transition-all duration-300 hover:bg-amber-50/50">
+                                    <p class="text-[10px] text-amber-500/70 uppercase tracking-[0.15em] font-semibold mb-1.5">Tasarım</p>
+                                    <p class="text-gray-600 text-sm leading-relaxed">Template tabanlı, sıradan görünür</p>
+                                </div>
+                                <div class="compare-row rounded-lg p-3 -mx-1 transition-all duration-300 hover:bg-amber-50/50">
+                                    <p class="text-[10px] text-amber-500/70 uppercase tracking-[0.15em] font-semibold mb-1.5">Özelleştirme</p>
+                                    <p class="text-gray-600 text-sm leading-relaxed">Yapıcının izin verdiğiyle sınırlı</p>
+                                </div>
+                                <div class="compare-row rounded-lg p-3 -mx-1 transition-all duration-300 hover:bg-amber-50/50">
+                                    <p class="text-[10px] text-amber-500/70 uppercase tracking-[0.15em] font-semibold mb-1.5">İçerik Düzenleme</p>
+                                    <p class="text-gray-600 text-sm leading-relaxed">Dahili (ama kısıtlı)</p>
+                                </div>
+                                <div class="compare-row rounded-lg p-3 -mx-1 transition-all duration-300 hover:bg-amber-50/50">
+                                    <p class="text-[10px] text-amber-500/70 uppercase tracking-[0.15em] font-semibold mb-1.5">Sahiplik</p>
+                                    <p class="text-gray-600 text-sm leading-relaxed">Kiralıyorsunuz — platformu bırakın, siteyi kaybedersiniz</p>
+                                </div>
+                                <div class="compare-row rounded-lg p-3 -mx-1 transition-all duration-300 hover:bg-amber-50/50">
+                                    <p class="text-[10px] text-amber-500/70 uppercase tracking-[0.15em] font-semibold mb-1.5">Süre</p>
+                                    <p class="text-gray-600 text-sm leading-relaxed">Günler</p>
+                                </div>
+                                <div class="compare-row rounded-lg p-3 -mx-1 transition-all duration-300 hover:bg-amber-50/50">
+                                    <p class="text-[10px] text-amber-500/70 uppercase tracking-[0.15em] font-semibold mb-1.5">Kalite</p>
+                                    <p class="text-gray-600 text-sm leading-relaxed">Template gibi görünür</p>
+                                </div>
+                                <div class="compare-row rounded-lg p-3 -mx-1 transition-all duration-300 hover:bg-amber-50/50">
+                                    <p class="text-[10px] text-amber-500/70 uppercase tracking-[0.15em] font-semibold mb-1.5">Devam Eden Maliyet</p>
+                                    <p class="text-gray-600 text-sm leading-relaxed">Sonsuza kadar aylık abonelik</p>
+                                </div>
+                                <div class="compare-row rounded-lg p-3 -mx-1 transition-all duration-300 hover:bg-amber-50/50">
+                                    <p class="text-[10px] text-amber-500/70 uppercase tracking-[0.15em] font-semibold mb-1.5">Destek</p>
+                                    <p class="text-gray-600 text-sm leading-relaxed">Yardım dökümanları ve chatbot'lar</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- CodeSeed (highlighted center card) -->
+                        <div class="compare-card group rounded-2xl overflow-hidden relative transition-all duration-500 hover:shadow-[0_12px_50px_rgba(141,186,144,0.25)] md:-mt-4 md:mb-[-1rem] bg-gray-900 border-2 border-primary/60">
+                            <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary/40 via-primary to-primary/40"></div>
+                            <div class="p-7 border-b border-primary/20 relative">
+                                <div class="flex items-center gap-3 mb-2">
+                                    <div class="w-9 h-9 rounded-lg bg-primary/30 flex items-center justify-center">
+                                        <i class="fas fa-seedling text-white text-sm"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-lg font-bold text-white">CodeSeed</h3>
+                                        <p class="text-xs text-primary/80">Akıllı orta yol</p>
+                                    </div>
+                                </div>
+                                <div class="mt-3 inline-flex items-center gap-1.5 bg-primary/25 text-primary text-xs font-semibold px-3 py-1 rounded-full">
+                                    <i class="fas fa-star text-[9px]"></i> En iyi değer
+                                </div>
+                            </div>
+                            <div class="p-7 space-y-5 relative">
+                                <div class="compare-row rounded-lg p-3 -mx-1 transition-all duration-300 hover:bg-white/10">
+                                    <p class="text-[10px] text-primary/70 uppercase tracking-[0.15em] font-semibold mb-1.5">Tasarım</p>
+                                    <p class="text-white text-sm font-medium leading-relaxed">Tamamen özel, markanız için tasarlanmış</p>
+                                </div>
+                                <div class="compare-row rounded-lg p-3 -mx-1 transition-all duration-300 hover:bg-white/10">
+                                    <p class="text-[10px] text-primary/70 uppercase tracking-[0.15em] font-semibold mb-1.5">Özelleştirme</p>
+                                    <p class="text-white text-sm font-medium leading-relaxed">İhtiyaçlarınıza göre özelleştirilmiş</p>
+                                </div>
+                                <div class="compare-row rounded-lg p-3 -mx-1 transition-all duration-300 hover:bg-white/10">
+                                    <p class="text-[10px] text-primary/70 uppercase tracking-[0.15em] font-semibold mb-1.5">İçerik Düzenleme</p>
+                                    <p class="text-white text-sm font-medium leading-relaxed">Basit panel — metin, görsel, yazı düzenleyin</p>
+                                </div>
+                                <div class="compare-row rounded-lg p-3 -mx-1 transition-all duration-300 hover:bg-white/10">
+                                    <p class="text-[10px] text-primary/70 uppercase tracking-[0.15em] font-semibold mb-1.5">Sahiplik</p>
+                                    <p class="text-white text-sm font-medium leading-relaxed flex items-center gap-2">Her şey sizin — kod, içerik, hosting <i class="fas fa-check-circle text-primary text-xs"></i></p>
+                                </div>
+                                <div class="compare-row rounded-lg p-3 -mx-1 transition-all duration-300 hover:bg-white/10">
+                                    <p class="text-[10px] text-primary/70 uppercase tracking-[0.15em] font-semibold mb-1.5">Süre</p>
+                                    <p class="text-white text-sm font-medium leading-relaxed">2-4 hafta</p>
+                                </div>
+                                <div class="compare-row rounded-lg p-3 -mx-1 transition-all duration-300 hover:bg-white/10">
+                                    <p class="text-[10px] text-primary/70 uppercase tracking-[0.15em] font-semibold mb-1.5">Kalite</p>
+                                    <p class="text-white text-sm font-medium leading-relaxed flex items-center gap-2">Premium site gibi görünür <i class="fas fa-check-circle text-primary text-xs"></i></p>
+                                </div>
+                                <div class="compare-row rounded-lg p-3 -mx-1 transition-all duration-300 hover:bg-white/10">
+                                    <p class="text-[10px] text-primary/70 uppercase tracking-[0.15em] font-semibold mb-1.5">Devam Eden Maliyet</p>
+                                    <p class="text-white text-sm font-medium leading-relaxed flex items-center gap-2">Sadece hosting'iniz (~$10/ay) <i class="fas fa-check-circle text-primary text-xs"></i></p>
+                                </div>
+                                <div class="compare-row rounded-lg p-3 -mx-1 transition-all duration-300 hover:bg-white/10">
+                                    <p class="text-[10px] text-primary/70 uppercase tracking-[0.15em] font-semibold mb-1.5">Destek</p>
+                                    <p class="text-white text-sm font-medium leading-relaxed">Siteyi yapan ekibe doğrudan erişim</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Geleneksel Ajans -->
+                        <div class="compare-card group rounded-2xl border border-[#e8dfd3] overflow-hidden transition-all duration-500 hover:border-violet-400/60 hover:shadow-[0_8px_40px_rgba(167,139,250,0.15)] bg-[#f5efe6]">
+                            <div class="p-7 border-b border-[#e8dfd3] relative">
+                                <div class="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-violet-400/0 via-violet-400/60 to-violet-400/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                                <div class="flex items-center gap-3 mb-2">
+                                    <div class="w-9 h-9 rounded-lg bg-violet-50 flex items-center justify-center group-hover:bg-violet-100 transition-colors duration-300">
+                                        <i class="fas fa-building text-violet-500 text-sm"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-lg font-bold text-gray-800 group-hover:text-violet-600 transition-colors duration-300">Geleneksel Ajans</h3>
+                                        <p class="text-xs text-gray-400">Tam hizmet ajanslar</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="p-7 space-y-5">
+                                <div class="compare-row rounded-lg p-3 -mx-1 transition-all duration-300 hover:bg-amber-50/50">
+                                    <p class="text-[10px] text-violet-500/70 uppercase tracking-[0.15em] font-semibold mb-1.5">Tasarım</p>
+                                    <p class="text-gray-600 text-sm leading-relaxed">Tamamen özel</p>
+                                </div>
+                                <div class="compare-row rounded-lg p-3 -mx-1 transition-all duration-300 hover:bg-amber-50/50">
+                                    <p class="text-[10px] text-violet-500/70 uppercase tracking-[0.15em] font-semibold mb-1.5">Özelleştirme</p>
+                                    <p class="text-gray-600 text-sm leading-relaxed">Sınırsız esneklik</p>
+                                </div>
+                                <div class="compare-row rounded-lg p-3 -mx-1 transition-all duration-300 hover:bg-amber-50/50">
+                                    <p class="text-[10px] text-violet-500/70 uppercase tracking-[0.15em] font-semibold mb-1.5">İçerik Düzenleme</p>
+                                    <p class="text-gray-600 text-sm leading-relaxed">Değişiklikler için genellikle developer gerekir</p>
+                                </div>
+                                <div class="compare-row rounded-lg p-3 -mx-1 transition-all duration-300 hover:bg-amber-50/50">
+                                    <p class="text-[10px] text-violet-500/70 uppercase tracking-[0.15em] font-semibold mb-1.5">Sahiplik</p>
+                                    <p class="text-gray-600 text-sm leading-relaxed">Genellikle size ait</p>
+                                </div>
+                                <div class="compare-row rounded-lg p-3 -mx-1 transition-all duration-300 hover:bg-amber-50/50">
+                                    <p class="text-[10px] text-violet-500/70 uppercase tracking-[0.15em] font-semibold mb-1.5">Süre</p>
+                                    <p class="text-gray-600 text-sm leading-relaxed">2-6 ay</p>
+                                </div>
+                                <div class="compare-row rounded-lg p-3 -mx-1 transition-all duration-300 hover:bg-amber-50/50">
+                                    <p class="text-[10px] text-violet-500/70 uppercase tracking-[0.15em] font-semibold mb-1.5">Kalite</p>
+                                    <p class="text-gray-600 text-sm leading-relaxed">Premium kalite</p>
+                                </div>
+                                <div class="compare-row rounded-lg p-3 -mx-1 transition-all duration-300 hover:bg-amber-50/50">
+                                    <p class="text-[10px] text-violet-500/70 uppercase tracking-[0.15em] font-semibold mb-1.5">Devam Eden Maliyet</p>
+                                    <p class="text-gray-600 text-sm leading-relaxed">Hosting + retainer ücretleri</p>
+                                </div>
+                                <div class="compare-row rounded-lg p-3 -mx-1 transition-all duration-300 hover:bg-amber-50/50">
+                                    <p class="text-[10px] text-violet-500/70 uppercase tracking-[0.15em] font-semibold mb-1.5">Destek</p>
+                                    <p class="text-gray-600 text-sm leading-relaxed">Değişir</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Mobile: Horizontally scrollable cards -->
+                    <div class="md:hidden compare-table">
+                        <div class="flex gap-4 pb-4" style="min-width: max-content;">
+                            <!-- Hazır Site Yapıcılar -->
+                            <div class="rounded-2xl border border-[#e8dfd3] overflow-hidden bg-[#f5efe6]" style="min-width: 280px; max-width: 300px;">
+                                <div class="p-5 border-b border-[#e8dfd3]">
+                                    <div class="flex items-center gap-3">
+                                        <div class="w-8 h-8 rounded-lg bg-amber-50 flex items-center justify-center">
+                                            <i class="fas fa-puzzle-piece text-amber-500 text-xs"></i>
+                                        </div>
+                                        <div>
+                                            <h3 class="text-base font-bold text-gray-800">Hazır Site Yapıcılar</h3>
+                                            <p class="text-xs text-gray-400">Wix, Squarespace</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="p-5 space-y-4">
+                                    <div class="rounded-lg p-2.5 -mx-0.5"><p class="text-[10px] text-amber-500/70 uppercase tracking-[0.15em] font-semibold mb-1">Tasarım</p><p class="text-gray-600 text-sm">Template tabanlı, sıradan görünür</p></div>
+                                    <div class="rounded-lg p-2.5 -mx-0.5"><p class="text-[10px] text-amber-500/70 uppercase tracking-[0.15em] font-semibold mb-1">Özelleştirme</p><p class="text-gray-600 text-sm">Yapıcının izin verdiğiyle sınırlı</p></div>
+                                    <div class="rounded-lg p-2.5 -mx-0.5"><p class="text-[10px] text-amber-500/70 uppercase tracking-[0.15em] font-semibold mb-1">İçerik Düzenleme</p><p class="text-gray-600 text-sm">Dahili (ama kısıtlı)</p></div>
+                                    <div class="rounded-lg p-2.5 -mx-0.5"><p class="text-[10px] text-amber-500/70 uppercase tracking-[0.15em] font-semibold mb-1">Sahiplik</p><p class="text-gray-600 text-sm">Kiralıyorsunuz — platformu bırakın, siteyi kaybedersiniz</p></div>
+                                    <div class="rounded-lg p-2.5 -mx-0.5"><p class="text-[10px] text-amber-500/70 uppercase tracking-[0.15em] font-semibold mb-1">Süre</p><p class="text-gray-600 text-sm">Günler</p></div>
+                                    <div class="rounded-lg p-2.5 -mx-0.5"><p class="text-[10px] text-amber-500/70 uppercase tracking-[0.15em] font-semibold mb-1">Kalite</p><p class="text-gray-600 text-sm">Template gibi görünür</p></div>
+                                    <div class="rounded-lg p-2.5 -mx-0.5"><p class="text-[10px] text-amber-500/70 uppercase tracking-[0.15em] font-semibold mb-1">Devam Eden Maliyet</p><p class="text-gray-600 text-sm">Sonsuza kadar aylık abonelik</p></div>
+                                    <div class="rounded-lg p-2.5 -mx-0.5"><p class="text-[10px] text-amber-500/70 uppercase tracking-[0.15em] font-semibold mb-1">Destek</p><p class="text-gray-600 text-sm">Yardım dökümanları ve chatbot'lar</p></div>
+                                </div>
+                            </div>
+
+                            <!-- CodeSeed (highlighted) -->
+                            <div class="rounded-2xl overflow-hidden relative bg-gray-900" style="min-width: 280px; max-width: 300px; border: 2px solid rgba(141,186,144,0.6);">
+                                <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary/40 via-primary to-primary/40"></div>
+                                <div class="p-5 border-b border-primary/20">
+                                    <div class="flex items-center gap-3">
+                                        <div class="w-8 h-8 rounded-lg bg-primary/30 flex items-center justify-center">
+                                            <i class="fas fa-seedling text-white text-xs"></i>
+                                        </div>
+                                        <div>
+                                            <h3 class="text-base font-bold text-white">CodeSeed</h3>
+                                            <p class="text-xs text-primary/60">Akıllı orta yol</p>
+                                        </div>
+                                    </div>
+                                    <div class="mt-3 inline-flex items-center gap-1.5 bg-primary/15 text-primary text-xs font-semibold px-3 py-1 rounded-full">
+                                        <i class="fas fa-star text-[9px]"></i> En iyi değer
+                                    </div>
+                                </div>
+                                <div class="p-5 space-y-4">
+                                    <div class="rounded-lg p-2.5 -mx-0.5"><p class="text-[10px] text-primary/70 uppercase tracking-[0.15em] font-semibold mb-1">Tasarım</p><p class="text-white text-sm font-medium">Tamamen özel, markanız için tasarlanmış</p></div>
+                                    <div class="rounded-lg p-2.5 -mx-0.5"><p class="text-[10px] text-primary/70 uppercase tracking-[0.15em] font-semibold mb-1">Özelleştirme</p><p class="text-white text-sm font-medium">İhtiyaçlarınıza göre özelleştirilmiş</p></div>
+                                    <div class="rounded-lg p-2.5 -mx-0.5"><p class="text-[10px] text-primary/70 uppercase tracking-[0.15em] font-semibold mb-1">İçerik Düzenleme</p><p class="text-white text-sm font-medium">Basit panel — metin, görsel, yazı düzenleyin</p></div>
+                                    <div class="rounded-lg p-2.5 -mx-0.5"><p class="text-[10px] text-primary/70 uppercase tracking-[0.15em] font-semibold mb-1">Sahiplik</p><p class="text-white text-sm font-medium">Her şey sizin — kod, içerik, hosting <i class="fas fa-check-circle text-primary text-xs"></i></p></div>
+                                    <div class="rounded-lg p-2.5 -mx-0.5"><p class="text-[10px] text-primary/70 uppercase tracking-[0.15em] font-semibold mb-1">Süre</p><p class="text-white text-sm font-medium">2-4 hafta</p></div>
+                                    <div class="rounded-lg p-2.5 -mx-0.5"><p class="text-[10px] text-primary/70 uppercase tracking-[0.15em] font-semibold mb-1">Kalite</p><p class="text-white text-sm font-medium">Premium site gibi görünür <i class="fas fa-check-circle text-primary text-xs"></i></p></div>
+                                    <div class="rounded-lg p-2.5 -mx-0.5"><p class="text-[10px] text-primary/70 uppercase tracking-[0.15em] font-semibold mb-1">Devam Eden Maliyet</p><p class="text-white text-sm font-medium">Sadece hosting'iniz (~$10/ay) <i class="fas fa-check-circle text-primary text-xs"></i></p></div>
+                                    <div class="rounded-lg p-2.5 -mx-0.5"><p class="text-[10px] text-primary/70 uppercase tracking-[0.15em] font-semibold mb-1">Destek</p><p class="text-white text-sm font-medium">Siteyi yapan ekibe doğrudan erişim</p></div>
+                                </div>
+                            </div>
+
+                            <!-- Geleneksel Ajans -->
+                            <div class="rounded-2xl border border-[#e8dfd3] overflow-hidden bg-[#f5efe6]" style="min-width: 280px; max-width: 300px;">
+                                <div class="p-5 border-b border-[#e8dfd3]">
+                                    <div class="flex items-center gap-3">
+                                        <div class="w-8 h-8 rounded-lg bg-violet-50 flex items-center justify-center">
+                                            <i class="fas fa-building text-violet-500 text-xs"></i>
+                                        </div>
+                                        <div>
+                                            <h3 class="text-base font-bold text-gray-800">Geleneksel Ajans</h3>
+                                            <p class="text-xs text-gray-400">Tam hizmet ajanslar</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="p-5 space-y-4">
+                                    <div class="rounded-lg p-2.5 -mx-0.5"><p class="text-[10px] text-violet-500/70 uppercase tracking-[0.15em] font-semibold mb-1">Tasarım</p><p class="text-gray-600 text-sm">Tamamen özel</p></div>
+                                    <div class="rounded-lg p-2.5 -mx-0.5"><p class="text-[10px] text-violet-500/70 uppercase tracking-[0.15em] font-semibold mb-1">Özelleştirme</p><p class="text-gray-600 text-sm">Sınırsız esneklik</p></div>
+                                    <div class="rounded-lg p-2.5 -mx-0.5"><p class="text-[10px] text-violet-500/70 uppercase tracking-[0.15em] font-semibold mb-1">İçerik Düzenleme</p><p class="text-gray-600 text-sm">Değişiklikler için genellikle developer gerekir</p></div>
+                                    <div class="rounded-lg p-2.5 -mx-0.5"><p class="text-[10px] text-violet-500/70 uppercase tracking-[0.15em] font-semibold mb-1">Sahiplik</p><p class="text-gray-600 text-sm">Genellikle size ait</p></div>
+                                    <div class="rounded-lg p-2.5 -mx-0.5"><p class="text-[10px] text-violet-500/70 uppercase tracking-[0.15em] font-semibold mb-1">Süre</p><p class="text-gray-600 text-sm">2-6 ay</p></div>
+                                    <div class="rounded-lg p-2.5 -mx-0.5"><p class="text-[10px] text-violet-500/70 uppercase tracking-[0.15em] font-semibold mb-1">Kalite</p><p class="text-gray-600 text-sm">Premium kalite</p></div>
+                                    <div class="rounded-lg p-2.5 -mx-0.5"><p class="text-[10px] text-violet-500/70 uppercase tracking-[0.15em] font-semibold mb-1">Devam Eden Maliyet</p><p class="text-gray-600 text-sm">Hosting + retainer ücretleri</p></div>
+                                    <div class="rounded-lg p-2.5 -mx-0.5"><p class="text-[10px] text-violet-500/70 uppercase tracking-[0.15em] font-semibold mb-1">Destek</p><p class="text-gray-600 text-sm">Değişir</p></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p class="text-center text-white/80 mt-14 text-lg max-w-2xl mx-auto leading-relaxed">Daha akıllı bir fiyat noktasında özel kalite alırsınız. Abonelik yok, bağımlılık yok, tasarımdan ödün yok.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Examples of Our Design Quality -->
+        <section class="py-20 md:py-28" style="background-color: #f9f7f4;">
+            <div class="container mx-auto px-4">
+                <div class="max-w-6xl mx-auto">
+                    <div class="text-center mb-16">
+                        <h2 class="text-4xl md:text-5xl lg:text-6xl font-serif italic font-normal mb-4 text-secondary">Siteniz Nasıl Görünebilir?</h2>
+                        <p class="text-lg text-gray-600 max-w-2xl mx-auto">Her proje aynı düzeyde tasarım özeni ve mühendislik kalitesi alır.</p>
+                    </div>
+                    <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                        <a href="https://readyai.dev" target="_blank" rel="noopener noreferrer" class="scroll-fade-in group bg-white rounded-xl overflow-hidden border border-gray-200 hover:border-primary/40 hover:shadow-lg transition-all duration-300">
+                            <div class="aspect-video bg-gray-100 overflow-hidden">
+                                <img src="../../assets/readyai-screenshot.png" alt="ReadyAI web sitesi ekran görüntüsü" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
+                            </div>
+                            <div class="p-6">
+                                <h3 class="text-lg font-bold text-gray-800 mb-2 group-hover:text-primary transition-colors">ReadyAI</h3>
+                                <p class="text-gray-600 text-sm mb-4">Yapay zeka destekli iş çözümleri platformu. Modern içerik yönetimi ile kurumsal düzeyde tasarım.</p>
+                                <span class="inline-flex items-center gap-2 text-primary font-medium text-sm group-hover:gap-3 transition-all">
+                                    Projeyi İncele <i class="fas fa-arrow-right text-xs"></i>
+                                </span>
+                            </div>
+                        </a>
+                        <a href="https://soulseedfestival.com" target="_blank" rel="noopener noreferrer" class="scroll-fade-in group bg-white rounded-xl overflow-hidden border border-gray-200 hover:border-primary/40 hover:shadow-lg transition-all duration-300">
+                            <div class="aspect-video bg-gray-100 overflow-hidden">
+                                <img src="../../assets/soulseed-screenshot.png" alt="SoulSeed Festival web sitesi ekran görüntüsü" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
+                            </div>
+                            <div class="p-6">
+                                <h3 class="text-lg font-bold text-gray-800 mb-2 group-hover:text-primary transition-colors">SoulSeed Festival</h3>
+                                <p class="text-gray-600 text-sm mb-4">Piksel mükemmelliğinde, responsive festival web sitesi ve modern tasarım.</p>
+                                <span class="inline-flex items-center gap-2 text-primary font-medium text-sm group-hover:gap-3 transition-all">
+                                    Projeyi İncele <i class="fas fa-arrow-right text-xs"></i>
+                                </span>
+                            </div>
+                        </a>
+                    </div>
+                    <p class="text-center text-gray-500 mt-10 text-base max-w-2xl mx-auto">Bunlar farklı sektörlerdeki tasarım kalitemizin örnekleri. Siteniz de aynı özen ve detay hassasiyetiyle yapılacak.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- What Clients Are Responsible For -->
+        <section class="py-20 md:py-28 bg-gray-900">
+            <div class="container mx-auto px-4">
+                <div class="max-w-4xl mx-auto">
+                    <div class="text-center mb-12">
+                        <h2 class="text-4xl md:text-5xl lg:text-6xl font-serif italic font-normal mb-4 text-white">Sizden Beklentilerimiz</h2>
+                        <p class="text-lg text-gray-400 max-w-2xl mx-auto">Fiyatı adil, süreci sorunsuz tutmanın yolu budur.</p>
+                    </div>
+                    <div class="space-y-6 max-w-3xl mx-auto">
+                        <div class="scroll-fade-in flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-lg bg-primary/20 flex items-center justify-center flex-shrink-0 mt-1">
+                                <i class="fas fa-file-lines text-primary text-sm"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-white font-semibold text-lg mb-2">İçeriğinizi siz sağlarsınız</h3>
+                                <p class="text-gray-400 leading-relaxed">Metin, görseller ve marka varlıklarınız (logo, renkler, fontlar). Biz tasarlayıp geliştiriyoruz; siz kelimeleri ve görselleri getiriyorsunuz. Copywriting veya fotoğraf konusunda yardıma ihtiyacınız varsa partnerlerimizi önerebiliriz.</p>
+                            </div>
+                        </div>
+                        <div class="scroll-fade-in flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-lg bg-primary/20 flex items-center justify-center flex-shrink-0 mt-1">
+                                <i class="fas fa-server text-primary text-sm"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-white font-semibold text-lg mb-2">Hosting'inizi kendiniz ödersiniz</h3>
+                                <p class="text-gray-400 leading-relaxed">Genellikle Railway, Vercel veya Netlify gibi sağlayıcılar üzerinden ~$10/ay. Geliştirme sürecinde sizin için kurarız — siz doğrudan hosting sağlayıcısına ödersiniz.</p>
+                            </div>
+                        </div>
+                        <div class="scroll-fade-in flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-lg bg-primary/20 flex items-center justify-center flex-shrink-0 mt-1">
+                                <i class="fas fa-wrench text-primary text-sm"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-white font-semibold text-lg mb-2">Yayın sonrası değişiklikler saatlik faturalandırılır</h3>
+                                <p class="text-gray-400 leading-relaxed">Teslimden sonra panelden düzenleyebildikleriniz dışındaki her şey saatlik destek tarifemizle faturalandırılır. Retainer yok, taahhüt yok — ihtiyacınız olduğunda yazmanız yeterli.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="py-20 md:py-28" style="background-color: #f9f7f4;">
+            <div class="container mx-auto px-4">
+                <div class="max-w-3xl mx-auto">
+                    <div class="text-center mb-16">
+                        <h2 class="text-4xl md:text-5xl lg:text-6xl font-serif italic font-normal mb-6 text-secondary">Sıkça Sorulan Sorular</h2>
+                    </div>
+                    <div class="space-y-3">
+                        <div class="faq-item bg-white rounded-xl border border-gray-200 overflow-hidden">
+                            <button class="faq-toggle w-full text-left px-6 py-5 flex items-center justify-between gap-4" aria-expanded="false">
+                                <span class="font-semibold text-gray-800">İçeriğim hazır değilse ne olur?</span>
+                                <i class="fas fa-chevron-down faq-chevron text-gray-400 text-sm flex-shrink-0"></i>
+                            </button>
+                            <div class="faq-answer px-6">
+                                <p class="text-gray-600 leading-relaxed">Tasarım aşamasına başlamadan önce metin ve görsellerinize ihtiyacımız var. Copywriting veya fotoğraf konusunda yardıma ihtiyacınız varsa partner önerebiliriz ama içerik üretimi geliştirme sürecine dahil değildir.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item bg-white rounded-xl border border-gray-200 overflow-hidden">
+                            <button class="faq-toggle w-full text-left px-6 py-5 flex items-center justify-between gap-4" aria-expanded="false">
+                                <span class="font-semibold text-gray-800">Yayından sonra neleri kendim düzenleyebilirim?</span>
+                                <i class="fas fa-chevron-down faq-chevron text-gray-400 text-sm flex-shrink-0"></i>
+                            </button>
+                            <div class="faq-answer px-6">
+                                <p class="text-gray-600 leading-relaxed">Metin, görseller, blog yazıları, ekip üyeleri, referanslar, portfolyo öğeleri — temelde tüm içerik. Layout, tasarım veya stil değiştirmek mümkün değildir — site her zaman profesyonel görünsün diye bunlar sabitlenir.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item bg-white rounded-xl border border-gray-200 overflow-hidden">
+                            <button class="faq-toggle w-full text-left px-6 py-5 flex items-center justify-between gap-4" aria-expanded="false">
+                                <span class="font-semibold text-gray-800">Tasarımda sonradan değişiklik yapmam gerekirse?</span>
+                                <i class="fas fa-chevron-down faq-chevron text-gray-400 text-sm flex-shrink-0"></i>
+                            </button>
+                            <div class="faq-answer px-6">
+                                <p class="text-gray-600 leading-relaxed">Bize yazmanız yeterli. İçerik düzenlemelerinin ötesinde her şey için saatlik destek sunuyoruz — yeni sayfalar, tasarım düzenlemeleri, yeni özellikler, entegrasyonlar. Retainer gerekmez.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item bg-white rounded-xl border border-gray-200 overflow-hidden">
+                            <button class="faq-toggle w-full text-left px-6 py-5 flex items-center justify-between gap-4" aria-expanded="false">
+                                <span class="font-semibold text-gray-800">Tüm süreç ne kadar sürüyor?</span>
+                                <i class="fas fa-chevron-down faq-chevron text-gray-400 text-sm flex-shrink-0"></i>
+                            </button>
+                            <div class="faq-answer px-6">
+                                <p class="text-gray-600 leading-relaxed">Çoğu proje, içeriğinizi aldığımızdan itibaren 2-4 hafta içinde tamamlanır. Daha karmaşık siteler daha uzun sürebilir — keşif görüşmesinde net bir zaman çizelgesi veririz.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item bg-white rounded-xl border border-gray-200 overflow-hidden">
+                            <button class="faq-toggle w-full text-left px-6 py-5 flex items-center justify-between gap-4" aria-expanded="false">
+                                <span class="font-semibold text-gray-800">Site gerçekten bana mı ait?</span>
+                                <i class="fas fa-chevron-down faq-chevron text-gray-400 text-sm flex-shrink-0"></i>
+                            </button>
+                            <div class="faq-answer px-6">
+                                <p class="text-gray-600 leading-relaxed">Evet, %100. Kod, tasarım, içerik — hepsi sizin. Kendi hosting hesabınızda çalışır. Başka bir developer'a geçmek isterseniz her şeyi yanınızda götürebilirsiniz.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item bg-white rounded-xl border border-gray-200 overflow-hidden">
+                            <button class="faq-toggle w-full text-left px-6 py-5 flex items-center justify-between gap-4" aria-expanded="false">
+                                <span class="font-semibold text-gray-800">Hosting maliyeti ne kadar?</span>
+                                <i class="fas fa-chevron-down faq-chevron text-gray-400 text-sm flex-shrink-0"></i>
+                            </button>
+                            <div class="faq-answer px-6">
+                                <p class="text-gray-600 leading-relaxed">Genellikle ~$10/ay, doğrudan hosting sağlayıcısına ödenir. Geliştirme sürecinde kurulumuna yardım ederiz.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item bg-white rounded-xl border border-gray-200 overflow-hidden">
+                            <button class="faq-toggle w-full text-left px-6 py-5 flex items-center justify-between gap-4" aria-expanded="false">
+                                <span class="font-semibold text-gray-800">Yayından sonra destek nasıl çalışır?</span>
+                                <i class="fas fa-chevron-down faq-chevron text-gray-400 text-sm flex-shrink-0"></i>
+                            </button>
+                            <div class="faq-answer px-6">
+                                <p class="text-gray-600 leading-relaxed">Saatlik bazda buradayız. Retainer yok, aylık taahhüt yok. İhtiyacınız olduğunda yazarsınız, süre tahmini veririz ve işi faturalandırırız. Bu kadar basit.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section id="cta" class="py-20 md:py-28 bg-gray-950">
+            <div class="container mx-auto px-4">
+                <div class="max-w-3xl mx-auto text-center">
+                    <h2 class="text-4xl md:text-5xl lg:text-6xl font-serif italic font-normal mb-8 text-primary">İşinizi Gerçekten Yansıtan Bir Web Sitesine Hazır Mısınız?</h2>
+                    <p class="text-xl md:text-2xl mb-12 text-gray-300 leading-relaxed">Ücretsiz bir görüşme ayarlayın. İşinizi tanıyalım, sitenizin neler yapması gerektiğini çıkaralım ve net bir teklif sunalım — baskı yok, zorunluluk yok.</p>
+                    <a href="web-iletisim.html" class="group bg-primary hover:bg-secondary text-white font-semibold py-4 px-10 rounded-full transition-all duration-300 text-lg shadow-lg hover:shadow-xl hover:scale-105 inline-flex items-center gap-2">
+                        <span>Ücretsiz Görüşme Ayarlayın</span>
+                        <i class="fas fa-arrow-right transition-transform duration-300 group-hover:translate-x-1"></i>
+                    </a>
+                    <p class="text-gray-500 text-sm mt-6">Görüşmeler genellikle 15 dakika sürer. 48 saat içinde yazılı bir teklif ile dönüş yaparız.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-900 text-white py-10 md:py-12">
+        <div class="container mx-auto px-4"><div class="text-center"><p class="footer-copyright text-gray-400 text-sm md:text-base leading-relaxed max-w-md mx-auto">&copy; 2025 CodeSeed. Tüm hakları saklıdır.</p></div></div>
+    </footer>
+
+    <script>
+        // Mobile menu
+        const mb = document.getElementById('mobile-menu-button'), mm = document.getElementById('mobile-menu');
+        if (mb && mm) { mb.addEventListener('click', e => { e.preventDefault(); mm.classList.toggle('show'); }); mm.querySelectorAll('a').forEach(l => l.addEventListener('click', () => mm.classList.remove('show'))); document.addEventListener('click', e => { if (!mm.contains(e.target) && !mb.contains(e.target) && mm.classList.contains('show')) mm.classList.remove('show'); }); }
+
+        // FAQ accordion
+        document.querySelectorAll('.faq-toggle').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const item = btn.closest('.faq-item');
+                const isOpen = item.classList.contains('open');
+                // Close all
+                document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+                document.querySelectorAll('.faq-toggle').forEach(b => b.setAttribute('aria-expanded', 'false'));
+                // Open clicked (if it was closed)
+                if (!isOpen) {
+                    item.classList.add('open');
+                    btn.setAttribute('aria-expanded', 'true');
+                }
+            });
+        });
+
+        // Scroll fade-in animation
+        const fadeObserver = new IntersectionObserver((entries) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => {
+                        entry.target.classList.add('visible');
+                    }, index * 80);
+                }
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.scroll-fade-in').forEach(el => fadeObserver.observe(el));
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(a => {
+            a.addEventListener('click', e => {
+                const target = document.querySelector(a.getAttribute('href'));
+                if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+            });
+        });
+    </script>
+</body>
+</html>

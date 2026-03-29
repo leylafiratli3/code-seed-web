@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Book a Free Website Consultation - CodeSeed</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Book a free website consultation with CodeSeed. Tell us about your business and we'll come back with a clear plan and quote for your custom website.">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/codeseed-logo.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/codeseed-logo.png">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://code-seed.io/services/website-contact.html">
+    <meta property="og:site_name" content="CodeSeed">
+    <meta property="og:title" content="Book a Free Website Consultation - CodeSeed">
+    <meta property="og:description" content="Tell us about your business and we'll come back with a clear plan and quote for your custom website.">
+    <meta property="og:image" content="https://code-seed.io/assets/codeseed-logo.png">
+
+    <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,600,700,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { primary: '#8dba90', secondary: '#5a7d5c', accent: '#D2B48C', tan: '#D2B48C' },
+                    fontFamily: { 'sans': ['Satoshi', 'sans-serif'], 'fira': ['"Fira Code"', 'monospace'], 'serif': ['"DM Serif Display"', 'Georgia', 'serif'] },
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="../styles.css" rel="stylesheet">
+    <style>
+        .form-input {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border: 1px solid #e5e7eb;
+            border-radius: 6px;
+            font-size: 0.95rem;
+            background: white;
+            transition: border-color 0.2s, box-shadow 0.2s;
+            font-family: 'Satoshi', sans-serif;
+            color: #1f2937;
+        }
+        .form-input:focus {
+            outline: none;
+            border-color: #8dba90;
+            box-shadow: 0 0 0 3px rgba(141, 186, 144, 0.15);
+        }
+        .form-label {
+            display: block;
+            font-weight: 600;
+            font-size: 0.875rem;
+            color: #374151;
+            margin-bottom: 0.4rem;
+        }
+        .form-hint {
+            font-size: 0.8rem;
+            color: #9ca3af;
+            margin-top: 0.25rem;
+        }
+        select.form-input {
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%239ca3af'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 0.75rem center;
+            background-size: 1.1rem;
+            padding-right: 2.5rem;
+        }
+        .radio-option {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            padding: 0.75rem 1rem;
+            border: 1px solid #e5e7eb;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: border-color 0.2s, background-color 0.2s;
+            font-size: 0.9rem;
+            color: #374151;
+            font-weight: 500;
+        }
+        .radio-option:has(input:checked) {
+            border-color: #8dba90;
+            background-color: rgba(141, 186, 144, 0.06);
+        }
+        .radio-option input[type="radio"] {
+            accent-color: #8dba90;
+            width: 1rem;
+            height: 1rem;
+            flex-shrink: 0;
+        }
+        .submit-btn {
+            background-color: #8dba90;
+            color: white;
+            font-weight: 600;
+            padding: 0.9rem 2rem;
+            border-radius: 9999px;
+            font-size: 1rem;
+            transition: background-color 0.2s, transform 0.15s;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            border: none;
+            cursor: pointer;
+            font-family: 'Satoshi', sans-serif;
+        }
+        .submit-btn:hover {
+            background-color: #5a7d5c;
+            transform: translateY(-1px);
+        }
+        .submit-btn:active {
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="font-sans bg-white">
+
+    <!-- Header -->
+    <header class="bg-white fixed w-full z-50 shadow-sm">
+        <nav class="container mx-auto px-4 py-5">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center transition-transform duration-300 ease-in-out hover:scale-105">
+                    <a href="../index.html#home" class="flex items-center">
+                        <img src="../assets/codeseed-logo.png" alt="CodeSeed Logo" id="header-logo" class="h-20 w-auto mr-4">
+                        <span class="text-2xl font-bold text-primary lowercase tracking-wide">code-seed</span>
+                    </a>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-500 hover:text-gray-600 focus:outline-none" aria-label="Toggle menu">
+                        <svg viewBox="0 0 24 24" class="h-6 w-6 fill-current">
+                            <path fill-rule="evenodd" d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"></path>
+                        </svg>
+                    </button>
+                </div>
+                <ul class="hidden md:flex space-x-6 items-center">
+                    <li><a href="../index.html#hero" class="text-gray-800 hover:text-primary transition-colors duration-300 font-medium">Home</a></li>
+                    <li><a href="../index.html#about-us" class="text-gray-800 hover:text-primary transition-colors duration-300 font-medium">About Us</a></li>
+                    <li class="relative group">
+                        <button class="text-gray-800 hover:text-primary transition-colors duration-300 font-medium flex items-center gap-1">
+                            Services
+                            <i class="fas fa-chevron-down text-xs opacity-50 ml-0.5"></i>
+                        </button>
+                        <div class="absolute top-full left-0 pt-2 hidden group-hover:block z-50">
+                            <div class="bg-white rounded-xl shadow-lg border border-gray-100 py-2 min-w-[200px]">
+                                <a href="../index.html#about" class="block px-4 py-2.5 text-sm text-gray-700 hover:text-primary hover:bg-gray-50 font-medium transition-colors border-b border-gray-100">All Services</a>
+                                <a href="professional-websites.html" class="block px-4 py-2 text-sm text-gray-700 hover:text-primary hover:bg-gray-50 transition-colors">Custom Websites</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="relative group">
+                        <button class="text-gray-800 hover:text-primary transition-colors duration-300 font-medium flex items-center gap-1">
+                            AI Setup &amp; Strategy
+                            <i class="fas fa-chevron-down text-xs opacity-50 ml-0.5"></i>
+                        </button>
+                        <div class="absolute top-full left-0 pt-2 hidden group-hover:block z-50">
+                            <div class="bg-white rounded-xl shadow-lg border border-gray-100 py-2 min-w-[200px]">
+                                <a href="ai-setup-and-strategy.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:text-primary hover:bg-gray-50 font-medium transition-colors border-b border-gray-100">Overview</a>
+                                <a href="ai-for-personal-use.html" class="block px-4 py-2 text-sm text-gray-700 hover:text-primary hover:bg-gray-50 transition-colors">For Personal Use</a>
+                                <a href="ai-for-traders.html" class="block px-4 py-2 text-sm text-gray-700 hover:text-primary hover:bg-gray-50 transition-colors">For Traders</a>
+                                <a href="ai-for-business-owners.html" class="block px-4 py-2 text-sm text-gray-700 hover:text-primary hover:bg-gray-50 transition-colors">For Business Owners</a>
+                                <a href="ai-for-construction.html" class="block px-4 py-2 text-sm text-gray-700 hover:text-primary hover:bg-gray-50 transition-colors">For Construction</a>
+                                <a href="ai-for-law-firms.html" class="block px-4 py-2 text-sm text-gray-700 hover:text-primary hover:bg-gray-50 transition-colors">For Law Firms</a>
+                                <a href="ai-for-real-estate.html" class="block px-4 py-2 text-sm text-gray-700 hover:text-primary hover:bg-gray-50 transition-colors">For Real Estate</a>
+                                <a href="ai-for-ecommerce.html" class="block px-4 py-2 text-sm text-gray-700 hover:text-primary hover:bg-gray-50 transition-colors">For E&#8209;Commerce</a>
+                                <a href="ai-for-accounting.html" class="block px-4 py-2 text-sm text-gray-700 hover:text-primary hover:bg-gray-50 transition-colors">For Accounting</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="../index.html#recent-projects" class="text-gray-800 hover:text-primary transition-colors duration-300 font-medium">Project Garden</a></li>
+                    <li><a href="../index.html#team" class="text-gray-800 hover:text-primary transition-colors duration-300 font-medium">Our Team</a></li>
+                    <li><a href="../index.html#contact" class="text-gray-800 hover:text-primary transition-colors duration-300 font-medium">Work with Us</a></li>
+                                    <li><a href="/tr/" class="text-xs font-bold border border-primary text-primary px-2.5 py-1 rounded-full hover:bg-primary hover:text-white transition-colors duration-300">TR</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div id="mobile-menu" class="md:hidden hidden">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t">
+                <a href="../index.html#hero" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">Home</a>
+                <a href="../index.html#about-us" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">About Us</a>
+                <a href="../index.html#about" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">Services</a>
+                <a href="professional-websites.html" class="block px-5 py-1.5 rounded-md text-sm text-gray-500 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">Custom Websites</a>
+                <p class="px-3 pt-3 pb-1 text-xs font-semibold text-gray-400 uppercase tracking-wider">AI Setup &amp; Strategy</p>
+                <a href="ai-setup-and-strategy.html" class="block px-5 py-1.5 rounded-md text-sm text-gray-600 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out font-medium">Overview</a>
+                <a href="ai-for-personal-use.html" class="block px-5 py-1.5 rounded-md text-sm text-gray-500 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">For Personal Use</a>
+                <a href="ai-for-traders.html" class="block px-5 py-1.5 rounded-md text-sm text-gray-500 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">For Traders</a>
+                <a href="ai-for-business-owners.html" class="block px-5 py-1.5 rounded-md text-sm text-gray-500 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">For Business Owners</a>
+                <a href="ai-for-construction.html" class="block px-5 py-1.5 rounded-md text-sm text-gray-500 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">For Construction</a>
+                <a href="ai-for-law-firms.html" class="block px-5 py-1.5 rounded-md text-sm text-gray-500 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">For Law Firms</a>
+                <a href="ai-for-real-estate.html" class="block px-5 py-1.5 rounded-md text-sm text-gray-500 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">For Real Estate</a>
+                <a href="ai-for-ecommerce.html" class="block px-5 py-1.5 rounded-md text-sm text-gray-500 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">For E&#8209;Commerce</a>
+                <a href="ai-for-accounting.html" class="block px-5 py-1.5 rounded-md text-sm text-gray-500 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">For Accounting</a>
+                <a href="../index.html#recent-projects" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">Project Garden</a>
+                <a href="../index.html#team" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">Our Team</a>
+                <a href="../index.html#contact" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">Work with Us</a>
+                <div class="border-t border-gray-200 mt-2 pt-2">
+                    <a href="/tr/" class="block px-3 py-2 rounded-md text-base font-bold text-primary hover:bg-primary hover:text-white transition duration-150 ease-in-out">TR - Türkçe</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-20 md:pt-28">
+
+        <!-- Hero -->
+        <section class="relative py-16 md:py-24 overflow-hidden bg-gray-950">
+            <div class="absolute inset-0 pointer-events-none" style="background-image: radial-gradient(circle, #ffffff 1px, transparent 1px); background-size: 28px 28px; -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,0.06) 0%, rgba(0,0,0,0.06) 40%, transparent 100%); mask-image: linear-gradient(to bottom, rgba(0,0,0,0.06) 0%, rgba(0,0,0,0.06) 40%, transparent 100%);"></div>
+            <div class="absolute bottom-0 right-0 w-[400px] h-[400px] bg-primary/10 rounded-full blur-3xl pointer-events-none"></div>
+            <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-primary/60 via-primary/20 to-transparent"></div>
+
+            <div class="container mx-auto px-4 relative z-10">
+                <div class="text-center max-w-2xl mx-auto">
+                    <div class="flex items-center justify-center gap-3 mb-5">
+                        <div class="w-8 h-px bg-primary"></div>
+                        <a href="professional-websites.html" class="font-fira text-primary text-xs tracking-[0.2em] uppercase hover:text-primary/80 transition-colors">Custom Websites</a>
+                        <div class="w-8 h-px bg-primary"></div>
+                    </div>
+                    <h1 class="font-serif italic font-normal text-primary mb-5" style="font-size: clamp(1.8rem, 5.5vw, 5rem); line-height: 1.1; text-wrap: balance;">
+                        Let's build your website.
+                    </h1>
+                    <p class="text-gray-300 font-medium text-lg md:text-xl mx-auto leading-relaxed max-w-xl">
+                        Tell us about your business and what you need. We'll come back with a clear plan and quote.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Form Section -->
+        <section class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="max-w-2xl mx-auto">
+
+                    <form id="website-contact-form" action="https://formspree.io/f/mnnaoeoa" method="POST">
+
+                        <!-- Hidden field to identify this as website inquiry -->
+                        <input type="hidden" name="_subject" value="Custom Website Inquiry - CodeSeed">
+                        <input type="hidden" name="form_source" value="Custom Websites Contact Page">
+
+                        <!-- Name + Email -->
+                        <div class="grid sm:grid-cols-2 gap-5 mb-5">
+                            <div>
+                                <label class="form-label" for="name">Your Name <span class="text-red-400">*</span></label>
+                                <input type="text" id="name" name="name" class="form-input" placeholder="Jane Smith" required>
+                            </div>
+                            <div>
+                                <label class="form-label" for="email">Email Address <span class="text-red-400">*</span></label>
+                                <input type="email" id="email" name="_replyto" class="form-input" placeholder="jane@example.com" required>
+                            </div>
+                        </div>
+
+                        <!-- Business Name -->
+                        <div class="mb-5">
+                            <label class="form-label" for="business_name">Business Name</label>
+                            <input type="text" id="business_name" name="business_name" class="form-input" placeholder="e.g. Smith Consulting">
+                        </div>
+
+                        <!-- Website Status -->
+                        <div class="mb-5">
+                            <label class="form-label">Do you have an existing website? <span class="text-red-400">*</span></label>
+                            <div class="grid sm:grid-cols-3 gap-3 mt-1">
+                                <label class="radio-option">
+                                    <input type="radio" name="website_status" value="No website yet" required>
+                                    No website yet
+                                </label>
+                                <label class="radio-option">
+                                    <input type="radio" name="website_status" value="Yes, needs a redesign">
+                                    Yes, needs a redesign
+                                </label>
+                                <label class="radio-option">
+                                    <input type="radio" name="website_status" value="Yes, starting fresh">
+                                    Yes, starting fresh
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Current website URL -->
+                        <div class="mb-5">
+                            <label class="form-label" for="current_url">Current website URL (if you have one)</label>
+                            <input type="url" id="current_url" name="current_url" class="form-input" placeholder="https://example.com">
+                        </div>
+
+                        <!-- What the site needs to do -->
+                        <div class="mb-5">
+                            <label class="form-label" for="site_goals">What does your website need to do? <span class="text-red-400">*</span></label>
+                            <textarea id="site_goals" name="site_goals" class="form-input h-28 resize-none" placeholder="e.g. Showcase my services, let clients book appointments, display a portfolio, publish blog posts..." required></textarea>
+                            <p class="form-hint">The more detail, the better. We use this to scope your project and give you an accurate quote.</p>
+                        </div>
+
+                        <!-- Estimated number of pages -->
+                        <div class="mb-5">
+                            <label class="form-label" for="page_count">Roughly how many pages do you need?</label>
+                            <select id="page_count" name="page_count" class="form-input">
+                                <option value="" disabled selected>Select a range</option>
+                                <option value="1-3 pages">1-3 pages (simple)</option>
+                                <option value="4-7 pages">4-7 pages (standard)</option>
+                                <option value="8-15 pages">8-15 pages (larger site)</option>
+                                <option value="15+ pages">15+ pages</option>
+                                <option value="Not sure">Not sure yet</option>
+                            </select>
+                        </div>
+
+                        <!-- Content readiness -->
+                        <div class="mb-5">
+                            <label class="form-label">Do you have your content ready (text, images, logo)? <span class="text-red-400">*</span></label>
+                            <div class="grid sm:grid-cols-3 gap-3 mt-1">
+                                <label class="radio-option">
+                                    <input type="radio" name="content_ready" value="Yes, all ready" required>
+                                    Yes, all ready
+                                </label>
+                                <label class="radio-option">
+                                    <input type="radio" name="content_ready" value="Partially ready">
+                                    Partially ready
+                                </label>
+                                <label class="radio-option">
+                                    <input type="radio" name="content_ready" value="Not yet">
+                                    Not yet
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Timeline -->
+                        <div class="mb-5">
+                            <label class="form-label" for="timeline">When do you need the site live?</label>
+                            <select id="timeline" name="timeline" class="form-input">
+                                <option value="" disabled selected>Select a timeline</option>
+                                <option value="ASAP">As soon as possible</option>
+                                <option value="Within a month">Within a month</option>
+                                <option value="1-2 months">1-2 months</option>
+                                <option value="No rush">No rush, just exploring</option>
+                            </select>
+                        </div>
+
+                        <!-- Anything else -->
+                        <div class="mb-8">
+                            <label class="form-label" for="message">Anything else we should know?</label>
+                            <textarea id="message" name="message" class="form-input h-24 resize-none" placeholder="Reference sites you like, specific features you need, questions you have, etc."></textarea>
+                        </div>
+
+                        <!-- Honeypot -->
+                        <input type="text" name="_gotcha" class="hidden" style="display:none">
+
+                        <div class="flex flex-col sm:flex-row sm:items-center gap-4">
+                            <button type="submit" class="submit-btn">
+                                <span>Send My Request</span>
+                                <i class="fas fa-arrow-right text-sm"></i>
+                            </button>
+                            <p class="text-gray-400 text-sm">We usually reply within one business day.</p>
+                        </div>
+
+                    </form>
+
+                    <!-- Success message (hidden by default) -->
+                    <div id="success-message" class="hidden mt-8 bg-primary/10 border border-primary/30 rounded-xl p-6 text-center">
+                        <div class="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-3">
+                            <i class="fas fa-check text-primary text-lg"></i>
+                        </div>
+                        <h3 class="font-bold text-secondary text-lg mb-1">Got it — we'll be in touch.</h3>
+                        <p class="text-gray-600 text-sm">We'll review your project details and come back with a clear plan and quote. Usually within one business day.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- What happens next -->
+        <section class="py-16 md:py-20 bg-gray-950">
+            <div class="container mx-auto px-4">
+                <div class="max-w-4xl mx-auto grid md:grid-cols-3 gap-8 text-center">
+                    <div>
+                        <div class="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center mx-auto mb-3">
+                            <i class="fas fa-comments text-primary text-sm"></i>
+                        </div>
+                        <h3 class="text-white font-semibold mb-2">We review your request</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed">We look at your business, your goals, and what your site needs to do.</p>
+                    </div>
+                    <div>
+                        <div class="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center mx-auto mb-3">
+                            <i class="fas fa-phone text-primary text-sm"></i>
+                        </div>
+                        <h3 class="text-white font-semibold mb-2">Quick discovery call</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed">A 15-minute call to align on scope, answer your questions, and make sure we're the right fit.</p>
+                    </div>
+                    <div>
+                        <div class="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center mx-auto mb-3">
+                            <i class="fas fa-file-lines text-primary text-sm"></i>
+                        </div>
+                        <h3 class="text-white font-semibold mb-2">You get a written proposal</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed">Clear scope, timeline, and quote within 48 hours. No surprises, no hidden fees.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-10 md:py-12">
+        <div class="container mx-auto px-4">
+            <div class="text-center">
+                <p class="text-gray-400 text-sm md:text-base leading-relaxed max-w-md mx-auto">&copy; 2025 CodeSeed. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        if (mobileMenuButton && mobileMenu) {
+            mobileMenuButton.addEventListener('click', (e) => {
+                e.preventDefault();
+                mobileMenu.classList.toggle('show');
+            });
+            mobileMenu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => mobileMenu.classList.remove('show'));
+            });
+            document.addEventListener('click', (event) => {
+                if (!mobileMenu.contains(event.target) && !mobileMenuButton.contains(event.target) && mobileMenu.classList.contains('show')) {
+                    mobileMenu.classList.remove('show');
+                }
+            });
+        }
+
+        // Form submission with success state
+        const form = document.getElementById('website-contact-form');
+        const successMsg = document.getElementById('success-message');
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const data = new FormData(form);
+            try {
+                const res = await fetch(form.action, {
+                    method: 'POST',
+                    body: data,
+                    headers: { 'Accept': 'application/json' }
+                });
+                if (res.ok) {
+                    form.classList.add('hidden');
+                    successMsg.classList.remove('hidden');
+                    window.scrollTo({ top: successMsg.offsetTop - 100, behavior: 'smooth' });
+                } else {
+                    form.submit();
+                }
+            } catch {
+                form.submit();
+            }
+        });
+    </script>
+</body>
+</html>
