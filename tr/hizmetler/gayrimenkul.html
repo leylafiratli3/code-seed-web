@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <title>Gayrimenkul İçin Yapay Zeka - CodeSeed | İlan Oluşturma & Potansiyel Müşteri Otomasyonu</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Gayrimenkul ofisleri için yapay zeka destekli araçlar. İlan açıklamaları, pazar analizi, potansiyel müşteri takibi ve müşteri iletişimini CodeSeed AI kurulum hizmetleriyle otomatikleştirin.">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../assets/codeseed-logo.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../assets/codeseed-logo.png">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://code-seed.io/tr/hizmetler/gayrimenkul.html">
+    <meta property="og:site_name" content="CodeSeed">
+    <meta property="og:title" content="Gayrimenkul İçin Yapay Zeka - CodeSeed">
+    <meta property="og:description" content="Gayrimenkul sektörü için yapay zeka araçları. İlan oluşturma, pazar analizi ve potansiyel müşteri takibi otomasyonu.">
+    <meta property="og:image" content="https://code-seed.io/assets/codeseed-logo.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Gayrimenkul İçin Yapay Zeka - CodeSeed">
+    <link rel="alternate" hreflang="en" href="https://code-seed.io/services/ai-for-real-estate.html">
+    <link rel="alternate" hreflang="tr" href="https://code-seed.io/tr/hizmetler/gayrimenkul.html">
+    <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,600,700,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400,500,700&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>tailwind.config={theme:{extend:{colors:{primary:'#8dba90',secondary:'#5a7d5c',accent:'#D2B48C',tan:'#D2B48C'},fontFamily:{'sans':['Satoshi','sans-serif'],'fira':['"Fira Code"','monospace'],'serif':['"DM Serif Display"','Georgia','serif']}}}}</script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="../../styles.css" rel="stylesheet">
+    <style>
+        .hero-cta-btn { background-color: #7ab87e; }
+        .hero-cta-btn:hover { background-color: #5a7d5c; }
+    </style>
+</head>
+<body class="font-sans bg-white">
+    <header class="bg-white fixed w-full z-50 shadow-sm">
+        <nav class="container mx-auto px-4 py-5"><div class="flex justify-between items-center"><div class="flex items-center transition-transform duration-300 ease-in-out hover:scale-105"><a href="../index.html#anasayfa" class="flex items-center"><img src="../../assets/codeseed-logo.png" alt="CodeSeed Logo" id="header-logo" class="h-20 w-auto mr-4"><span class="text-2xl font-bold text-primary lowercase tracking-wide">code-seed</span></a></div><div class="md:hidden"><button id="mobile-menu-button" class="text-gray-500 hover:text-gray-600 focus:outline-none" aria-label="Menüyü aç/kapat"><svg viewBox="0 0 24 24" class="h-6 w-6 fill-current"><path fill-rule="evenodd" d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"></path></svg></button></div><ul class="hidden md:flex space-x-6 items-center">
+    <li><a href="../index.html#anasayfa" class="text-gray-800 hover:text-primary transition-colors duration-300 font-medium">Ana Sayfa</a></li>
+    <li><a href="../index.html#hakkimizda" class="text-gray-800 hover:text-primary transition-colors duration-300 font-medium">Hakkımızda</a></li>
+    <li class="relative group">
+        <button class="text-gray-800 hover:text-primary transition-colors duration-300 font-medium flex items-center gap-1">
+            Hizmetler
+            <i class="fas fa-chevron-down text-xs opacity-50 ml-0.5"></i>
+        </button>
+        <div class="absolute top-full left-0 pt-2 hidden group-hover:block z-50">
+            <div class="bg-white rounded-xl shadow-lg border border-gray-100 py-2 min-w-[220px]">
+                <a href="../index.html#hizmetler" class="block px-4 py-2.5 text-sm text-gray-700 hover:text-primary hover:bg-gray-50 font-medium transition-colors border-b border-gray-100">Tüm Hizmetler</a>
+                <a href="profesyonel-web-siteleri.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:text-primary hover:bg-gray-50 font-medium transition-colors">Profesyonel Web Siteleri</a>
+            </div>
+        </div>
+    </li>
+    <li class="relative group">
+        <button class="text-gray-800 hover:text-primary transition-colors duration-300 font-medium flex items-center gap-1">
+            Yapay Zeka Kurulumu
+            <i class="fas fa-chevron-down text-xs opacity-50 ml-0.5"></i>
+        </button>
+        <div class="absolute top-full left-0 pt-2 hidden group-hover:block z-50">
+            <div class="bg-white rounded-xl shadow-lg border border-gray-100 py-2 min-w-[240px]">
+                <a href="yapay-zeka-kurulumu.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:text-primary hover:bg-gray-50 font-medium transition-colors border-b border-gray-100">Genel Bilgi</a>
+                <a href="isletme-sahipleri.html" class="block px-4 py-2 text-sm text-gray-700 hover:text-primary hover:bg-gray-50 transition-colors">İşletme Sahipleri</a>
+                <a href="yatirimcilar.html" class="block px-4 py-2 text-sm text-gray-700 hover:text-primary hover:bg-gray-50 transition-colors">Yatırımcılar</a>
+                <a href="hukuk-burolari.html" class="block px-4 py-2 text-sm text-gray-700 hover:text-primary hover:bg-gray-50 transition-colors">Hukuk Büroları</a>
+                <a href="gayrimenkul.html" class="block px-4 py-2 text-sm text-gray-700 hover:text-primary hover:bg-gray-50 transition-colors">Gayrimenkul</a>
+                <a href="insaat.html" class="block px-4 py-2 text-sm text-gray-700 hover:text-primary hover:bg-gray-50 transition-colors">İnşaat</a>
+                <a href="muhasebe.html" class="block px-4 py-2 text-sm text-gray-700 hover:text-primary hover:bg-gray-50 transition-colors">Muhasebe</a>
+                <a href="saglik.html" class="block px-4 py-2 text-sm text-gray-700 hover:text-primary hover:bg-gray-50 transition-colors">Sağlık</a>
+                <a href="pazarlama-ajanslari.html" class="block px-4 py-2 text-sm text-gray-700 hover:text-primary hover:bg-gray-50 transition-colors">Pazarlama Ajansları</a>
+                <a href="e-ticaret.html" class="block px-4 py-2 text-sm text-gray-700 hover:text-primary hover:bg-gray-50 transition-colors">E&#8209;Ticaret</a>
+                <a href="bireysel-kullanim.html" class="block px-4 py-2 text-sm text-gray-700 hover:text-primary hover:bg-gray-50 transition-colors">Bireysel Kullanım</a>
+            </div>
+        </div>
+    </li>
+    <li><a href="../index.html#projeler" class="text-gray-800 hover:text-primary transition-colors duration-300 font-medium">Projeler</a></li>
+    <li><a href="../index.html#ekibimiz" class="text-gray-800 hover:text-primary transition-colors duration-300 font-medium">Ekibimiz</a></li>
+    <li><a href="iletisim.html" class="text-gray-800 hover:text-primary transition-colors duration-300 font-medium">İletişim</a></li>
+<li><a href="/" class="text-xs font-bold border border-primary text-primary px-2.5 py-1 rounded-full hover:bg-primary hover:text-white transition-colors duration-300">EN</a></li>
+</ul></div></nav>
+        <div id="mobile-menu" class="md:hidden hidden">
+    <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t">
+        <a href="../index.html#anasayfa" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">Ana Sayfa</a>
+        <a href="../index.html#hakkimizda" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">Hakkımızda</a>
+        <a href="../index.html#hizmetler" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">Tüm Hizmetler</a>
+        <a href="profesyonel-web-siteleri.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">Profesyonel Web Siteleri</a>
+        <p class="px-3 pt-3 pb-1 text-xs font-semibold text-gray-400 uppercase tracking-wider">Yapay Zeka Kurulumu</p>
+        <a href="yapay-zeka-kurulumu.html" class="block px-5 py-1.5 rounded-md text-sm text-gray-600 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out font-medium">Genel Bilgi</a>
+        <a href="isletme-sahipleri.html" class="block px-5 py-1.5 rounded-md text-sm text-gray-500 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">İşletme Sahipleri</a>
+        <a href="yatirimcilar.html" class="block px-5 py-1.5 rounded-md text-sm text-gray-500 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">Yatırımcılar</a>
+        <a href="hukuk-burolari.html" class="block px-5 py-1.5 rounded-md text-sm text-gray-500 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">Hukuk Büroları</a>
+        <a href="gayrimenkul.html" class="block px-5 py-1.5 rounded-md text-sm text-gray-500 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">Gayrimenkul</a>
+        <a href="insaat.html" class="block px-5 py-1.5 rounded-md text-sm text-gray-500 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">İnşaat</a>
+        <a href="muhasebe.html" class="block px-5 py-1.5 rounded-md text-sm text-gray-500 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">Muhasebe</a>
+        <a href="saglik.html" class="block px-5 py-1.5 rounded-md text-sm text-gray-500 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">Sağlık</a>
+        <a href="pazarlama-ajanslari.html" class="block px-5 py-1.5 rounded-md text-sm text-gray-500 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">Pazarlama Ajansları</a>
+        <a href="e-ticaret.html" class="block px-5 py-1.5 rounded-md text-sm text-gray-500 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">E&#8209;Ticaret</a>
+        <a href="bireysel-kullanim.html" class="block px-5 py-1.5 rounded-md text-sm text-gray-500 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">Bireysel Kullanım</a>
+        <a href="../index.html#projeler" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">Projeler</a>
+        <a href="../index.html#ekibimiz" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">Ekibimiz</a>
+        <a href="iletisim.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">İletişim</a>
+    <div class="border-t border-gray-200 mt-2 pt-2">
+        <a href="/" class="block px-3 py-2 rounded-md text-base font-bold text-primary hover:bg-primary hover:text-white transition duration-150 ease-in-out">EN - English</a>
+    </div>
+    </div>
+</div>
+    </header>
+
+    <main class="pt-20 md:pt-32">
+        <!-- Hero -->
+        <section class="relative py-20 md:py-32 overflow-hidden bg-gray-950">
+            <div class="absolute inset-0 pointer-events-none" style="background-image: radial-gradient(circle, #ffffff 1px, transparent 1px); background-size: 28px 28px; -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,0.06) 0%, rgba(0,0,0,0.06) 40%, transparent 100%); mask-image: linear-gradient(to bottom, rgba(0,0,0,0.06) 0%, rgba(0,0,0,0.06) 40%, transparent 100%);"></div>
+            <div class="absolute bottom-0 right-0 w-[500px] h-[500px] bg-primary/10 rounded-full blur-3xl pointer-events-none"></div>
+            <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-primary/60 via-primary/20 to-transparent"></div>
+            <div class="container mx-auto px-4 relative z-10">
+                <div class="text-center max-w-3xl mx-auto">
+                    <div class="flex items-center justify-center gap-3 mb-5">
+                        <div class="w-8 h-px bg-primary"></div>
+                        <a href="yapay-zeka-kurulumu.html" class="font-fira text-primary text-xs tracking-[0.2em] uppercase hover:text-primary/80 transition-colors">Yapay Zeka Kurulumu</a>
+                        <div class="w-8 h-px bg-primary"></div>
+                    </div>
+                    <h1 class="font-serif italic font-normal text-primary mb-5" style="font-size: clamp(3rem, 8vw, 6rem); line-height: 1.1; text-wrap: balance;">
+                        Gayrimenkul İçin Yapay Zeka
+                    </h1>
+                    <p class="text-gray-300 font-medium text-lg md:text-xl mx-auto mb-8 leading-relaxed max-w-xl">
+                        İlan açıklamaları yazan, potansiyel müşterileri takip eden ve vakit bulamadığınız evrak işlerini halleden AI araçlarını kuruyoruz.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 items-center justify-center">
+                        <a href="iletisim.html" class="hero-cta-btn text-white font-semibold py-3.5 px-7 transition-colors duration-300 text-base rounded-[4px]">
+                            Başlayalım
+                        </a>
+                        <a href="yapay-zeka-kurulumu.html" class="group text-gray-300 hover:text-primary font-medium py-3.5 inline-flex items-center gap-2 transition-colors duration-300 text-base">
+                            Tüm AI Hizmetlerini Gör
+                            <i class="fas fa-arrow-right text-sm transition-transform duration-300 group-hover:translate-x-1"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20 md:py-28" style="background-color: #f9f7f4;">
+            <div class="container mx-auto px-4"><div class="max-w-7xl mx-auto">
+                <div class="text-center mb-16"><h2 class="text-4xl md:text-5xl lg:text-6xl font-serif italic font-normal mb-6 text-secondary">Tanıdık geldi mi?</h2></div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="border-l-2 border-primary/40 pl-7 py-2">
+                        <h3 class="text-lg font-semibold mb-2 text-gray-800">İlan Açıklaması Yazmak</h3>
+                        <p class="text-gray-600 leading-relaxed">Her mülk için özgün ve çekici açıklamalar yazmak zaman alıyor, özellikle düzinelerce aktif ilanınız varken.</p>
+                    </div>
+                    <div class="border-l-2 border-primary/40 pl-7 py-2">
+                        <h3 class="text-lg font-semibold mb-2 text-gray-800">Zaman Alan Piyasa Analizi</h3>
+                        <p class="text-gray-600 leading-relaxed">Emsal analizi çıkarmak, trendleri incelemek ve piyasa raporları hazırlamak, müşterilerle geçirilecek zamandan çalıyor.</p>
+                    </div>
+                    <div class="border-l-2 border-primary/40 pl-7 py-2">
+                        <h3 class="text-lg font-semibold mb-2 text-gray-800">Soğuyan Potansiyel Müşteriler</h3>
+                        <p class="text-gray-600 leading-relaxed">Geç dönüş kayıp fırsat demek. Gün boyu mülk gösterirken yeni taleplere anında yanıt vermek neredeyse imkansız.</p>
+                    </div>
+                    <div class="border-l-2 border-primary/40 pl-7 py-2">
+                        <h3 class="text-lg font-semibold mb-2 text-gray-800">Evrak Yükü</h3>
+                        <p class="text-gray-600 leading-relaxed">İdari evrak işleri, satış süreci koordinasyonu ve belge yönetimi, sahada müşteriyle geçirmeniz gereken saatleri yiyor.</p>
+                    </div>
+                </div>
+            </div></div>
+        </section>
+
+        <section class="py-20 md:py-28 bg-gray-900">
+            <div class="container mx-auto px-4"><div class="max-w-6xl mx-auto">
+                <div class="text-center mb-16"><h2 class="text-4xl md:text-5xl lg:text-6xl font-serif italic font-normal mb-6 text-white">Nasıl Yardımcı Oluyoruz</h2></div>
+                <div class="grid md:grid-cols-2 gap-12">
+                    <div class="">
+                        <h3 class="text-2xl font-bold text-white mb-6">İlan & Pazarlama</h3>
+                        <ul class="space-y-4">
+                            <li class="flex items-start"><i class="fas fa-check-circle text-primary mt-1 mr-3 flex-shrink-0"></i><span class="text-gray-300">Mülk detayları ve fotoğraflardan AI ilan açıklaması oluşturma</span></li>
+                            <li class="flex items-start"><i class="fas fa-check-circle text-primary mt-1 mr-3 flex-shrink-0"></i><span class="text-gray-300">Otomatik emsal analizi ve fiyat önerileri</span></li>
+                            <li class="flex items-start"><i class="fas fa-check-circle text-primary mt-1 mr-3 flex-shrink-0"></i><span class="text-gray-300">Sosyal medya ve e-posta pazarlama içeriği üretimi</span></li>
+                            <li class="flex items-start"><i class="fas fa-check-circle text-primary mt-1 mr-3 flex-shrink-0"></i><span class="text-gray-300">Sanal tur açıklamaları ve semt tanıtımları</span></li>
+                        </ul>
+                    </div>
+                    <div class="">
+                        <h3 class="text-2xl font-bold text-white mb-6">Müşteri Takibi & Operasyon</h3>
+                        <ul class="space-y-4">
+                            <li class="flex items-start"><i class="fas fa-check-circle text-primary mt-1 mr-3 flex-shrink-0"></i><span class="text-gray-300">Kişiselleştirilmiş yanıtlarla potansiyel müşteri takip otomasyonu</span></li>
+                            <li class="flex items-start"><i class="fas fa-check-circle text-primary mt-1 mr-3 flex-shrink-0"></i><span class="text-gray-300">Alıcı ve satıcılar için müşteri iletişim dizileri</span></li>
+                            <li class="flex items-start"><i class="fas fa-check-circle text-primary mt-1 mr-3 flex-shrink-0"></i><span class="text-gray-300">Satış sürecindeki belgelerin işlenmesi ve düzenlenmesi</span></li>
+                            <li class="flex items-start"><i class="fas fa-check-circle text-primary mt-1 mr-3 flex-shrink-0"></i><span class="text-gray-300">Açık ev ziyaretçi takibi ve otomatik e-posta dizisi kurulumu</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div></div>
+        </section>
+
+        <section class="py-20 md:py-28 bg-secondary">
+            <div class="container mx-auto px-4"><div class="max-w-5xl mx-auto">
+                <div class="text-center mb-12"><h2 class="text-4xl md:text-5xl lg:text-6xl font-serif italic font-normal mb-6 text-white">Örnek Kurulum</h2></div>
+                <div class="grid md:grid-cols-2 gap-4">
+                        <div class="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+                            <h3 class="text-primary font-semibold text-sm uppercase tracking-wider mb-3">Müşteri</h3>
+                            <p class="text-white text-base leading-relaxed">Rekabetin yoğun olduğu bir bölgede 40'tan fazla aktif portföyle çalışan 3 kişilik bir gayrimenkul ekibi.</p>
+                        </div>
+                        <div class="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+                            <h3 class="text-primary font-semibold text-sm uppercase tracking-wider mb-3">Sorun</h3>
+                            <p class="text-white/90 text-base leading-relaxed">İlan açıklamaları her biri 30-45 dakika sürüyordu, yeni mülklerde 2-3 günlük birikim oluşuyordu. Potansiyel müşteri takibi tutarsızdı — danışmanlar bazen taleplere 24 saatten fazla geç dönüyordu. Açık ev ziyaretçileri bir tabloya yazılıp çoğu zaman bir daha iletişime geçilmiyordu.</p>
+                        </div>
+                        <div class="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+                            <h3 class="text-primary font-semibold text-sm uppercase tracking-wider mb-3">Kurulum</h3>
+                            <ul class="space-y-2">
+                                <li class="flex items-start text-white/90 text-base"><span class="text-primary mr-2 mt-1 flex-shrink-0">—</span>Mülk detaylarından dakikalar içinde portale hazır ilan metni üreten AI ilan yazıcı</li>
+                                <li class="flex items-start text-white/90 text-base"><span class="text-primary mr-2 mt-1 flex-shrink-0">—</span>Talep geldiğinde 5 dakika içinde kişiselleştirilmiş yanıt gönderen otomatik potansiyel müşteri takibi</li>
+                                <li class="flex items-start text-white/90 text-base"><span class="text-primary mr-2 mt-1 flex-shrink-0">—</span>Basit bir formdan otomatik olarak tetiklenen açık ev takip dizisi</li>
+                            </ul>
+                        </div>
+                        <div class="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+                            <h3 class="text-primary font-semibold text-sm uppercase tracking-wider mb-3">Sonuç</h3>
+                            <ul class="space-y-2">
+                                <li class="flex items-start text-white/90 text-base"><span class="text-primary mr-2 mt-1 flex-shrink-0">—</span>İlanlar 3 gün beklemek yerine aynı gün yayında</li>
+                                <li class="flex items-start text-white/90 text-base"><span class="text-primary mr-2 mt-1 flex-shrink-0">—</span>Potansiyel müşteri yanıt süresi: 24 saat → 5 dakikanın altı</li>
+                                <li class="flex items-start text-white/90 text-base"><span class="text-primary mr-2 mt-1 flex-shrink-0">—</span>Tutarlı takip sayesinde açık ev dönüşüm oranı %40 artış</li>
+                                <li class="flex items-start text-white/90 text-base"><span class="text-primary mr-2 mt-1 flex-shrink-0">—</span>İlk çeyrekte 8 ek satış gerçekleşti</li>
+                            </ul>
+                        </div>
+                    </div>
+            </div></div>
+        </section>
+
+        <section class="py-20 md:py-28" style="background-color: #f9f7f4;">
+            <div class="container mx-auto px-4"><div class="max-w-5xl mx-auto text-center">
+                <h2 class="text-4xl md:text-5xl lg:text-6xl font-serif italic font-normal mb-8 text-secondary">Hadi kuralım.</h2>
+                <p class="text-xl md:text-2xl mb-12 text-gray-600 leading-relaxed">Ücretsiz görüşme. Çalışma şeklinize bakıp neleri otomatikleştireceğimizi birlikte belirleyelim.</p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="iletisim.html" class="group bg-secondary text-white hover:bg-secondary/90 font-semibold py-4 px-8 rounded-full transition-all duration-300 text-lg shadow-lg hover:shadow-xl hover:scale-105 inline-flex items-center gap-2"><span>Konuşalım</span><i class="fas fa-arrow-right transition-transform duration-300 group-hover:translate-x-1"></i></a>
+                    <a href="yapay-zeka-kurulumu.html" class="border-2 border-secondary text-secondary hover:bg-secondary hover:text-white font-semibold py-4 px-8 rounded-full transition-all duration-300 text-lg">Tüm AI Hizmetleri</a>
+                </div>
+            </div></div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-900 text-white py-10 md:py-12"><div class="container mx-auto px-4"><div class="text-center"><p class="footer-copyright text-gray-400 text-sm md:text-base leading-relaxed max-w-md mx-auto">&copy; 2026 CodeSeed. Tüm hakları saklıdır.</p></div></div></footer>
+    <script>const mb=document.getElementById('mobile-menu-button'),mm=document.getElementById('mobile-menu');if(mb&&mm){mb.addEventListener('click',e=>{e.preventDefault();mm.classList.toggle('show')});mm.querySelectorAll('a').forEach(l=>l.addEventListener('click',()=>mm.classList.remove('show')));document.addEventListener('click',e=>{if(!mm.contains(e.target)&&!mb.contains(e.target)&&mm.classList.contains('show'))mm.classList.remove('show')})}</script>
+</body>
+</html>

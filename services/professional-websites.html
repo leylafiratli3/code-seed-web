@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Professional Websites - CodeSeed | Custom-Built Websites with a Content Dashboard</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Custom-designed, professionally built websites with a simple content dashboard. One-time investment, no subscriptions, you own everything. Built by real engineers at CodeSeed.">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/codeseed-logo.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/codeseed-logo.png">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://code-seed.io/services/professional-websites.html">
+    <meta property="og:site_name" content="CodeSeed">
+    <meta property="og:title" content="Professional Websites - CodeSeed">
+    <meta property="og:description" content="Custom-designed, professionally built websites with a simple content dashboard. One-time investment, no subscriptions, you own everything.">
+    <meta property="og:image" content="https://code-seed.io/assets/codeseed-logo.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Professional Websites - CodeSeed">
+    <meta name="twitter:description" content="Custom-designed, professionally built websites with a simple content dashboard. One-time investment, no subscriptions, you own everything.">
+    <meta name="twitter:image" content="https://code-seed.io/assets/codeseed-logo.png">
+    <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,600,700,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { primary: '#8dba90', secondary: '#5a7d5c', accent: '#D2B48C', tan: '#D2B48C' },
+                    fontFamily: { 'sans': ['Satoshi', 'sans-serif'], 'fira': ['"Fira Code"', 'monospace'], 'serif': ['"DM Serif Display"', 'Georgia', 'serif'] },
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="../styles.css" rel="stylesheet">
+    <style>
+        .hero-cta-btn { background-color: #7ab87e; }
+        .hero-cta-btn:hover { background-color: #5a7d5c; }
+        .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1); padding-top: 0 !important; padding-bottom: 0 !important; }
+        .faq-item.open .faq-answer { max-height: 500px; padding-top: 0 !important; padding-bottom: 1.25rem !important; }
+        .faq-item.open .faq-chevron { transform: rotate(180deg); }
+        .faq-chevron { transition: transform 0.3s ease; }
+        .compare-table { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+        .compare-table::-webkit-scrollbar { height: 6px; }
+        .compare-table::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.2); border-radius: 3px; }
+        .scroll-fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
+        .scroll-fade-in.visible { opacity: 1; transform: translateY(0); }
+    </style>
+</head>
+<body class="font-sans bg-white">
+    <header class="bg-white fixed w-full z-50 shadow-sm">
+        <nav class="container mx-auto px-4 py-5">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center transition-transform duration-300 ease-in-out hover:scale-105">
+                    <a href="../index.html#home" class="flex items-center">
+                        <img src="../assets/codeseed-logo.png" alt="CodeSeed Logo" id="header-logo" class="h-20 w-auto mr-4">
+                        <span class="text-2xl font-bold text-primary lowercase tracking-wide">code-seed</span>
+                    </a>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-500 hover:text-gray-600 focus:outline-none" aria-label="Toggle menu">
+                        <svg viewBox="0 0 24 24" class="h-6 w-6 fill-current"><path fill-rule="evenodd" d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"></path></svg>
+                    </button>
+                </div>
+                <ul class="hidden md:flex space-x-6 items-center">
+                    <li><a href="../index.html#hero" class="text-gray-800 hover:text-primary transition-colors duration-300 font-medium">Home</a></li>
+                    <li><a href="../index.html#about-us" class="text-gray-800 hover:text-primary transition-colors duration-300 font-medium">About Us</a></li>
+                    <li class="relative group">
+                        <button class="text-gray-800 hover:text-primary transition-colors duration-300 font-medium flex items-center gap-1">
+                            Services
+                            <i class="fas fa-chevron-down text-xs opacity-50 ml-0.5"></i>
+                        </button>
+                        <div class="absolute top-full left-0 pt-2 hidden group-hover:block z-50">
+                            <div class="bg-white rounded-xl shadow-lg border border-gray-100 py-2 min-w-[200px]">
+                                <a href="../index.html#about" class="block px-4 py-2.5 text-sm text-gray-700 hover:text-primary hover:bg-gray-50 font-medium transition-colors border-b border-[#e8dfd3]">All Services</a>
+                                <a href="professional-websites.html" class="block px-4 py-2 text-sm text-primary hover:bg-gray-50 font-medium transition-colors">Custom Websites</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="relative group">
+                        <button class="text-gray-800 hover:text-primary transition-colors duration-300 font-medium flex items-center gap-1">
+                            AI Setup &amp; Strategy
+                            <i class="fas fa-chevron-down text-xs opacity-50 ml-0.5"></i>
+                        </button>
+                        <div class="absolute top-full left-0 pt-2 hidden group-hover:block z-50">
+                            <div class="bg-white rounded-xl shadow-lg border border-gray-100 py-2 min-w-[200px]">
+                                <a href="ai-setup-and-strategy.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:text-primary hover:bg-gray-50 font-medium transition-colors border-b border-[#e8dfd3]">Overview</a>
+                                <a href="ai-for-personal-use.html" class="block px-4 py-2 text-sm text-gray-700 hover:text-primary hover:bg-gray-50 transition-colors">For Personal Use</a>
+                                <a href="ai-for-traders.html" class="block px-4 py-2 text-sm text-gray-700 hover:text-primary hover:bg-gray-50 transition-colors">For Traders</a>
+                                <a href="ai-for-business-owners.html" class="block px-4 py-2 text-sm text-gray-700 hover:text-primary hover:bg-gray-50 transition-colors">For Business Owners</a>
+                                <a href="ai-for-construction.html" class="block px-4 py-2 text-sm text-gray-700 hover:text-primary hover:bg-gray-50 transition-colors">For Construction</a>
+                                <a href="ai-for-law-firms.html" class="block px-4 py-2 text-sm text-gray-700 hover:text-primary hover:bg-gray-50 transition-colors">For Law Firms</a>
+                                <a href="ai-for-real-estate.html" class="block px-4 py-2 text-sm text-gray-700 hover:text-primary hover:bg-gray-50 transition-colors">For Real Estate</a>
+                                <a href="ai-for-ecommerce.html" class="block px-4 py-2 text-sm text-gray-700 hover:text-primary hover:bg-gray-50 transition-colors">For E&#8209;Commerce</a>
+                                <a href="ai-for-accounting.html" class="block px-4 py-2 text-sm text-gray-700 hover:text-primary hover:bg-gray-50 transition-colors">For Accounting</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="../index.html#recent-projects" class="text-gray-800 hover:text-primary transition-colors duration-300 font-medium">Project Garden</a></li>
+                    <li><a href="../index.html#team" class="text-gray-800 hover:text-primary transition-colors duration-300 font-medium">Our Team</a></li>
+                    <li><a href="../index.html#contact" class="text-gray-800 hover:text-primary transition-colors duration-300 font-medium">Work with Us</a></li>
+                                    <li><a href="/tr/" class="text-xs font-bold border border-primary text-primary px-2.5 py-1 rounded-full hover:bg-primary hover:text-white transition-colors duration-300">TR</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div id="mobile-menu" class="md:hidden hidden">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t">
+                <a href="../index.html#hero" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">Home</a>
+                <a href="../index.html#about-us" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">About Us</a>
+                <a href="../index.html#about" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">Services</a>
+                <a href="professional-websites.html" class="block px-5 py-1.5 rounded-md text-sm text-primary hover:bg-gray-50 transition duration-150 ease-in-out font-medium">Custom Websites</a>
+                <p class="px-3 pt-3 pb-1 text-xs font-semibold text-gray-400 uppercase tracking-wider">AI Setup &amp; Strategy</p>
+                <a href="ai-setup-and-strategy.html" class="block px-5 py-1.5 rounded-md text-sm text-gray-600 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out font-medium">Overview</a>
+                <a href="ai-for-personal-use.html" class="block px-5 py-1.5 rounded-md text-sm text-gray-500 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">For Personal Use</a>
+                <a href="ai-for-traders.html" class="block px-5 py-1.5 rounded-md text-sm text-gray-500 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">For Traders</a>
+                <a href="ai-for-business-owners.html" class="block px-5 py-1.5 rounded-md text-sm text-gray-500 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">For Business Owners</a>
+                <a href="ai-for-construction.html" class="block px-5 py-1.5 rounded-md text-sm text-gray-500 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">For Construction</a>
+                <a href="ai-for-law-firms.html" class="block px-5 py-1.5 rounded-md text-sm text-gray-500 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">For Law Firms</a>
+                <a href="ai-for-real-estate.html" class="block px-5 py-1.5 rounded-md text-sm text-gray-500 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">For Real Estate</a>
+                <a href="ai-for-ecommerce.html" class="block px-5 py-1.5 rounded-md text-sm text-gray-500 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">For E&#8209;Commerce</a>
+                <a href="ai-for-accounting.html" class="block px-5 py-1.5 rounded-md text-sm text-gray-500 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">For Accounting</a>
+                <a href="../index.html#recent-projects" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">Project Garden</a>
+                <a href="../index.html#team" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">Our Team</a>
+                <a href="../index.html#contact" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">Work with Us</a>
+                <div class="border-t border-gray-200 mt-2 pt-2">
+                    <a href="/tr/" class="block px-3 py-2 rounded-md text-base font-bold text-primary hover:bg-primary hover:text-white transition duration-150 ease-in-out">TR - Türkçe</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-20 md:pt-32">
+        <!-- Hero -->
+        <section class="relative py-20 md:py-32 overflow-hidden bg-gray-950">
+            <div class="absolute inset-0 pointer-events-none" style="background-image: radial-gradient(circle, #ffffff 1px, transparent 1px); background-size: 28px 28px; -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,0.06) 0%, rgba(0,0,0,0.06) 40%, transparent 100%); mask-image: linear-gradient(to bottom, rgba(0,0,0,0.06) 0%, rgba(0,0,0,0.06) 40%, transparent 100%);"></div>
+            <div class="absolute bottom-0 right-0 w-[500px] h-[500px] bg-primary/10 rounded-full blur-3xl pointer-events-none"></div>
+            <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-primary/60 via-primary/20 to-transparent"></div>
+            <div class="container mx-auto px-4 relative z-10">
+                <div class="text-center max-w-3xl mx-auto">
+                    <div class="flex items-center justify-center gap-3 mb-5">
+                        <div class="w-8 h-px bg-primary"></div>
+                        <span class="font-fira text-primary text-xs tracking-[0.2em] uppercase">Professional Websites</span>
+                        <div class="w-8 h-px bg-primary"></div>
+                    </div>
+                    <h1 class="font-serif italic font-normal text-primary mb-5" style="font-size: clamp(2.5rem, 7vw, 5rem); line-height: 1.1; text-wrap: balance;">
+                        A Website Worth Showing Off — That You Can Actually&nbsp;Edit.
+                    </h1>
+                    <p class="text-gray-300 font-medium text-lg md:text-xl mx-auto mb-8 leading-relaxed max-w-xl">
+                        Professionally designed, fully custom websites — without the agency price tag. Built by real engineers, owned by you, and easy to update yourself.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 items-center justify-center">
+                        <a href="#how-it-works" class="hero-cta-btn text-white font-semibold py-3.5 px-7 transition-colors duration-300 text-base rounded-[4px]">
+                            See How It Works
+                        </a>
+                        <a href="website-contact.html" class="group text-gray-300 hover:text-primary font-medium py-3.5 inline-flex items-center gap-2 transition-colors duration-300 text-base">
+                            Book a Free Call
+                            <i class="fas fa-arrow-right text-sm transition-transform duration-300 group-hover:translate-x-1"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Problem Statement -->
+        <section class="py-20 md:py-28" style="background-color: #f9f7f4;">
+            <div class="container mx-auto px-4">
+                <div class="max-w-4xl mx-auto">
+                    <div class="text-center mb-12">
+                        <h2 class="text-4xl md:text-5xl lg:text-6xl font-serif italic font-normal mb-6 text-secondary">Your Website Should Match the Quality of Your Work.</h2>
+                    </div>
+                    <div class="text-lg md:text-xl text-gray-700 leading-relaxed space-y-6 max-w-3xl mx-auto">
+                        <p>Most businesses face the same frustrating choice: pay for a cheap template that looks like everyone else's site, or commit to a full agency build that blows the budget. The template route is fast, but your clients can tell it's generic. The custom route looks great, but the cost and timeline are hard to justify when you're trying to grow.</p>
+                        <p>There should be something in between. That's exactly what we built.</p>
+                        <p>CodeSeed designs and develops professional websites with fully custom design, modern architecture, and a simple content dashboard — so you can update your own text, images, and pages without touching code or calling a developer.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works -->
+        <section id="how-it-works" class="py-20 md:py-28 bg-gray-900">
+            <div class="container mx-auto px-4">
+                <div class="max-w-6xl mx-auto">
+                    <div class="text-center mb-16">
+                        <h2 class="text-4xl md:text-5xl lg:text-6xl font-serif italic font-normal mb-6 text-white">How It Works</h2>
+                    </div>
+                    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                        <div class="scroll-fade-in bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 relative">
+                            <div class="text-primary font-fira text-sm font-bold mb-4 tracking-wider">01</div>
+                            <h3 class="text-xl font-bold text-white mb-4">Discovery Call</h3>
+                            <p class="text-gray-300 leading-relaxed">We learn about your business, your audience, and what you need your website to do. We'll outline the scope and give you a clear quote.</p>
+                        </div>
+                        <div class="scroll-fade-in bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 relative">
+                            <div class="text-primary font-fira text-sm font-bold mb-4 tracking-wider">02</div>
+                            <h3 class="text-xl font-bold text-white mb-4">Design & Build</h3>
+                            <p class="text-gray-300 leading-relaxed">Our team designs your site from scratch — no templates, no cookie-cutter layouts. Every page is crafted to match your brand and make you look professional.</p>
+                        </div>
+                        <div class="scroll-fade-in bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 relative">
+                            <div class="text-primary font-fira text-sm font-bold mb-4 tracking-wider">03</div>
+                            <h3 class="text-xl font-bold text-white mb-4">Content Dashboard Setup</h3>
+                            <p class="text-gray-300 leading-relaxed">We set up a simple editing dashboard where you can update your own text, images, blog posts, team members, and more. No code, no developer needed.</p>
+                        </div>
+                        <div class="scroll-fade-in bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 relative">
+                            <div class="text-primary font-fira text-sm font-bold mb-4 tracking-wider">04</div>
+                            <h3 class="text-xl font-bold text-white mb-4">Launch & Handoff</h3>
+                            <p class="text-gray-300 leading-relaxed">We deploy your site, walk you through how to use your dashboard, and hand you the keys. You own everything.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- What You Get -->
+        <section class="py-20 md:py-28" style="background-color: #f9f7f4;">
+            <div class="container mx-auto px-4">
+                <div class="max-w-6xl mx-auto">
+                    <div class="text-center mb-16">
+                        <h2 class="text-4xl md:text-5xl lg:text-6xl font-serif italic font-normal mb-6 text-secondary">What You Get</h2>
+                    </div>
+                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <div class="scroll-fade-in bg-white rounded-xl p-7 border border-gray-200 hover:border-primary/40 hover:shadow-md transition-all duration-300">
+                            <div class="text-primary text-2xl mb-4"><i class="fas fa-palette"></i></div>
+                            <h3 class="text-lg font-semibold mb-3 text-gray-800">Custom Design</h3>
+                            <p class="text-gray-600 leading-relaxed">No templates. Every site is designed specifically for your brand, your audience, and your goals.</p>
+                        </div>
+                        <div class="scroll-fade-in bg-white rounded-xl p-7 border border-gray-200 hover:border-primary/40 hover:shadow-md transition-all duration-300">
+                            <div class="text-primary text-2xl mb-4"><i class="fas fa-pen-to-square"></i></div>
+                            <h3 class="text-lg font-semibold mb-3 text-gray-800">Content You Control</h3>
+                            <p class="text-gray-600 leading-relaxed">Update your own text, images, blog posts, team bios, and more through a simple dashboard. No coding, no waiting on developers.</p>
+                        </div>
+                        <div class="scroll-fade-in bg-white rounded-xl p-7 border border-gray-200 hover:border-primary/40 hover:shadow-md transition-all duration-300">
+                            <div class="text-primary text-2xl mb-4"><i class="fas fa-key"></i></div>
+                            <h3 class="text-lg font-semibold mb-3 text-gray-800">You Own Everything</h3>
+                            <p class="text-gray-600 leading-relaxed">Your site lives on your own hosting. No platform lock-in, no monthly subscription to a website builder. You own your code, your content, and your domain.</p>
+                        </div>
+                        <div class="scroll-fade-in bg-white rounded-xl p-7 border border-gray-200 hover:border-primary/40 hover:shadow-md transition-all duration-300">
+                            <div class="text-primary text-2xl mb-4"><i class="fas fa-mobile-screen-button"></i></div>
+                            <h3 class="text-lg font-semibold mb-3 text-gray-800">Mobile-First & Fast</h3>
+                            <p class="text-gray-600 leading-relaxed">Every site is responsive and optimized for speed. Your visitors get a great experience on any device.</p>
+                        </div>
+                        <div class="scroll-fade-in bg-white rounded-xl p-7 border border-gray-200 hover:border-primary/40 hover:shadow-md transition-all duration-300">
+                            <div class="text-primary text-2xl mb-4"><i class="fas fa-user-shield"></i></div>
+                            <h3 class="text-lg font-semibold mb-3 text-gray-800">Built by Real Engineers</h3>
+                            <p class="text-gray-600 leading-relaxed">Not a freelancer with a Canva account. Our team has built systems for Google, Accenture, and Harman International. You get that level of quality.</p>
+                        </div>
+                        <div class="scroll-fade-in bg-white rounded-xl p-7 border border-gray-200 hover:border-primary/40 hover:shadow-md transition-all duration-300">
+                            <div class="text-primary text-2xl mb-4"><i class="fas fa-headset"></i></div>
+                            <h3 class="text-lg font-semibold mb-3 text-gray-800">Hourly Support When You Need It</h3>
+                            <p class="text-gray-600 leading-relaxed">After launch, we're here if you need us. No retainer, no commitment — just reach out when you want help, and we'll bill by the hour.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How We Compare -->
+        <section class="py-20 md:py-28 relative overflow-hidden bg-secondary">
+            <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-white/5 rounded-full blur-3xl pointer-events-none"></div>
+            <div class="absolute bottom-0 right-0 w-[400px] h-[400px] bg-black/5 rounded-full blur-3xl pointer-events-none"></div>
+            <div class="container mx-auto px-4 relative z-10">
+                <div class="max-w-6xl mx-auto">
+                    <div class="text-center mb-16">
+                        <h2 class="text-4xl md:text-5xl lg:text-6xl font-serif italic font-normal mb-4 text-white">How We Compare</h2>
+                        <p class="text-white/70 text-lg max-w-xl mx-auto">Three ways to build a website. Only one gives you custom quality without the custom price.</p>
+                    </div>
+
+                    <!-- Desktop: 3-column card comparison -->
+                    <div class="hidden md:grid md:grid-cols-3 gap-5 items-start">
+                        <!-- DIY Builders -->
+                        <div class="compare-card group rounded-2xl border border-[#e8dfd3] overflow-hidden transition-all duration-500 hover:border-primary/60 hover:shadow-[0_8px_40px_rgba(141,186,144,0.15)] bg-[#f5efe6]">
+                            <div class="p-7 border-b border-[#e8dfd3] relative">
+                                <div class="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-primary/0 via-primary/60 to-primary/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                                <div class="flex items-center gap-3 mb-2">
+                                    <div class="w-9 h-9 rounded-lg bg-primary/15 flex items-center justify-center group-hover:bg-primary/25 transition-colors duration-300">
+                                        <i class="fas fa-puzzle-piece text-primary text-sm"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-lg font-bold text-gray-800 group-hover:text-secondary transition-colors duration-300">DIY Builders</h3>
+                                        <p class="text-xs text-gray-400">Wix, Squarespace</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="p-7 space-y-5">
+                                <div class="compare-row rounded-lg p-3 -mx-1 transition-all duration-300 hover:bg-primary/5">
+                                    <p class="text-[10px] text-primary/60 uppercase tracking-[0.15em] font-semibold mb-1.5">Design</p>
+                                    <p class="text-gray-600 text-sm leading-relaxed">Template-based, looks generic</p>
+                                </div>
+                                <div class="compare-row rounded-lg p-3 -mx-1 transition-all duration-300 hover:bg-primary/5">
+                                    <p class="text-[10px] text-primary/60 uppercase tracking-[0.15em] font-semibold mb-1.5">Customization</p>
+                                    <p class="text-gray-600 text-sm leading-relaxed">Limited to what the builder allows</p>
+                                </div>
+                                <div class="compare-row rounded-lg p-3 -mx-1 transition-all duration-300 hover:bg-primary/5">
+                                    <p class="text-[10px] text-primary/60 uppercase tracking-[0.15em] font-semibold mb-1.5">Content Editing</p>
+                                    <p class="text-gray-600 text-sm leading-relaxed">Built-in (but limited)</p>
+                                </div>
+                                <div class="compare-row rounded-lg p-3 -mx-1 transition-all duration-300 hover:bg-primary/5">
+                                    <p class="text-[10px] text-primary/60 uppercase tracking-[0.15em] font-semibold mb-1.5">Ownership</p>
+                                    <p class="text-gray-600 text-sm leading-relaxed">You're renting — leave the platform, lose the site</p>
+                                </div>
+                                <div class="compare-row rounded-lg p-3 -mx-1 transition-all duration-300 hover:bg-primary/5">
+                                    <p class="text-[10px] text-primary/60 uppercase tracking-[0.15em] font-semibold mb-1.5">Timeline</p>
+                                    <p class="text-gray-600 text-sm leading-relaxed">Days</p>
+                                </div>
+                                <div class="compare-row rounded-lg p-3 -mx-1 transition-all duration-300 hover:bg-primary/5">
+                                    <p class="text-[10px] text-primary/60 uppercase tracking-[0.15em] font-semibold mb-1.5">Quality</p>
+                                    <p class="text-gray-600 text-sm leading-relaxed">Looks like a template</p>
+                                </div>
+                                <div class="compare-row rounded-lg p-3 -mx-1 transition-all duration-300 hover:bg-primary/5">
+                                    <p class="text-[10px] text-primary/60 uppercase tracking-[0.15em] font-semibold mb-1.5">Ongoing Costs</p>
+                                    <p class="text-gray-600 text-sm leading-relaxed">Monthly subscription forever</p>
+                                </div>
+                                <div class="compare-row rounded-lg p-3 -mx-1 transition-all duration-300 hover:bg-primary/5">
+                                    <p class="text-[10px] text-primary/60 uppercase tracking-[0.15em] font-semibold mb-1.5">Support</p>
+                                    <p class="text-gray-600 text-sm leading-relaxed">Help docs and chatbots</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- CodeSeed (highlighted center card) -->
+                        <div class="compare-card group rounded-2xl overflow-hidden relative transition-all duration-500 hover:shadow-[0_12px_50px_rgba(141,186,144,0.25)] md:-mt-4 md:mb-[-1rem] bg-gray-900 border-2 border-primary/60">
+                            <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary/40 via-primary to-primary/40"></div>
+                            <div class="p-7 border-b border-primary/20 relative">
+                                <div class="flex items-center gap-3 mb-2">
+                                    <div class="w-9 h-9 rounded-lg bg-primary/30 flex items-center justify-center">
+                                        <i class="fas fa-seedling text-white text-sm"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-lg font-bold text-white">CodeSeed</h3>
+                                        <p class="text-xs text-primary/80">The smarter middle ground</p>
+                                    </div>
+                                </div>
+                                <div class="mt-3 inline-flex items-center gap-1.5 bg-primary/25 text-primary text-xs font-semibold px-3 py-1 rounded-full">
+                                    <i class="fas fa-star text-[9px]"></i> Best value
+                                </div>
+                            </div>
+                            <div class="p-7 space-y-5 relative">
+                                <div class="compare-row rounded-lg p-3 -mx-1 transition-all duration-300 hover:bg-white/10">
+                                    <p class="text-[10px] text-primary/70 uppercase tracking-[0.15em] font-semibold mb-1.5">Design</p>
+                                    <p class="text-white text-sm font-medium leading-relaxed">Fully custom, designed for your brand</p>
+                                </div>
+                                <div class="compare-row rounded-lg p-3 -mx-1 transition-all duration-300 hover:bg-white/10">
+                                    <p class="text-[10px] text-primary/70 uppercase tracking-[0.15em] font-semibold mb-1.5">Customization</p>
+                                    <p class="text-white text-sm font-medium leading-relaxed">Tailored to your exact needs</p>
+                                </div>
+                                <div class="compare-row rounded-lg p-3 -mx-1 transition-all duration-300 hover:bg-white/10">
+                                    <p class="text-[10px] text-primary/70 uppercase tracking-[0.15em] font-semibold mb-1.5">Content Editing</p>
+                                    <p class="text-white text-sm font-medium leading-relaxed">Simple dashboard — edit text, images, posts</p>
+                                </div>
+                                <div class="compare-row rounded-lg p-3 -mx-1 transition-all duration-300 hover:bg-white/10">
+                                    <p class="text-[10px] text-primary/70 uppercase tracking-[0.15em] font-semibold mb-1.5">Ownership</p>
+                                    <p class="text-white text-sm font-medium leading-relaxed flex items-center gap-2">You own everything — code, content, hosting <i class="fas fa-check-circle text-primary text-xs"></i></p>
+                                </div>
+                                <div class="compare-row rounded-lg p-3 -mx-1 transition-all duration-300 hover:bg-white/10">
+                                    <p class="text-[10px] text-primary/70 uppercase tracking-[0.15em] font-semibold mb-1.5">Timeline</p>
+                                    <p class="text-white text-sm font-medium leading-relaxed">2-4 weeks</p>
+                                </div>
+                                <div class="compare-row rounded-lg p-3 -mx-1 transition-all duration-300 hover:bg-white/10">
+                                    <p class="text-[10px] text-primary/70 uppercase tracking-[0.15em] font-semibold mb-1.5">Quality</p>
+                                    <p class="text-white text-sm font-medium leading-relaxed flex items-center gap-2">Looks like a premium site <i class="fas fa-check-circle text-primary text-xs"></i></p>
+                                </div>
+                                <div class="compare-row rounded-lg p-3 -mx-1 transition-all duration-300 hover:bg-white/10">
+                                    <p class="text-[10px] text-primary/70 uppercase tracking-[0.15em] font-semibold mb-1.5">Ongoing Costs</p>
+                                    <p class="text-white text-sm font-medium leading-relaxed flex items-center gap-2">Just your hosting (~$10/month) <i class="fas fa-check-circle text-primary text-xs"></i></p>
+                                </div>
+                                <div class="compare-row rounded-lg p-3 -mx-1 transition-all duration-300 hover:bg-white/10">
+                                    <p class="text-[10px] text-primary/70 uppercase tracking-[0.15em] font-semibold mb-1.5">Support</p>
+                                    <p class="text-white text-sm font-medium leading-relaxed">Direct access to the team that built it</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Traditional Agency -->
+                        <div class="compare-card group rounded-2xl border border-[#e8dfd3] overflow-hidden transition-all duration-500 hover:border-primary/60 hover:shadow-[0_8px_40px_rgba(141,186,144,0.15)] bg-[#f5efe6]">
+                            <div class="p-7 border-b border-[#e8dfd3] relative">
+                                <div class="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-primary/0 via-primary/60 to-primary/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                                <div class="flex items-center gap-3 mb-2">
+                                    <div class="w-9 h-9 rounded-lg bg-primary/15 flex items-center justify-center group-hover:bg-primary/25 transition-colors duration-300">
+                                        <i class="fas fa-building text-primary text-sm"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-lg font-bold text-gray-800 group-hover:text-secondary transition-colors duration-300">Traditional Agency</h3>
+                                        <p class="text-xs text-gray-400">Full-service firms</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="p-7 space-y-5">
+                                <div class="compare-row rounded-lg p-3 -mx-1 transition-all duration-300 hover:bg-primary/5">
+                                    <p class="text-[10px] text-primary/60 uppercase tracking-[0.15em] font-semibold mb-1.5">Design</p>
+                                    <p class="text-gray-600 text-sm leading-relaxed">Fully custom</p>
+                                </div>
+                                <div class="compare-row rounded-lg p-3 -mx-1 transition-all duration-300 hover:bg-primary/5">
+                                    <p class="text-[10px] text-primary/60 uppercase tracking-[0.15em] font-semibold mb-1.5">Customization</p>
+                                    <p class="text-gray-600 text-sm leading-relaxed">Unlimited flexibility</p>
+                                </div>
+                                <div class="compare-row rounded-lg p-3 -mx-1 transition-all duration-300 hover:bg-primary/5">
+                                    <p class="text-[10px] text-primary/60 uppercase tracking-[0.15em] font-semibold mb-1.5">Content Editing</p>
+                                    <p class="text-gray-600 text-sm leading-relaxed">Usually need a developer for changes</p>
+                                </div>
+                                <div class="compare-row rounded-lg p-3 -mx-1 transition-all duration-300 hover:bg-primary/5">
+                                    <p class="text-[10px] text-primary/60 uppercase tracking-[0.15em] font-semibold mb-1.5">Ownership</p>
+                                    <p class="text-gray-600 text-sm leading-relaxed">You usually own it</p>
+                                </div>
+                                <div class="compare-row rounded-lg p-3 -mx-1 transition-all duration-300 hover:bg-primary/5">
+                                    <p class="text-[10px] text-primary/60 uppercase tracking-[0.15em] font-semibold mb-1.5">Timeline</p>
+                                    <p class="text-gray-600 text-sm leading-relaxed">2-6 months</p>
+                                </div>
+                                <div class="compare-row rounded-lg p-3 -mx-1 transition-all duration-300 hover:bg-primary/5">
+                                    <p class="text-[10px] text-primary/60 uppercase tracking-[0.15em] font-semibold mb-1.5">Quality</p>
+                                    <p class="text-gray-600 text-sm leading-relaxed">Premium quality</p>
+                                </div>
+                                <div class="compare-row rounded-lg p-3 -mx-1 transition-all duration-300 hover:bg-primary/5">
+                                    <p class="text-[10px] text-primary/60 uppercase tracking-[0.15em] font-semibold mb-1.5">Ongoing Costs</p>
+                                    <p class="text-gray-600 text-sm leading-relaxed">Hosting + retainer fees</p>
+                                </div>
+                                <div class="compare-row rounded-lg p-3 -mx-1 transition-all duration-300 hover:bg-primary/5">
+                                    <p class="text-[10px] text-primary/60 uppercase tracking-[0.15em] font-semibold mb-1.5">Support</p>
+                                    <p class="text-gray-600 text-sm leading-relaxed">Varies</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Mobile: Horizontally scrollable cards -->
+                    <div class="md:hidden compare-table">
+                        <div class="flex gap-4 pb-4" style="min-width: max-content;">
+                            <!-- DIY Builders -->
+                            <div class="rounded-2xl border border-[#e8dfd3] overflow-hidden bg-[#f5efe6]" style="min-width: 280px; max-width: 300px;">
+                                <div class="p-5 border-b border-[#e8dfd3]">
+                                    <div class="flex items-center gap-3">
+                                        <div class="w-8 h-8 rounded-lg bg-primary/15 flex items-center justify-center">
+                                            <i class="fas fa-puzzle-piece text-primary text-xs"></i>
+                                        </div>
+                                        <div>
+                                            <h3 class="text-base font-bold text-gray-800">DIY Builders</h3>
+                                            <p class="text-xs text-gray-400">Wix, Squarespace</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="p-5 space-y-4">
+                                    <div class="rounded-lg p-2.5 -mx-0.5"><p class="text-[10px] text-primary/60 uppercase tracking-[0.15em] font-semibold mb-1">Design</p><p class="text-gray-600 text-sm">Template-based, looks generic</p></div>
+                                    <div class="rounded-lg p-2.5 -mx-0.5"><p class="text-[10px] text-primary/60 uppercase tracking-[0.15em] font-semibold mb-1">Customization</p><p class="text-gray-600 text-sm">Limited to what the builder allows</p></div>
+                                    <div class="rounded-lg p-2.5 -mx-0.5"><p class="text-[10px] text-primary/60 uppercase tracking-[0.15em] font-semibold mb-1">Content Editing</p><p class="text-gray-600 text-sm">Built-in (but limited)</p></div>
+                                    <div class="rounded-lg p-2.5 -mx-0.5"><p class="text-[10px] text-primary/60 uppercase tracking-[0.15em] font-semibold mb-1">Ownership</p><p class="text-gray-600 text-sm">You're renting — leave the platform, lose the site</p></div>
+                                    <div class="rounded-lg p-2.5 -mx-0.5"><p class="text-[10px] text-primary/60 uppercase tracking-[0.15em] font-semibold mb-1">Timeline</p><p class="text-gray-600 text-sm">Days</p></div>
+                                    <div class="rounded-lg p-2.5 -mx-0.5"><p class="text-[10px] text-primary/60 uppercase tracking-[0.15em] font-semibold mb-1">Quality</p><p class="text-gray-600 text-sm">Looks like a template</p></div>
+                                    <div class="rounded-lg p-2.5 -mx-0.5"><p class="text-[10px] text-primary/60 uppercase tracking-[0.15em] font-semibold mb-1">Ongoing Costs</p><p class="text-gray-600 text-sm">Monthly subscription forever</p></div>
+                                    <div class="rounded-lg p-2.5 -mx-0.5"><p class="text-[10px] text-primary/60 uppercase tracking-[0.15em] font-semibold mb-1">Support</p><p class="text-gray-600 text-sm">Help docs and chatbots</p></div>
+                                </div>
+                            </div>
+
+                            <!-- CodeSeed (highlighted) -->
+                            <div class="rounded-2xl overflow-hidden relative bg-gray-900" style="min-width: 280px; max-width: 300px; border: 2px solid rgba(141,186,144,0.6);">
+                                <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary/40 via-primary to-primary/40"></div>
+                                <div class="p-5 border-b border-primary/20">
+                                    <div class="flex items-center gap-3">
+                                        <div class="w-8 h-8 rounded-lg bg-primary/30 flex items-center justify-center">
+                                            <i class="fas fa-seedling text-white text-xs"></i>
+                                        </div>
+                                        <div>
+                                            <h3 class="text-base font-bold text-white">CodeSeed</h3>
+                                            <p class="text-xs text-primary/60">The smarter middle ground</p>
+                                        </div>
+                                    </div>
+                                    <div class="mt-3 inline-flex items-center gap-1.5 bg-primary/15 text-primary text-xs font-semibold px-3 py-1 rounded-full">
+                                        <i class="fas fa-star text-[9px]"></i> Best value
+                                    </div>
+                                </div>
+                                <div class="p-5 space-y-4">
+                                    <div class="rounded-lg p-2.5 -mx-0.5"><p class="text-[10px] text-primary/70 uppercase tracking-[0.15em] font-semibold mb-1">Design</p><p class="text-white text-sm font-medium">Fully custom, designed for your brand</p></div>
+                                    <div class="rounded-lg p-2.5 -mx-0.5"><p class="text-[10px] text-primary/70 uppercase tracking-[0.15em] font-semibold mb-1">Customization</p><p class="text-white text-sm font-medium">Tailored to your exact needs</p></div>
+                                    <div class="rounded-lg p-2.5 -mx-0.5"><p class="text-[10px] text-primary/70 uppercase tracking-[0.15em] font-semibold mb-1">Content Editing</p><p class="text-white text-sm font-medium">Simple dashboard — edit text, images, posts</p></div>
+                                    <div class="rounded-lg p-2.5 -mx-0.5"><p class="text-[10px] text-primary/70 uppercase tracking-[0.15em] font-semibold mb-1">Ownership</p><p class="text-white text-sm font-medium">You own everything — code, content, hosting <i class="fas fa-check-circle text-primary text-xs"></i></p></div>
+                                    <div class="rounded-lg p-2.5 -mx-0.5"><p class="text-[10px] text-primary/70 uppercase tracking-[0.15em] font-semibold mb-1">Timeline</p><p class="text-white text-sm font-medium">2-4 weeks</p></div>
+                                    <div class="rounded-lg p-2.5 -mx-0.5"><p class="text-[10px] text-primary/70 uppercase tracking-[0.15em] font-semibold mb-1">Quality</p><p class="text-white text-sm font-medium">Looks like a premium site <i class="fas fa-check-circle text-primary text-xs"></i></p></div>
+                                    <div class="rounded-lg p-2.5 -mx-0.5"><p class="text-[10px] text-primary/70 uppercase tracking-[0.15em] font-semibold mb-1">Ongoing Costs</p><p class="text-white text-sm font-medium">Just your hosting (~$10/month) <i class="fas fa-check-circle text-primary text-xs"></i></p></div>
+                                    <div class="rounded-lg p-2.5 -mx-0.5"><p class="text-[10px] text-primary/70 uppercase tracking-[0.15em] font-semibold mb-1">Support</p><p class="text-white text-sm font-medium">Direct access to the team that built it</p></div>
+                                </div>
+                            </div>
+
+                            <!-- Traditional Agency -->
+                            <div class="rounded-2xl border border-[#e8dfd3] overflow-hidden bg-[#f5efe6]" style="min-width: 280px; max-width: 300px;">
+                                <div class="p-5 border-b border-[#e8dfd3]">
+                                    <div class="flex items-center gap-3">
+                                        <div class="w-8 h-8 rounded-lg bg-primary/15 flex items-center justify-center">
+                                            <i class="fas fa-building text-primary text-xs"></i>
+                                        </div>
+                                        <div>
+                                            <h3 class="text-base font-bold text-gray-800">Traditional Agency</h3>
+                                            <p class="text-xs text-gray-400">Full-service firms</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="p-5 space-y-4">
+                                    <div class="rounded-lg p-2.5 -mx-0.5"><p class="text-[10px] text-primary/60 uppercase tracking-[0.15em] font-semibold mb-1">Design</p><p class="text-gray-600 text-sm">Fully custom</p></div>
+                                    <div class="rounded-lg p-2.5 -mx-0.5"><p class="text-[10px] text-primary/60 uppercase tracking-[0.15em] font-semibold mb-1">Customization</p><p class="text-gray-600 text-sm">Unlimited flexibility</p></div>
+                                    <div class="rounded-lg p-2.5 -mx-0.5"><p class="text-[10px] text-primary/60 uppercase tracking-[0.15em] font-semibold mb-1">Content Editing</p><p class="text-gray-600 text-sm">Usually need a developer for changes</p></div>
+                                    <div class="rounded-lg p-2.5 -mx-0.5"><p class="text-[10px] text-primary/60 uppercase tracking-[0.15em] font-semibold mb-1">Ownership</p><p class="text-gray-600 text-sm">You usually own it</p></div>
+                                    <div class="rounded-lg p-2.5 -mx-0.5"><p class="text-[10px] text-primary/60 uppercase tracking-[0.15em] font-semibold mb-1">Timeline</p><p class="text-gray-600 text-sm">2-6 months</p></div>
+                                    <div class="rounded-lg p-2.5 -mx-0.5"><p class="text-[10px] text-primary/60 uppercase tracking-[0.15em] font-semibold mb-1">Quality</p><p class="text-gray-600 text-sm">Premium quality</p></div>
+                                    <div class="rounded-lg p-2.5 -mx-0.5"><p class="text-[10px] text-primary/60 uppercase tracking-[0.15em] font-semibold mb-1">Ongoing Costs</p><p class="text-gray-600 text-sm">Hosting + retainer fees</p></div>
+                                    <div class="rounded-lg p-2.5 -mx-0.5"><p class="text-[10px] text-primary/60 uppercase tracking-[0.15em] font-semibold mb-1">Support</p><p class="text-gray-600 text-sm">Varies</p></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p class="text-center text-white/80 mt-14 text-lg max-w-2xl mx-auto leading-relaxed">You get custom quality at a smarter price point. No subscriptions, no lock-in, no compromises on design.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Examples of Our Design Quality -->
+        <section class="py-20 md:py-28" style="background-color: #f9f7f4;">
+            <div class="container mx-auto px-4">
+                <div class="max-w-6xl mx-auto">
+                    <div class="text-center mb-16">
+                        <h2 class="text-4xl md:text-5xl lg:text-6xl font-serif italic font-normal mb-4 text-secondary">What Your Site Could Look Like</h2>
+                        <p class="text-lg text-gray-600 max-w-2xl mx-auto">Every project gets the same level of design attention and engineering quality.</p>
+                    </div>
+                    <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                        <a href="https://readyai.dev" target="_blank" rel="noopener noreferrer" class="scroll-fade-in group bg-white rounded-xl overflow-hidden border border-gray-200 hover:border-primary/40 hover:shadow-lg transition-all duration-300">
+                            <div class="aspect-video bg-gray-100 overflow-hidden">
+                                <img src="../assets/readyai-screenshot.png" alt="ReadyAI website screenshot" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
+                            </div>
+                            <div class="p-6">
+                                <h3 class="text-lg font-bold text-gray-800 mb-2 group-hover:text-primary transition-colors">ReadyAI</h3>
+                                <p class="text-gray-600 text-sm mb-4">AI-powered business solutions platform. Enterprise-grade design with modern content management.</p>
+                                <span class="inline-flex items-center gap-2 text-primary font-medium text-sm group-hover:gap-3 transition-all">
+                                    View Project <i class="fas fa-arrow-right text-xs"></i>
+                                </span>
+                            </div>
+                        </a>
+                        <a href="https://soulseedfestival.com" target="_blank" rel="noopener noreferrer" class="scroll-fade-in group bg-white rounded-xl overflow-hidden border border-gray-200 hover:border-primary/40 hover:shadow-lg transition-all duration-300">
+                            <div class="aspect-video bg-gray-100 overflow-hidden">
+                                <img src="../assets/soulseed-screenshot.png" alt="SoulSeed Festival website screenshot" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
+                            </div>
+                            <div class="p-6">
+                                <h3 class="text-lg font-bold text-gray-800 mb-2 group-hover:text-primary transition-colors">SoulSeed Festival</h3>
+                                <p class="text-gray-600 text-sm mb-4">Pixel-perfect, responsive festival website with modern design.</p>
+                                <span class="inline-flex items-center gap-2 text-primary font-medium text-sm group-hover:gap-3 transition-all">
+                                    View Project <i class="fas fa-arrow-right text-xs"></i>
+                                </span>
+                            </div>
+                        </a>
+                    </div>
+                    <p class="text-center text-gray-500 mt-10 text-base max-w-2xl mx-auto">These are examples of our design quality across different industries. Your site will be built with the same care and attention to detail.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- What Clients Are Responsible For -->
+        <section class="py-20 md:py-28 bg-gray-900">
+            <div class="container mx-auto px-4">
+                <div class="max-w-4xl mx-auto">
+                    <div class="text-center mb-12">
+                        <h2 class="text-4xl md:text-5xl lg:text-6xl font-serif italic font-normal mb-4 text-white">What You Bring to the Table</h2>
+                        <p class="text-lg text-gray-400 max-w-2xl mx-auto">Here's how we keep the price fair and the process smooth.</p>
+                    </div>
+                    <div class="space-y-6 max-w-3xl mx-auto">
+                        <div class="scroll-fade-in flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-lg bg-primary/20 flex items-center justify-center flex-shrink-0 mt-1">
+                                <i class="fas fa-file-lines text-primary text-sm"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-white font-semibold text-lg mb-2">You provide your content</h3>
+                                <p class="text-gray-400 leading-relaxed">Text, images, and any branding assets (logo, colors, fonts). We design and build; you bring the words and visuals. If you need help with copywriting or photography, we can recommend partners.</p>
+                            </div>
+                        </div>
+                        <div class="scroll-fade-in flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-lg bg-primary/20 flex items-center justify-center flex-shrink-0 mt-1">
+                                <i class="fas fa-server text-primary text-sm"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-white font-semibold text-lg mb-2">You pay for your own hosting</h3>
+                                <p class="text-gray-400 leading-relaxed">Typically ~$10/month through providers like Railway, Vercel, or Netlify. We'll set it up for you during the build — you just pay the hosting provider directly.</p>
+                            </div>
+                        </div>
+                        <div class="scroll-fade-in flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-lg bg-primary/20 flex items-center justify-center flex-shrink-0 mt-1">
+                                <i class="fas fa-wrench text-primary text-sm"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-white font-semibold text-lg mb-2">Post-launch changes are hourly</h3>
+                                <p class="text-gray-400 leading-relaxed">After handoff, anything beyond what's editable in your dashboard is billed at our hourly support rate. No retainer, no commitment — just reach out when you need help.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="py-20 md:py-28" style="background-color: #f9f7f4;">
+            <div class="container mx-auto px-4">
+                <div class="max-w-3xl mx-auto">
+                    <div class="text-center mb-16">
+                        <h2 class="text-4xl md:text-5xl lg:text-6xl font-serif italic font-normal mb-6 text-secondary">Frequently Asked Questions</h2>
+                    </div>
+                    <div class="space-y-3">
+                        <div class="faq-item bg-white rounded-xl border border-gray-200 overflow-hidden">
+                            <button class="faq-toggle w-full text-left px-6 py-5 flex items-center justify-between gap-4" aria-expanded="false">
+                                <span class="font-semibold text-gray-800">What if I don't have content ready?</span>
+                                <i class="fas fa-chevron-down faq-chevron text-gray-400 text-sm flex-shrink-0"></i>
+                            </button>
+                            <div class="faq-answer px-6">
+                                <p class="text-gray-600 leading-relaxed">We need your text and images before we start the design phase. If you need help with copywriting or photography, we can recommend partners, but content creation isn't included in the build.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item bg-white rounded-xl border border-gray-200 overflow-hidden">
+                            <button class="faq-toggle w-full text-left px-6 py-5 flex items-center justify-between gap-4" aria-expanded="false">
+                                <span class="font-semibold text-gray-800">What can I edit myself after launch?</span>
+                                <i class="fas fa-chevron-down faq-chevron text-gray-400 text-sm flex-shrink-0"></i>
+                            </button>
+                            <div class="faq-answer px-6">
+                                <p class="text-gray-600 leading-relaxed">Text, images, blog posts, team members, testimonials, portfolio items — basically any content. You won't be able to change the layout, design, or styling — that's locked in so the site always looks professional.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item bg-white rounded-xl border border-gray-200 overflow-hidden">
+                            <button class="faq-toggle w-full text-left px-6 py-5 flex items-center justify-between gap-4" aria-expanded="false">
+                                <span class="font-semibold text-gray-800">What if I need changes to the design later?</span>
+                                <i class="fas fa-chevron-down faq-chevron text-gray-400 text-sm flex-shrink-0"></i>
+                            </button>
+                            <div class="faq-answer px-6">
+                                <p class="text-gray-600 leading-relaxed">Just reach out. We offer hourly support for anything beyond content edits — new pages, design tweaks, new features, integrations. No retainer required.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item bg-white rounded-xl border border-gray-200 overflow-hidden">
+                            <button class="faq-toggle w-full text-left px-6 py-5 flex items-center justify-between gap-4" aria-expanded="false">
+                                <span class="font-semibold text-gray-800">How long does the whole process take?</span>
+                                <i class="fas fa-chevron-down faq-chevron text-gray-400 text-sm flex-shrink-0"></i>
+                            </button>
+                            <div class="faq-answer px-6">
+                                <p class="text-gray-600 leading-relaxed">Most projects are completed in 2-4 weeks from the time we receive your content. More complex sites may take longer — we'll give you a clear timeline on our discovery call.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item bg-white rounded-xl border border-gray-200 overflow-hidden">
+                            <button class="faq-toggle w-full text-left px-6 py-5 flex items-center justify-between gap-4" aria-expanded="false">
+                                <span class="font-semibold text-gray-800">Do I really own the site?</span>
+                                <i class="fas fa-chevron-down faq-chevron text-gray-400 text-sm flex-shrink-0"></i>
+                            </button>
+                            <div class="faq-answer px-6">
+                                <p class="text-gray-600 leading-relaxed">Yes, 100%. The code, the design, the content — it's all yours. It lives on your own hosting account. If you ever want to move to a different developer, you can take everything with you.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item bg-white rounded-xl border border-gray-200 overflow-hidden">
+                            <button class="faq-toggle w-full text-left px-6 py-5 flex items-center justify-between gap-4" aria-expanded="false">
+                                <span class="font-semibold text-gray-800">What does hosting cost?</span>
+                                <i class="fas fa-chevron-down faq-chevron text-gray-400 text-sm flex-shrink-0"></i>
+                            </button>
+                            <div class="faq-answer px-6">
+                                <p class="text-gray-600 leading-relaxed">Typically ~$10/month, paid directly to the hosting provider. We'll help you set it up during the build process.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item bg-white rounded-xl border border-gray-200 overflow-hidden">
+                            <button class="faq-toggle w-full text-left px-6 py-5 flex items-center justify-between gap-4" aria-expanded="false">
+                                <span class="font-semibold text-gray-800">How does support work after launch?</span>
+                                <i class="fas fa-chevron-down faq-chevron text-gray-400 text-sm flex-shrink-0"></i>
+                            </button>
+                            <div class="faq-answer px-6">
+                                <p class="text-gray-600 leading-relaxed">We're available on an hourly basis. No retainer, no monthly commitment. You reach out when you need something, we give you a time estimate, and we bill for the work. Simple.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section id="cta" class="py-20 md:py-28 bg-gray-950">
+            <div class="container mx-auto px-4">
+                <div class="max-w-3xl mx-auto text-center">
+                    <h2 class="text-4xl md:text-5xl lg:text-6xl font-serif italic font-normal mb-8 text-primary">Ready for a Website That Actually Represents Your Business?</h2>
+                    <p class="text-xl md:text-2xl mb-12 text-gray-300 leading-relaxed">Book a free call. We'll learn about your business, outline what your site needs, and give you a clear quote — no pressure, no obligations.</p>
+                    <a href="website-contact.html" class="group bg-primary hover:bg-secondary text-white font-semibold py-4 px-10 rounded-full transition-all duration-300 text-lg shadow-lg hover:shadow-xl hover:scale-105 inline-flex items-center gap-2">
+                        <span>Book Your Free Call</span>
+                        <i class="fas fa-arrow-right transition-transform duration-300 group-hover:translate-x-1"></i>
+                    </a>
+                    <p class="text-gray-500 text-sm mt-6">Most calls take about 15 minutes. We'll follow up with a written proposal within 48 hours.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-900 text-white py-10 md:py-12">
+        <div class="container mx-auto px-4"><div class="text-center"><p class="footer-copyright text-gray-400 text-sm md:text-base leading-relaxed max-w-md mx-auto">&copy; 2025 CodeSeed. All rights reserved.</p></div></div>
+    </footer>
+
+    <script>
+        // Mobile menu
+        const mb = document.getElementById('mobile-menu-button'), mm = document.getElementById('mobile-menu');
+        if (mb && mm) { mb.addEventListener('click', e => { e.preventDefault(); mm.classList.toggle('show'); }); mm.querySelectorAll('a').forEach(l => l.addEventListener('click', () => mm.classList.remove('show'))); document.addEventListener('click', e => { if (!mm.contains(e.target) && !mb.contains(e.target) && mm.classList.contains('show')) mm.classList.remove('show'); }); }
+
+        // FAQ accordion
+        document.querySelectorAll('.faq-toggle').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const item = btn.closest('.faq-item');
+                const isOpen = item.classList.contains('open');
+                // Close all
+                document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+                document.querySelectorAll('.faq-toggle').forEach(b => b.setAttribute('aria-expanded', 'false'));
+                // Open clicked (if it was closed)
+                if (!isOpen) {
+                    item.classList.add('open');
+                    btn.setAttribute('aria-expanded', 'true');
+                }
+            });
+        });
+
+        // Scroll fade-in animation
+        const fadeObserver = new IntersectionObserver((entries) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => {
+                        entry.target.classList.add('visible');
+                    }, index * 80);
+                }
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.scroll-fade-in').forEach(el => fadeObserver.observe(el));
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(a => {
+            a.addEventListener('click', e => {
+                const target = document.querySelector(a.getAttribute('href'));
+                if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+            });
+        });
+    </script>
+</body>
+</html>
