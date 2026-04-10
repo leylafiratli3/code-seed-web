@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Rites of Accord | CodeSeed Newsletter</title>
+
+  <!-- Web fonts: used by clients that support them (Apple Mail, iOS Mail, Gmail webview, Thunderbird).
+       Outlook will ignore these and fall back to the Georgia/Arial stack below. -->
+  
+  
+
+  <!--[if !mso]><!-->
+  
+  <!--<![endif]-->
+
+  <!--[if mso]>
+  <style type="text/css">
+    body, table, td, p, a, h1, h2, h3 {font-family: Arial, sans-serif !important;}
+    .serif {font-family: Georgia, 'Times New Roman', serif !important;}
+    .stack {display: block !important; width: 100% !important;}
+  </style>
+  <![endif]-->
+  
+<style>@font-face {
+font-family: 'Satoshi'; src: url('https://cdn.fontshare.com/wf/TTX2Z3BF3P6Y5BQT3IV2VNOK6FL22KUT/7QYRJOI3JIMYHGY6CH7SOIFRQLZOLNJ6/KFIAZD4RUMEZIYV6FQ3T3GP5PDBDB6JY.woff2') format('woff2'),url('https://cdn.fontshare.com/wf/TTX2Z3BF3P6Y5BQT3IV2VNOK6FL22KUT/7QYRJOI3JIMYHGY6CH7SOIFRQLZOLNJ6/KFIAZD4RUMEZIYV6FQ3T3GP5PDBDB6JY.woff') format('woff'),url('https://cdn.fontshare.com/wf/TTX2Z3BF3P6Y5BQT3IV2VNOK6FL22KUT/7QYRJOI3JIMYHGY6CH7SOIFRQLZOLNJ6/KFIAZD4RUMEZIYV6FQ3T3GP5PDBDB6JY.ttf') format('truetype'); font-weight: 400; font-display: swap; font-style: normal;
+}
+@font-face {
+font-family: 'Satoshi'; src: url('https://cdn.fontshare.com/wf/P2LQKHE6KA6ZP4AAGN72KDWMHH6ZH3TA/ZC32TK2P7FPS5GFTL46EU6KQJA24ZYDB/7AHDUZ4A7LFLVFUIFSARGIWCRQJHISQP.woff2') format('woff2'),url('https://cdn.fontshare.com/wf/P2LQKHE6KA6ZP4AAGN72KDWMHH6ZH3TA/ZC32TK2P7FPS5GFTL46EU6KQJA24ZYDB/7AHDUZ4A7LFLVFUIFSARGIWCRQJHISQP.woff') format('woff'),url('https://cdn.fontshare.com/wf/P2LQKHE6KA6ZP4AAGN72KDWMHH6ZH3TA/ZC32TK2P7FPS5GFTL46EU6KQJA24ZYDB/7AHDUZ4A7LFLVFUIFSARGIWCRQJHISQP.ttf') format('truetype'); font-weight: 500; font-display: swap; font-style: normal;
+}
+@font-face {
+font-family: 'Satoshi'; src: url('https://cdn.fontshare.com/wf/LAFFD4SDUCDVQEXFPDC7C53EQ4ZELWQI/PXCT3G6LO6ICM5I3NTYENYPWJAECAWDD/GHM6WVH6MILNYOOCXHXB5GTSGNTMGXZR.woff2') format('woff2'),url('https://cdn.fontshare.com/wf/LAFFD4SDUCDVQEXFPDC7C53EQ4ZELWQI/PXCT3G6LO6ICM5I3NTYENYPWJAECAWDD/GHM6WVH6MILNYOOCXHXB5GTSGNTMGXZR.woff') format('woff'),url('https://cdn.fontshare.com/wf/LAFFD4SDUCDVQEXFPDC7C53EQ4ZELWQI/PXCT3G6LO6ICM5I3NTYENYPWJAECAWDD/GHM6WVH6MILNYOOCXHXB5GTSGNTMGXZR.ttf') format('truetype'); font-weight: 700; font-display: swap; font-style: normal;
+}
+@font-face {
+font-family: 'Satoshi'; src: url('https://cdn.fontshare.com/wf/NHPGVFYUXYXE33DZ75OIT4JFGHITX5PE/PSUTMASCDJTVPERDYJZPN23BVUFUCQIF/J64QX5IPOHK56I2KYUNBQ5M2XWZEYKYX.woff2') format('woff2'),url('https://cdn.fontshare.com/wf/NHPGVFYUXYXE33DZ75OIT4JFGHITX5PE/PSUTMASCDJTVPERDYJZPN23BVUFUCQIF/J64QX5IPOHK56I2KYUNBQ5M2XWZEYKYX.woff') format('woff'),url('https://cdn.fontshare.com/wf/NHPGVFYUXYXE33DZ75OIT4JFGHITX5PE/PSUTMASCDJTVPERDYJZPN23BVUFUCQIF/J64QX5IPOHK56I2KYUNBQ5M2XWZEYKYX.ttf') format('truetype'); font-weight: 900; font-display: swap; font-style: normal;
+}
+@font-face {
+font-family: 'DM Serif Display'; font-style: italic; font-weight: 400; font-display: swap; src: url('https://fonts.gstatic.com/s/dmserifdisplay/v17/-nFhOHM81r4j6k0gjAW3mujVU2B2G_Vx1w.ttf') format('truetype');
+}
+@font-face {
+font-family: 'DM Serif Display'; font-style: normal; font-weight: 400; font-display: swap; src: url('https://fonts.gstatic.com/s/dmserifdisplay/v17/-nFnOHM81r4j6k0gjAW3mujVU2B2K_c.ttf') format('truetype');
+}
+img {
+max-width: 100%; height: auto; border: 0; outline: none; text-decoration: none;
+}
+@media only screen and (max-width: 600px) {
+  .main-table {
+    width: 100% !important; max-width: 100% !important;
+  }
+  .content-cell {
+    padding: 24px 18px !important;
+  }
+  .hero-cell {
+    padding: 26px 22px !important;
+  }
+  .stack {
+    display: block !important; width: 100% !important; padding: 0 0 10px 0 !important;
+  }
+  h1 {
+    font-size: 26px !important;
+  }
+  h2 {
+    font-size: 22px !important;
+  }
+  h3 {
+    font-size: 17px !important;
+  }
+  .hero-title {
+    font-size: 28px !important;
+  }
+  .btn {
+    display: block !important; width: 100% !important; text-align: center !important; box-sizing: border-box !important;
+  }
+  .btn + .btn {
+    margin-top: 10px !important;
+  }
+  .image-rounded {
+    border-radius: 10px !important;
+  }
+  .checklist-num {
+    width: 26px !important; height: 26px !important; line-height: 26px !important; font-size: 12px !important;
+  }
+}
+</style>
+</head>
+
+<body style="font-family: 'Satoshi', Arial, Helvetica, sans-serif; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; margin: 0; padding: 0;" bgcolor="#f4f0ea">
+  <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="width: 100% !important; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; padding: 28px 0;" bgcolor="#f4f0ea">
+    <tr>
+      <td align="center" style="padding: 0;">
+        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="640" style="max-width: 640px; width: 100%; border-radius: 4px; overflow: hidden; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; margin: 0 auto; border: 1px solid #e8dfd0;" bgcolor="#ffffff">
+
+          <!-- Header -->
+          <tr>
+            <td style="border-bottom-width: 1px; border-bottom-color: #efe4d3; border-bottom-style: solid; padding: 26px 36px;" bgcolor="#ffffff">
+              <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+                <tr>
+                  <td style="" valign="middle">
+                    <a href="https://code-seed.io" style="text-decoration: none; color: inherit;">
+                      <img src="https://code-seed.io/assets/codeseed-logo-no-background.png" alt="CodeSeed" height="44" style="vertical-align: middle; height: 44px; width: auto; display: inline-block; max-width: 100%; outline: none; text-decoration: none; border-width: 0;">
+                      <span style="vertical-align: middle; font-size: 20px; color: #5a7d5c; font-weight: 700; letter-spacing: 0.5px; margin-left: 10px; font-family: 'Satoshi', Arial, Helvetica, sans-serif;">code‑seed</span>
+                    </a>
+                  </td>
+                  <td align="right" style="" valign="middle">
+                    <span style="font-size: 11px; color: #8dba90; letter-spacing: 2px; text-transform: uppercase; font-weight: 700; font-family: 'Satoshi', Arial, Helvetica, sans-serif;">Newsletter · 2026</span>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- Top image -->
+          <tr>
+            <td style="padding: 0;">
+              <img src="https://code-seed.io/assets/ritesofaccord.png" alt="Rites of Accord key art" width="640" style="display: block; width: 100%; max-width: 640px; height: auto; border-radius: 0; outline: none; text-decoration: none; border-width: 0;">
+            </td>
+          </tr>
+
+          <!-- Hero -->
+          <tr>
+            <td style="padding: 44px 44px 38px;" bgcolor="#1a1f3a">
+              <p style="font-size: 11px; color: #8dba90; letter-spacing: 3px; text-transform: uppercase; font-weight: 700; font-family: 'Satoshi', Arial, Helvetica, sans-serif; margin: 0 0 14px;">
+                Big news · We made a game
+              </p>
+              <h1 style="font-size: 36px; color: #ffffff; font-weight: 400; letter-spacing: -0.5px; line-height: 1.1; font-family: 'DM Serif Display', Georgia, 'Times New Roman', serif; margin: 0 0 14px;">
+                Rites of Accord is live on Steam.
+              </h1>
+              <p style="font-size: 16px; color: #d9e2ff; line-height: 1.75; font-family: 'Satoshi', Arial, Helvetica, sans-serif; margin: 0 0 16px;">
+                We developed <strong style="color: #ffffff; font-weight: 700;">Rites of Accord</strong> — a multiplayer, turn‑based, hex tactics game set on a future Earth where techno‑tribes resolve their conflicts through ceremonial digital battles instead of warfare.
+              </p>
+              <p style="font-size: 15px; color: #d9e2ff; line-height: 1.75; font-family: 'Satoshi', Arial, Helvetica, sans-serif; margin: 0 0 10px;">
+                For an indie game like ours, <strong style="color: #ffffff; font-weight: 700;">wishlists are everything</strong>: Steam’s algorithm uses them to decide which games to show to millions of players.
+              </p>
+              <p style="font-size: 13.5px; color: #a8b4d6; line-height: 1.7; font-style: italic; font-family: 'Satoshi', Arial, Helvetica, sans-serif; margin: 0 0 14px;">
+                (Steam is the main online store for PC games, like the App Store but for games.)
+              </p>
+              <p style="font-size: 15px; color: #d9e2ff; line-height: 1.75; font-family: 'Satoshi', Arial, Helvetica, sans-serif; margin: 0 0 18px;">
+                <strong style="color: #ffffff; font-weight: 700;">Steam Next Fest</strong> is a huge week‑long showcase of upcoming games, and games that go in with strong wishlist numbers get featured the most.
+              </p>
+              <p style="font-size: 19px; color: #ffffff; line-height: 1.5; font-weight: 700; letter-spacing: -0.2px; font-family: 'Satoshi', Arial, Helvetica, sans-serif; margin: 0 0 26px;">
+                We’re aiming for <span style="color: #8dba90;">10,000 wishlists by June</span>. We can’t get there without you.
+              </p>
+
+              <a href="https://store.steampowered.com/app/4579700/Rites_of_Accord/" target="_blank" rel="noopener noreferrer" style="background-color: #8dba90; color: #ffffff; text-decoration: none; font-weight: 700; display: inline-block; border-radius: 2px; font-size: 15px; font-family: 'Satoshi', Arial, Helvetica, sans-serif; letter-spacing: 0.3px; padding: 14px 22px;">
+                Wishlist on Steam  →
+              </a>
+            </td>
+          </tr>
+
+          <!-- Why we made this -->
+          <tr>
+            <td style="padding: 44px 44px 18px;">
+              <p style="font-size: 11px; color: #5a7d5c; letter-spacing: 3px; text-transform: uppercase; font-weight: 700; font-family: 'Satoshi', Arial, Helvetica, sans-serif; margin: 0 0 10px;">
+                The story behind it
+              </p>
+              <h2 style="font-size: 28px; color: #1a202c; font-weight: 400; line-height: 1.15; letter-spacing: -0.3px; font-family: 'DM Serif Display', Georgia, 'Times New Roman', serif; margin: 0 0 18px;">
+                Why we made this game
+              </h2>
+
+              <p style="font-size: 15.5px; color: #4a5568; line-height: 1.85; font-family: 'Satoshi', Arial, Helvetica, sans-serif; margin: 0 0 12px;">
+                We believe the media we consume is flooded with dystopias on purpose, to make it harder to imagine a different way of organizing ourselves. To shrink the horizon. To make the current order feel inevitable. We think, right now, <strong style="color: #1a202c; font-weight: 700;">one of the most needed things in our world is imagination rooted in hope</strong>.
+              </p>
+              <p style="font-size: 15.5px; color: #4a5568; line-height: 1.85; font-family: 'Satoshi', Arial, Helvetica, sans-serif; margin: 0 0 12px;">
+                In the world we imagined, the current concentrations of power fell, and what replaced them wasn’t a new empire. It was something messier and more hopeful: communes and tribes shaped by the biomes they call home, bound by ecosystems and mutual responsibility rather than capital and walls.
+              </p>
+              <p style="font-size: 15.5px; color: #4a5568; line-height: 1.85; font-family: 'Satoshi', Arial, Helvetica, sans-serif; margin: 0 0 12px;">
+                Old tensions don’t disappear, of course. So the factions built the <strong style="color: #1a202c; font-weight: 700;">Rites of Accord</strong> — ritualized contests fought in digital arenas before a watching world. Skill and strategy settle disputes, not bombs.
+              </p>
+              <p style="font-size: 15.5px; color: #4a5568; line-height: 1.85; font-family: 'Satoshi', Arial, Helvetica, sans-serif; margin: 0;">
+                For us, this game is a way of <strong style="color: #1a202c; font-weight: 700;">practicing hope</strong>. Hope grounded in systems, in community, in the genuine belief that rebuilding is possible. We’re tired of futures that only imagine ruin. We wanted to make something that dares to imagine otherwise.
+              </p>
+            </td>
+          </tr>
+
+          <!-- Divider -->
+          <tr>
+            <td style="padding: 28px 44px;">
+              <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+                <tr>
+                  <td style="border-top-width: 1px; border-top-color: #efe4d3; border-top-style: solid; line-height: 0; font-size: 0;"> </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- How to Support Checklist -->
+          <tr>
+            <td style="padding: 0 44px 12px;">
+              <p style="font-size: 11px; color: #5a7d5c; letter-spacing: 3px; text-transform: uppercase; font-weight: 700; font-family: 'Satoshi', Arial, Helvetica, sans-serif; margin: 0 0 10px;">
+                How you can help
+              </p>
+              <h2 style="font-size: 28px; color: #1a202c; font-weight: 400; line-height: 1.15; letter-spacing: -0.3px; font-family: 'DM Serif Display', Georgia, 'Times New Roman', serif; margin: 0 0 8px;">
+                A 5‑minute support checklist
+              </h2>
+              <p style="font-size: 15px; color: #4a5568; line-height: 1.75; font-family: 'Satoshi', Arial, Helvetica, sans-serif; margin: 0 0 24px;">
+                If you want to help us reach 10,000 wishlists, here’s everything that genuinely moves the needle, in order of impact. Every single step is free.
+              </p>
+            </td>
+          </tr>
+
+          <!-- Checklist item 1 -->
+          <tr>
+            <td style="padding: 0 44px 8px;">
+              <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="border-left-width: 3px; border-left-color: #8dba90; border-left-style: solid; border-radius: 2px; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;" bgcolor="#f8f5ee">
+                <tr>
+                  <td valign="top" style="width: 42px; padding: 14px 16px 14px 18px;">
+                    <div style="background-color: #8dba90; color: #ffffff; width: 28px; height: 28px; line-height: 28px; border-radius: 50%; font-weight: 700; font-size: 13px; font-family: 'Satoshi', Arial, Helvetica, sans-serif;" align="center">1</div>
+                  </td>
+                  <td valign="middle" style="padding: 14px 18px 14px 0;">
+                    <h3 style="font-size: 15px; color: #1a202c; font-weight: 700; line-height: 1.3; font-family: 'Satoshi', Arial, Helvetica, sans-serif; margin: 0 0 3px;">
+                      Wishlist on Steam
+                    </h3>
+                    <p style="font-size: 13.5px; color: #4a5568; line-height: 1.55; font-family: 'Satoshi', Arial, Helvetica, sans-serif; margin: 0 0 6px;">
+                      Free, 10 seconds, and the single biggest signal to Steam’s algorithm.
+                    </p>
+                    <a href="https://store.steampowered.com/app/4579700/Rites_of_Accord/" target="_blank" rel="noopener noreferrer" style="color: #5a7d5c; text-decoration: none; font-size: 13px; font-weight: 700; border-bottom-width: 2px; border-bottom-color: #8dba90; border-bottom-style: solid; padding-bottom: 1px; font-family: 'Satoshi', Arial, Helvetica, sans-serif;">
+                      Wishlist now →
+                    </a>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- Checklist item 2 -->
+          <tr>
+            <td style="padding: 0 44px 8px;">
+              <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="border-left-width: 3px; border-left-color: #8dba90; border-left-style: solid; border-radius: 2px; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;" bgcolor="#f8f5ee">
+                <tr>
+                  <td valign="top" style="width: 42px; padding: 14px 16px 14px 18px;">
+                    <div style="background-color: #8dba90; color: #ffffff; width: 28px; height: 28px; line-height: 28px; border-radius: 50%; font-weight: 700; font-size: 13px; font-family: 'Satoshi', Arial, Helvetica, sans-serif;" align="center">2</div>
+                  </td>
+                  <td valign="middle" style="padding: 14px 18px 14px 0;">
+                    <h3 style="font-size: 15px; color: #1a202c; font-weight: 700; line-height: 1.3; font-family: 'Satoshi', Arial, Helvetica, sans-serif; margin: 0 0 3px;">
+                      Forward this email to your friends
+                    </h3>
+                    <p style="font-size: 13.5px; color: #4a5568; line-height: 1.55; font-family: 'Satoshi', Arial, Helvetica, sans-serif; margin: 0;">
+                      A forward from a trusted friend beats any ad we could buy.
+                    </p>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- Checklist item 3 -->
+          <tr>
+            <td style="padding: 0 44px 8px;">
+              <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="border-left-width: 3px; border-left-color: #8dba90; border-left-style: solid; border-radius: 2px; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;" bgcolor="#f8f5ee">
+                <tr>
+                  <td valign="top" style="width: 42px; padding: 14px 16px 14px 18px;">
+                    <div style="background-color: #8dba90; color: #ffffff; width: 28px; height: 28px; line-height: 28px; border-radius: 50%; font-weight: 700; font-size: 13px; font-family: 'Satoshi', Arial, Helvetica, sans-serif;" align="center">3</div>
+                  </td>
+                  <td valign="middle" style="padding: 14px 18px 14px 0;">
+                    <h3 style="font-size: 15px; color: #1a202c; font-weight: 700; line-height: 1.3; font-family: 'Satoshi', Arial, Helvetica, sans-serif; margin: 0 0 3px;">
+                      Share the Steam page anywhere
+                    </h3>
+                    <p style="font-size: 13.5px; color: #4a5568; line-height: 1.55; font-family: 'Satoshi', Arial, Helvetica, sans-serif; margin: 0;">
+                      A Discord, a group chat, a subreddit, wherever your people are.
+                    </p>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- Checklist item 4 -->
+          <tr>
+            <td style="padding: 0 44px 24px;">
+              <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="border-left-width: 3px; border-left-color: #8dba90; border-left-style: solid; border-radius: 2px; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;" bgcolor="#f8f5ee">
+                <tr>
+                  <td valign="top" style="width: 42px; padding: 14px 16px 14px 18px;">
+                    <div style="background-color: #8dba90; color: #ffffff; width: 28px; height: 28px; line-height: 28px; border-radius: 50%; font-weight: 700; font-size: 13px; font-family: 'Satoshi', Arial, Helvetica, sans-serif;" align="center">4</div>
+                  </td>
+                  <td valign="middle" style="padding: 14px 18px 14px 0;">
+                    <h3 style="font-size: 15px; color: #1a202c; font-weight: 700; line-height: 1.3; font-family: 'Satoshi', Arial, Helvetica, sans-serif; margin: 0 0 3px;">
+                      Follow the Steam page
+                    </h3>
+                    <p style="font-size: 13.5px; color: #4a5568; line-height: 1.55; font-family: 'Satoshi', Arial, Helvetica, sans-serif; margin: 0;">
+                      Separate from wishlisting, and it boosts visibility on every update we post.
+                    </p>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- Spacer before services -->
+          <tr>
+            <td style="padding: 0 44px 16px;">
+              <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+                <tr>
+                  <td style="border-top-width: 1px; border-top-color: #efe4d3; border-top-style: solid; line-height: 0; font-size: 0; padding-top: 24px;"> </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- Section divider -->
+          <tr>
+            <td style="padding: 0 44px 8px;">
+              <p style="font-size: 11px; color: #5a7d5c; letter-spacing: 3px; text-transform: uppercase; font-weight: 700; font-family: 'Satoshi', Arial, Helvetica, sans-serif; margin: 0 0 6px;" align="center">
+                •  Also new at CodeSeed  •
+              </p>
+              <h2 style="font-size: 24px; color: #1a202c; font-weight: 400; line-height: 1.2; letter-spacing: -0.3px; font-family: 'DM Serif Display', Georgia, 'Times New Roman', serif; margin: 0 0 22px;" align="center">
+                Two new services on our site
+              </h2>
+            </td>
+          </tr>
+
+          <!-- AI Consultation section -->
+          <tr>
+            <td style="padding: 0 44px 16px;">
+              <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="border-radius: 4px; overflow: hidden; box-shadow: 0 2px 0 #e8dfd0; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;" bgcolor="#ffffff">
+                <tr>
+                  <td style="padding: 14px 24px;" bgcolor="#8dba90">
+                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+                      <tr>
+                        <td style="" valign="middle">
+                          <span style="font-size: 11px; color: #ffffff; letter-spacing: 2px; text-transform: uppercase; font-weight: 700; font-family: 'Satoshi', Arial, Helvetica, sans-serif;">
+                            Service · 01
+                          </span>
+                        </td>
+                        <td align="right" style="" valign="middle">
+                          <span style="font-size: 18px; color: #ffffff; font-weight: 700; font-family: 'Satoshi', Arial, Helvetica, sans-serif;">◎</span>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="border-left-width: 1px; border-left-color: #e8dfd0; border-left-style: solid; border-right-width: 1px; border-right-color: #e8dfd0; border-right-style: solid; border-bottom-width: 1px; border-bottom-color: #e8dfd0; border-bottom-style: solid; padding: 22px 26px 24px;" bgcolor="#ffffff">
+                    <h3 style="font-size: 24px; color: #1a202c; font-weight: 400; line-height: 1.2; font-family: 'DM Serif Display', Georgia, 'Times New Roman', serif; margin: 0 0 10px;">
+                      AI Setup &amp; Strategy
+                    </h3>
+                    <p style="font-size: 14.5px; color: #4a5568; line-height: 1.75; font-family: 'Satoshi', Arial, Helvetica, sans-serif; margin: 0 0 14px;">
+                      There are so many AI tools out there that can genuinely save you hours every week, but we noticed most people don’t know which one to pick or how to use them. So we built a service where we sit down with you, figure out what you actually do day‑to‑day, pick the right tools for your workflow, and train you to use them confidently. And when off‑the‑shelf tools aren’t enough, we can <strong style="color: #1a202c; font-weight: 700;">build something custom</strong>: a proactive AI assistant tailored to the exact way you work, not the generic way everyone else does.
+                    </p>
+                    <a href="https://code-seed.io/services/ai-setup-and-strategy.html" target="_blank" rel="noopener noreferrer" style="color: #5a7d5c; text-decoration: none; font-size: 14px; font-weight: 700; border-bottom-width: 2px; border-bottom-color: #8dba90; border-bottom-style: solid; padding-bottom: 1px; font-family: 'Satoshi', Arial, Helvetica, sans-serif;">
+                      Learn more →
+                    </a>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- Web Design section -->
+          <tr>
+            <td style="padding: 0 44px 36px;">
+              <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="border-radius: 4px; overflow: hidden; box-shadow: 0 2px 0 #e8dfd0; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;" bgcolor="#ffffff">
+                <tr>
+                  <td style="padding: 14px 24px;" bgcolor="#1a1f3a">
+                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+                      <tr>
+                        <td style="" valign="middle">
+                          <span style="font-size: 11px; color: #D2B48C; letter-spacing: 2px; text-transform: uppercase; font-weight: 700; font-family: 'Satoshi', Arial, Helvetica, sans-serif;">
+                            Service · 02
+                          </span>
+                        </td>
+                        <td align="right" style="" valign="middle">
+                          <span style="font-size: 18px; color: #D2B48C; font-weight: 700; font-family: 'Satoshi', Arial, Helvetica, sans-serif;">◇</span>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="border-left-width: 1px; border-left-color: #e8dfd0; border-left-style: solid; border-right-width: 1px; border-right-color: #e8dfd0; border-right-style: solid; border-bottom-width: 1px; border-bottom-color: #e8dfd0; border-bottom-style: solid; padding: 22px 26px 24px;" bgcolor="#ffffff">
+                    <h3 style="font-size: 24px; color: #1a202c; font-weight: 400; line-height: 1.2; font-family: 'DM Serif Display', Georgia, 'Times New Roman', serif; margin: 0 0 10px;">
+                      Professional Websites
+                    </h3>
+                    <p style="font-size: 14.5px; color: #4a5568; line-height: 1.75; font-family: 'Satoshi', Arial, Helvetica, sans-serif; margin: 0 0 14px;">
+                      Here’s the thing most people don’t realize: if your site is on Wix, WordPress, Squarespace, or Shopify, you’re basically <strong style="color: #1a202c; font-weight: 700;">renting your own website</strong>. Stop paying and it disappears. We wanted a middle ground, a way to divest from big platforms without needing a full dev team, so we build custom sites with a simple content dashboard you can update yourself. One‑time investment, no subscriptions, you own everything.
+                    </p>
+                    <a href="https://code-seed.io/services/professional-websites.html" target="_blank" rel="noopener noreferrer" style="color: #1a1f3a; text-decoration: none; font-size: 14px; font-weight: 700; border-bottom-width: 2px; border-bottom-color: #D2B48C; border-bottom-style: solid; padding-bottom: 1px; font-family: 'Satoshi', Arial, Helvetica, sans-serif;">
+                      Learn more →
+                    </a>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- Work with us -->
+          <tr>
+            <td style="padding: 0 44px 44px;">
+              <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="border-radius: 2px; text-align: center; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;" bgcolor="#1a1f3a">
+                <tr>
+                  <td style="padding: 32px 28px;">
+                    <p style="font-size: 11px; color: #8dba90; letter-spacing: 3px; text-transform: uppercase; font-weight: 700; font-family: 'Satoshi', Arial, Helvetica, sans-serif; margin: 0 0 10px;">
+                      Work with us
+                    </p>
+                    <h2 style="font-size: 24px; color: #ffffff; font-weight: 400; line-height: 1.2; font-family: 'DM Serif Display', Georgia, 'Times New Roman', serif; margin: 0 0 12px;">
+                      Got a project in mind?
+                    </h2>
+                    <p style="font-size: 15px; color: #d9e2ff; line-height: 1.75; font-family: 'Satoshi', Arial, Helvetica, sans-serif; margin: 0 0 20px;">
+                      If you (or someone you know) needs help with a website, product, or AI workflow, we’d love to talk.
+                    </p>
+                    <a href="mailto:codeseedtech@gmail.com" style="background-color: #8dba90; color: #ffffff; text-decoration: none; font-weight: 700; display: inline-block; border-radius: 2px; font-size: 15px; font-family: 'Satoshi', Arial, Helvetica, sans-serif; letter-spacing: 0.3px; padding: 14px 26px;">
+                      codeseedtech@gmail.com
+                    </a>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- Footer -->
+          <tr>
+            <td style="border-top-width: 1px; border-top-color: #efe4d3; border-top-style: solid; padding: 28px 24px;" align="center" bgcolor="#f8f5ee">
+              <p style="font-size: 15px; color: #1a202c; font-family: 'DM Serif Display', Georgia, 'Times New Roman', serif; font-weight: 400; margin: 0 0 8px;">
+                CodeSeed. Building better technology, ethically.
+              </p>
+              <p style="font-size: 13px; color: #7b6f60; font-family: 'Satoshi', Arial, Helvetica, sans-serif; margin: 0;">
+                <a href="https://code-seed.io" style="color: #5a7d5c; text-decoration: none; font-weight: 700;">code‑seed.io</a>
+                 · 
+                <a href="https://store.steampowered.com/app/4579700/Rites_of_Accord/" style="color: #5a7d5c; text-decoration: none; font-weight: 700;">Rites of Accord on Steam</a>
+              </p>
+            </td>
+          </tr>
+
+        </table>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>
