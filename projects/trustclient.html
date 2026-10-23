@@ -22,7 +22,7 @@
     <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Chakra+Petch:wght@500;600;700&family=Michroma&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="/development/tailwind-config.js"></script>
@@ -34,7 +34,7 @@
 
     <header class="dev-header dev-header--dark fixed inset-x-0 top-0 z-50">
         <nav class="container mx-auto px-4 lg:px-8 h-[72px] flex items-center justify-between">
-            <a href="/development/" class="flex items-center gap-3">
+            <a href="/" class="flex items-center gap-3">
                 <img src="/assets/codeseed-logo.png" alt="CodeSeed logo" class="h-10 w-10">
                 <span class="flex flex-col leading-none">
                     <span class="text-xl font-bold text-secondary lowercase tracking-wide">code-seed</span>
@@ -42,12 +42,12 @@
                 </span>
             </a>
             <ul class="hidden lg:flex items-center gap-8 text-[0.95rem] font-medium text-slate-700">
-                <li><a href="/development/#services" class="nav-link">Services</a></li>
-                <li><a href="/development/#work" class="nav-link">Work</a></li>
-                <li><a href="/development/#process" class="nav-link">Process</a></li>
-                <li><a href="/development/#team" class="nav-link">Team</a></li>
-                <li><a href="/studios/" class="nav-link">Studios</a></li>
-                <li><a href="/development/#contact" class="btn btn-primary btn-sm">Start a project</a></li>
+                <li><a href="/#services" class="nav-link">Services</a></li>
+                <li><a href="/#work" class="nav-link">Work</a></li>
+                <li><a href="/#process" class="nav-link">Process</a></li>
+                <li><a href="/#team" class="nav-link">Team</a></li>
+                <li><a href="/studios/" class="studios-pill"><i class="fas fa-gamepad"></i> Studios</a></li>
+                <li><a href="/#contact" class="btn btn-primary btn-sm">Start a project</a></li>
             </ul>
             <button id="dev-menu-button" class="lg:hidden p-2 -mr-2 text-slate-700" aria-label="Open menu" aria-expanded="false" aria-controls="dev-menu">
                 <i class="fas fa-bars text-xl"></i>
@@ -55,12 +55,12 @@
         </nav>
         <div id="dev-menu" class="lg:hidden hidden border-t border-slate-200 bg-white">
             <div class="container mx-auto px-4 py-3 flex flex-col text-base font-medium text-slate-700">
-                <a href="/development/#services" class="py-3 border-b border-slate-100">Services</a>
-                <a href="/development/#work" class="py-3 border-b border-slate-100">Work</a>
-                <a href="/development/#process" class="py-3 border-b border-slate-100">Process</a>
-                <a href="/development/#team" class="py-3 border-b border-slate-100">Team</a>
-                <a href="/studios/" class="py-3 border-b border-slate-100">CodeSeed Studios</a>
-                <a href="/development/#contact" class="btn btn-primary justify-center mt-4 mb-2">Start a project</a>
+                <a href="/#services" class="py-3 border-b border-slate-100">Services</a>
+                <a href="/#work" class="py-3 border-b border-slate-100">Work</a>
+                <a href="/#process" class="py-3 border-b border-slate-100">Process</a>
+                <a href="/#team" class="py-3 border-b border-slate-100">Team</a>
+                <a href="/studios/" class="py-3 border-b border-slate-100 flex items-center gap-2 font-semibold text-[#0b7f8c]"><i class="fas fa-gamepad"></i> CodeSeed Studios</a>
+                <a href="/#contact" class="btn btn-primary justify-center mt-4 mb-2">Start a project</a>
             </div>
         </div>
     </header>
@@ -70,7 +70,7 @@
             <div class="dev-hero-bg absolute inset-0 pointer-events-none" aria-hidden="true"></div>
             <div class="container mx-auto px-4 lg:px-8 relative pt-10 md:pt-14 pb-12 md:pb-16">
                 <nav class="breadcrumb breadcrumb--light mb-10" aria-label="Breadcrumb">
-                    <a href="/development/#work">Work</a><i class="fas fa-chevron-right"></i><span>Trust-Client.com</span>
+                    <a href="/#work">Work</a><i class="fas fa-chevron-right"></i><span>Trust-Client.com</span>
                 </nav>
                 <div class="case-hero">
                     <div>
@@ -153,7 +153,7 @@
                         <h2 class="text-2xl md:text-3xl font-bold text-white mb-2">Have a project like this?</h2>
                         <p class="text-slate-300 max-w-xl">Book a free 15-minute call. We'll follow up with a written proposal within 48 hours.</p>
                     </div>
-                    <a href="/development/#contact" class="btn btn-light shrink-0">Start a project <i class="fas fa-arrow-right text-sm"></i></a>
+                    <a href="/#contact" class="btn btn-light shrink-0">Start a project <i class="fas fa-arrow-right text-sm"></i></a>
                 </div>
             </div>
         </section>
@@ -163,7 +163,7 @@
     <footer class="bg-forest text-slate-300">
         <div class="container mx-auto px-4 lg:px-8 py-14 grid sm:grid-cols-2 md:grid-cols-[1.4fr_1fr_1fr_1fr] gap-10">
             <div class="sm:col-span-2 md:col-span-1">
-                <a href="/development/" class="flex items-center gap-3 mb-4">
+                <a href="/" class="flex items-center gap-3 mb-4">
                     <img src="/assets/codeseed-logo.png" alt="" class="h-10 w-10 rounded-md">
                     <span class="text-xl font-bold text-white lowercase tracking-wide">code-seed</span>
                 </a>
@@ -172,26 +172,25 @@
             <div>
                 <p class="footer-heading">Services</p>
                 <ul class="footer-links">
-                    <li><a href="/development/#services">Web &amp; app development</a></li>
-                    <li><a href="/development/#services">Software &amp; APIs</a></li>
-                    <li><a href="/development/#services">Data &amp; machine learning</a></li>
+                    <li><a href="/#services">Web &amp; app development</a></li>
+                    <li><a href="/#services">Software &amp; APIs</a></li>
+                    <li><a href="/#services">Data &amp; machine learning</a></li>
                     <li><a href="/services/professional-websites.html">Professional websites</a></li>
                 </ul>
             </div>
             <div>
                 <p class="footer-heading">Company</p>
                 <ul class="footer-links">
-                    <li><a href="/development/#work">Work</a></li>
-                    <li><a href="/development/#process">Process</a></li>
-                    <li><a href="/development/#team">Team</a></li>
-                    <li><a href="/development/#contact">Contact</a></li>
+                    <li><a href="/#work">Work</a></li>
+                    <li><a href="/#process">Process</a></li>
+                    <li><a href="/#team">Team</a></li>
+                    <li><a href="/#contact">Contact</a></li>
                 </ul>
             </div>
             <div>
                 <p class="footer-heading">CodeSeed</p>
                 <ul class="footer-links">
                     <li><a href="/studios/">CodeSeed Studios</a></li>
-                    <li><a href="/">code-seed.io</a></li>
                     <li><a href="/privacy.html">Privacy</a></li>
                 </ul>
             </div>
