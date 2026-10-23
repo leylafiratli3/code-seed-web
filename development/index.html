@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Basic Meta Tags -->
+    <title>CodeSeed Development | Professional Software Development, Ethically Built</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CodeSeed Development: professional software development that aligns with your values. Websites, web apps, mobile apps, APIs and data engineering, built ethically by a senior team.">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/assets/codeseed-logo.png">
+
+    <!-- Open Graph / Twitter -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://code-seed.io/development/">
+    <meta property="og:site_name" content="CodeSeed Development">
+    <meta property="og:title" content="CodeSeed Development">
+    <meta property="og:description" content="Professional software development that aligns with your values. Building better technology, ethically.">
+    <meta property="og:image" content="https://code-seed.io/assets/og-codeseed.png">
+    <meta property="og:image:alt" content="CodeSeed Development">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="CodeSeed Development">
+    <meta name="twitter:description" content="Professional software development that aligns with your values. Building better technology, ethically.">
+    <meta name="twitter:image" content="https://code-seed.io/assets/og-codeseed.png">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "CodeSeed Development",
+      "url": "https://code-seed.io/development/",
+      "logo": "https://code-seed.io/assets/codeseed-logo.png",
+      "description": "Professional software development that aligns with your values. Building better technology, ethically.",
+      "parentOrganization": { "@type": "Organization", "name": "CodeSeed", "url": "https://code-seed.io" }
+    }
+    </script>
+
+    <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Chakra+Petch:wght@500;600;700&family=Michroma&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="/development/tailwind-config.js"></script>
+    <link href="/development/development.css" rel="stylesheet">
+    <script src="/development/form-guard.js" defer></script>
+    <script src="/development/development.js" defer></script>
+</head>
+<body class="font-sans bg-paper text-slate-800 antialiased">
+
+    <!-- Header -->
+    <header class="dev-header dev-header--dark fixed inset-x-0 top-0 z-50">
+        <nav class="container mx-auto px-4 lg:px-8 h-[72px] flex items-center justify-between">
+            <a href="#top" class="flex items-center gap-3">
+                <img src="/assets/codeseed-logo.png" alt="CodeSeed logo" class="h-10 w-10">
+                <span class="flex flex-col leading-none">
+                    <span class="text-xl font-bold text-secondary lowercase tracking-wide">code-seed</span>
+                    <span class="text-[0.62rem] font-bold text-slate-500 uppercase tracking-[0.28em] mt-1">Development</span>
+                </span>
+            </a>
+            <ul class="hidden lg:flex items-center gap-8 text-[0.95rem] font-medium text-slate-700">
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#work" class="nav-link">Work</a></li>
+                <li><a href="#process" class="nav-link">Process</a></li>
+                <li><a href="#team" class="nav-link">Team</a></li>
+                <li><a href="/studios/" class="nav-link">Studios</a></li>
+                <li><a href="#contact" class="btn btn-primary btn-sm">Start a project</a></li>
+            </ul>
+            <button id="dev-menu-button" class="lg:hidden p-2 -mr-2 text-slate-700" aria-label="Open menu" aria-expanded="false" aria-controls="dev-menu">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+        </nav>
+        <div id="dev-menu" class="lg:hidden hidden border-t border-slate-200 bg-white">
+            <div class="container mx-auto px-4 py-3 flex flex-col text-base font-medium text-slate-700">
+                <a href="#services" class="py-3 border-b border-slate-100">Services</a>
+                <a href="#work" class="py-3 border-b border-slate-100">Work</a>
+                <a href="#process" class="py-3 border-b border-slate-100">Process</a>
+                <a href="#team" class="py-3 border-b border-slate-100">Team</a>
+                <a href="/studios/" class="py-3 border-b border-slate-100">CodeSeed Studios</a>
+                <a href="#contact" class="btn btn-primary justify-center mt-4 mb-2">Start a project</a>
+            </div>
+        </div>
+    </header>
+
+    <main id="top">
+        <!-- Hero -->
+        <section class="dev-hero relative overflow-hidden pt-[72px]">
+            <div class="dev-hero-bg absolute inset-0 pointer-events-none" aria-hidden="true"></div>
+            <div class="container mx-auto px-4 lg:px-8 relative grid lg:grid-cols-[1.05fr_1fr] gap-12 lg:gap-12 items-center pt-12 pb-14 md:pt-16 md:pb-16 lg:pt-20 lg:pb-20">
+                <div>
+                    <p class="eyebrow eyebrow--light mb-6">CodeSeed Development</p>
+                    <h1 class="text-white font-bold tracking-tight leading-[1.04] mb-6" style="font-size: clamp(2.3rem, 4vw, 3.6rem); text-wrap: balance;">
+                        Professional software development that <span class="font-serif italic font-normal text-primary">aligns with your values.</span>
+                    </h1>
+                    <p class="text-xl md:text-2xl text-white/90 font-medium mb-5">Building better technology, ethically.</p>
+                    <p class="text-lg text-slate-300 leading-relaxed max-w-xl mb-9">We design and build websites, web apps, and mobile apps for teams who care how their software is made: big-tech engineering standards from a senior team, with no surveillance, dark patterns, or surprise invoices.</p>
+                    <div class="flex flex-col sm:flex-row gap-3">
+                        <a href="#contact" class="btn btn-sage">Start a project <i class="fas fa-arrow-right text-sm"></i></a>
+                        <a href="#work" class="btn btn-ghost-light">See our work</a>
+                    </div>
+                </div>
+
+                <div class="float-cluster">
+                    <a href="/projects/harman.html" class="float-card float-card--a">
+                        <strong>$1B+</strong><span>inventory a year through a system we built</span><em>Harman</em>
+                    </a>
+                    <a href="/studios/listforge.html" class="float-card float-card--b float-card--solid">
+                        <strong>50,000+</strong><span>users on an app we built and run</span><em>ListForge</em>
+                    </a>
+                    <figure class="float-quote">
+                        <blockquote>"They delivered a stunning website revamp that exceeded our expectations, completing the project ahead of schedule and right on budget."</blockquote>
+                        <figcaption>
+                            <img src="/assets/development/readyai-logo.webp" alt="ReadyAI">
+                            <span><strong>Carol Eastman</strong><span>CEO, ReadyAI</span></span>
+                        </figcaption>
+                    </figure>
+                    <a href="/studios/listforge.html" class="float-card float-card--c">
+                        <strong>2,000+</strong><span>paid subscribers on our own app</span><em>ListForge</em>
+                    </a>
+                    <a href="/projects/harman.html" class="float-card float-card--d">
+                        <strong>60%</strong><span>less manual operations work</span><em>Harman</em>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Logos -->
+            <div class="relative border-t border-white/10">
+                <div class="container mx-auto px-4 lg:px-8 py-7 flex flex-col md:flex-row md:items-center gap-5 md:gap-12">
+                    <p class="text-sm font-medium text-slate-400 shrink-0">We've worked with</p>
+                    <ul class="logo-row logo-row--light grid grid-cols-2 sm:grid-cols-4 gap-x-10 gap-y-6 items-center flex-1">
+                        <li><img src="/assets/google.png" alt="Google" class="h-7"></li>
+                        <li><img src="/assets/development/harman-logo.webp" alt="Harman International" class="h-12"></li>
+                        <li><img src="/assets/accenture.png" alt="Accenture" class="h-7"></li>
+                        <li><img src="/assets/dimmak.png" alt="Dim Mak Records" class="h-12"></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services -->
+        <section id="services" class="py-16 md:py-20 bg-white">
+            <div class="container mx-auto px-4 lg:px-8">
+                <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-5 lg:gap-16 mb-10">
+                    <div class="max-w-2xl">
+                        <p class="eyebrow mb-4">Services</p>
+                        <h2 class="section-title">End-to-end development, from first sketch to&nbsp;production.</h2>
+                    </div>
+                    <p class="text-lg text-slate-600 leading-relaxed max-w-md">Design, development, and launch, built to the same engineering standards we brought from big&nbsp;tech.</p>
+                </div>
+
+                <ol class="svc-grid">
+                    <li class="svc">
+                        <span class="svc-num">01</span>
+                        <h3>Web Development</h3>
+                        <p>Fast, responsive web apps, from landing pages to full platforms.</p>
+                    </li>
+                    <li class="svc">
+                        <span class="svc-num">02</span>
+                        <h3>App Development</h3>
+                        <p>Mobile and desktop apps for iOS, Android, macOS, Windows, and Linux.</p>
+                    </li>
+                    <li class="svc">
+                        <span class="svc-num">03</span>
+                        <h3>Software &amp; APIs</h3>
+                        <p>Secure APIs, backends, and integrations that keep products running at scale.</p>
+                    </li>
+                    <li class="svc">
+                        <span class="svc-num">04</span>
+                        <h3>Data Engineering</h3>
+                        <p>Pipelines, warehouses, and dashboards that turn raw data into decisions.</p>
+                    </li>
+                    <li class="svc">
+                        <span class="svc-num">05</span>
+                        <h3>Applied Machine Learning</h3>
+                        <p>NLP, computer vision, and LLM integrations that deliver measurable value.</p>
+                    </li>
+                    <li class="svc">
+                        <span class="svc-num">06</span>
+                        <h3>Adaptive Automation</h3>
+                        <p>Custom automation that cuts manual work and fits the tools you already use.</p>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="py-16 md:py-24 bg-forest text-white">
+            <div class="container mx-auto px-4 lg:px-8">
+                <p class="eyebrow eyebrow--light mb-4">Testimonials</p>
+                <h2 class="section-title text-white mb-10 md:mb-12 max-w-2xl">What it's like to work with&nbsp;us.</h2>
+                <div class="grid lg:grid-cols-2 gap-6 lg:gap-8">
+                    <figure class="quote-card">
+                        <blockquote>"Our experience with CodeSeed was exceptional from start to finish. They delivered a stunning website revamp that exceeded our expectations, completing the project ahead of schedule and right on budget. What impressed us most was their consistent professionalism and proactive follow-up, ensuring a seamless and stress-free experience. We highly recommend CodeSeed to anyone seeking a dedicated and talented web design partner who delivers outstanding results."</blockquote>
+                        <figcaption>
+                            <img src="/assets/development/readyai-logo.webp" alt="ReadyAI" class="quote-logo">
+                            <span><strong>Carol Eastman</strong><span>CEO, ReadyAI</span></span>
+                        </figcaption>
+                    </figure>
+                    <figure class="quote-card">
+                        <blockquote>"Working with CodeSeed on the planning and development of Trust-Client.com has been a great experience. From the start, they took the time to understand not just the features, but the purpose behind the platform. The process felt organized, transparent, and genuinely collaborative. I'd recommend CodeSeed to anyone looking for a development team that listens and knows how to bring an idea to life."</blockquote>
+                        <figcaption>
+                            <img src="/assets/development/trustclient-logo.webp" alt="Trust-Client.com" class="quote-logo">
+                            <span><strong>Luis E. Bahena</strong><span>Founder, Trust-Client.com</span></span>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        <!-- Work -->
+        <section id="work" class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-4 lg:px-8">
+                <p class="eyebrow mb-4">Recent work</p>
+                <h2 class="section-title max-w-2xl mb-10">What we've been working&nbsp;on.</h2>
+
+                <article class="featured">
+                    <div class="featured-body">
+                        <p class="featured-tag">Featured partner</p>
+                        <h3>ReadyAI</h3>
+                        <p>We're an ongoing development partner to ReadyAI, an enterprise AI company. It started with an enterprise-grade rebuild of their website and a custom CMS their team runs without developers.</p>
+                        <div class="featured-links">
+                            <a href="/projects/readyai.html" class="btn btn-primary">Read the case study <i class="fas fa-arrow-right text-sm"></i></a>
+                            <a href="https://readyai.dev" target="_blank" rel="noopener" class="btn btn-outline">Visit readyai.dev <i class="fas fa-arrow-up-right-from-square text-sm"></i></a>
+                        </div>
+                    </div>
+                    <a href="/projects/readyai.html" class="featured-shot" tabindex="-1" aria-hidden="true">
+                        <span class="browser-bar"><span></span><span></span><span></span><em>readyai.dev</em></span>
+                        <img src="/assets/development/readyai-site.webp" alt="" width="1600" height="854" loading="lazy">
+                    </a>
+                </article>
+
+                <ul class="proj-list">
+                    <li>
+                        <a href="/projects/harman.html" class="proj-row">
+                            <span class="proj-logo" style="--chip:#ffffff;"><img src="/assets/development/harman-logo.webp" alt="" loading="lazy"></span>
+                            <span class="proj-name"><strong>Harman International</strong><span>Commander System</span></span>
+                            <span class="proj-desc">A cloud operations platform that automates allocation and order processing for over $1B in annual inventory.</span>
+                            <span class="proj-cta">Case study <i class="fas fa-arrow-right"></i></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/projects/trustclient.html" class="proj-row">
+                            <span class="proj-logo" style="--chip:#000000;"><img src="/assets/development/trustclient-logo.webp" alt="" loading="lazy"></span>
+                            <span class="proj-name"><strong>Trust-Client.com</strong><span>Review platform</span></span>
+                            <span class="proj-desc">A review platform that helps contractors vet clients before taking a job, built from concept to launch.</span>
+                            <span class="proj-cta">Case study <i class="fas fa-arrow-right"></i></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/projects/coflow.html" class="proj-row">
+                            <span class="proj-logo" style="--chip:#ffffff;"><img src="/assets/development/coflow.webp" alt="" loading="lazy"></span>
+                            <span class="proj-name"><strong>CoFlow</strong><span>AI community bot</span></span>
+                            <span class="proj-desc">An AI-powered Discord bot that keeps communities engaged and cuts admin overhead.</span>
+                            <span class="proj-cta">Case study <i class="fas fa-arrow-right"></i></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Small business websites -->
+        <section id="websites" class="py-16 md:py-24">
+            <div class="container mx-auto px-4 lg:px-8">
+                <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 lg:gap-16 mb-10">
+                    <div class="max-w-2xl">
+                        <p class="eyebrow mb-4">For small businesses</p>
+                        <h2 class="section-title mb-4">Professional websites, without the agency price&nbsp;tag.</h2>
+                        <p class="text-lg text-slate-600 leading-relaxed">Custom-designed sites with a simple content dashboard you can update yourself. One-time price, no subscriptions, and you own everything.</p>
+                    </div>
+                    <div class="flex flex-col sm:flex-row gap-3 shrink-0">
+                        <a href="/services/website-contact.html" class="btn btn-primary">Book a free call <i class="fas fa-arrow-right text-sm"></i></a>
+                        <a href="/services/professional-websites.html" class="btn btn-outline">How it works</a>
+                    </div>
+                </div>
+                <div class="site-grid">
+                    <a href="https://leylafiratli.com" target="_blank" rel="noopener" class="site-card">
+                        <span class="site-shot">
+                            <span class="browser-bar"><span></span><span></span><span></span><em>leylafiratli.com</em></span>
+                            <img src="/assets/development/site-leyla.webp" alt="Freedom From Chronic Pain website" width="1080" height="623" loading="lazy">
+                        </span>
+                        <span class="site-meta">
+                            <span><strong>Freedom From Chronic Pain</strong><span>Breathwork therapy website</span></span>
+                            <i class="fas fa-arrow-up-right-from-square"></i>
+                        </span>
+                    </a>
+                    <a href="https://pipraine.com" target="_blank" rel="noopener" class="site-card">
+                        <span class="site-shot">
+                            <span class="browser-bar"><span></span><span></span><span></span><em>pipraine.com</em></span>
+                            <img src="/assets/development/site-pip.webp" alt="Pip Raine website" width="1080" height="623" loading="lazy">
+                        </span>
+                        <span class="site-meta">
+                            <span><strong>Pip Raine</strong><span>Breathwork therapy website</span></span>
+                            <i class="fas fa-arrow-up-right-from-square"></i>
+                        </span>
+                    </a>
+                    <a href="https://soulseedfestival.com" target="_blank" rel="noopener" class="site-card">
+                        <span class="site-shot">
+                            <span class="browser-bar"><span></span><span></span><span></span><em>soulseedfestival.com</em></span>
+                            <img src="/assets/development/site-soulseed.webp" alt="SoulSeed Festival website" width="1080" height="623" loading="lazy">
+                        </span>
+                        <span class="site-meta">
+                            <span><strong>SoulSeed Festival</strong><span>Music &amp; healing-arts festival website</span></span>
+                            <i class="fas fa-arrow-up-right-from-square"></i>
+                        </span>
+                    </a>
+                </div>
+                <ul class="site-facts">
+                    <li><strong>2–4 weeks</strong> typical timeline</li>
+                    <li><strong>~$10/month</strong> hosting, paid directly</li>
+                    <li><strong>100% yours</strong> code, content, and domain</li>
+                    <li><strong>No retainer</strong> hourly support when you need it</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Process -->
+        <section id="process" class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-4 lg:px-8">
+                <div class="grid lg:grid-cols-[0.8fr_1.2fr] gap-6 lg:gap-20 mb-14">
+                    <div>
+                        <p class="eyebrow mb-4">How we work</p>
+                        <h2 class="section-title">A clear process, from first call to&nbsp;launch.</h2>
+                    </div>
+                    <p class="text-lg text-slate-600 leading-relaxed lg:pt-9">You'll always know what's happening, what it costs, and what comes next. No retainers, no lock-in, and direct access to the people building your project.</p>
+                </div>
+                <ol class="process">
+                    <li>
+                        <span class="process-step">Step 1</span>
+                        <h3>Free discovery call</h3>
+                        <p>A short call, usually about 15 minutes, to learn about your business, your goals, and what you need built.</p>
+                    </li>
+                    <li>
+                        <span class="process-step">Step 2</span>
+                        <h3>Written proposal</h3>
+                        <p>Within 48 hours you get a written proposal with a clear scope, timeline, and quote. No pressure, no obligation.</p>
+                    </li>
+                    <li>
+                        <span class="process-step">Step 3</span>
+                        <h3>Design &amp; build</h3>
+                        <p>Our team designs and builds from scratch, with no templates or cookie-cutter layouts, shaped around your brand and goals.</p>
+                    </li>
+                    <li>
+                        <span class="process-step">Step 4</span>
+                        <h3>Launch &amp; support</h3>
+                        <p>We deploy, walk you through everything, and hand over the keys. After launch, support is hourly, with no retainer.</p>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- Approach -->
+        <section id="approach" class="py-16 md:py-24">
+            <div class="container mx-auto px-4 lg:px-8 grid lg:grid-cols-2 gap-12 lg:gap-20">
+                <div>
+                    <p class="eyebrow mb-4">Our approach</p>
+                    <h2 class="section-title mb-6">Big-tech standards, without the big-tech&nbsp;baggage.</h2>
+                    <p class="text-lg text-slate-600 leading-relaxed mb-5">We're engineers who've built systems for major tech platforms, and left due to ethical concerns. We bring the same professional standards, rigorous processes, and technical excellence, without supporting surveillance capitalism, environmental harm, or exploitative practices.</p>
+                    <p class="text-lg text-slate-600 leading-relaxed">Our mission is to build technology that serves people without extracting from&nbsp;them.</p>
+                </div>
+                <ul class="principles">
+                    <li>
+                        <h3>Enterprise quality, startup pricing</h3>
+                        <p>The same professional standards that power major platforms, without the enterprise price tag.</p>
+                    </li>
+                    <li>
+                        <h3>Ethical by design</h3>
+                        <p>User privacy, environmental responsibility, and fair practices built into how we work.</p>
+                    </li>
+                    <li>
+                        <h3>Transparent partnership</h3>
+                        <p>No hidden fees and no surprise bills. Honest communication and quality results.</p>
+                    </li>
+                    <li>
+                        <h3>Values-driven development</h3>
+                        <p>Technology that fits your business values and how you want to operate.</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Team -->
+        <section id="team" class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-4 lg:px-8">
+                <p class="eyebrow mb-4">Team</p>
+                <h2 class="section-title mb-10 md:mb-12 max-w-2xl">The people who'll build your&nbsp;project.</h2>
+                <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <article class="team-card">
+                        <img src="/assets/development/team-bryce.webp" alt="Bryce Merrill" width="480" height="480" loading="lazy">
+                        <h3>Bryce Merrill</h3>
+                        <p class="team-role">Principal Software Engineer</p>
+                        <p>An adaptive engineer focused on intelligent systems and automation. Specializes in backend systems, and is just as comfortable with frontend, API, and data integrations.</p>
+                    </article>
+                    <article class="team-card">
+                        <img src="/assets/development/team-leyla.webp" alt="Leyla Fıratlı" width="480" height="480" loading="lazy">
+                        <h3>Leyla Fıratlı</h3>
+                        <p class="team-role">Data Architect &amp; Web Developer</p>
+                        <p>7+ years building data infrastructure for companies like Google and Accenture, combined with a commitment to responsible data practices.</p>
+                    </article>
+                    <article class="team-card">
+                        <img src="/assets/development/team-deanna.webp" alt="Deanna Patelis" width="480" height="480" loading="lazy">
+                        <h3>Deanna Patelis</h3>
+                        <p class="team-role">Machine Learning Engineer</p>
+                        <p>Applied machine learning and LLM specialist who also handles DevOps, so projects deploy efficiently and keep improving.</p>
+                    </article>
+                    <article class="team-card">
+                        <img src="/assets/development/team-isaac.webp" alt="Isaac Vandyne" width="480" height="480" loading="lazy">
+                        <h3>Isaac Vandyne</h3>
+                        <p class="team-role">Product Designer &amp; Creative Tactician</p>
+                        <p>A background in graphic and motion design, plus 7+ years building complex B2B software platforms that solve real user problems.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Studios -->
+        <section id="studios" class="studios-showcase relative overflow-hidden py-16 md:py-24">
+            <div class="studios-glow absolute inset-0 pointer-events-none" aria-hidden="true"></div>
+            <div class="container mx-auto px-4 lg:px-8 relative">
+                <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-10 md:mb-12">
+                    <div class="max-w-2xl">
+                        <p class="studios-eyebrow mb-4">From CodeSeed Studios</p>
+                        <h2 class="studios-title">We ship our own products, too.</h2>
+                        <p class="text-slate-300 text-lg leading-relaxed mt-4">The same team that builds for clients makes games and tools for players. Shipping to tens of thousands of real users is how we keep our standards&nbsp;honest.</p>
+                    </div>
+                    <a href="/studios/" class="studios-btn studios-btn--ghost shrink-0">Visit CodeSeed Studios <i class="fas fa-arrow-right text-xs"></i></a>
+                </div>
+
+                <div class="studio-grid">
+                    <article class="studio-card studio-card--rites" data-tilt>
+                        <div class="studio-card-inner">
+                            <div class="rites-art">
+                                <img src="/assets/studios/rites-of-accord-capsule.webp" alt="Rites of Accord key art" width="1232" height="706" loading="lazy">
+                            </div>
+                            <div class="studio-card-body">
+                                <p class="studio-tag studio-tag--rite"><span class="live-dot"></span> Open beta · Free to play</p>
+                                <h3 class="rites-title">Rites of Accord</h3>
+                                <p class="studio-desc">Turn-based hex tactics with a Survival roguelite and ranked 1v1. Six factions, one rebuilt world.</p>
+                                <div class="studio-actions">
+                                    <a href="https://ritesofaccord.com" target="_blank" rel="noopener" class="studios-btn studios-btn--rite">Play free in browser <i class="fas fa-play text-[0.6rem]"></i></a>
+                                    <a href="https://store.steampowered.com/app/4579700/Rites_of_Accord/" target="_blank" rel="noopener" class="studios-btn studios-btn--ghost"><i class="fab fa-steam"></i> Wishlist on Steam</a>
+                                    <a href="/studios/#rites-of-accord" class="studio-more">Learn more <i class="fas fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="studio-card studio-card--listforge" data-tilt>
+                        <div class="studio-card-inner">
+                            <div class="lf-top">
+                                <span class="lf-badge"><img src="/assets/LISTFORGE.png" alt="ListForge logo" loading="lazy"></span>
+                                <div>
+                                    <p class="studio-tag">Tabletop app</p>
+                                    <h3 class="lf-title">ListForge</h3>
+                                </div>
+                            </div>
+                            <p class="studio-desc">The army builder, rules reference, and game tracker for Warhammer 40k, now with Rites of Accord lists.</p>
+                            <div class="lf-stats">
+                                <div><strong data-count="50000">50,000+</strong><span>players</span></div>
+                                <div><strong data-count="2000">2,000+</strong><span>paid subscribers</span></div>
+                            </div>
+                            <ul class="lf-platforms" aria-label="Available on">
+                                <li title="Windows"><i class="fab fa-windows"></i></li>
+                                <li title="macOS"><i class="fab fa-apple"></i></li>
+                                <li title="Linux"><i class="fab fa-linux"></i></li>
+                                <li title="iOS"><i class="fab fa-app-store-ios"></i></li>
+                                <li title="Android"><i class="fab fa-google-play"></i></li>
+                            </ul>
+                            <div class="studio-actions mt-auto">
+                                <a href="https://listforge.club" target="_blank" rel="noopener" class="studios-btn studios-btn--seed">Get ListForge <i class="fas fa-arrow-up-right-from-square text-[0.65rem]"></i></a>
+                                <a href="/studios/listforge.html" class="studio-more">How we built it <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact" class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-4 lg:px-8 grid lg:grid-cols-[0.9fr_1.1fr] gap-12 lg:gap-20">
+                <div>
+                    <p class="eyebrow mb-4">Start a project</p>
+                    <h2 class="section-title mb-6">Tell us what you're&nbsp;building.</h2>
+                    <p class="text-lg text-slate-600 leading-relaxed mb-8">Share a few details and we'll set up a free discovery call. Most calls take about 15 minutes, and we'll follow up with a written proposal within 48 hours.</p>
+                    <ul class="space-y-4 text-slate-700">
+                        <li class="flex gap-3"><i class="fas fa-check text-secondary mt-1"></i> Enterprise-grade quality without the enterprise price tag</li>
+                        <li class="flex gap-3"><i class="fas fa-check text-secondary mt-1"></i> No hidden fees, no surprise bills</li>
+                        <li class="flex gap-3"><i class="fas fa-check text-secondary mt-1"></i> Privacy and fair practices built in from day one</li>
+                    </ul>
+                </div>
+                <form id="contact-form" action="https://formspree.io/f/mnnaoeoa" method="POST" class="contact-form">
+                    <div class="grid sm:grid-cols-2 gap-5">
+                        <label class="field">
+                            <span>Name</span>
+                            <input type="text" name="name" required autocomplete="name">
+                        </label>
+                        <label class="field">
+                            <span>Email</span>
+                            <input type="email" name="_replyto" required autocomplete="email">
+                        </label>
+                        <label class="field">
+                            <span>Company <em>(optional)</em></span>
+                            <input type="text" name="company" autocomplete="organization">
+                        </label>
+                        <label class="field">
+                            <span>What do you need?</span>
+                            <select name="project_type">
+                                <option>Website</option>
+                                <option>Web application</option>
+                                <option>Mobile or desktop app</option>
+                                <option>Software / API</option>
+                                <option>Data engineering</option>
+                                <option>Machine learning / automation</option>
+                                <option>Not sure yet</option>
+                            </select>
+                        </label>
+                        <label class="field sm:col-span-2">
+                            <span>Project details</span>
+                            <textarea name="message" rows="5" required placeholder="What are you building, and what does success look like?"></textarea>
+                        </label>
+                    </div>
+                    <input type="hidden" name="_subject" value="New inquiry from CodeSeed Development">
+                    <input type="text" name="_gotcha" class="hidden" tabindex="-1" autocomplete="off">
+                    <button type="submit" class="btn btn-primary w-full justify-center mt-6">Send inquiry <i class="fas fa-arrow-right text-sm"></i></button>
+                    <p id="contact-status" class="text-sm mt-4 min-h-[1.25rem] text-center text-slate-500" role="status" aria-live="polite">We usually reply within one business day.</p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-forest text-slate-300">
+        <div class="container mx-auto px-4 lg:px-8 py-14 grid sm:grid-cols-2 md:grid-cols-[1.4fr_1fr_1fr_1fr] gap-10">
+            <div class="sm:col-span-2 md:col-span-1">
+                <a href="#top" class="flex items-center gap-3 mb-4">
+                    <img src="/assets/codeseed-logo.png" alt="" class="h-10 w-10 rounded-md">
+                    <span class="text-xl font-bold text-white lowercase tracking-wide">code-seed</span>
+                </a>
+                <p class="text-slate-400 leading-relaxed max-w-sm">Professional software development that aligns with your values. Building better technology, ethically.</p>
+            </div>
+            <div>
+                <p class="footer-heading">Services</p>
+                <ul class="footer-links">
+                    <li><a href="#services">Web &amp; app development</a></li>
+                    <li><a href="#services">Software &amp; APIs</a></li>
+                    <li><a href="#services">Data &amp; machine learning</a></li>
+                    <li><a href="/services/professional-websites.html">Professional websites</a></li>
+                </ul>
+            </div>
+            <div>
+                <p class="footer-heading">Company</p>
+                <ul class="footer-links">
+                    <li><a href="#work">Work</a></li>
+                    <li><a href="#process">Process</a></li>
+                    <li><a href="#team">Team</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <p class="footer-heading">CodeSeed</p>
+                <ul class="footer-links">
+                    <li><a href="/studios/">CodeSeed Studios</a></li>
+                    <li><a href="/">code-seed.io</a></li>
+                    <li><a href="/privacy.html">Privacy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="border-t border-white/10">
+            <p class="container mx-auto px-4 lg:px-8 py-6 text-sm text-slate-500">&copy; <span id="year">2026</span> CodeSeed. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

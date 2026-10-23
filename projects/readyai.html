@@ -1,273 +1,204 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Basic Meta Tags -->
-    <title>ReadyAI - CodeSeed Project | AI-Powered Business Solutions Platform</title>
+    <title>ReadyAI Case Study | CodeSeed Development</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="ReadyAI is a modern website showcasing AI-powered business solutions. Built by CodeSeed with clean design and intuitive user experience.">
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" sizes="32x32" href="../assets/codeseed-logo.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="../assets/codeseed-logo.png">
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
+    <meta name="description" content="ReadyAI case study by CodeSeed Development: An enterprise-grade rebuild of ReadyAI&#x27;s website, with a custom CMS their team runs without developers.">
+    <link rel="icon" type="image/png" href="/assets/codeseed-logo.png">
+    <link rel="canonical" href="https://code-seed.io/projects/readyai.html">
+
+    <meta property="og:type" content="article">
     <meta property="og:url" content="https://code-seed.io/projects/readyai.html">
-    <meta property="og:site_name" content="CodeSeed">
-    <meta property="og:title" content="ReadyAI - AI-Powered Business Solutions Platform">
-    <meta property="og:description" content="Modern website showcasing AI-powered business solutions with clean design and intuitive user experience.">
-    <meta property="og:image" content="https://code-seed.io/assets/readyai-logo.jpg">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:image:alt" content="ReadyAI Website">
-
-    <!-- Twitter -->
+    <meta property="og:site_name" content="CodeSeed Development">
+    <meta property="og:title" content="ReadyAI Case Study | CodeSeed Development">
+    <meta property="og:description" content="ReadyAI case study by CodeSeed Development: An enterprise-grade rebuild of ReadyAI&#x27;s website, with a custom CMS their team runs without developers.">
+    <meta property="og:image" content="https://code-seed.io/assets/og-codeseed.png">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="https://code-seed.io/projects/readyai.html">
-    <meta name="twitter:title" content="ReadyAI - AI-Powered Business Solutions Platform">
-    <meta name="twitter:description" content="Modern website showcasing AI-powered business solutions with clean design and intuitive user experience.">
-    <meta name="twitter:image" content="https://code-seed.io/assets/readyai-logo.jpg">
+    <meta name="twitter:title" content="ReadyAI Case Study | CodeSeed Development">
+    <meta name="twitter:description" content="ReadyAI case study by CodeSeed Development: An enterprise-grade rebuild of ReadyAI&#x27;s website, with a custom CMS their team runs without developers.">
+    <meta name="twitter:image" content="https://code-seed.io/assets/og-codeseed.png">
 
-    <!-- Structured Data -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "ReadyAI",
-      "description": "AI-powered business solutions platform",
-      "url": "https://readyai.dev",
-      "creator": {
-        "@type": "Organization",
-        "name": "CodeSeed"
-      }
-    }
-    </script>
-
-    <!-- Satoshi Font from Fontshare -->
-    <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,600,700,900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400,500,700&display=swap" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#8dba90',
-                        secondary: '#5a7d5c',
-                        accent: '#D2B48C',
-                        tan: '#D2B48C',
-                    },
-                    fontFamily: {
-                        'sans': ['Satoshi', 'sans-serif'],
-                        'fira': ['"Fira Code"', 'monospace'],
-                    },
-                }
-            }
-        }
-    </script>
+    <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="../styles.css" rel="stylesheet">
-    <script src="../script.js" defer></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="/development/tailwind-config.js"></script>
+    <link href="/development/development.css" rel="stylesheet">
+    <script src="/development/form-guard.js" defer></script>
+    <script src="/development/development.js" defer></script>
 </head>
-<body class="font-sans bg-white">
-    <!-- Header -->
-    <header class="bg-white/95 backdrop-blur-sm fixed w-full z-50 shadow-sm">
-        <nav class="container mx-auto px-4 py-5">
-            <div class="flex justify-between items-center">
-                <div class="flex items-center transition-transform duration-300 ease-in-out hover:scale-105">
-                    <a href="../index.html#home" class="flex items-center">
-                        <img src="../assets/codeseed-logo.png" alt="CodeSeed Logo" id="header-logo" class="h-20 w-auto mr-4">
-                        <span class="text-2xl font-bold text-primary lowercase tracking-wide">code-seed</span>
-                    </a>
-                </div>
-                <div class="md:hidden">
-                    <button id="mobile-menu-button" class="text-gray-500 hover:text-gray-600 focus:outline-none focus:text-gray-600" aria-label="Toggle menu">
-                        <svg viewBox="0 0 24 24" class="h-6 w-6 fill-current">
-                            <path fill-rule="evenodd" d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"></path>
-                        </svg>
-                    </button>
-                </div>
-                <ul class="hidden md:flex space-x-6">
-                    <li><a href="../index.html#home" class="text-gray-800 hover:text-primary transition-colors duration-300 font-medium">Home</a></li>
-                    <li><a href="../index.html#recent-projects" class="text-gray-800 hover:text-primary transition-colors duration-300 font-medium">Recent Projects</a></li>
-                    <li><a href="../index.html#projects" class="text-gray-800 hover:text-primary transition-colors duration-300 font-medium">Past Projects</a></li>
-                    <li><a href="../index.html#team" class="text-gray-800 hover:text-primary transition-colors duration-300 font-medium">Our Team</a></li>
-                    <li><a href="../index.html#contact" class="text-gray-800 hover:text-primary transition-colors duration-300 font-medium">Work with Us</a></li>
-                </ul>
-            </div>
+<body class="font-sans bg-paper text-slate-800 antialiased">
+
+    <header class="dev-header dev-header--dark fixed inset-x-0 top-0 z-50">
+        <nav class="container mx-auto px-4 lg:px-8 h-[72px] flex items-center justify-between">
+            <a href="/development/" class="flex items-center gap-3">
+                <img src="/assets/codeseed-logo.png" alt="CodeSeed logo" class="h-10 w-10">
+                <span class="flex flex-col leading-none">
+                    <span class="text-xl font-bold text-secondary lowercase tracking-wide">code-seed</span>
+                    <span class="text-[0.62rem] font-bold text-slate-500 uppercase tracking-[0.28em] mt-1">Development</span>
+                </span>
+            </a>
+            <ul class="hidden lg:flex items-center gap-8 text-[0.95rem] font-medium text-slate-700">
+                <li><a href="/development/#services" class="nav-link">Services</a></li>
+                <li><a href="/development/#work" class="nav-link">Work</a></li>
+                <li><a href="/development/#process" class="nav-link">Process</a></li>
+                <li><a href="/development/#team" class="nav-link">Team</a></li>
+                <li><a href="/studios/" class="nav-link">Studios</a></li>
+                <li><a href="/development/#contact" class="btn btn-primary btn-sm">Start a project</a></li>
+            </ul>
+            <button id="dev-menu-button" class="lg:hidden p-2 -mr-2 text-slate-700" aria-label="Open menu" aria-expanded="false" aria-controls="dev-menu">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
         </nav>
-        <div id="mobile-menu" class="md:hidden hidden">
-            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t">
-                <a href="../index.html#home" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">Home</a>
-                <a href="../index.html#recent-projects" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">Recent Projects</a>
-                <a href="../index.html#projects" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">Past Projects</a>
-                <a href="../index.html#team" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">Our Team</a>
-                <a href="../index.html#contact" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">Work with Us</a>
+        <div id="dev-menu" class="lg:hidden hidden border-t border-slate-200 bg-white">
+            <div class="container mx-auto px-4 py-3 flex flex-col text-base font-medium text-slate-700">
+                <a href="/development/#services" class="py-3 border-b border-slate-100">Services</a>
+                <a href="/development/#work" class="py-3 border-b border-slate-100">Work</a>
+                <a href="/development/#process" class="py-3 border-b border-slate-100">Process</a>
+                <a href="/development/#team" class="py-3 border-b border-slate-100">Team</a>
+                <a href="/studios/" class="py-3 border-b border-slate-100">CodeSeed Studios</a>
+                <a href="/development/#contact" class="btn btn-primary justify-center mt-4 mb-2">Start a project</a>
             </div>
         </div>
     </header>
 
-    <!-- Project Content -->
-    <main class="pt-20 md:pt-32">
-        <!-- Hero Section with Gradient -->
-        <section class="hero-section bg-gradient-to-br from-secondary via-secondary to-primary py-20 md:py-32 relative overflow-hidden">
-            <div class="absolute inset-0 bg-black/5"></div>
-            <div class="container mx-auto px-4 relative z-10">
-                <div class="max-w-5xl mx-auto">
-                    <div class="text-center text-white mb-12">
-                        <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-                            ReadyAI
-                        </h1>
-                        <p class="text-xl md:text-2xl mb-8 text-white/95 max-w-3xl mx-auto leading-relaxed">
-                            Enterprise-grade website transformation for ReadyAI's Enterprise AI solutions. We enhanced their existing platform with premium design, custom Strapi CMS integration, and comprehensive mobile optimization to establish stronger credibility and improve lead capture.
-                        </p>
-                        <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                            <a href="https://readyai.dev" target="_blank" class="group bg-white text-secondary hover:bg-white/95 font-semibold py-4 px-8 rounded-full transition-all duration-300 text-lg shadow-lg hover:shadow-xl hover:scale-105 inline-flex items-center gap-2">
-                                <span>View this project</span>
-                                <i class="fas fa-arrow-right transition-transform duration-300 group-hover:translate-x-1"></i>
-                            </a>
-                            <a href="../index.html#recent-projects" class="bg-transparent border-2 border-white text-white hover:bg-white hover:text-secondary font-semibold py-4 px-8 rounded-full transition-all duration-300 text-lg">
-                                View other projects
-                            </a>
-                        </div>
+    <main id="top">
+        <section class="dev-hero relative overflow-hidden pt-[72px]">
+            <div class="dev-hero-bg absolute inset-0 pointer-events-none" aria-hidden="true"></div>
+            <div class="container mx-auto px-4 lg:px-8 relative pt-10 md:pt-14 pb-12 md:pb-16">
+                <nav class="breadcrumb breadcrumb--light mb-10" aria-label="Breadcrumb">
+                    <a href="/development/#work">Work</a><i class="fas fa-chevron-right"></i><span>ReadyAI</span>
+                </nav>
+                <div class="case-hero">
+                    <div>
+                        <span class="case-logo" style="--chip:#ffffff;"><img src="/assets/development/readyai-logo.webp" alt="ReadyAI logo"></span>
+                        <p class="case-subtitle">Enterprise website and CMS for an enterprise AI company</p>
+                        <h1>ReadyAI</h1>
+                        <p class="case-summary">An enterprise-grade rebuild of ReadyAI&#x27;s website, with a custom CMS their team runs without developers.</p>
+                        <div class="mt-8"><a href="https://readyai.dev" target="_blank" rel="noopener" class="btn btn-ghost-light">Visit readyai.dev <i class="fas fa-arrow-up-right-from-square text-sm"></i></a></div>
+                    </div>
+                    <dl class="case-facts"><div><dt>Client</dt><dd>ReadyAI</dd></div><div><dt>Scope</dt><dd>Web design &amp; development, CMS, SEO</dd></div><div><dt>Built with</dt><dd>TypeScript, Strapi</dd></div></dl>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-12 md:py-16 bg-white border-b border-slate-200">
+            <div class="container mx-auto px-4 lg:px-8">
+                <div class="outcomes outcomes--highlights">
+                    <div class="outcome">
+                        <p class="outcome-value">Ahead of schedule</p>
+                        <p class="outcome-label">and right on budget</p>
+                        <p class="outcome-note">In the client&#x27;s own words</p>
+                    </div><div class="outcome">
+                        <p class="outcome-value">Self-serve content</p>
+                        <p class="outcome-label">with no developer needed</p>
+                        <p class="outcome-note">Pages, blog, and SEO managed in-house</p>
+                    </div><div class="outcome">
+                        <p class="outcome-value">Enterprise-ready</p>
+                        <p class="outcome-label">on every screen</p>
+                        <p class="outcome-note">Rebuilt for desktop, tablet, and mobile</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Project Overview with Split Layout -->
-        <section class="py-20 md:py-28 bg-white">
-            <div class="container mx-auto px-4">
-                <div class="max-w-7xl mx-auto">
-                    <div class="text-center mb-16">
-                        <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-secondary">Project Overview</h2>
-                        <div class="w-24 h-1 bg-primary mx-auto"></div>
-                    </div>
-                    <div class="grid md:grid-cols-2 gap-12 lg:gap-16 items-stretch">
-                        <div class="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-8 md:p-10 shadow-lg border border-gray-100 flex flex-col">
-                            <h3 class="text-3xl md:text-4xl font-bold mb-6 text-secondary">The Challenge</h3>
-                            <p class="text-gray-700 mb-1 leading-relaxed text-lg flex-grow">
-                                ReadyAI required a refined, enterprise-grade website that better reflected their credibility in the Enterprise AI transformation space. Their existing TypeScript website needed visual, structural, and functional enhancements to establish a premium look, improve mobile responsiveness, and build foundations for lead capture.
-                            </p>
-                            <p class="text-gray-700 leading-relaxed text-lg">
-                                The challenge included implementing a modern content management system that wouldn't break the budget, creating an intuitive admin experience for ongoing content updates without technical expertise, and improving SEO structure for better visibility.
-                            </p>
-                        </div>
-                        <div class="bg-gradient-to-br from-primary/5 to-secondary/5 rounded-2xl p-8 md:p-10 shadow-lg border border-primary/20 flex flex-col">
-                            <h3 class="text-3xl md:text-4xl font-bold mb-6 text-secondary">Our Solution</h3>
-                            <p class="text-gray-700 mb-1 leading-relaxed text-lg flex-grow">
-                                We transformed ReadyAI's website with enterprise-grade enhancements including premium visual design, streamlined navigation, and a custom Strapi integration for content management. This custom solution saves $90/month compared to traditional CMS platforms while providing superior admin tools for easy content updates and SEO metadata editing.
-                            </p>
-                            <p class="text-gray-700 leading-relaxed text-lg">
-                                We implemented comprehensive mobile optimization across all breakpoints, added lead capture CTAs for enterprise lead generation, and improved content organization for better SEO. The result is a polished platform that strengthens ReadyAI's enterprise credibility and improves conversion opportunities.
-                            </p>
-                        </div>
-                    </div>
+        <section class="py-16 md:py-20 bg-white">
+            <div class="container mx-auto px-4 lg:px-8">
+                <div class="story">
+                    <div><p class="eyebrow mb-3">The brief</p><p class="story-text">ReadyAI&#x27;s website didn&#x27;t reflect their credibility in enterprise AI. They needed a premium look, a site that worked properly on mobile, room for lead generation, and a way to manage content without a developer or an expensive CMS subscription.</p></div>
+                    <div><p class="eyebrow mb-3">Our approach</p><p class="story-text">We refreshed the visual design, simplified navigation and content structure for search, and built a custom Strapi integration so the team can update pages, blog posts, and SEO metadata themselves, at a fraction of the cost of a traditional CMS.</p></div>
                 </div>
             </div>
         </section>
 
-        <!-- Key Features with Modern Cards -->
-        <section class="py-20 md:py-28 bg-gradient-to-b from-gray-50 to-white">
-            <div class="container mx-auto px-4">
-                <div class="max-w-7xl mx-auto">
-                    <div class="text-center mb-16">
-                        <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-secondary">Key Features</h2>
-                        <p class="text-xl text-gray-600 max-w-2xl mx-auto">
-                            Enterprise-grade enhancements and custom solutions
-                        </p>
+        <section class="py-16 md:py-20">
+            <div class="container mx-auto px-4 lg:px-8">
+                <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8">
+                    <div><p class="eyebrow mb-3">What we built</p><h2 class="case-h2">Inside the project</h2></div>
+                    <ul class="stack-list" aria-label="Built with"><li>TypeScript</li><li>Strapi</li></ul>
+                </div>
+                <ul class="built-grid"><li><h3>Premium design</h3><p>A refined visual system built around ReadyAI&#x27;s gold palette and typography.</p></li><li><h3>Custom Strapi CMS</h3><p>Content, blog, and SEO metadata editable by the team, no code required.</p></li><li><h3>Mobile optimization</h3><p>Fixed navigation and layouts tuned for every breakpoint.</p></li><li><h3>Lead capture</h3><p>Book-a-demo calls to action and enterprise lead prompts.</p></li></ul>
+            </div>
+        </section>
+
+        <section class="py-16 md:py-20 bg-forest">
+            <div class="container mx-auto px-4 lg:px-8">
+                <figure class="case-quote">
+                    <img src="/assets/development/readyai-logo.webp" alt="" class="case-quote-logo">
+                    <blockquote>"Our experience with CodeSeed was exceptional from start to finish. They delivered a stunning website revamp that exceeded our expectations, completing the project ahead of schedule and right on budget."</blockquote>
+                    <figcaption><strong>Carol Eastman</strong> · CEO, ReadyAI</figcaption>
+                </figure>
+            </div>
+        </section>
+        <section class="py-12 md:py-16 bg-white">
+            <div class="container mx-auto px-4 lg:px-8">
+                <a href="/projects/trustclient.html" class="next-case">
+                    <span class="next-case-label">Next project</span>
+                    <span class="next-case-main">
+                        <span class="case-logo case-logo--sm" style="--chip:#000000;"><img src="/assets/development/trustclient-logo.webp" alt=""></span>
+                        <span><strong>TrustClient</strong><span>A platform where contractors share verified reviews of clients before taking a job, built from first idea to launch.</span></span>
+                    </span>
+                    <span class="next-case-arrow"><i class="fas fa-arrow-right"></i></span>
+                </a>
+            </div>
+        </section>
+
+        <section class="py-16 md:py-20 bg-white border-t border-slate-200">
+            <div class="container mx-auto px-4 lg:px-8">
+                <div class="cta-band">
+                    <div>
+                        <h2 class="text-2xl md:text-3xl font-bold text-white mb-2">Have a project like this?</h2>
+                        <p class="text-slate-300 max-w-xl">Book a free 15-minute call. We'll follow up with a written proposal within 48 hours.</p>
                     </div>
-                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        <div class="group bg-white rounded-2xl p-8 shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-primary/30 hover:-translate-y-1">
-                            <div class="inline-block px-4 py-3 bg-secondary/10 rounded-xl mb-6 group-hover:bg-secondary/20 transition-colors">
-                                <i class="fas fa-database text-secondary text-3xl"></i>
-                            </div>
-                            <h3 class="text-2xl font-bold mb-4 text-secondary">Custom Strapi CMS</h3>
-                            <p class="text-gray-600 leading-relaxed">
-                                Built a custom Strapi integration for modern content management, saving $90/month compared to traditional CMS solutions while providing superior admin tools for easy content updates, blog management, and SEO metadata editing.
-                            </p>
-                        </div>
-                        <div class="group bg-white rounded-2xl p-8 shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-primary/30 hover:-translate-y-1">
-                            <div class="inline-block px-4 py-3 bg-secondary/10 rounded-xl mb-6 group-hover:bg-secondary/20 transition-colors">
-                                <i class="fas fa-palette text-secondary text-3xl"></i>
-                            </div>
-                            <h3 class="text-2xl font-bold mb-4 text-secondary">Premium Enterprise Design</h3>
-                            <p class="text-gray-600 leading-relaxed">
-                                Visual refresh with enterprise-grade aesthetic, consistent brand gold palette, refined typography, and polished layouts that strengthen ReadyAI's credibility in the Enterprise AI transformation space.
-                            </p>
-                        </div>
-                        <div class="group bg-white rounded-2xl p-8 shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-primary/30 hover:-translate-y-1">
-                            <div class="inline-block px-4 py-3 bg-secondary/10 rounded-xl mb-6 group-hover:bg-secondary/20 transition-colors">
-                                <i class="fas fa-mobile-alt text-secondary text-3xl"></i>
-                            </div>
-                            <h3 class="text-2xl font-bold mb-4 text-secondary">Mobile Optimization</h3>
-                            <p class="text-gray-600 leading-relaxed">
-                                Comprehensive responsive optimization for all modern breakpoints, fixing mobile navigation issues and ensuring seamless functionality across desktop, tablet, and mobile devices.
-                            </p>
-                        </div>
-                        <div class="group bg-white rounded-2xl p-8 shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-primary/30 hover:-translate-y-1">
-                            <div class="inline-block px-4 py-3 bg-secondary/10 rounded-xl mb-6 group-hover:bg-secondary/20 transition-colors">
-                                <i class="fas fa-search text-secondary text-3xl"></i>
-                            </div>
-                            <h3 class="text-2xl font-bold mb-4 text-secondary">SEO Enhancements</h3>
-                            <p class="text-gray-600 leading-relaxed">
-                                Strengthened content structure and navigation for improved SEO, with blog categorization and optimized metadata to help ReadyAI reach their target enterprise audience and improve search visibility.
-                            </p>
-                        </div>
-                        <div class="group bg-white rounded-2xl p-8 shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-primary/30 hover:-translate-y-1">
-                            <div class="inline-block px-4 py-3 bg-secondary/10 rounded-xl mb-6 group-hover:bg-secondary/20 transition-colors">
-                                <i class="fas fa-user-cog text-secondary text-3xl"></i>
-                            </div>
-                            <h3 class="text-2xl font-bold mb-4 text-secondary">Enhanced Admin System</h3>
-                            <p class="text-gray-600 leading-relaxed">
-                                Improved admin dashboard with professional usability, allowing easy updates of blog content, images, and SEO metadata without requiring technical expertise.
-                            </p>
-                        </div>
-                        <div class="group bg-white rounded-2xl p-8 shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-primary/30 hover:-translate-y-1">
-                            <div class="inline-block px-4 py-3 bg-secondary/10 rounded-xl mb-6 group-hover:bg-secondary/20 transition-colors">
-                                <i class="fas fa-bullhorn text-secondary text-3xl"></i>
-                            </div>
-                            <h3 class="text-2xl font-bold mb-4 text-secondary">Lead Capture CTAs</h3>
-                            <p class="text-gray-600 leading-relaxed">
-                                Implemented interactive call-to-action elements including Book a Demo buttons and enterprise-focused lead capture popups designed to convert visitors into qualified leads.
-                            </p>
-                        </div>
-                    </div>
+                    <a href="/development/#contact" class="btn btn-light shrink-0">Start a project <i class="fas fa-arrow-right text-sm"></i></a>
                 </div>
             </div>
         </section>
 
-        <!-- Call to Action -->
-        <section class="py-20 md:py-28 bg-gradient-to-br from-primary to-secondary">
-            <div class="container mx-auto px-4">
-                <div class="max-w-5xl mx-auto text-center text-white">
-                    <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-8">Want something like this?<br>Work with&nbsp;us.</h2>
-                    <p class="text-xl md:text-2xl mb-12 text-white/95 leading-relaxed">
-                        ReadyAI demonstrates our ability to transform existing websites into enterprise-grade platforms. From custom CMS solutions that save money to premium design that builds credibility, we deliver results that strengthen your brand and improve conversion opportunities.
-                    </p>
-                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                        <a href="../index.html#contact" class="group bg-white text-secondary hover:bg-white/95 font-semibold py-4 px-8 rounded-full transition-all duration-300 text-lg shadow-lg hover:shadow-xl hover:scale-105 inline-flex items-center gap-2">
-                            <span>Work with&nbsp;us</span>
-                            <i class="fas fa-arrow-right transition-transform duration-300 group-hover:translate-x-1"></i>
-                        </a>
-                        <a href="../index.html#recent-projects" class="bg-transparent border-2 border-white text-white hover:bg-white hover:text-secondary font-semibold py-4 px-8 rounded-full transition-all duration-300 text-lg">
-                            View other projects
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-10 md:py-12">
-        <div class="container mx-auto px-4">
-            <div class="text-center">
-                <p class="footer-copyright text-gray-400 text-sm md:text-base leading-relaxed max-w-md mx-auto">&copy; 2025 CodeSeed. All rights reserved.</p>
+    <footer class="bg-forest text-slate-300">
+        <div class="container mx-auto px-4 lg:px-8 py-14 grid sm:grid-cols-2 md:grid-cols-[1.4fr_1fr_1fr_1fr] gap-10">
+            <div class="sm:col-span-2 md:col-span-1">
+                <a href="/development/" class="flex items-center gap-3 mb-4">
+                    <img src="/assets/codeseed-logo.png" alt="" class="h-10 w-10 rounded-md">
+                    <span class="text-xl font-bold text-white lowercase tracking-wide">code-seed</span>
+                </a>
+                <p class="text-slate-400 leading-relaxed max-w-sm">Professional software development that aligns with your values. Building better technology, ethically.</p>
             </div>
+            <div>
+                <p class="footer-heading">Services</p>
+                <ul class="footer-links">
+                    <li><a href="/development/#services">Web &amp; app development</a></li>
+                    <li><a href="/development/#services">Software &amp; APIs</a></li>
+                    <li><a href="/development/#services">Data &amp; machine learning</a></li>
+                    <li><a href="/services/professional-websites.html">Professional websites</a></li>
+                </ul>
+            </div>
+            <div>
+                <p class="footer-heading">Company</p>
+                <ul class="footer-links">
+                    <li><a href="/development/#work">Work</a></li>
+                    <li><a href="/development/#process">Process</a></li>
+                    <li><a href="/development/#team">Team</a></li>
+                    <li><a href="/development/#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <p class="footer-heading">CodeSeed</p>
+                <ul class="footer-links">
+                    <li><a href="/studios/">CodeSeed Studios</a></li>
+                    <li><a href="/">code-seed.io</a></li>
+                    <li><a href="/privacy.html">Privacy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="border-t border-white/10">
+            <p class="container mx-auto px-4 lg:px-8 py-6 text-sm text-slate-500">&copy; <span id="year">2026</span> CodeSeed. All rights reserved.</p>
         </div>
     </footer>
 </body>
 </html>
-

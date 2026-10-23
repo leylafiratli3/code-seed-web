@@ -1,374 +1,204 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Basic Meta Tags -->
-    <title>TrustClient - CodeSeed Project | Client Review Platform for Licensed Professionals</title>
+    <title>TrustClient Case Study | CodeSeed Development</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="TrustClient is a comprehensive platform enabling licensed professionals to share verified client reviews and access risk insights, protecting businesses from bad deals.">
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" sizes="32x32" href="../assets/codeseed-logo.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="../assets/codeseed-logo.png">
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
+    <meta name="description" content="TrustClient case study by CodeSeed Development: A platform where contractors share verified reviews of clients before taking a job, built from first idea to launch.">
+    <link rel="icon" type="image/png" href="/assets/codeseed-logo.png">
+    <link rel="canonical" href="https://code-seed.io/projects/trustclient.html">
+
+    <meta property="og:type" content="article">
     <meta property="og:url" content="https://code-seed.io/projects/trustclient.html">
-    <meta property="og:site_name" content="CodeSeed">
-    <meta property="og:title" content="TrustClient - Client Review Platform for Licensed Professionals">
-    <meta property="og:description" content="A platform enabling licensed professionals to share verified client reviews and protect their businesses.">
-    <meta property="og:image" content="https://code-seed.io/assets/codeseed-logo.png">
-
-    <!-- Twitter -->
+    <meta property="og:site_name" content="CodeSeed Development">
+    <meta property="og:title" content="TrustClient Case Study | CodeSeed Development">
+    <meta property="og:description" content="TrustClient case study by CodeSeed Development: A platform where contractors share verified reviews of clients before taking a job, built from first idea to launch.">
+    <meta property="og:image" content="https://code-seed.io/assets/og-codeseed.png">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="https://code-seed.io/projects/trustclient.html">
-    <meta name="twitter:title" content="TrustClient - Client Review Platform for Licensed Professionals">
-    <meta name="twitter:description" content="A platform enabling licensed professionals to share verified client reviews and protect their businesses.">
-    <meta name="twitter:image" content="https://code-seed.io/assets/codeseed-logo.png">
+    <meta name="twitter:title" content="TrustClient Case Study | CodeSeed Development">
+    <meta name="twitter:description" content="TrustClient case study by CodeSeed Development: A platform where contractors share verified reviews of clients before taking a job, built from first idea to launch.">
+    <meta name="twitter:image" content="https://code-seed.io/assets/og-codeseed.png">
 
-    <!-- Structured Data -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      "name": "TrustClient",
-      "description": "Client review platform for licensed professionals",
-      "url": "https://trust-client.com",
-      "applicationCategory": "BusinessApplication",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      },
-      "creator": {
-        "@type": "Organization",
-        "name": "CodeSeed"
-      }
-    }
-    </script>
-
-    <!-- Satoshi Font from Fontshare -->
-    <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,600,700,900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400,500,700&display=swap" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#8dba90',
-                        secondary: '#5a7d5c',
-                        accent: '#D2B48C',
-                        tan: '#D2B48C',
-                    },
-                    fontFamily: {
-                        'sans': ['Satoshi', 'sans-serif'],
-                        'fira': ['"Fira Code"', 'monospace'],
-                    },
-                }
-            }
-        }
-    </script>
+    <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="../styles.css" rel="stylesheet">
-    <script src="../script.js" defer></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="/development/tailwind-config.js"></script>
+    <link href="/development/development.css" rel="stylesheet">
+    <script src="/development/form-guard.js" defer></script>
+    <script src="/development/development.js" defer></script>
 </head>
-<body class="font-sans bg-white">
-    <!-- Header -->
-    <header class="bg-white/95 backdrop-blur-sm fixed w-full z-50 shadow-sm">
-        <nav class="container mx-auto px-4 py-5">
-            <div class="flex justify-between items-center">
-                <div class="flex items-center transition-transform duration-300 ease-in-out hover:scale-105">
-                    <a href="../index.html#home" class="flex items-center">
-                        <img src="../assets/codeseed-logo.png" alt="CodeSeed Logo" id="header-logo" class="h-20 w-auto mr-4">
-                        <span class="text-2xl font-bold text-primary lowercase tracking-wide">code-seed</span>
-                    </a>
-                </div>
-                <div class="md:hidden">
-                    <button id="mobile-menu-button" class="text-gray-500 hover:text-gray-600 focus:outline-none focus:text-gray-600" aria-label="Toggle menu">
-                        <svg viewBox="0 0 24 24" class="h-6 w-6 fill-current">
-                            <path fill-rule="evenodd" d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"></path>
-                        </svg>
-                    </button>
-                </div>
-                <ul class="hidden md:flex space-x-6">
-                    <li><a href="../index.html#home" class="text-gray-800 hover:text-primary transition-colors duration-300 font-medium">Home</a></li>
-                    <li><a href="../index.html#recent-projects" class="text-gray-800 hover:text-primary transition-colors duration-300 font-medium">Recent Projects</a></li>
-                    <li><a href="../index.html#projects" class="text-gray-800 hover:text-primary transition-colors duration-300 font-medium">Past Projects</a></li>
-                    <li><a href="../index.html#team" class="text-gray-800 hover:text-primary transition-colors duration-300 font-medium">Our Team</a></li>
-                    <li><a href="../index.html#contact" class="text-gray-800 hover:text-primary transition-colors duration-300 font-medium">Work with Us</a></li>
-                </ul>
-            </div>
+<body class="font-sans bg-paper text-slate-800 antialiased">
+
+    <header class="dev-header dev-header--dark fixed inset-x-0 top-0 z-50">
+        <nav class="container mx-auto px-4 lg:px-8 h-[72px] flex items-center justify-between">
+            <a href="/development/" class="flex items-center gap-3">
+                <img src="/assets/codeseed-logo.png" alt="CodeSeed logo" class="h-10 w-10">
+                <span class="flex flex-col leading-none">
+                    <span class="text-xl font-bold text-secondary lowercase tracking-wide">code-seed</span>
+                    <span class="text-[0.62rem] font-bold text-slate-500 uppercase tracking-[0.28em] mt-1">Development</span>
+                </span>
+            </a>
+            <ul class="hidden lg:flex items-center gap-8 text-[0.95rem] font-medium text-slate-700">
+                <li><a href="/development/#services" class="nav-link">Services</a></li>
+                <li><a href="/development/#work" class="nav-link">Work</a></li>
+                <li><a href="/development/#process" class="nav-link">Process</a></li>
+                <li><a href="/development/#team" class="nav-link">Team</a></li>
+                <li><a href="/studios/" class="nav-link">Studios</a></li>
+                <li><a href="/development/#contact" class="btn btn-primary btn-sm">Start a project</a></li>
+            </ul>
+            <button id="dev-menu-button" class="lg:hidden p-2 -mr-2 text-slate-700" aria-label="Open menu" aria-expanded="false" aria-controls="dev-menu">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
         </nav>
-        <div id="mobile-menu" class="md:hidden hidden">
-            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t">
-                <a href="../index.html#home" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">Home</a>
-                <a href="../index.html#recent-projects" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">Recent Projects</a>
-                <a href="../index.html#projects" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">Past Projects</a>
-                <a href="../index.html#team" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">Our Team</a>
-                <a href="../index.html#contact" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">Work with Us</a>
+        <div id="dev-menu" class="lg:hidden hidden border-t border-slate-200 bg-white">
+            <div class="container mx-auto px-4 py-3 flex flex-col text-base font-medium text-slate-700">
+                <a href="/development/#services" class="py-3 border-b border-slate-100">Services</a>
+                <a href="/development/#work" class="py-3 border-b border-slate-100">Work</a>
+                <a href="/development/#process" class="py-3 border-b border-slate-100">Process</a>
+                <a href="/development/#team" class="py-3 border-b border-slate-100">Team</a>
+                <a href="/studios/" class="py-3 border-b border-slate-100">CodeSeed Studios</a>
+                <a href="/development/#contact" class="btn btn-primary justify-center mt-4 mb-2">Start a project</a>
             </div>
         </div>
     </header>
 
-    <!-- Project Content -->
-    <main class="pt-20 md:pt-32">
-        <!-- Hero Section with Gradient -->
-        <section class="hero-section bg-gradient-to-br from-secondary via-secondary to-primary py-20 md:py-32 relative overflow-hidden">
-            <div class="absolute inset-0 bg-black/5"></div>
-            <div class="container mx-auto px-4 relative z-10">
-                <div class="max-w-5xl mx-auto">
-                    <div class="text-center text-white mb-12">
-                        <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-                            TrustClient
-                        </h1>
-                        <p class="text-xl md:text-2xl mb-8 text-white/95 max-w-3xl mx-auto leading-relaxed">
-                            A specialized review platform helping contractors make informed decisions by sharing and accessing verified client reviews. Built to protect businesses from bad deals while building trust within the contractor community.
-                        </p>
-                        <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                            <a href="https://trust-client.com" target="_blank" class="group bg-white text-secondary hover:bg-white/95 font-semibold py-4 px-8 rounded-full transition-all duration-300 text-lg shadow-lg hover:shadow-xl hover:scale-105 inline-flex items-center gap-2">
-                                <span>View this project</span>
-                                <i class="fas fa-arrow-right transition-transform duration-300 group-hover:translate-x-1"></i>
-                            </a>
-                            <a href="../index.html#recent-projects" class="bg-transparent border-2 border-white text-white hover:bg-white hover:text-secondary font-semibold py-4 px-8 rounded-full transition-all duration-300 text-lg">
-                                View other projects
-                            </a>
-                        </div>
+    <main id="top">
+        <section class="dev-hero relative overflow-hidden pt-[72px]">
+            <div class="dev-hero-bg absolute inset-0 pointer-events-none" aria-hidden="true"></div>
+            <div class="container mx-auto px-4 lg:px-8 relative pt-10 md:pt-14 pb-12 md:pb-16">
+                <nav class="breadcrumb breadcrumb--light mb-10" aria-label="Breadcrumb">
+                    <a href="/development/#work">Work</a><i class="fas fa-chevron-right"></i><span>Trust-Client.com</span>
+                </nav>
+                <div class="case-hero">
+                    <div>
+                        <span class="case-logo" style="--chip:#000000;"><img src="/assets/development/trustclient-logo.webp" alt="Trust-Client.com logo"></span>
+                        <p class="case-subtitle">A review platform for the construction trades</p>
+                        <h1>TrustClient</h1>
+                        <p class="case-summary">A platform where contractors share verified reviews of clients before taking a job, built from first idea to launch.</p>
+                        <div class="mt-8"><a href="https://trust-client.com" target="_blank" rel="noopener" class="btn btn-ghost-light">Visit trust-client.com <i class="fas fa-arrow-up-right-from-square text-sm"></i></a></div>
+                    </div>
+                    <dl class="case-facts"><div><dt>Client</dt><dd>Trust-Client.com</dd></div><div><dt>Scope</dt><dd>Product planning, full-stack development</dd></div><div><dt>Payments</dt><dd>Stripe</dd></div></dl>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-12 md:py-16 bg-white border-b border-slate-200">
+            <div class="container mx-auto px-4 lg:px-8">
+                <div class="outcomes outcomes--highlights">
+                    <div class="outcome">
+                        <p class="outcome-value">Idea to launch</p>
+                        <p class="outcome-label">one team, end to end</p>
+                        <p class="outcome-note">Planning, build, and launch</p>
+                    </div><div class="outcome">
+                        <p class="outcome-value">Freemium model</p>
+                        <p class="outcome-label">with paid subscriptions</p>
+                        <p class="outcome-note">Premium plans powered by Stripe</p>
+                    </div><div class="outcome">
+                        <p class="outcome-value">Verified community</p>
+                        <p class="outcome-label">built for trust</p>
+                        <p class="outcome-note">License checks and two-factor sign-in</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Project Overview with Split Layout -->
-        <section class="py-20 md:py-28 bg-white">
-            <div class="container mx-auto px-4">
-                <div class="max-w-7xl mx-auto">
-                    <div class="text-center mb-16">
-                        <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-secondary">Project Overview</h2>
-                        <div class="w-24 h-1 bg-primary mx-auto"></div>
-                    </div>
-                    <div class="grid md:grid-cols-2 gap-12 lg:gap-16 items-center">
-                        <div class="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-8 md:p-10 shadow-lg border border-gray-100">
-                            <div class="inline-block px-4 py-2 bg-secondary/10 rounded-full mb-6">
-                                <i class="fas fa-exclamation-triangle text-secondary text-2xl"></i>
-                            </div>
-                            <h3 class="text-3xl md:text-4xl font-bold mb-6 text-secondary">The Challenge</h3>
-                            <p class="text-gray-700 mb-4 leading-relaxed text-lg">
-                                Contractors needed a trusted way to share and access information about clients before taking on jobs. The platform had to enable honest reviews while maintaining data quality and preventing abuse.
-                            </p>
-                            <p class="text-gray-700 leading-relaxed text-lg">
-                                The solution needed to support different user types, provide robust search capabilities, and implement a sustainable business model with premium features for power users.
-                            </p>
-                        </div>
-                        <div class="bg-gradient-to-br from-primary/5 to-secondary/5 rounded-2xl p-8 md:p-10 shadow-lg border border-primary/20">
-                            <div class="inline-block px-4 py-2 bg-primary/20 rounded-full mb-6">
-                                <i class="fas fa-code text-primary text-2xl"></i>
-                            </div>
-                            <h3 class="text-3xl md:text-4xl font-bold mb-6 text-secondary">Our Solution</h3>
-                            <p class="text-gray-700 mb-4 leading-relaxed text-lg">
-                                We built a comprehensive review platform with user-friendly authentication, role-based accounts, and a review system that lets contractors rate clients with ratings,tags, and photos. Users can search by client name or address and filter by various criteria.
-                            </p>
-                            <p class="text-gray-700 leading-relaxed text-lg">
-                                Implemented a freemium business model where basic access is free, and premium features unlock unlimited searches. Added an admin dashboard for managing users and moderating reviews, plus a manual license verification system to ensure professional credentials. The platform integrates with property and contractor data APIs to provide additional context.
-                            </p>
-                        </div>
-                    </div>
+        <section class="py-16 md:py-20 bg-white">
+            <div class="container mx-auto px-4 lg:px-8">
+                <div class="story">
+                    <div><p class="eyebrow mb-3">The brief</p><p class="story-text">Contractors had no reliable way to learn about a client before taking a job. The founder needed a platform that encouraged honest reviews, kept data quality high, prevented abuse, and could sustain itself with a premium tier.</p></div>
+                    <div><p class="eyebrow mb-3">Our approach</p><p class="story-text">We worked with the founder from planning through launch, shaping the product as much as building it: role-based accounts, structured reviews, fast search, moderation tools, and a freemium model, with security built in from day one.</p></div>
                 </div>
             </div>
         </section>
 
-        <!-- Key Features with Modern Cards -->
-        <section class="py-20 md:py-28 bg-gradient-to-b from-gray-50 to-white">
-            <div class="container mx-auto px-4">
-                <div class="max-w-7xl mx-auto">
-                    <div class="text-center mb-16">
-                        <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-secondary">Key Features</h2>
-                        <p class="text-xl text-gray-600 max-w-2xl mx-auto">
-                            Platform capabilities designed to help contractors make better business decisions
-                        </p>
+        <section class="py-16 md:py-20">
+            <div class="container mx-auto px-4 lg:px-8">
+                <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8">
+                    <div><p class="eyebrow mb-3">What we built</p><h2 class="case-h2">Inside the project</h2></div>
+                    <ul class="stack-list" aria-label="Built with"><li>Stripe</li><li>Google sign-in</li><li>Property &amp; contractor data APIs</li></ul>
+                </div>
+                <ul class="built-grid"><li><h3>Reviews &amp; ratings</h3><p>Star ratings, tags like &quot;Late Payer&quot;, written comments, and photos.</p></li><li><h3>Search &amp; filters</h3><p>Find clients by name or address and filter by rating, tags, or date.</p></li><li><h3>Admin &amp; moderation</h3><p>Usage analytics, user management, and review moderation.</p></li><li><h3>Premium &amp; payments</h3><p>A free tier plus Stripe-powered premium subscriptions.</p></li></ul>
+            </div>
+        </section>
+
+        <section class="py-16 md:py-20 bg-forest">
+            <div class="container mx-auto px-4 lg:px-8">
+                <figure class="case-quote">
+                    <img src="/assets/development/trustclient-logo.webp" alt="" class="case-quote-logo">
+                    <blockquote>"From the start, they took the time to understand not just the features, but the purpose behind the platform. The process felt organized, transparent, and genuinely collaborative."</blockquote>
+                    <figcaption><strong>Luis E. Bahena</strong> · Founder, Trust-Client.com</figcaption>
+                </figure>
+            </div>
+        </section>
+        <section class="py-12 md:py-16 bg-white">
+            <div class="container mx-auto px-4 lg:px-8">
+                <a href="/projects/coflow.html" class="next-case">
+                    <span class="next-case-label">Next project</span>
+                    <span class="next-case-main">
+                        <span class="case-logo case-logo--sm" style="--chip:#ffffff;"><img src="/assets/development/coflow.webp" alt=""></span>
+                        <span><strong>CoFlow</strong><span>A Discord bot that uses Claude to hold context-aware conversations, run events and polls, and help moderate busy communities.</span></span>
+                    </span>
+                    <span class="next-case-arrow"><i class="fas fa-arrow-right"></i></span>
+                </a>
+            </div>
+        </section>
+
+        <section class="py-16 md:py-20 bg-white border-t border-slate-200">
+            <div class="container mx-auto px-4 lg:px-8">
+                <div class="cta-band">
+                    <div>
+                        <h2 class="text-2xl md:text-3xl font-bold text-white mb-2">Have a project like this?</h2>
+                        <p class="text-slate-300 max-w-xl">Book a free 15-minute call. We'll follow up with a written proposal within 48 hours.</p>
                     </div>
-                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        <div class="group bg-white rounded-2xl p-8 shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-primary/30 hover:-translate-y-1">
-                            <div class="inline-block px-4 py-3 bg-secondary/10 rounded-xl mb-6 group-hover:bg-secondary/20 transition-colors">
-                                <i class="fas fa-user-shield text-secondary text-3xl"></i>
-                            </div>
-                            <h3 class="text-2xl font-bold mb-4 text-secondary">User Accounts</h3>
-                            <p class="text-gray-600 leading-relaxed">
-                                Easy sign-up with email or Google login. Users can create accounts as Contractors, Subcontractors, or General Contractors, each with appropriate access and features.
-                            </p>
-                        </div>
-                        <div class="group bg-white rounded-2xl p-8 shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-primary/30 hover:-translate-y-1">
-                            <div class="inline-block px-4 py-3 bg-secondary/10 rounded-xl mb-6 group-hover:bg-secondary/20 transition-colors">
-                                <i class="fas fa-star text-secondary text-3xl"></i>
-                            </div>
-                            <h3 class="text-2xl font-bold mb-4 text-secondary">Review System</h3>
-                            <p class="text-gray-600 leading-relaxed">
-                                Contractors can leave detailed reviews with 5-star ratings, helpful tags like "Late Payer" or "Respectful", written comments, and photo uploads to provide context for other contractors.
-                            </p>
-                        </div>
-                        <div class="group bg-white rounded-2xl p-8 shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-primary/30 hover:-translate-y-1">
-                            <div class="inline-block px-4 py-3 bg-secondary/10 rounded-xl mb-6 group-hover:bg-secondary/20 transition-colors">
-                                <i class="fas fa-search text-secondary text-3xl"></i>
-                            </div>
-                            <h3 class="text-2xl font-bold mb-4 text-secondary">Search & Discovery</h3>
-                            <p class="text-gray-600 leading-relaxed">
-                                Powerful search lets users find reviews by client name or address. Filter by rating, location, review tags, or date to quickly find the information they need.
-                            </p>
-                        </div>
-                        <div class="group bg-white rounded-2xl p-8 shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-primary/30 hover:-translate-y-1">
-                            <div class="inline-block px-4 py-3 bg-secondary/10 rounded-xl mb-6 group-hover:bg-secondary/20 transition-colors">
-                                <i class="fas fa-chart-bar text-secondary text-3xl"></i>
-                            </div>
-                            <h3 class="text-2xl font-bold mb-4 text-secondary">Admin Dashboard</h3>
-                            <p class="text-gray-600 leading-relaxed">
-                                Complete admin control with analytics to track platform usage, user management tools, and review moderation to ensure quality content and maintain community standards.
-                            </p>
-                        </div>
-                        <div class="group bg-white rounded-2xl p-8 shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-primary/30 hover:-translate-y-1">
-                            <div class="inline-block px-4 py-3 bg-secondary/10 rounded-xl mb-6 group-hover:bg-secondary/20 transition-colors">
-                                <i class="fas fa-credit-card text-secondary text-3xl"></i>
-                            </div>
-                            <h3 class="text-2xl font-bold mb-4 text-secondary">Freemium Business Model</h3>
-                            <p class="text-gray-600 leading-relaxed">
-                                Free tier provides basic access with limited searches, while premium membership unlocks unlimited searches. This model makes the platform accessible while supporting sustainable growth.
-                            </p>
-                        </div>
-                        <div class="group bg-white rounded-2xl p-8 shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-primary/30 hover:-translate-y-1">
-                            <div class="inline-block px-4 py-3 bg-secondary/10 rounded-xl mb-6 group-hover:bg-secondary/20 transition-colors">
-                                <i class="fas fa-plug text-secondary text-3xl"></i>
-                            </div>
-                            <h3 class="text-2xl font-bold mb-4 text-secondary">Data Integration</h3>
-                            <p class="text-gray-600 leading-relaxed">
-                                Integrates with contractor and property databases to validate information and provide additional context, helping users make more informed decisions.
-                            </p>
-                        </div>
-                        <div class="group bg-white rounded-2xl p-8 shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-primary/30 hover:-translate-y-1">
-                            <div class="inline-block px-4 py-3 bg-secondary/10 rounded-xl mb-6 group-hover:bg-secondary/20 transition-colors">
-                                <i class="fas fa-shield-alt text-secondary text-3xl"></i>
-                            </div>
-                            <h3 class="text-2xl font-bold mb-4 text-secondary">Security & Protection</h3>
-                            <p class="text-gray-600 leading-relaxed">
-                                Built with security in mind: two-factor authentication for account protection, bot protection on forms, and systems in place to prevent abuse and ensure platform integrity.
-                            </p>
-                        </div>
-                        <div class="group bg-white rounded-2xl p-8 shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-primary/30 hover:-translate-y-1">
-                            <div class="inline-block px-4 py-3 bg-secondary/10 rounded-xl mb-6 group-hover:bg-secondary/20 transition-colors">
-                                <i class="fas fa-id-badge text-secondary text-3xl"></i>
-                            </div>
-                            <h3 class="text-2xl font-bold mb-4 text-secondary">License Verification</h3>
-                            <p class="text-gray-600 leading-relaxed">
-                                Manual verification system ensures contractors have valid professional licenses, helping maintain trust and credibility within the platform community.
-                            </p>
-                        </div>
-                        <div class="group bg-white rounded-2xl p-8 shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-primary/30 hover:-translate-y-1">
-                            <div class="inline-block px-4 py-3 bg-secondary/10 rounded-xl mb-6 group-hover:bg-secondary/20 transition-colors">
-                                <i class="fas fa-cloud text-secondary text-3xl"></i>
-                            </div>
-                            <h3 class="text-2xl font-bold mb-4 text-secondary">Scalable Platform</h3>
-                            <p class="text-gray-600 leading-relaxed">
-                                Built on modern cloud infrastructure that automatically scales to handle growth, ensuring fast performance and reliability as the user base expands.
-                            </p>
-                        </div>
-                    </div>
+                    <a href="/development/#contact" class="btn btn-light shrink-0">Start a project <i class="fas fa-arrow-right text-sm"></i></a>
                 </div>
             </div>
         </section>
 
-        <!-- What We Built -->
-        <section class="py-20 md:py-28 bg-white">
-            <div class="container mx-auto px-4">
-                <div class="max-w-6xl mx-auto">
-                    <div class="text-center mb-16">
-                        <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-secondary">What We Built</h2>
-                        <div class="w-24 h-1 bg-primary mx-auto mb-6"></div>
-                        <p class="text-xl text-gray-600 max-w-2xl mx-auto">
-                            A complete, production-ready platform from concept to launch
-                        </p>
-                    </div>
-                    <div class="grid md:grid-cols-2 gap-12">
-                        <div class="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-8 border border-gray-100 shadow-md">
-                            <div class="flex items-center mb-6">
-                                <div class="bg-primary/10 rounded-lg p-3 mr-4">
-                                    <i class="fas fa-check-circle text-primary text-2xl"></i>
-                                </div>
-                                <h3 class="text-2xl font-bold text-secondary">Complete Platform</h3>
-                            </div>
-                            <ul class="space-y-4">
-                                <li class="flex items-start">
-                                    <i class="fas fa-check text-primary mt-1 mr-3 flex-shrink-0"></i>
-                                    <span class="text-gray-700">Fully functional review system with user accounts</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <i class="fas fa-check text-primary mt-1 mr-3 flex-shrink-0"></i>
-                                    <span class="text-gray-700">Payment processing integrated with Stripe</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <i class="fas fa-check text-primary mt-1 mr-3 flex-shrink-0"></i>
-                                    <span class="text-gray-700">Admin dashboard with analytics and moderation tools</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <i class="fas fa-check text-primary mt-1 mr-3 flex-shrink-0"></i>
-                                    <span class="text-gray-700">Mobile-responsive design for all devices</span>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-8 border border-gray-100 shadow-md">
-                            <div class="flex items-center mb-6">
-                                <div class="bg-primary/10 rounded-lg p-3 mr-4">
-                                    <i class="fas fa-rocket text-primary text-2xl"></i>
-                                </div>
-                                <h3 class="text-2xl font-bold text-secondary">Ready to Scale</h3>
-                            </div>
-                            <ul class="space-y-4">
-                                <li class="flex items-start">
-                                    <i class="fas fa-check text-primary mt-1 mr-3 flex-shrink-0"></i>
-                                    <span class="text-gray-700">Built on cloud infrastructure that grows with your business</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <i class="fas fa-check text-primary mt-1 mr-3 flex-shrink-0"></i>
-                                    <span class="text-gray-700">Security features to protect user data and prevent abuse</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <i class="fas fa-check text-primary mt-1 mr-3 flex-shrink-0"></i>
-                                    <span class="text-gray-700">Integrations ready for future enhancements</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Call to Action -->
-        <section class="py-20 md:py-28 bg-gradient-to-br from-primary to-secondary">
-            <div class="container mx-auto px-4">
-                <div class="max-w-5xl mx-auto text-center text-white">
-                    <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-8">Want to build something like this? Work with&nbsp;us.</h2>
-                    <p class="text-xl md:text-2xl mb-12 text-white/95 leading-relaxed">
-                        TrustClient demonstrates our ability to deliver complete, production-ready platforms. We can help you build yours.
-                    </p>
-                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                        <a href="../index.html#contact" class="group bg-white text-secondary hover:bg-white/95 font-semibold py-4 px-8 rounded-full transition-all duration-300 text-lg shadow-lg hover:shadow-xl hover:scale-105 inline-flex items-center gap-2">
-                            <span>Work with&nbsp;us</span>
-                            <i class="fas fa-arrow-right transition-transform duration-300 group-hover:translate-x-1"></i>
-                        </a>
-                        <a href="../index.html#recent-projects" class="bg-transparent border-2 border-white text-white hover:bg-white hover:text-secondary font-semibold py-4 px-8 rounded-full transition-all duration-300 text-lg">
-                            View other projects
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-10 md:py-12">
-        <div class="container mx-auto px-4">
-            <div class="text-center">
-                <p class="footer-copyright text-gray-400 text-sm md:text-base leading-relaxed max-w-md mx-auto">&copy; 2025 CodeSeed. All rights reserved.</p>
+    <footer class="bg-forest text-slate-300">
+        <div class="container mx-auto px-4 lg:px-8 py-14 grid sm:grid-cols-2 md:grid-cols-[1.4fr_1fr_1fr_1fr] gap-10">
+            <div class="sm:col-span-2 md:col-span-1">
+                <a href="/development/" class="flex items-center gap-3 mb-4">
+                    <img src="/assets/codeseed-logo.png" alt="" class="h-10 w-10 rounded-md">
+                    <span class="text-xl font-bold text-white lowercase tracking-wide">code-seed</span>
+                </a>
+                <p class="text-slate-400 leading-relaxed max-w-sm">Professional software development that aligns with your values. Building better technology, ethically.</p>
             </div>
+            <div>
+                <p class="footer-heading">Services</p>
+                <ul class="footer-links">
+                    <li><a href="/development/#services">Web &amp; app development</a></li>
+                    <li><a href="/development/#services">Software &amp; APIs</a></li>
+                    <li><a href="/development/#services">Data &amp; machine learning</a></li>
+                    <li><a href="/services/professional-websites.html">Professional websites</a></li>
+                </ul>
+            </div>
+            <div>
+                <p class="footer-heading">Company</p>
+                <ul class="footer-links">
+                    <li><a href="/development/#work">Work</a></li>
+                    <li><a href="/development/#process">Process</a></li>
+                    <li><a href="/development/#team">Team</a></li>
+                    <li><a href="/development/#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <p class="footer-heading">CodeSeed</p>
+                <ul class="footer-links">
+                    <li><a href="/studios/">CodeSeed Studios</a></li>
+                    <li><a href="/">code-seed.io</a></li>
+                    <li><a href="/privacy.html">Privacy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="border-t border-white/10">
+            <p class="container mx-auto px-4 lg:px-8 py-6 text-sm text-slate-500">&copy; <span id="year">2026</span> CodeSeed. All rights reserved.</p>
         </div>
     </footer>
 </body>
 </html>
-

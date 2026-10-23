@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Basic Meta Tags -->
+    <title>ListForge | CodeSeed Studios</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="How CodeSeed Studios built ListForge, the cross-platform army list builder used by 50,000+ tabletop wargamers on iOS, Android, macOS, Windows and Linux.">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/assets/codeseed-logo.png">
+
+    <!-- Open Graph / Twitter -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://code-seed.io/studios/listforge.html">
+    <meta property="og:site_name" content="CodeSeed Studios">
+    <meta property="og:title" content="ListForge | CodeSeed Studios">
+    <meta property="og:description" content="The cross-platform army list builder used by 50,000+ tabletop wargamers.">
+    <meta property="og:image" content="https://code-seed.io/assets/LISTFORGE.png">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="ListForge | CodeSeed Studios">
+    <meta name="twitter:description" content="The cross-platform army list builder used by 50,000+ tabletop wargamers.">
+    <meta name="twitter:image" content="https://code-seed.io/assets/LISTFORGE.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=Michroma&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        ink: '#060f1e',
+                        panel: '#0b1424',
+                        seed: '#8dba90',
+                        moss: '#5a7d5c',
+                        tan: '#D2B48C',
+                        ember: '#f2a94b',
+                        rite: '#00c8dc',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'Segoe UI', 'sans-serif'],
+                        display: ['"Chakra Petch"', 'Inter', 'sans-serif'],
+                        title: ['Michroma', '"Chakra Petch"', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <link href="/studios/studios.css" rel="stylesheet">
+    <script src="/studios/studios.js" defer></script>
+</head>
+<body class="bg-ink text-slate-200 font-sans antialiased">
+
+    <!-- Header -->
+    <header class="studio-header fixed inset-x-0 top-0 z-50">
+        <nav class="container mx-auto px-4 py-4 flex items-center justify-between">
+            <a href="/studios/" class="flex items-center gap-3 group">
+                <img src="/assets/codeseed-logo.png" alt="CodeSeed logo" class="h-11 w-auto transition-transform duration-300 group-hover:rotate-[-6deg]">
+                <span class="flex flex-col leading-none">
+                    <span class="font-display font-semibold text-lg text-white lowercase tracking-wide">code-seed</span>
+                    <span class="font-title text-[0.6rem] text-seed tracking-[0.35em] mt-1">STUDIOS</span>
+                </span>
+            </a>
+            <button id="studio-menu-button" class="md:hidden text-slate-300 hover:text-white p-2" aria-label="Toggle menu" aria-expanded="false" aria-controls="studio-menu">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+            <ul class="hidden md:flex items-center gap-8 font-display font-medium uppercase tracking-wider text-sm">
+                <li><a href="/studios/#rites-of-accord" class="text-slate-300 hover:text-rite transition-colors">Rites of Accord</a></li>
+                <li><a href="/studios/#listforge" class="text-seed">ListForge</a></li>
+                <li><a href="/studios/#newsletter" class="text-slate-300 hover:text-white transition-colors">Newsletter</a></li>
+                <li><a href="/development/" class="hex-btn hex-btn--ghost text-xs">Hire us <i class="fas fa-arrow-up-right-from-square text-[0.65rem]"></i></a></li>
+            </ul>
+        </nav>
+        <div id="studio-menu" class="md:hidden hidden border-t border-white/10 bg-ink/95 backdrop-blur">
+            <div class="px-4 py-3 flex flex-col font-display uppercase tracking-wider text-sm">
+                <a href="/studios/#rites-of-accord" class="py-2.5 text-slate-300 hover:text-rite">Rites of Accord</a>
+                <a href="/studios/#listforge" class="py-2.5 text-seed">ListForge</a>
+                <a href="/studios/#newsletter" class="py-2.5 text-slate-300 hover:text-white">Newsletter</a>
+                <a href="/development/" class="py-2.5 text-seed">CodeSeed Development →</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero -->
+        <section class="relative overflow-hidden hex-bg">
+            <div class="absolute inset-0 pointer-events-none hero-glow"></div>
+            <div class="container mx-auto px-4 max-w-6xl pt-32 pb-20 md:pt-40 md:pb-28 relative grid md:grid-cols-5 gap-10 items-center">
+                <div class="md:col-span-3">
+                    <a href="/studios/#listforge" class="inline-flex items-center gap-2 text-slate-400 hover:text-white text-sm mb-6"><i class="fas fa-arrow-left text-xs"></i> Back to Studios</a>
+                    <p class="font-title text-[0.65rem] tracking-[0.35em] text-seed mb-4">TABLETOP TOOL</p>
+                    <h1 class="font-display font-bold text-white uppercase leading-[0.95] mb-6" style="font-size: clamp(2.6rem, 7vw, 5rem);">ListForge</h1>
+                    <p class="text-lg md:text-xl text-slate-300 leading-relaxed mb-8">A cross-platform army list builder for tabletop wargamers, with real-time sync, rules validation, and build simulations, on iOS, macOS, Android, Windows, and Linux.</p>
+                    <div class="flex flex-wrap gap-3">
+                        <a href="https://listforge.club" target="_blank" rel="noopener" class="hex-btn hex-btn--seed">Get ListForge <i class="fas fa-arrow-right text-xs"></i></a>
+                    </div>
+                </div>
+                <div class="md:col-span-2 flex justify-center">
+                    <div class="listforge-badge aspect-square w-full max-w-xs rounded-3xl overflow-hidden flex items-center justify-center">
+                        <img src="/assets/LISTFORGE.png" alt="ListForge by CodeSeed logo" class="w-full h-full object-contain scale-[1.45]">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats -->
+        <section class="border-y border-white/10 bg-panel/60">
+            <div class="container mx-auto px-4 max-w-6xl grid grid-cols-3 divide-x divide-white/10">
+                <div class="py-8 md:py-10 text-center">
+                    <p class="font-display font-bold text-3xl md:text-5xl text-seed">50k+</p>
+                    <p class="text-xs uppercase tracking-wider text-slate-500 mt-2">Players</p>
+                </div>
+                <div class="py-8 md:py-10 text-center">
+                    <p class="font-display font-bold text-3xl md:text-5xl text-tan">2k+</p>
+                    <p class="text-xs uppercase tracking-wider text-slate-500 mt-2">Paid subscribers</p>
+                </div>
+                <div class="py-8 md:py-10 text-center">
+                    <p class="font-display font-bold text-3xl md:text-5xl text-white">5</p>
+                    <p class="text-xs uppercase tracking-wider text-slate-500 mt-2">Platforms</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Challenge / Solution -->
+        <section class="py-20 md:py-28">
+            <div class="container mx-auto px-4 max-w-6xl grid md:grid-cols-2 gap-6 md:gap-8">
+                <div class="bg-panel rounded-2xl p-8 md:p-10 border border-white/10">
+                    <p class="font-title text-[0.6rem] tracking-[0.35em] text-ember mb-4">THE PROBLEM</p>
+                    <h2 class="font-display font-semibold text-white text-2xl md:text-3xl uppercase mb-5">Army lists are a chore</h2>
+                    <p class="text-slate-400 leading-relaxed mb-4">Tabletop players needed a faster, more reliable way to build and manage their army lists. Spreadsheets and paper were slow, and point-calculation errors were common.</p>
+                    <p class="text-slate-400 leading-relaxed">We needed something that could handle complex game rules and still feel easy for both casual and competitive players.</p>
+                </div>
+                <div class="bg-panel rounded-2xl p-8 md:p-10 border border-seed/25">
+                    <p class="font-title text-[0.6rem] tracking-[0.35em] text-seed mb-4">WHAT WE BUILT</p>
+                    <h2 class="font-display font-semibold text-white text-2xl md:text-3xl uppercase mb-5">A list builder that keeps up</h2>
+                    <p class="text-slate-400 leading-relaxed mb-4">ListForge makes building accurate lists fast. It handles sharing, gives you support during games, and runs mathematical simulations of your builds.</p>
+                    <p class="text-slate-400 leading-relaxed">It's mobile-first and works the same on every major platform, so players can build and tweak lists anywhere.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features -->
+        <section class="py-20 md:py-24 border-t border-white/10 hex-bg">
+            <div class="container mx-auto px-4 max-w-6xl">
+                <h2 class="font-display font-bold text-white uppercase text-3xl md:text-4xl mb-12">Key features</h2>
+                <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-white/10 rounded-2xl overflow-hidden">
+                    <div class="bg-ink p-7">
+                        <i class="fas fa-check-double text-seed text-xl mb-4"></i>
+                        <h3 class="font-display font-semibold text-white text-lg uppercase tracking-wide mb-2">Rules compliance</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">Built-in validation keeps every list within game rules and point limits.</p>
+                    </div>
+                    <div class="bg-ink p-7">
+                        <i class="fas fa-rotate text-seed text-xl mb-4"></i>
+                        <h3 class="font-display font-semibold text-white text-lg uppercase tracking-wide mb-2">Real-time sync</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">Lists stay up to date across every device automatically.</p>
+                    </div>
+                    <div class="bg-ink p-7">
+                        <i class="fas fa-mobile-screen text-seed text-xl mb-4"></i>
+                        <h3 class="font-display font-semibold text-white text-lg uppercase tracking-wide mb-2">Five platforms</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">iOS, macOS, Android, Windows, and Linux, with the same experience everywhere.</p>
+                    </div>
+                    <div class="bg-ink p-7">
+                        <i class="fas fa-calculator text-seed text-xl mb-4"></i>
+                        <h3 class="font-display font-semibold text-white text-lg uppercase tracking-wide mb-2">Build simulations</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">Run the math on a list before you take it to the table.</p>
+                    </div>
+                    <div class="bg-ink p-7">
+                        <i class="fas fa-share-nodes text-seed text-xl mb-4"></i>
+                        <h3 class="font-display font-semibold text-white text-lg uppercase tracking-wide mb-2">Easy sharing</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">Send lists to your group or opponent in a couple of taps.</p>
+                    </div>
+                    <div class="bg-ink p-7">
+                        <i class="fas fa-wifi text-seed text-xl mb-4"></i>
+                        <h3 class="font-display font-semibold text-white text-lg uppercase tracking-wide mb-2">Offline-first</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">Works at the game store with no signal, and syncs when you're back online.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="py-16 md:py-20 border-t border-white/10">
+            <div class="container mx-auto px-4 max-w-6xl flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+                <div>
+                    <p class="font-display text-white text-xl md:text-2xl font-semibold">Want an app like this for your business?</p>
+                    <p class="text-slate-400 mt-1">The team behind ListForge builds cross-platform apps for clients through CodeSeed Development.</p>
+                </div>
+                <a href="/development/#contact" class="hex-btn hex-btn--seed shrink-0">Work with us <i class="fas fa-arrow-right text-xs"></i></a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="border-t border-white/10 py-10">
+        <div class="container mx-auto px-4 max-w-6xl flex flex-col md:flex-row items-center justify-between gap-6 text-sm text-slate-500">
+            <a href="/" class="flex items-center gap-2 hover:text-slate-300">
+                <img src="/assets/codeseed-logo.png" alt="" class="h-7 w-auto opacity-80">
+                <span>A CodeSeed label</span>
+            </a>
+            <p>&copy; <span id="year">2026</span> CodeSeed · <a href="/privacy.html" class="hover:text-slate-300">Privacy</a></p>
+        </div>
+    </footer>
+</body>
+</html>

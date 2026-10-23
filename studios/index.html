@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Basic Meta Tags -->
+    <title>CodeSeed Studios | Games &amp; Tools for Players</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CodeSeed Studios is the games label of CodeSeed. Makers of Rites of Accord, a turn-based hex tactics game, and ListForge, the list builder used by 50,000+ tabletop players.">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/assets/codeseed-logo.png">
+
+    <!-- Open Graph / Twitter -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://code-seed.io/studios/">
+    <meta property="og:site_name" content="CodeSeed Studios">
+    <meta property="og:title" content="CodeSeed Studios">
+    <meta property="og:description" content="Makers of Rites of Accord and ListForge. Games and tools for players, built with production-grade engineering.">
+    <meta property="og:image" content="https://code-seed.io/assets/studios/rites-of-accord-capsule.jpg">
+    <meta property="og:image:alt" content="Rites of Accord key art">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="CodeSeed Studios">
+    <meta name="twitter:description" content="Makers of Rites of Accord and ListForge. Games and tools for players, built with production-grade engineering.">
+    <meta name="twitter:image" content="https://code-seed.io/assets/studios/rites-of-accord-capsule.jpg">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "CodeSeed Studios",
+      "url": "https://code-seed.io/studios/",
+      "logo": "https://code-seed.io/assets/codeseed-logo.png",
+      "parentOrganization": { "@type": "Organization", "name": "CodeSeed", "url": "https://code-seed.io" },
+      "sameAs": ["https://ritesofaccord.com", "https://listforge.club", "https://discord.gg/ePTEFw4tyk"]
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=Michroma&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        ink: '#060f1e',
+                        panel: '#0b1424',
+                        seed: '#8dba90',
+                        moss: '#5a7d5c',
+                        tan: '#D2B48C',
+                        ember: '#f2a94b',
+                        rite: '#00c8dc',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'Segoe UI', 'sans-serif'],
+                        display: ['"Chakra Petch"', 'Inter', 'sans-serif'],
+                        title: ['Michroma', '"Chakra Petch"', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <link href="/studios/studios.css" rel="stylesheet">
+    <script src="/development/form-guard.js" defer></script>
+    <script src="/studios/studios.js" defer></script>
+</head>
+<body class="bg-ink text-slate-200 font-sans antialiased">
+
+    <!-- Header -->
+    <header class="studio-header fixed inset-x-0 top-0 z-50">
+        <nav class="container mx-auto px-4 py-4 flex items-center justify-between">
+            <a href="/studios/" class="flex items-center gap-3 group">
+                <img src="/assets/codeseed-logo.png" alt="CodeSeed logo" class="h-11 w-auto transition-transform duration-300 group-hover:rotate-[-6deg]">
+                <span class="flex flex-col leading-none">
+                    <span class="font-display font-semibold text-lg text-white lowercase tracking-wide">code-seed</span>
+                    <span class="font-title text-[0.6rem] text-seed tracking-[0.35em] mt-1">STUDIOS</span>
+                </span>
+            </a>
+            <button id="studio-menu-button" class="md:hidden text-slate-300 hover:text-white p-2" aria-label="Toggle menu" aria-expanded="false" aria-controls="studio-menu">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+            <ul class="hidden md:flex items-center gap-8 font-display font-medium uppercase tracking-wider text-sm">
+                <li><a href="#rites-of-accord" class="text-slate-300 hover:text-rite transition-colors">Rites of Accord</a></li>
+                <li><a href="#listforge" class="text-slate-300 hover:text-seed transition-colors">ListForge</a></li>
+                <li><a href="#newsletter" class="text-slate-300 hover:text-white transition-colors">Newsletter</a></li>
+                <li><a href="/development/" class="hex-btn hex-btn--ghost text-xs">Hire us <i class="fas fa-arrow-up-right-from-square text-[0.65rem]"></i></a></li>
+            </ul>
+        </nav>
+        <div id="studio-menu" class="md:hidden hidden border-t border-white/10 bg-ink/95 backdrop-blur">
+            <div class="px-4 py-3 flex flex-col font-display uppercase tracking-wider text-sm">
+                <a href="#rites-of-accord" class="py-2.5 text-slate-300 hover:text-rite">Rites of Accord</a>
+                <a href="#listforge" class="py-2.5 text-slate-300 hover:text-seed">ListForge</a>
+                <a href="#newsletter" class="py-2.5 text-slate-300 hover:text-white">Newsletter</a>
+                <a href="/development/" class="py-2.5 text-seed">CodeSeed Development →</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero -->
+        <section class="studio-hero relative min-h-[92vh] flex items-center overflow-hidden hex-bg">
+            <div class="absolute inset-0 pointer-events-none hero-glow"></div>
+            <div class="container mx-auto px-4 pt-28 pb-12 lg:pb-16 relative grid lg:grid-cols-[minmax(0,1fr)_minmax(0,1.1fr)] gap-6 lg:gap-4 items-center">
+                <div class="max-w-2xl relative z-10">
+                    <p class="font-title text-[0.7rem] md:text-xs text-seed tracking-[0.4em] mb-6">CODESEED STUDIOS</p>
+                    <h1 class="font-display font-bold text-white uppercase leading-[0.95] mb-6" style="font-size: clamp(2.6rem, 6vw, 5rem); text-wrap: balance;">
+                        We make the games<br class="hidden sm:block"> <span class="text-seed">we want to play.</span>
+                    </h1>
+                    <p class="text-lg md:text-xl text-slate-300 leading-relaxed max-w-xl mb-10">
+                        CodeSeed Studios is the in-house games label of CodeSeed. We bring the production-grade engineering we use for clients to the things we love: tactics, tabletop, and the communities around&nbsp;them.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#rites-of-accord" class="hex-btn hex-btn--rite">Play Rites of Accord <i class="fas fa-play text-xs"></i></a>
+                        <a href="#newsletter" class="hex-btn hex-btn--ghost">Get studio updates</a>
+                    </div>
+                </div>
+
+                <!-- Rites of Accord: one hero from each of the six factions -->
+                <a href="#rites-of-accord" class="hero-stage relative block w-full max-w-[640px] mx-auto lg:mr-0" aria-label="Rites of Accord">
+                    <div class="hero-floor" aria-hidden="true"></div>
+                    <figure class="hero-unit hero-unit--back" style="--x:16%; --b:30%; --h:42%; --z:1; --c:167,139,250; --depth:6; --i:0;">
+                        <img src="/assets/studios/matriarch-of-the-veil.webp" alt="Matriarch of the Veil, The Veilbound" width="889" height="845">
+                        <figcaption>Matriarch of the Veil · <span>The Veilbound</span></figcaption>
+                    </figure>
+                    <figure class="hero-unit hero-unit--back" style="--x:71%; --b:33%; --h:46%; --z:1; --c:251,146,60; --depth:6; --i:1;">
+                        <img src="/assets/studios/forgemaster.webp" alt="Forgemaster, The Reforged" width="515" height="824">
+                        <figcaption>Forgemaster · <span>The Reforged</span></figcaption>
+                    </figure>
+                    <figure class="hero-unit hero-unit--float" style="--x:-2%; --b:62%; --h:37%; --z:2; --c:250,204,21; --depth:14; --i:2;">
+                        <img src="/assets/studios/high-windseer.webp" alt="High Windseer, Solar Nomadry" width="804" height="833">
+                        <figcaption>High Windseer · <span>Solar Nomadry</span></figcaption>
+                    </figure>
+                    <figure class="hero-unit" style="--x:-4%; --b:8%; --h:54%; --z:3; --c:74,222,128; --depth:18; --i:3;">
+                        <img src="/assets/studios/spiritbound-hunter.webp" alt="Spiritbound Hunter, Symbiont Ethos" width="812" height="832">
+                        <figcaption>Spiritbound Hunter · <span>Symbiont Ethos</span></figcaption>
+                    </figure>
+                    <figure class="hero-unit" style="--x:58%; --b:6%; --h:57%; --z:3; --c:125,211,252; --depth:18; --i:4;">
+                        <img src="/assets/studios/hanta.webp" alt="Hanta, Glacial Chorus" width="883" height="1000">
+                        <figcaption>Hanta · <span>Glacial Chorus</span></figcaption>
+                    </figure>
+                    <figure class="hero-unit" style="--x:33%; --b:4%; --h:80%; --z:4; --c:45,212,191; --depth:26; --i:5;">
+                        <img src="/assets/studios/captain-flux.webp" alt="Captain Flux, Tideborne Collective" width="516" height="1000" fetchpriority="high">
+                        <figcaption>Captain Flux · <span>Tideborne Collective</span></figcaption>
+                    </figure>
+                    <span class="hero-stage-tag font-display uppercase tracking-wider text-xs">
+                        <span class="w-1.5 h-1.5 rounded-full bg-rite animate-pulse"></span> Rites of Accord · Open beta
+                    </span>
+                </a>
+            </div>
+        </section>
+
+        <!-- Rites of Accord -->
+        <section id="rites-of-accord" class="relative py-20 md:py-28 border-t border-rite/20">
+            <div class="container mx-auto px-4 max-w-6xl">
+                <div class="flex items-center gap-3 mb-8">
+                    <span class="font-title text-[0.65rem] tracking-[0.35em] text-rite">FLAGSHIP GAME</span>
+                    <span class="h-px flex-1 bg-gradient-to-r from-rite/50 to-transparent"></span>
+                </div>
+                <a href="https://ritesofaccord.com" target="_blank" rel="noopener" class="block keyart rounded-2xl overflow-hidden mb-10 md:mb-14">
+                    <img src="/assets/studios/rites-of-accord-capsule.webp" alt="Rites of Accord key art: three faction heroes over a glowing hex battlefield" width="1232" height="706" class="w-full h-auto block" loading="lazy">
+                </a>
+                <div class="grid md:grid-cols-5 gap-10 md:gap-14">
+                    <div class="md:col-span-3">
+                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-rite/40 bg-rite/10 text-rite text-xs font-display uppercase tracking-wider mb-5">
+                            <span class="w-1.5 h-1.5 rounded-full bg-rite animate-pulse"></span> Open beta: free to play
+                        </div>
+                        <h2 class="font-title text-white text-2xl md:text-4xl leading-tight mb-5">Rites of Accord</h2>
+                        <p class="text-xl text-slate-200 leading-relaxed mb-4">Turn-based hex tactics with a Survival roguelite and ranked&nbsp;1v1.</p>
+                        <p class="text-slate-400 leading-relaxed mb-8">After the collapse, every community forged its own philosophy of survival. Lead one of six factions across a rebuilt world. Draft abilities, outthink your opponent on the hex grid, and climb the ranked ladder, or push your luck in the Survival run.</p>
+                        <div class="flex flex-wrap gap-3">
+                            <a href="https://ritesofaccord.com" target="_blank" rel="noopener" class="hex-btn hex-btn--rite">Play free in browser <i class="fas fa-arrow-right text-xs"></i></a>
+                            <a href="https://store.steampowered.com/app/4579700/Rites_of_Accord/" target="_blank" rel="noopener" class="hex-btn hex-btn--ghost"><i class="fab fa-steam"></i> Wishlist on Steam</a>
+                            <a href="https://discord.gg/ePTEFw4tyk" target="_blank" rel="noopener" class="hex-btn hex-btn--ghost"><i class="fab fa-discord"></i> Join the Discord</a>
+                        </div>
+                    </div>
+                    <dl class="md:col-span-2 grid grid-cols-2 md:grid-cols-1 gap-px bg-white/10 rounded-xl overflow-hidden self-start">
+                        <div class="bg-panel p-5">
+                            <dt class="font-title text-[0.6rem] tracking-[0.3em] text-slate-500 mb-1.5">GENRE</dt>
+                            <dd class="font-display text-white text-lg">Hex tactics · Roguelite</dd>
+                        </div>
+                        <div class="bg-panel p-5">
+                            <dt class="font-title text-[0.6rem] tracking-[0.3em] text-slate-500 mb-1.5">PLATFORMS</dt>
+                            <dd class="font-display text-white text-lg">Browser · Steam · Mobile</dd>
+                        </div>
+                        <div class="bg-panel p-5">
+                            <dt class="font-title text-[0.6rem] tracking-[0.3em] text-slate-500 mb-1.5">MODES</dt>
+                            <dd class="font-display text-white text-lg">Survival · Ranked 1v1</dd>
+                        </div>
+                        <div class="bg-panel p-5">
+                            <dt class="font-title text-[0.6rem] tracking-[0.3em] text-slate-500 mb-1.5">STEAM RELEASE</dt>
+                            <dd class="font-display text-ember text-lg">April 2027</dd>
+                        </div>
+                    </dl>
+                </div>
+            </div>
+        </section>
+
+        <!-- ListForge -->
+        <section id="listforge" class="relative py-20 md:py-28 bg-panel/60 border-t border-seed/20 overflow-hidden">
+            <div class="container mx-auto px-4 max-w-6xl">
+                <div class="flex items-center gap-3 mb-12">
+                    <span class="font-title text-[0.65rem] tracking-[0.35em] text-seed">TABLETOP TOOL</span>
+                    <span class="h-px flex-1 bg-gradient-to-r from-seed/50 to-transparent"></span>
+                </div>
+                <div class="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
+                    <div class="order-2 md:order-1">
+                        <h2 class="font-title text-white text-2xl md:text-4xl leading-tight mb-5">ListForge</h2>
+                        <p class="text-xl text-slate-200 leading-relaxed mb-4">Army builder, rules reference, and game tracker for Warhammer&nbsp;40k.</p>
+                        <p class="text-slate-400 leading-relaxed mb-5">Build and check your lists for 10th and 11th edition, look up rules mid-game, and track the game as you play. Your lists sync across your phone, tablet, and desktop.</p>
+                        <div class="flex flex-wrap gap-2 mb-8 font-display text-xs uppercase tracking-wider">
+                            <span class="px-3 py-1.5 rounded-full border border-seed/40 bg-seed/10 text-seed">Warhammer 40k · 10th &amp; 11th ed.</span>
+                            <a href="#rites-of-accord" class="px-3 py-1.5 rounded-full border border-rite/40 bg-rite/10 text-rite hover:bg-rite/20 transition-colors">Now with Rites of Accord lists</a>
+                        </div>
+                        <div class="grid grid-cols-3 gap-4 mb-10">
+                            <div>
+                                <p class="font-display font-bold text-3xl md:text-4xl text-seed">50k+</p>
+                                <p class="text-xs uppercase tracking-wider text-slate-500 mt-1">Players</p>
+                            </div>
+                            <div>
+                                <p class="font-display font-bold text-3xl md:text-4xl text-tan">2k+</p>
+                                <p class="text-xs uppercase tracking-wider text-slate-500 mt-1">Subscribers</p>
+                            </div>
+                            <div>
+                                <p class="font-display font-bold text-3xl md:text-4xl text-white">5</p>
+                                <p class="text-xs uppercase tracking-wider text-slate-500 mt-1">Platforms</p>
+                            </div>
+                        </div>
+                        <div class="flex flex-wrap gap-3">
+                            <a href="https://listforge.club" target="_blank" rel="noopener" class="hex-btn hex-btn--seed">Visit listforge.club <i class="fas fa-arrow-right text-xs"></i></a>
+                            <a href="/studios/listforge.html" class="hex-btn hex-btn--ghost">How we built it</a>
+                        </div>
+                    </div>
+                    <div class="order-1 md:order-2 flex justify-center">
+                        <div class="listforge-badge relative aspect-square w-full max-w-sm rounded-3xl flex items-center justify-center overflow-hidden">
+                            <img src="/assets/LISTFORGE.png" alt="ListForge by CodeSeed logo" class="w-full h-full object-contain scale-[1.45]">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Platforms -->
+                <div class="mt-14 md:mt-20">
+                    <p class="font-title text-[0.6rem] tracking-[0.35em] text-slate-500 mb-4">DOWNLOAD LISTFORGE</p>
+                    <ul class="platform-bar">
+                        <li><a href="https://listforge.club" target="_blank" rel="noopener"><i class="fab fa-windows"></i><span><strong>Windows</strong><small>Windows 10 or later</small></span></a></li>
+                        <li><a href="https://listforge.club" target="_blank" rel="noopener"><i class="fab fa-apple"></i><span><strong>macOS</strong><small>macOS 11 or later</small></span></a></li>
+                        <li><a href="https://listforge.club" target="_blank" rel="noopener"><i class="fab fa-linux"></i><span><strong>Linux</strong><small>Any distro</small></span></a></li>
+                        <li><a href="https://apps.apple.com/us/app/listforge/id6739130347" target="_blank" rel="noopener"><i class="fab fa-app-store-ios"></i><span><strong>iPhone &amp; iPad</strong><small>App Store</small></span></a></li>
+                        <li><a href="https://play.google.com/store/apps/details?id=io.codeseed.list_forge" target="_blank" rel="noopener"><i class="fab fa-google-play"></i><span><strong>Android</strong><small>Google Play</small></span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter -->
+        <section id="newsletter" class="relative py-20 md:py-28 hex-bg border-t border-white/10">
+            <div class="container mx-auto px-4 max-w-2xl text-center relative">
+                <p class="font-title text-[0.65rem] tracking-[0.35em] text-seed mb-5">STUDIO DISPATCH</p>
+                <h2 class="font-display font-bold text-white uppercase text-3xl md:text-5xl leading-tight mb-4">Don't miss the next drop</h2>
+                <p class="text-slate-400 leading-relaxed mb-8">Beta invites, patch notes, Steam launch news, and the occasional behind-the-scenes look. No spam, and you can unsubscribe any time.</p>
+                <form id="newsletter-form" action="https://formspree.io/f/mnnaoeoa" method="POST" class="flex flex-col sm:flex-row gap-3 max-w-lg mx-auto">
+                    <label for="newsletter-email" class="sr-only">Email address</label>
+                    <input id="newsletter-email" type="email" name="email" required autocomplete="email" placeholder="you@example.com"
+                        class="flex-1 bg-panel border border-white/15 focus:border-seed focus:ring-2 focus:ring-seed/30 outline-none rounded-lg px-4 py-3.5 text-white placeholder-slate-500">
+                    <input type="hidden" name="_subject" value="Studios newsletter signup">
+                    <input type="hidden" name="list" value="studios-newsletter">
+                    <input type="text" name="_gotcha" class="hidden" tabindex="-1" autocomplete="off">
+                    <button type="submit" class="hex-btn hex-btn--seed justify-center">Subscribe</button>
+                </form>
+                <p id="newsletter-status" class="text-sm mt-4 min-h-[1.25rem]" role="status" aria-live="polite"></p>
+            </div>
+        </section>
+
+        <!-- Cross-link to Development -->
+        <section class="py-14 border-t border-white/10">
+            <div class="container mx-auto px-4 max-w-6xl flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+                <div>
+                    <p class="font-display text-white text-xl md:text-2xl font-semibold">Need a team to build your product?</p>
+                    <p class="text-slate-400 mt-1">The people behind Studios also build web and mobile apps for clients.</p>
+                </div>
+                <a href="/development/" class="hex-btn hex-btn--ghost shrink-0">CodeSeed Development <i class="fas fa-arrow-right text-xs"></i></a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="border-t border-white/10 py-10">
+        <div class="container mx-auto px-4 max-w-6xl flex flex-col md:flex-row items-center justify-between gap-6 text-sm text-slate-500">
+            <a href="/" class="flex items-center gap-2 hover:text-slate-300">
+                <img src="/assets/codeseed-logo.png" alt="" class="h-7 w-auto opacity-80">
+                <span>A CodeSeed label</span>
+            </a>
+            <div class="flex items-center gap-5 text-lg">
+                <a href="https://discord.gg/ePTEFw4tyk" target="_blank" rel="noopener" class="hover:text-white" aria-label="Rites of Accord Discord"><i class="fab fa-discord"></i></a>
+                <a href="https://store.steampowered.com/app/4579700/Rites_of_Accord/" target="_blank" rel="noopener" class="hover:text-white" aria-label="Rites of Accord on Steam"><i class="fab fa-steam"></i></a>
+                <a href="https://ko-fi.com/ritesofaccord" target="_blank" rel="noopener" class="hover:text-white" aria-label="Support Rites of Accord on Ko-fi"><i class="fas fa-mug-hot"></i></a>
+            </div>
+            <p>&copy; <span id="year">2026</span> CodeSeed · <a href="/privacy.html" class="hover:text-slate-300">Privacy</a></p>
+        </div>
+    </footer>
+</body>
+</html>

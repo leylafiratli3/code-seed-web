@@ -2,32 +2,26 @@
 <html lang="en">
 <head>
     <!-- Basic Meta Tags -->
-    <title>CodeSeed | Professional Software Development. Ethically Sourced.</title>
+    <title>CodeSeed | Ethical Tech, Production Quality</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="CodeSeed: Professional software development that aligns with your values. Ethically sourced. Enterprise-grade quality without the enterprise price tag.">
-    
+    <meta name="description" content="CodeSeed is ethical tech with production quality. CodeSeed Development builds web and mobile apps for clients; CodeSeed Studios makes games and tools for players.">
+
     <!-- Favicon -->
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/codeseed-logo.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/codeseed-logo.png">
-    
-    <!-- Open Graph / Facebook -->
+    <link rel="icon" type="image/png" href="/assets/codeseed-logo.png">
+
+    <!-- Open Graph / Twitter -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://code-seed.io/">
     <meta property="og:site_name" content="CodeSeed">
-    <meta property="og:title" content="CodeSeed">
-    <meta property="og:description" content="CodeSeed: Professional software development that aligns with your values. Ethically sourced. Enterprise-grade quality without the enterprise price tag.">
-    <meta property="og:image" content="https://code-seed.io/assets/codeseed-logo.png">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:image:alt" content="CodeSeed Logo">
-
-    <!-- Twitter -->
-    <meta name="twitter:card" content="https://code-seed.io/assets/codeseed-logo.png">
-    <meta name="twitter:url" content="https://code-seed.io/">
+    <meta property="og:title" content="CodeSeed | Ethical Tech, Production Quality">
+    <meta property="og:description" content="Web and app development for clients, plus games and tools for players.">
+    <meta property="og:image" content="https://code-seed.io/assets/og-codeseed.png">
+    <meta property="og:image:alt" content="CodeSeed logo">
+    <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="CodeSeed">
-    <meta name="twitter:description" content="CodeSeed: Professional software development that aligns with your values. Ethically sourced. Enterprise-grade quality without the enterprise price tag.">
-    <meta name="twitter:image" content="https://code-seed.io/assets/codeseed-logo.png">
+    <meta name="twitter:description" content="Web and app development for clients, plus games and tools for players.">
+    <meta name="twitter:image" content="https://code-seed.io/assets/og-codeseed.png">
 
     <!-- Structured Data -->
     <script type="application/ld+json">
@@ -37,19 +31,18 @@
       "name": "CodeSeed",
       "url": "https://code-seed.io",
       "logo": "https://code-seed.io/assets/codeseed-logo.png",
-      "description": "CodeSeed: Professional software development that aligns with your values. Ethically sourced. Enterprise-grade quality without the enterprise price tag.",
-      "image": "https://code-seed.io/assets/codeseed-logo.png",
-      "address": {
-        "@type": "PostalAddress",
-        "addressCountry": "Turkey"
-      }
+      "description": "Ethical tech with production quality.",
+      "subOrganization": [
+        { "@type": "Organization", "name": "CodeSeed Development", "url": "https://code-seed.io/development/" },
+        { "@type": "Organization", "name": "CodeSeed Studios", "url": "https://code-seed.io/studios/" }
+      ]
     }
     </script>
 
-    <!-- Satoshi Font from Fontshare -->
-    <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,600,700,900&display=swap" rel="stylesheet">
-    <!-- Keep Fira Code for code/technical elements if needed -->
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Chakra+Petch:wght@600;700&family=Michroma&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -58,859 +51,87 @@
                     colors: {
                         primary: '#8dba90',
                         secondary: '#5a7d5c',
-                        accent: '#D2B48C',
                         tan: '#D2B48C',
+                        ink: '#060f1e',
+                        rite: '#00c8dc',
                     },
                     fontFamily: {
-                        'sans': ['Satoshi', 'sans-serif'],
-                        'fira': ['"Fira Code"', 'monospace'],
-                        'serif': ['"DM Serif Display"', 'Georgia', 'serif'],
+                        sans: ['Satoshi', 'sans-serif'],
+                        serif: ['"DM Serif Display"', 'Georgia', 'serif'],
+                        display: ['"Chakra Petch"', 'sans-serif'],
+                        title: ['Michroma', 'sans-serif'],
                     },
                 }
             }
         }
     </script>
-    <script src="script.js" defer></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link href="styles.css" rel="stylesheet">
+    <style>
+        .door { transition: flex-grow .6s cubic-bezier(.2, .8, .2, 1); }
+        @media (min-width: 768px) {
+            .doors:hover .door { flex-grow: 1; }
+            .doors .door:hover { flex-grow: 1.35; }
+        }
+        .door-arrow { transition: transform .3s ease; }
+        .door:hover .door-arrow, .door:focus-visible .door-arrow { transform: translateX(6px); }
+        .door:focus-visible { outline: 3px solid #fff; outline-offset: -6px; }
+        .hex-bg {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='98' viewBox='0 0 56 98'%3E%3Cpath d='M28 0 L56 16 L56 49 L28 65 L0 49 L0 16 Z M28 65 L28 98' fill='none' stroke='%238dba90' stroke-opacity='0.1' stroke-width='1'/%3E%3C/svg%3E");
+            background-size: 56px 98px;
+        }
+        .leaf-bg {
+            background:
+                radial-gradient(70% 60% at 20% 20%, rgba(141, 186, 144, 0.35), transparent 70%),
+                radial-gradient(60% 50% at 90% 90%, rgba(210, 180, 140, 0.25), transparent 70%),
+                #f5f7f2;
+        }
+        @media (prefers-reduced-motion: reduce) {
+            .door, .door-arrow { transition: none; }
+        }
+    </style>
 </head>
-<body class="font-sans bg-primary text-gray-800 loading">
-    <header class="bg-white shadow-md fixed w-full z-50">
-        <nav class="container mx-auto px-4 py-5">
-            <div class="flex justify-between items-center">
-                <div class="flex items-center transition-transform duration-300 ease-in-out hover:scale-105">
-                    <a href="#hero" class="flex items-center transition-transform duration-300 ease-in-out hover:scale-105">
-                        <img src="assets/codeseed-logo.png" alt="CodeSeed Logo" id="header-logo" class="h-20 w-auto mr-4">
-                        <span class="text-2xl font-bold text-primary lowercase tracking-wide">code-seed</span>
-                    </a>
-                </div>
-                <div class="md:hidden">
-                    <button id="mobile-menu-button" class="text-gray-500 hover:text-gray-600 focus:outline-none focus:text-gray-600" aria-label="Toggle menu">
-                        <svg viewBox="0 0 24 24" class="h-6 w-6 fill-current">
-                            <path fill-rule="evenodd" d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"></path>
-                        </svg>
-                    </button>
-                </div>
-                <ul class="hidden md:flex space-x-6 items-center">
-                    <li><a href="#hero" class="text-gray-800 hover:text-primary transition-colors duration-300 font-medium">Home</a></li>
-                    <li><a href="#about-us" class="text-gray-800 hover:text-primary transition-colors duration-300 font-medium">About Us</a></li>
-                    <li class="relative group">
-                        <button class="text-gray-800 hover:text-primary transition-colors duration-300 font-medium flex items-center gap-1">
-                            Services
-                            <i class="fas fa-chevron-down text-xs opacity-50 ml-0.5"></i>
-                        </button>
-                        <div class="absolute top-full left-0 pt-2 hidden group-hover:block z-50">
-                            <div class="bg-white rounded-xl shadow-lg border border-gray-100 py-2 min-w-[200px]">
-                                <a href="#about" class="block px-4 py-2.5 text-sm text-gray-700 hover:text-primary hover:bg-gray-50 font-medium transition-colors border-b border-gray-100">All Services</a>
-                                <a href="services/professional-websites.html" class="block px-4 py-2 text-sm text-gray-700 hover:text-primary hover:bg-gray-50 transition-colors">Custom Websites</a>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="relative group">
-                        <button class="text-gray-800 hover:text-primary transition-colors duration-300 font-medium flex items-center gap-1">
-                            AI Setup &amp; Strategy
-                            <i class="fas fa-chevron-down text-xs opacity-50 ml-0.5"></i>
-                        </button>
-                        <div class="absolute top-full left-0 pt-2 hidden group-hover:block z-50">
-                            <div class="bg-white rounded-xl shadow-lg border border-gray-100 py-2 min-w-[200px]">
-                                <a href="services/ai-setup-and-strategy.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:text-primary hover:bg-gray-50 font-medium transition-colors border-b border-gray-100">Overview</a>
-                                <a href="services/ai-for-personal-use.html" class="block px-4 py-2 text-sm text-gray-700 hover:text-primary hover:bg-gray-50 transition-colors">For Personal Use</a>
-                                <a href="services/ai-for-traders.html" class="block px-4 py-2 text-sm text-gray-700 hover:text-primary hover:bg-gray-50 transition-colors">For Traders</a>
-                                <a href="services/ai-for-business-owners.html" class="block px-4 py-2 text-sm text-gray-700 hover:text-primary hover:bg-gray-50 transition-colors">For Business Owners</a>
-                                <a href="services/ai-for-construction.html" class="block px-4 py-2 text-sm text-gray-700 hover:text-primary hover:bg-gray-50 transition-colors">For Construction</a>
-                                <a href="services/ai-for-law-firms.html" class="block px-4 py-2 text-sm text-gray-700 hover:text-primary hover:bg-gray-50 transition-colors">For Law Firms</a>
-                                <a href="services/ai-for-real-estate.html" class="block px-4 py-2 text-sm text-gray-700 hover:text-primary hover:bg-gray-50 transition-colors">For Real Estate</a>
-                                <a href="services/ai-for-ecommerce.html" class="block px-4 py-2 text-sm text-gray-700 hover:text-primary hover:bg-gray-50 transition-colors">For E&#8209;Commerce</a>
-                                <a href="services/ai-for-accounting.html" class="block px-4 py-2 text-sm text-gray-700 hover:text-primary hover:bg-gray-50 transition-colors">For Accounting</a>
-                            </div>
-                        </div>
-                    </li>
-                    <li><a href="#recent-projects" class="text-gray-800 hover:text-primary transition-colors duration-300 font-medium">Project Garden</a></li>
-                    <li><a href="#team" class="text-gray-800 hover:text-primary transition-colors duration-300 font-medium">Our Team</a></li>
-                    <li><a href="#contact" class="text-gray-800 hover:text-primary transition-colors duration-300 font-medium">Work with Us</a></li>
-                    <li><a href="/tr/" class="text-xs font-bold border border-primary text-primary px-2.5 py-1 rounded-full hover:bg-primary hover:text-white transition-colors duration-300">TR</a></li>
-                </ul>
-            </div>
-        </nav>
-        <div id="mobile-menu" class="md:hidden hidden">
-            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t">
-                <a href="#hero" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">
-                    <span data-lang="en">Home</span><span data-lang="tr" class="hidden">Ana Sayfa</span>
-                </a>
-                <a href="#about-us" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">
-                    <span data-lang="en">About Us</span><span data-lang="tr" class="hidden">Hakkımızda</span>
-                </a>
-                <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">Services</a>
-                <a href="services/professional-websites.html" class="block px-5 py-1.5 rounded-md text-sm text-gray-500 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">Custom Websites</a>
-                <p class="px-3 pt-3 pb-1 text-xs font-semibold text-gray-400 uppercase tracking-wider">AI Setup &amp; Strategy</p>
-                <a href="services/ai-setup-and-strategy.html" class="block px-5 py-1.5 rounded-md text-sm text-gray-600 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out font-medium">Overview</a>
-                <a href="services/ai-for-personal-use.html" class="block px-5 py-1.5 rounded-md text-sm text-gray-500 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">For Personal Use</a>
-                <a href="services/ai-for-traders.html" class="block px-5 py-1.5 rounded-md text-sm text-gray-500 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">For Traders</a>
-                <a href="services/ai-for-business-owners.html" class="block px-5 py-1.5 rounded-md text-sm text-gray-500 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">For Business Owners</a>
-                <a href="services/ai-for-construction.html" class="block px-5 py-1.5 rounded-md text-sm text-gray-500 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">For Construction</a>
-                <a href="services/ai-for-law-firms.html" class="block px-5 py-1.5 rounded-md text-sm text-gray-500 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">For Law Firms</a>
-                <a href="services/ai-for-real-estate.html" class="block px-5 py-1.5 rounded-md text-sm text-gray-500 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">For Real Estate</a>
-                <a href="services/ai-for-ecommerce.html" class="block px-5 py-1.5 rounded-md text-sm text-gray-500 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">For E&#8209;Commerce</a>
-                <a href="services/ai-for-accounting.html" class="block px-5 py-1.5 rounded-md text-sm text-gray-500 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">For Accounting</a>
-                <a href="#recent-projects" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">
-                    <span data-lang="en">Project Garden</span><span data-lang="tr" class="hidden">Proje Bahçesi</span>
-                </a>
-                <a href="#team" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">
-                    <span data-lang="en">Our Team</span><span data-lang="tr" class="hidden">Ekibimiz</span>
-                </a>
-                <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 transition duration-150 ease-in-out">
-                    <span data-lang="en">Work with Us</span><span data-lang="tr" class="hidden">Bizimle Çalışın</span>
-                </a>
-                <div class="border-t border-gray-200 mt-2 pt-2">
-                    <a href="/tr/" class="block px-3 py-2 rounded-md text-base font-bold text-primary hover:bg-primary hover:text-white transition duration-150 ease-in-out">TR - Türkçe</a>
-                </div>
+<body class="font-sans bg-ink antialiased">
+    <main class="doors relative min-h-screen flex flex-col md:flex-row">
+
+        <!-- Brand mark -->
+        <div class="absolute top-0 inset-x-0 z-20 flex justify-center pt-6 md:pt-8 pointer-events-none">
+            <div class="flex items-center gap-3 bg-white/90 backdrop-blur rounded-full pl-2 pr-5 py-2 shadow-lg">
+                <img src="/assets/codeseed-logo.png" alt="" class="h-10 w-auto">
+                <span class="flex flex-col leading-tight">
+                    <span class="text-xl font-bold text-primary lowercase tracking-wide">code-seed</span>
+                    <span class="text-[0.65rem] text-gray-500 uppercase tracking-[0.2em]">Ethical tech · Production quality</span>
+                </span>
             </div>
         </div>
-    </header>
+        <h1 class="sr-only">CodeSeed: choose CodeSeed Development or CodeSeed Studios</h1>
 
-    <section id="hero" class="hero relative min-h-screen overflow-hidden">
-        <div class="video-background absolute inset-0 overflow-hidden">
-            <video autoplay loop muted playsinline class="min-w-full min-h-full object-cover absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-40">
-                <source src="assets/codeseed-background.mp4" type="video/mp4">
-            </video>
-            <div class="absolute inset-0 bg-black bg-opacity-60"></div>
-        </div>
-        <div class="hero-content container mx-auto px-4 min-h-screen flex items-center justify-center text-center text-white relative z-10 py-20">
-            <div class="hero-card bg-black bg-opacity-60 p-4 md:p-8 rounded-lg shadow-lg max-w-[64.4rem] w-full mx-4">
-                <h1 class="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mb-4">
-                    <span data-lang="en"><span class="font-serif italic font-normal">Professional Tech.</span> <span class="font-serif italic font-normal text-primary">Ethically Sourced.</span></span>
-                    <span data-lang="tr" class="hidden"><span class="font-serif italic font-normal">Profesyonel Teknoloji.</span> <span class="font-serif italic font-normal text-primary">Etik Kaynaklı.</span></span>
-                </h1>
-                <p class="text-base md:text-lg lg:text-xl mb-6 md:mb-8 text-gray-200">
-                    <span data-lang="en">We offer enterprise-grade software development and consulting without enterprise-sized budgets or ethical compromises. Our team combines the technical rigor of Big Tech with the agility and values of independent&nbsp;development.</span>
-                    <span data-lang="tr" class="hidden">Kurumsal bütçeler veya etik ödünler olmadan kurumsal düzeyde yazılım geliştirme ve danışmanlık sunuyoruz. Ekibimiz Big Tech'in teknik titizliğini bağımsız geliştirmenin çevikliği ve değerleriyle birleştiriyor.</span>
-                </p>
-                <div class="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center">
-                    <a href="#recent-projects" class="bg-transparent hover:bg-primary border-2 border-primary text-white font-bold py-2 md:py-3 px-4 md:px-6 rounded-full transition-colors duration-300 text-sm md:text-base">
-                        <span data-lang="en">See Our Work</span>
-                        <span data-lang="tr" class="hidden">Projelerimiz</span>
-                    </a>
-                    <a href="#contact" class="bg-transparent hover:bg-primary border-2 border-primary text-white font-bold py-2 md:py-3 px-4 md:px-6 rounded-full transition-colors duration-300 text-sm md:text-base">
-                        <span data-lang="en">Work With Us</span>
-                        <span data-lang="tr" class="hidden">Bizimle Çalışın</span>
-                    </a>
-                </div>
+        <!-- Development door -->
+        <a href="/development/" class="door group relative flex-1 leaf-bg flex items-end md:items-center min-h-[50vh] md:min-h-screen overflow-hidden">
+            <div class="relative w-full px-6 sm:px-10 lg:px-16 pt-32 pb-12 md:py-0 max-w-xl">
+                <p class="text-secondary font-bold text-xs tracking-[0.3em] uppercase mb-4">For clients</p>
+                <h2 class="font-serif italic text-secondary leading-[1.05] mb-5" style="font-size: clamp(2.5rem, 5.5vw, 4.5rem);">CodeSeed<br><span class="text-primary">Development</span></h2>
+                <p class="text-gray-700 text-lg leading-relaxed mb-8 max-w-md">Production-quality websites, apps and software for teams who care how their tech is made.</p>
+                <span class="inline-flex items-center gap-3 bg-secondary group-hover:bg-primary text-white font-bold py-3.5 px-7 rounded-full transition-colors duration-300">
+                    Work with us
+                    <svg class="door-arrow w-4 h-4" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M10.3 3.3a1 1 0 011.4 0l6 6a1 1 0 010 1.4l-6 6a1 1 0 01-1.4-1.4L14.6 11H3a1 1 0 110-2h11.6l-4.3-4.3a1 1 0 010-1.4z" clip-rule="evenodd"/></svg>
+                </span>
+                <p class="text-gray-500 text-sm mt-6">Web dev · App dev · APIs · Data · ML</p>
             </div>
-        </div>
-    </section>
+        </a>
 
-    <section id="about-us" class="bg-white py-16 md:py-24">
-        <div class="container mx-auto px-4 max-w-4xl">
-            <h2 class="text-4xl md:text-5xl lg:text-6xl font-serif italic font-normal text-center mb-10 md:mb-14 text-secondary">
-                <span data-lang="en">About Us</span>
-                <span data-lang="tr" class="hidden">Hakkımızda</span>
-            </h2>
-            <p class="text-xl md:text-2xl text-gray-700 leading-relaxed text-center max-w-4xl mx-auto">
-                <span data-lang="en">We're engineers who've built systems for major tech platforms, and left due to ethical concerns. We bring the same professional standards, rigorous processes, and technical excellence — but without supporting surveillance capitalism, environmental impact, and exploitative practices. Our mission is to build technology that serves people without extracting from them.</span>
-                <span data-lang="tr" class="hidden">Büyük teknoloji platformları için sistemler kuran mühendisleriz ve etik kaygılar nedeniyle ayrıldık. Aynı profesyonel standartları, titiz süreçleri ve teknik mükemmelliği sunuyoruz — ancak gözetim kapitalizmi, çevresel etki ve sömürücü uygulamaları desteklemeden. Misyonumuz, insanlara hizmet eden ve onlardan çıkarmayan teknoloji inşa etmektir.</span>
-            </p>
-        </div>
-    </section>
-
-    <!-- AI Setup & Strategy Highlight -->
-    <section class="bg-gray-950 py-16 md:py-24">
-        <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-primary/60 via-primary/20 to-transparent"></div>
-        <div class="container mx-auto px-4">
-            <div class="max-w-5xl mx-auto">
-                <div class="flex flex-col md:flex-row items-center gap-10 md:gap-16">
-                    <div class="flex-1">
-                        <p class="text-primary font-medium text-sm tracking-widest uppercase mb-4">New Service</p>
-                        <h2 class="font-serif italic font-normal text-white mb-5" style="font-size: clamp(2.2rem, 5vw, 3.5rem); line-height: 1.15; text-wrap: balance;">AI Setup &amp; Strategy</h2>
-                        <p class="text-gray-300 text-lg leading-relaxed mb-8">We evaluate your workflow, find the right AI tools, set them up on your hardware, and train you to use them. Whether you're a solo trader or small business owner, we make AI actually work for you.</p>
-                        <a href="services/ai-setup-and-strategy.html" class="inline-flex items-center gap-2 bg-primary hover:bg-secondary text-white font-semibold py-3.5 px-7 rounded-[4px] transition-colors duration-300 text-base">
-                            See AI Services
-                            <i class="fas fa-arrow-right text-sm"></i>
-                        </a>
-                    </div>
-                    <div class="flex-1 space-y-6">
-                        <div class="flex gap-6 items-start">
-                            <span class="text-primary font-fira font-bold text-lg mt-1 shrink-0">01</span>
-                            <div>
-                                <h3 class="text-lg font-bold mb-1 text-white">Discovery & Audit</h3>
-                                <p class="text-gray-400 leading-relaxed text-sm">We look at how you currently work, find where time is being wasted, and figure out where AI can actually help.</p>
-                            </div>
-                        </div>
-                        <div class="border-t border-white/10"></div>
-                        <div class="flex gap-6 items-start">
-                            <span class="text-primary font-fira font-bold text-lg mt-1 shrink-0">02</span>
-                            <div>
-                                <h3 class="text-lg font-bold mb-1 text-white">Tool Selection & Setup</h3>
-                                <p class="text-gray-400 leading-relaxed text-sm">We pick the right tools for your situation — weighing cost, capability, and ease of use — then handle the full technical setup.</p>
-                            </div>
-                        </div>
-                        <div class="border-t border-white/10"></div>
-                        <div class="flex gap-6 items-start">
-                            <span class="text-primary font-fira font-bold text-lg mt-1 shrink-0">03</span>
-                            <div>
-                                <h3 class="text-lg font-bold mb-1 text-white">Training & Support</h3>
-                                <p class="text-gray-400 leading-relaxed text-sm">We teach you and your team how to use everything, and stick around as tools evolve and new capabilities come out.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        <!-- Studios door -->
+        <a href="/studios/" class="door group relative flex-1 bg-ink hex-bg flex items-start md:items-center min-h-[50vh] md:min-h-screen overflow-hidden md:justify-end">
+            <div class="absolute inset-0 pointer-events-none" style="background: radial-gradient(60% 50% at 70% 40%, rgba(0, 200, 220, 0.16), transparent 70%), radial-gradient(50% 50% at 20% 90%, rgba(141, 186, 144, 0.14), transparent 70%);"></div>
+            <div class="relative w-full px-6 sm:px-10 lg:px-16 pt-12 pb-16 md:py-0 max-w-xl md:text-right">
+                <p class="font-title text-rite text-[0.65rem] tracking-[0.35em] mb-4">FOR PLAYERS</p>
+                <h2 class="font-display font-bold uppercase text-white leading-[0.95] mb-5" style="font-size: clamp(2.5rem, 5.5vw, 4.5rem);">CodeSeed<br><span class="text-primary">Studios</span></h2>
+                <p class="text-slate-300 text-lg leading-relaxed mb-8 max-w-md md:ml-auto">Games and tools we make for ourselves and our communities, from hex tactics to tabletop.</p>
+                <span class="inline-flex items-center gap-3 bg-rite text-ink font-display font-semibold uppercase tracking-wider py-3.5 px-7 transition-shadow duration-300 group-hover:shadow-[0_0_28px_rgba(0,220,240,0.4)]" style="clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);">
+                    Play our games
+                    <svg class="door-arrow w-4 h-4" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M10.3 3.3a1 1 0 011.4 0l6 6a1 1 0 010 1.4l-6 6a1 1 0 01-1.4-1.4L14.6 11H3a1 1 0 110-2h11.6l-4.3-4.3a1 1 0 010-1.4z" clip-rule="evenodd"/></svg>
+                </span>
+                <p class="text-slate-500 text-sm mt-6">Rites of Accord · ListForge</p>
             </div>
-        </div>
-    </section>
-
-    <section id="about" class="about-section bg-secondary py-16">
-        <div class="container mx-auto px-4">
-            <h2 class="text-4xl md:text-5xl lg:text-6xl font-serif italic font-normal text-center mb-16 md:mb-20 text-white">
-                <span data-lang="en">Our Expertise</span>
-                <span data-lang="tr" class="hidden">Uzmanlıklarımız</span>
-            </h2>
-            <div class="services-tabs max-w-7xl mx-auto">
-                <div class="flex flex-col md:flex-row md:items-stretch gap-6">
-                    <!-- Tab Navigation - Left Sidebar -->
-                    <div class="w-full md:w-1/4 lg:w-1/3 flex flex-col">
-                        <div class="flex flex-row md:flex-col gap-1.5 overflow-x-auto md:overflow-x-visible pb-2 md:pb-0 md:pr-2">
-                            <button class="service-tab-btn active group relative w-full text-left px-5 py-3.5 rounded-xl transition-all duration-300 font-medium text-sm md:text-base whitespace-nowrap md:whitespace-normal" data-service="app-development">
-                                <div class="flex items-center">
-                                    <i class="fas fa-mobile-alt mr-3 text-base w-5 flex-shrink-0 transition-transform duration-300 group-hover:scale-110"></i>
-                                    <span data-lang="en">App Development</span>
-                                    <span data-lang="tr" class="hidden">Uygulama Geliştirme</span>
-                                </div>
-                            </button>
-                            <button class="service-tab-btn group relative w-full text-left px-5 py-3.5 rounded-xl transition-all duration-300 font-medium text-sm md:text-base whitespace-nowrap md:whitespace-normal hover:shadow-md" data-service="software-development">
-                                <div class="flex items-center">
-                                    <i class="fas fa-code mr-3 text-base w-5 flex-shrink-0 transition-transform duration-300 group-hover:scale-110"></i>
-                                    <span data-lang="en">Software Development</span>
-                                    <span data-lang="tr" class="hidden">Yazılım Geliştirme</span>
-                                </div>
-                            </button>
-                            <button class="service-tab-btn group relative w-full text-left px-5 py-3.5 text-white/80 hover:text-white hover:bg-white/10 rounded-xl transition-all duration-300 font-medium text-sm md:text-base whitespace-nowrap md:whitespace-normal hover:shadow-md" data-service="data-analytics">
-                                <div class="flex items-center">
-                                    <i class="fas fa-database mr-3 text-base w-5 flex-shrink-0 transition-transform duration-300 group-hover:scale-110"></i>
-                                    <span data-lang="en">Data Analytics & Engineering</span>
-                                    <span data-lang="tr" class="hidden">Veri Analitiği ve Mühendisliği</span>
-                                </div>
-                            </button>
-                            <button class="service-tab-btn group relative w-full text-left px-5 py-3.5 text-white/80 hover:text-white hover:bg-white/10 rounded-xl transition-all duration-300 font-medium text-sm md:text-base whitespace-nowrap md:whitespace-normal hover:shadow-md" data-service="web-development">
-                                <div class="flex items-center">
-                                    <i class="fas fa-globe mr-3 text-base w-5 flex-shrink-0 transition-transform duration-300 group-hover:scale-110"></i>
-                                    <span data-lang="en">Web Development</span>
-                                    <span data-lang="tr" class="hidden">Web Geliştirme</span>
-                                </div>
-                            </button>
-                            <button class="service-tab-btn group relative w-full text-left px-5 py-3.5 text-white/80 hover:text-white hover:bg-white/10 rounded-xl transition-all duration-300 font-medium text-sm md:text-base whitespace-nowrap md:whitespace-normal hover:shadow-md" data-service="machine-learning">
-                                <div class="flex items-center">
-                                    <i class="fas fa-robot mr-3 text-base w-5 flex-shrink-0 transition-transform duration-300 group-hover:scale-110"></i>
-                                    <span data-lang="en">Applied Machine Learning</span>
-                                    <span data-lang="tr" class="hidden">Uygulamalı Makine Öğrenimi</span>
-                                </div>
-                            </button>
-                            <button class="service-tab-btn group relative w-full text-left px-5 py-3.5 text-white/80 hover:text-white hover:bg-white/10 rounded-xl transition-all duration-300 font-medium text-sm md:text-base whitespace-nowrap md:whitespace-normal hover:shadow-md" data-service="automation">
-                                <div class="flex items-center">
-                                    <i class="fas fa-cogs mr-3 text-base w-5 flex-shrink-0 transition-transform duration-300 group-hover:scale-110"></i>
-                                    <span data-lang="en">Adaptive Automation</span>
-                                    <span data-lang="tr" class="hidden">Adaptif Otomasyon</span>
-                                </div>
-                            </button>
-                            <button class="service-tab-btn group relative w-full text-left px-5 py-3.5 text-white/80 hover:text-white hover:bg-white/10 rounded-xl transition-all duration-300 font-medium text-sm md:text-base whitespace-nowrap md:whitespace-normal hover:shadow-md" data-service="professional-websites">
-                                <div class="flex items-center">
-                                    <i class="fas fa-globe mr-3 text-base w-5 flex-shrink-0 transition-transform duration-300 group-hover:scale-110"></i>
-                                    <span data-lang="en">Professional Websites</span>
-                                    <span data-lang="tr" class="hidden">Profesyonel Web Siteleri</span>
-                                </div>
-                            </button>
-                        </div>
-                    </div>
-
-                    <!-- Tab Content - Right Side -->
-                    <div class="flex-1 flex flex-col min-h-0">
-                <div class="service-content bg-white rounded-xl shadow-xl p-8 md:p-10 h-full border border-gray-100 flex flex-col">
-                    <!-- App Development -->
-                    <div class="service-panel active" data-panel="app-development">
-                        <h3 class="text-3xl md:text-4xl font-bold text-secondary mb-6">
-                            <span data-lang="en">App Development</span>
-                            <span data-lang="tr" class="hidden">Uygulama Geliştirme</span>
-                        </h3>
-                        <p class="text-gray-700 text-lg md:text-xl mb-8 leading-relaxed">
-                            <span data-lang="en">We build mobile apps that scale. Our ListForge app has over 20,000 users and 800 paid subscribers — cross-platform (iOS, Android, macOS, Windows, Linux), with real sync and a focus on quality. Enterprise-grade tooling and architecture, delivered by a small team.</span>
-                            <span data-lang="tr" class="hidden">Ölçeklenen mobil uygulamalar geliştiriyoruz. ListForge uygulamamız 20.000'den fazla kullanıcı ve 800 ücretli aboneye sahip — çapraz platform (iOS, Android, macOS, Windows, Linux), gerçek senkronizasyon ve kalite odaklı. Kurumsal düzeyde araçlar ve mimari, küçük bir ekip tarafından sunuluyor.</span>
-                        </p>
-                        <a href="/projects/listforge.html" data-project="listforge" class="group inline-flex items-center gap-2 bg-transparent border-2 border-primary text-primary hover:bg-primary hover:text-white font-semibold py-3 px-8 rounded-full transition-all duration-300 hover:shadow-lg hover:scale-105">
-                            <span data-lang="en">View Example Project</span>
-                            <span data-lang="tr" class="hidden">Örnek Projeyi Görüntüle</span>
-                            <i class="fas fa-arrow-right text-sm transition-transform duration-300 group-hover:translate-x-1"></i>
-                        </a>
-                    </div>
-
-                    <!-- Software Development -->
-                    <div class="service-panel hidden" data-panel="software-development">
-                        <h3 class="text-3xl md:text-4xl font-bold text-secondary mb-6">
-                            <span data-lang="en">Software Development</span>
-                            <span data-lang="tr" class="hidden">Yazılım Geliştirme</span>
-                        </h3>
-                        <p class="text-gray-700 text-lg md:text-xl mb-8 leading-relaxed">
-                            <span data-lang="en">Robust, secure APIs and custom software that power your platform. Scalable, maintainable, and built with modern tooling — we deliver the kind of backend and integration work that keeps products running at scale.</span>
-                            <span data-lang="tr" class="hidden">Platformunuzu güçlendiren sağlam, güvenli API'ler ve özel yazılım. Ölçeklenebilir, sürdürülebilir ve modern araçlarla inşa edilmiş — ürünleri ölçekte çalışır tutan backend ve entegrasyon işlerini sunuyoruz.</span>
-                        </p>
-                        <a href="/projects/trustclient.html" data-project="trustclient" class="group inline-flex items-center gap-2 bg-transparent border-2 border-primary text-primary hover:bg-primary hover:text-white font-semibold py-3 px-8 rounded-full transition-all duration-300 hover:shadow-lg hover:scale-105">
-                            <span data-lang="en">View Example Project</span>
-                            <span data-lang="tr" class="hidden">Örnek Projeyi Görüntüle</span>
-                            <i class="fas fa-arrow-right text-sm transition-transform duration-300 group-hover:translate-x-1"></i>
-                        </a>
-                    </div>
-
-                    <!-- Data Analytics & Engineering -->
-                    <div class="service-panel hidden" data-panel="data-analytics">
-                        <h3 class="text-3xl md:text-4xl font-bold text-secondary mb-6">
-                            <span data-lang="en">Data Analytics & Engineering</span>
-                            <span data-lang="tr" class="hidden">Veri Analitiği ve Mühendisliği</span>
-                        </h3>
-                        <p class="text-gray-700 text-lg md:text-xl mb-8 leading-relaxed">
-                            <span data-lang="en">Transform raw data into actionable insights. We build robust data pipelines, design data warehouses, and create analytics dashboards that help you make informed decisions. Data quality, integrity, and accessibility across your organization.</span>
-                            <span data-lang="tr" class="hidden">Ham verileri eyleme dönüştürülebilir içgörülere dönüştürün. Bilinçli kararlar vermenize yardımcı olan güçlü veri boru hatları, veri ambarları ve analitik panolar oluşturuyoruz. Organizasyonunuz genelinde veri kalitesi, bütünlük ve erişilebilirlik.</span>
-                        </p>
-                        <a href="/projects/dimmak.html" data-project="dimmak" class="group inline-flex items-center gap-2 bg-transparent border-2 border-primary text-primary hover:bg-primary hover:text-white font-semibold py-3 px-8 rounded-full transition-all duration-300 hover:shadow-lg hover:scale-105">
-                            <span data-lang="en">View Example Project</span>
-                            <span data-lang="tr" class="hidden">Örnek Projeyi Görüntüle</span>
-                            <i class="fas fa-arrow-right text-sm transition-transform duration-300 group-hover:translate-x-1"></i>
-                        </a>
-                    </div>
-
-                    <!-- Web Development -->
-                    <div class="service-panel hidden" data-panel="web-development">
-                        <h3 class="text-3xl md:text-4xl font-bold text-secondary mb-6">
-                            <span data-lang="en">Web Development</span>
-                            <span data-lang="tr" class="hidden">Web Geliştirme</span>
-                        </h3>
-                        <p class="text-gray-700 text-lg md:text-xl mb-8 leading-relaxed">
-                            <span data-lang="en">Modern, responsive web applications that deliver exceptional user experiences. Fast, scalable solutions — from landing pages to full platforms — with clean architecture and a focus on performance and maintainability.</span>
-                            <span data-lang="tr" class="hidden">Olağanüstü kullanıcı deneyimleri sunan modern, duyarlı web uygulamaları. Açılış sayfalarından tam platformlara kadar hızlı, ölçeklenebilir çözümler — temiz mimari ve performans ile sürdürülebilirliğe odaklanarak.</span>
-                        </p>
-                        <a href="/projects/soulseedfestival.html" data-project="soulseedfestival" class="group inline-flex items-center gap-2 bg-transparent border-2 border-primary text-primary hover:bg-primary hover:text-white font-semibold py-3 px-8 rounded-full transition-all duration-300 hover:shadow-lg hover:scale-105">
-                            <span data-lang="en">View Example Project</span>
-                            <span data-lang="tr" class="hidden">Örnek Projeyi Görüntüle</span>
-                            <i class="fas fa-arrow-right text-sm transition-transform duration-300 group-hover:translate-x-1"></i>
-                        </a>
-                    </div>
-
-                    <!-- Applied Machine Learning -->
-                    <div class="service-panel hidden" data-panel="machine-learning">
-                        <h3 class="text-3xl md:text-4xl font-bold text-secondary mb-6">
-                            <span data-lang="en">Applied Machine Learning</span>
-                            <span data-lang="tr" class="hidden">Uygulamalı Makine Öğrenimi</span>
-                        </h3>
-                        <p class="text-gray-700 text-lg md:text-xl mb-8 leading-relaxed">
-                            <span data-lang="en">Intelligent solutions powered by machine learning and AI. We develop custom ML models that enhance your products and automate complex processes — from NLP and computer vision to LLM integrations. Applied AI that delivers measurable value.</span>
-                            <span data-lang="tr" class="hidden">Makine öğrenimi ve AI ile desteklenen akıllı çözümler. Ürünlerinizi geliştiren ve karmaşık süreçleri otomatikleştiren özel ML modelleri geliştiriyoruz — NLP ve bilgisayarlı görüden LLM entegrasyonlarına kadar. Ölçülebilir değer sunan uygulamalı AI.</span>
-                        </p>
-                        <a href="/projects/coflow.html" data-project="coflow" class="group inline-flex items-center gap-2 bg-transparent border-2 border-primary text-primary hover:bg-primary hover:text-white font-semibold py-3 px-8 rounded-full transition-all duration-300 hover:shadow-lg hover:scale-105">
-                            <span data-lang="en">View Example Project</span>
-                            <span data-lang="tr" class="hidden">Örnek Projeyi Görüntüle</span>
-                            <i class="fas fa-arrow-right text-sm transition-transform duration-300 group-hover:translate-x-1"></i>
-                        </a>
-                    </div>
-
-                    <!-- Adaptive Automation -->
-                    <div class="service-panel hidden" data-panel="automation">
-                        <h3 class="text-3xl md:text-4xl font-bold text-secondary mb-6">
-                            <span data-lang="en">Adaptive Automation</span>
-                            <span data-lang="tr" class="hidden">Adaptif Otomasyon</span>
-                        </h3>
-                        <p class="text-gray-700 text-lg md:text-xl mb-8 leading-relaxed">
-                            <span data-lang="en">Streamline operations with intelligent automation. We build custom solutions that adapt to your processes, reduce manual work, and increase efficiency. Seamless integration with existing workflows, built to scale as your needs grow.</span>
-                            <span data-lang="tr" class="hidden">Akıllı otomasyonla operasyonları kolaylaştırın. Süreçlerinize uyum sağlayan, manuel çalışmayı azaltan ve verimliliği artıran özel çözümler oluşturuyoruz. Mevcut iş akışlarıyla sorunsuz entegrasyon, ihtiyaçlarınız büyüdükçe ölçeklenecek şekilde inşa edildi.</span>
-                        </p>
-                        <a href="/projects/harman.html" data-project="harman" class="group inline-flex items-center gap-2 bg-transparent border-2 border-primary text-primary hover:bg-primary hover:text-white font-semibold py-3 px-8 rounded-full transition-all duration-300 hover:shadow-lg hover:scale-105">
-                            <span data-lang="en">View Example Project</span>
-                            <span data-lang="tr" class="hidden">Örnek Projeyi Görüntüle</span>
-                            <i class="fas fa-arrow-right text-sm transition-transform duration-300 group-hover:translate-x-1"></i>
-                        </a>
-                    </div>
-
-                    <!-- Professional Websites -->
-                    <div class="service-panel hidden" data-panel="professional-websites">
-                        <h3 class="text-3xl md:text-4xl font-bold text-secondary mb-6">
-                            <span data-lang="en">Professional Websites</span>
-                            <span data-lang="tr" class="hidden">Profesyonel Web Siteleri</span>
-                        </h3>
-                        <p class="text-gray-700 text-lg md:text-xl mb-8 leading-relaxed">
-                            <span data-lang="en">Custom-designed, professionally built websites with a simple content dashboard. One-time investment, no subscriptions, you own everything. Update your own text, images, and pages without touching code or calling a developer.</span>
-                            <span data-lang="tr" class="hidden">Basit bir içerik panosuyla özel tasarlanmış, profesyonelce oluşturulmuş web siteleri. Tek seferlik yatırım, abonelik yok, her şeyin sahibi sizsiniz.</span>
-                        </p>
-                        <a href="/services/professional-websites.html" class="group inline-flex items-center gap-2 bg-transparent border-2 border-primary text-primary hover:bg-primary hover:text-white font-semibold py-3 px-8 rounded-full transition-all duration-300 hover:shadow-lg hover:scale-105">
-                            <span data-lang="en">Learn More</span>
-                            <span data-lang="tr" class="hidden">Daha Fazla Bilgi</span>
-                            <i class="fas fa-arrow-right text-sm transition-transform duration-300 group-hover:translate-x-1"></i>
-                        </a>
-                    </div>
-                </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="clients-section bg-white py-16">
-        <div class="container mx-auto px-4">
-            <h2 class="text-4xl md:text-5xl lg:text-6xl font-serif italic font-normal text-center mb-12 text-secondary">
-                <span data-lang="en">We've Worked With</span>
-                <span data-lang="tr" class="hidden">Birlikte Çalıştığımız Firmalar</span>
-            </h2>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-items-center">
-                <div class="client-logo flex items-center justify-center bg-white rounded-lg p-4 transition-all duration-300 hover:grayscale-0">
-                    <img src="assets/google.png" alt="Google" class="object-contain w-full h-full grayscale">
-                </div>
-                <div class="client-logo flex items-center justify-center bg-white rounded-lg p-4 transition-all duration-300 hover:grayscale-0">
-                    <img src="assets/harman.png" alt="Harman International" class="object-contain w-full h-full grayscale">
-                </div>
-                <div class="client-logo flex items-center justify-center bg-white rounded-lg p-4 transition-all duration-300 hover:grayscale-0">
-                    <img src="assets/accenture.png" alt="Accenture" class="object-contain w-full h-full grayscale">
-                </div>
-                <div class="client-logo flex items-center justify-center bg-white rounded-lg p-4 transition-all duration-300 hover:grayscale-0">
-                    <img src="assets/dimmak.png" alt="Dim Mak Records" class="object-contain w-full h-full grayscale">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="recent-projects" class="recent-projects-section bg-primary py-20 md:py-28">
-        <div class="container mx-auto px-4 max-w-7xl">
-            <h2 class="text-4xl md:text-5xl lg:text-6xl font-serif italic font-normal text-center mb-20 md:mb-24 text-white">
-                <span data-lang="en">Recent Projects</span>
-                <span data-lang="tr" class="hidden">Son Projeler</span>
-            </h2>
-            <div class="space-y-8 md:space-y-10">
-                <!-- ListForge Project -->
-                <div class="project-container bg-secondary rounded-2xl overflow-hidden border-2 border-secondary/50 hover:border-white/30 hover:shadow-2xl transition-all duration-300">
-                    <div class="flex flex-col md:flex-row items-center gap-8 md:gap-12 p-8 md:p-10">
-                        <div class="project-image flex-shrink-0 w-full md:w-1/3 flex items-center justify-center">
-                            <img src="assets/LISTFORGE.png" 
-                                 alt="ListForge Logo" 
-                                 class="w-full max-w-[375px] h-auto object-contain">
-                        </div>
-                        <div class="project-content flex-1 text-white">
-                            <div class="inline-block px-4 py-1.5 bg-white/20 backdrop-blur-sm border border-white/30 rounded-full text-xs md:text-sm font-medium mb-4 text-white tracking-wide uppercase">
-                                <span data-lang="en">Cross Platform Application</span>
-                                <span data-lang="tr" class="hidden">Çok Platformlu Uygulama</span>
-                            </div>
-                            <h3 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-3 leading-tight text-white">
-                                <span data-lang="en">ListForge</span>
-                                <span data-lang="tr" class="hidden">ListForge</span>
-                            </h3>
-                            <p class="text-lg md:text-xl text-white/95 mb-3 font-medium">
-                                <span data-lang="en">Intuitive List Building App</span>
-                                <span data-lang="tr" class="hidden">Sezgisel Liste Oluşturma Uygulaması</span>
-                            </p>
-                            <p class="text-base md:text-lg text-white/85 mb-8 leading-relaxed">
-                                <span data-lang="en">Trusted by 20,000+ tabletop gaming enthusiasts. Cross-platform syncing across iOS, macOS, Android, Windows, and Linux.</span>
-                                <span data-lang="tr" class="hidden">20.000+ masaüstü oyun tutkunu tarafından güveniliyor. iOS, macOS, Android, Windows ve Linux'ta çok platformlu senkronizasyon.</span>
-                            </p>
-                            <div class="flex flex-wrap gap-4">
-                                <a href="https://listforge.club" target="_blank" class="group inline-flex items-center gap-2 bg-white text-secondary hover:bg-white/95 font-semibold py-2.5 px-6 rounded-full transition-all duration-300 hover:shadow-lg">
-                                    <span data-lang="en">Visit Project</span>
-                                    <span data-lang="tr" class="hidden">Projeyi Ziyaret Et</span>
-                                    <i class="fas fa-arrow-right text-sm transition-transform duration-300 group-hover:translate-x-1"></i>
-                                </a>
-                                <a href="/projects/listforge.html" data-project="listforge" class="group inline-flex items-center gap-2 border-2 border-white/60 text-white hover:bg-white/10 hover:border-white font-semibold py-2.5 px-6 rounded-full transition-all duration-300">
-                                    <span data-lang="en">Learn More</span>
-                                    <span data-lang="tr" class="hidden">Daha Fazla Bilgi</span>
-                                    <i class="fas fa-arrow-right text-sm transition-transform duration-300 group-hover:translate-x-1"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- ReadyAI Project -->
-                <div class="project-container bg-secondary rounded-2xl overflow-hidden border-2 border-secondary/50 hover:border-white/30 hover:shadow-2xl transition-all duration-300">
-                    <div class="flex flex-col md:flex-row items-center gap-8 md:gap-12 p-8 md:p-10">
-                        <div class="project-image flex-shrink-0 w-full md:w-1/3 flex items-center justify-center">
-                            <img src="assets/readyai-logo.png" 
-                                 alt="ReadyAI Logo" 
-                                 class="w-full max-w-[375px] h-auto object-contain rounded-xl">
-                        </div>
-                        <div class="project-content flex-1 text-white">
-                            <div class="inline-block px-4 py-1.5 bg-white/20 backdrop-blur-sm border border-white/30 rounded-full text-xs md:text-sm font-medium mb-4 text-white tracking-wide uppercase">
-                                <span data-lang="en">Web Development</span>
-                                <span data-lang="tr" class="hidden">Web Geliştirme</span>
-                            </div>
-                            <h3 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-3 leading-tight text-white">
-                                <span data-lang="en">ReadyAI</span>
-                                <span data-lang="tr" class="hidden">ReadyAI</span>
-                            </h3>
-                            <p class="text-lg md:text-xl text-white/95 mb-3 font-medium">
-                                <span data-lang="en">AI-Powered Business Solutions Platform</span>
-                                <span data-lang="tr" class="hidden">AI Destekli İş Çözümleri Platformu</span>
-                            </p>
-                            <p class="text-base md:text-lg text-white/85 mb-8 leading-relaxed">
-                                <span data-lang="en">We transformed ReadyAI's existing website into an enterprise-grade platform that better reflects their credibility in Enterprise AI transformation. Enhanced with premium visual design, improved content organization, and built a custom Strapi integration for modern content management.</span>
-                                <span data-lang="tr" class="hidden">ReadyAI'nin mevcut web sitesini, Kurumsal AI dönüşümündeki güvenilirliğini daha iyi yansıtan kurumsal düzeyde bir platforma dönüştürdük. Premium görsel tasarım, geliştirilmiş içerik organizasyonu ve içerik güncellemeleri için gelişmiş admin araçları sağlayan özel bir Strapi entegrasyonu ile geliştirildi.</span>
-                            </p>
-                            <div class="flex flex-wrap gap-4">
-                                <a href="https://readyai.dev" target="_blank" class="group inline-flex items-center gap-2 bg-white text-secondary hover:bg-white/95 font-semibold py-2.5 px-6 rounded-full transition-all duration-300 hover:shadow-lg">
-                                    <span data-lang="en">Visit Project</span>
-                                    <span data-lang="tr" class="hidden">Projeyi Ziyaret Et</span>
-                                    <i class="fas fa-arrow-right text-sm transition-transform duration-300 group-hover:translate-x-1"></i>
-                                </a>
-                                <a href="/projects/readyai.html" data-project="readyai" class="group inline-flex items-center gap-2 border-2 border-white/60 text-white hover:bg-white/10 hover:border-white font-semibold py-2.5 px-6 rounded-full transition-all duration-300">
-                                    <span data-lang="en">Learn More</span>
-                                    <span data-lang="tr" class="hidden">Daha Fazla Bilgi</span>
-                                    <i class="fas fa-arrow-right text-sm transition-transform duration-300 group-hover:translate-x-1"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- TrustClient Project -->
-                <div class="project-container bg-secondary rounded-2xl overflow-hidden border-2 border-secondary/50 hover:border-white/30 hover:shadow-2xl transition-all duration-300">
-                    <div class="flex flex-col md:flex-row items-center gap-8 md:gap-12 p-8 md:p-10">
-                        <div class="project-image flex-shrink-0 w-full md:w-1/3 flex items-center justify-center">
-                            <img src="assets/trustclient.png" 
-                                 alt="TrustClient Logo" 
-                                 class="w-full max-w-[317px] h-auto object-contain rounded-xl">
-                        </div>
-                        <div class="project-content flex-1 text-white">
-                            <div class="inline-block px-4 py-1.5 bg-white/20 backdrop-blur-sm border border-white/30 rounded-full text-xs md:text-sm font-medium mb-4 text-white tracking-wide uppercase">
-                                <span data-lang="en">Web Application</span>
-                                <span data-lang="tr" class="hidden">Web Application</span>
-                            </div>
-                            <h3 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-3 leading-tight text-white">
-                                <span data-lang="en">TrustClient</span>
-                                <span data-lang="tr" class="hidden">TrustClient</span>
-                            </h3>
-                            <p class="text-lg md:text-xl text-white/95 mb-3 font-medium">
-                                <span data-lang="en">License Verification & Review Management System</span>
-                                <span data-lang="tr" class="hidden">Lisans Doğrulama ve İnceleme Yönetim Sistemi</span>
-                            </p>
-                            <p class="text-base md:text-lg text-white/85 mb-8 leading-relaxed">
-                                <span data-lang="en">Built a secure web platform with license verification, advanced search algorithms, review moderation systems, and risk assessment analytics. Implemented robust authentication, data privacy compliance, and scalable cloud infrastructure.</span>
-                                <span data-lang="tr" class="hidden">Lisans doğrulama, gelişmiş arama algoritmaları, inceleme moderasyon sistemleri ve risk değerlendirme analitiği ile güvenli bir web platformu geliştirildi. Güçlü kimlik doğrulama, veri gizliliği uyumluluğu ve ölçeklenebilir bulut altyapısı uygulandı.</span>
-                            </p>
-                            <div class="flex flex-wrap gap-4">
-                                <a href="https://trust-client.com" target="_blank" class="group inline-flex items-center gap-2 bg-white text-secondary hover:bg-white/95 font-semibold py-2.5 px-6 rounded-full transition-all duration-300 hover:shadow-lg">
-                                    <span data-lang="en">Visit Project</span>
-                                    <span data-lang="tr" class="hidden">Projeyi Ziyaret Et</span>
-                                    <i class="fas fa-arrow-right text-sm transition-transform duration-300 group-hover:translate-x-1"></i>
-                                </a>
-                                <a href="/projects/trustclient.html" data-project="trustclient" class="group inline-flex items-center gap-2 border-2 border-white/60 text-white hover:bg-white/10 hover:border-white font-semibold py-2.5 px-6 rounded-full transition-all duration-300">
-                                    <span data-lang="en">Learn More</span>
-                                    <span data-lang="tr" class="hidden">Daha Fazla Bilgi</span>
-                                    <i class="fas fa-arrow-right text-sm transition-transform duration-300 group-hover:translate-x-1"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- SoulSeed Festival Project -->
-                <div class="project-container bg-secondary rounded-2xl overflow-hidden border-2 border-secondary/50 hover:border-white/30 hover:shadow-2xl transition-all duration-300">
-                    <div class="flex flex-col md:flex-row items-center gap-8 md:gap-12 p-8 md:p-10">
-                        <div class="project-image flex-shrink-0 w-full md:w-1/3 flex items-center justify-center">
-                            <img src="assets/soulseedss.png" 
-                                 alt="SoulSeed Festival Logo" 
-                                 class="w-full max-w-[288px] h-auto object-contain">
-                        </div>
-                        <div class="project-content flex-1 text-white">
-                            <div class="inline-block px-4 py-1.5 bg-white/20 backdrop-blur-sm border border-white/30 rounded-full text-xs md:text-sm font-medium mb-4 text-white tracking-wide uppercase">
-                                <span data-lang="en">Web Development</span>
-                                <span data-lang="tr" class="hidden">Web Sitesi</span>
-                            </div>
-                            <h3 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-3 leading-tight text-white">
-                                <span data-lang="en">SoulSeed Festival</span>
-                                <span data-lang="tr" class="hidden">SoulSeed Festival</span>
-                            </h3>
-                            <p class="text-lg md:text-xl text-white/95 mb-3 font-medium">
-                                <span data-lang="en">Design-to-Code Web Implementation</span>
-                                <span data-lang="tr" class="hidden">Tasarımdan Koda Web Uygulaması</span>
-                            </p>
-                            <p class="text-base md:text-lg text-white/85 mb-8 leading-relaxed">
-                                <span data-lang="en">Pixel-perfect, responsive website that brings the festival's vision to life with fast, modern design.</span>
-                                <span data-lang="tr" class="hidden">Festival vizyonunu hızlı, modern tasarımla hayata geçiren pikselle kusursuz, duyarlı web sitesi.</span>
-                            </p>
-                            <div class="flex flex-wrap gap-4">
-                                <a href="https://soulseedfestival.com" target="_blank" class="group inline-flex items-center gap-2 bg-white text-secondary hover:bg-white/95 font-semibold py-2.5 px-6 rounded-full transition-all duration-300 hover:shadow-lg">
-                                    <span data-lang="en">Visit Project</span>
-                                    <span data-lang="tr" class="hidden">Projeyi Ziyaret Et</span>
-                                    <i class="fas fa-arrow-right text-sm transition-transform duration-300 group-hover:translate-x-1"></i>
-                                </a>
-                                <a href="/projects/soulseedfestival.html" data-project="soulseedfestival" class="group inline-flex items-center gap-2 border-2 border-white/60 text-white hover:bg-white/10 hover:border-white font-semibold py-2.5 px-6 rounded-full transition-all duration-300">
-                                    <span data-lang="en">Learn More</span>
-                                    <span data-lang="tr" class="hidden">Daha Fazla Bilgi</span>
-                                    <i class="fas fa-arrow-right text-sm transition-transform duration-300 group-hover:translate-x-1"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- MindBody Healing Project -->
-                <div class="project-container bg-secondary rounded-2xl overflow-hidden border-2 border-secondary/50 hover:border-white/30 hover:shadow-2xl transition-all duration-300">
-                    <div class="flex flex-col md:flex-row items-center gap-8 md:gap-12 p-8 md:p-10">
-                        <div class="project-image flex-shrink-0 w-full md:w-1/3 flex items-center justify-center">
-                            <img src="assets/mindbodylogo.png" 
-                                 alt="MindBody Healing Logo" 
-                                 class="w-full max-w-[288px] h-auto object-contain rounded-xl">
-                        </div>
-                        <div class="project-content flex-1 text-white">
-                            <div class="inline-block px-4 py-1.5 bg-white/20 backdrop-blur-sm border border-white/30 rounded-full text-xs md:text-sm font-medium mb-4 text-white tracking-wide uppercase">
-                                <span data-lang="en">Web Development</span>
-                                <span data-lang="tr" class="hidden">Web Development</span>
-                            </div>
-                            <h3 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-3 leading-tight text-white">
-                                <span data-lang="en">MindBody Healing</span>
-                                <span data-lang="tr" class="hidden">Mind-Body Healing Website</span>
-                            </h3>
-                            <p class="text-lg md:text-xl text-white/95 mb-3 font-medium">
-                                <span data-lang="en">Healing & Wellness Website</span>
-                                <span data-lang="tr" class="hidden">İyileştirme ve Sağlık Web Sitesi</span>
-                            </p>
-                            <p class="text-base md:text-lg text-white/85 mb-8 leading-relaxed">
-                                <span data-lang="en">A responsive, modern website built with clean design principles and optimized user experience. Features intuitive navigation, mobile-first design, and seamless performance.</span>
-                                <span data-lang="tr" class="hidden">Temiz tasarım ilkeleri ve optimize edilmiş kullanıcı deneyimi ile oluşturulmuş duyarlı, modern bir web sitesi. Sezgisel navigasyon, mobil öncelikli tasarım ve sorunsuz performans özellikleri içerir.</span>
-                            </p>
-                            <div class="flex flex-wrap gap-4">
-                                <a href="https://mindbodyhealingwithleyla.com" target="_blank" class="group inline-flex items-center gap-2 bg-white text-secondary hover:bg-white/95 font-semibold py-2.5 px-6 rounded-full transition-all duration-300 hover:shadow-lg">
-                                    <span data-lang="en">Visit Project</span>
-                                    <span data-lang="tr" class="hidden">Projeyi Ziyaret Et</span>
-                                    <i class="fas fa-arrow-right text-sm transition-transform duration-300 group-hover:translate-x-1"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="why-choose-us" class="bg-white py-16 md:py-24">
-        <div class="container mx-auto px-4 max-w-6xl">
-            <h2 class="text-4xl md:text-5xl lg:text-6xl font-serif italic font-normal text-center mb-14 md:mb-16 text-secondary">
-                <span data-lang="en">Why Choose CodeSeed</span>
-                <span data-lang="tr" class="hidden">Neden CodeSeed</span>
-            </h2>
-            <div class="grid md:grid-cols-2 gap-6 md:gap-8">
-                <div class="why-card bg-primary/5 rounded-2xl p-6 md:p-8 border border-primary/20 hover:bg-primary/10 transition-colors duration-300">
-                    <h3 class="text-xl font-bold text-secondary mb-2"><span data-lang="en">Enterprise Quality, Startup Pricing</span><span data-lang="tr" class="hidden">Kurumsal Kalite, Startup Fiyatı</span></h3>
-                    <p class="text-gray-700 text-base md:text-lg leading-relaxed"><span data-lang="en">The same professional standards that power major platforms — without the enterprise price tag.</span><span data-lang="tr" class="hidden">Büyük platformları güçlendiren aynı profesyonel standartlar — kurumsal fiyat etiketi olmadan.</span></p>
-                </div>
-                <div class="why-card bg-primary/5 rounded-2xl p-6 md:p-8 border border-primary/20 hover:bg-primary/10 transition-colors duration-300">
-                    <h3 class="text-xl font-bold text-secondary mb-2"><span data-lang="en">Ethical by Design</span><span data-lang="tr" class="hidden">Tasarımda Etik</span></h3>
-                    <p class="text-gray-700 text-base md:text-lg leading-relaxed"><span data-lang="en">User privacy, environmental responsibility, and fair practices built into how we work.</span><span data-lang="tr" class="hidden">Kullanıcı gizliliği, çevresel sorumluluk ve adil uygulamalar çalışma şeklimize dahil.</span></p>
-                </div>
-                <div class="why-card bg-primary/5 rounded-2xl p-6 md:p-8 border border-primary/20 hover:bg-primary/10 transition-colors duration-300">
-                    <h3 class="text-xl font-bold text-secondary mb-2"><span data-lang="en">Transparent Partnership</span><span data-lang="tr" class="hidden">Şeffaf Ortaklık</span></h3>
-                    <p class="text-gray-700 text-base md:text-lg leading-relaxed"><span data-lang="en">No hidden fees, no surprise bills — honest communication and quality results.</span><span data-lang="tr" class="hidden">Gizli ücret yok, sürpriz faturalar yok — dürüst iletişim ve kaliteli sonuçlar.</span></p>
-                </div>
-                <div class="why-card bg-primary/5 rounded-2xl p-6 md:p-8 border border-primary/20 hover:bg-primary/10 transition-colors duration-300">
-                    <h3 class="text-xl font-bold text-secondary mb-2"><span data-lang="en">Values-Driven Development</span><span data-lang="tr" class="hidden">Değer Odaklı Geliştirme</span></h3>
-                    <p class="text-gray-700 text-base md:text-lg leading-relaxed"><span data-lang="en">Technology that aligns with your business values and how you want to operate.</span><span data-lang="tr" class="hidden">İş değerleriniz ve nasıl çalışmak istediğinizle uyumlu teknoloji.</span></p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="testimonials" class="testimonials-section bg-black py-16">
-        <div class="container mx-auto px-4 max-w-6xl">
-            <h2 class="text-4xl md:text-5xl lg:text-6xl font-serif italic font-normal text-center mb-12 text-white">
-                <span data-lang="en">What Our Clients Say</span>
-                <span data-lang="tr" class="hidden">Müşterilerimiz Ne Diyor</span>
-            </h2>
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
-            <div class="testimonial bg-gray-900 rounded-2xl shadow-lg p-6 md:p-8 flex flex-col">
-                <div class="quote text-base md:text-lg text-white mb-4 leading-relaxed italic flex-1" style="color: #ffffff !important;">
-                    <span data-lang="en">"Our experience with CodeSeed was exceptional from start to finish. They delivered a stunning website revamp that exceeded our expectations, completing the project ahead of schedule and right on budget. Their creativity brought a fresh and innovative perspective to our online presence, truly capturing the essence of our brand. What impressed us most was their consistent professionalism and proactive follow-up, ensuring a seamless and stress-free experience. And their communication was consistently excellent, keeping us informed and involved every step of the way. We highly recommend CodeSeed to anyone seeking a dedicated and talented web design partner who delivers outstanding results."</span>
-                    <span data-lang="tr" class="hidden">"CodeSeed ile deneyimimiz baştan sona olağanüstüydü. Beklentilerimizi aşan, zamanından önce ve bütçe dahilinde tamamlanan muhteşem bir web sitesi yenilemesi teslim ettiler. Yaratıcılıkları, markamızın özünü gerçekten yakalayarak çevrimiçi varlığımıza taze ve yenilikçi bir bakış açısı getirdi. Bizi en çok etkileyen, sorunsuz ve stressiz bir deneyim sağlayan tutarlı profesyonellikleri ve proaktif takipleriydi. İletişimleri de sürekli mükemmeldi, bizi her adımda bilgilendirdiler ve dahil ettiler. Olağanüstü sonuçlar veren, adanmış ve yetenekli bir web tasarım ortağı arayan herkese CodeSeed'i şiddetle tavsiye ediyoruz."</span>
-                </div>
-                <div class="author text-right">
-                    <p class="font-bold text-lg text-white">
-                        <span data-lang="en">Carol Eastman</span>
-                        <span data-lang="tr" class="hidden">Carol Eastman</span>
-                    </p>
-                    <p class="text-gray-300">
-                        <span data-lang="en">CEO, ReadyAI</span>
-                        <span data-lang="tr" class="hidden">CEO, ReadyAI</span>
-                    </p>
-                </div>
-            </div>
-            <div class="testimonial bg-gray-900 rounded-2xl shadow-lg p-6 md:p-8 flex flex-col">
-                <div class="quote text-base md:text-lg text-white mb-4 leading-relaxed italic flex-1" style="color: #ffffff !important;">
-                    <span data-lang="en">"Working with CodeSeed on the planning and development of Trust-Client.com has been a great experience. From the start, they took the time to understand not just the features, but the purpose behind the platform. Their team communicated clearly, asked the right questions, and helped turn my idea into a practical, well-structured solution. The process felt organized, transparent, and genuinely collaborative. I'd recommend CodeSeed to anyone looking for a development team that listens and knows how to bring an idea to life."</span>
-                    <span data-lang="tr" class="hidden">"Working with CodeSeed on the planning and development of Trust-Client.com has been a great experience. From the start, they took the time to understand not just the features, but the purpose behind the platform. Their team communicated clearly, asked the right questions, and helped turn my idea into a practical, well-structured solution. The process felt organized, transparent, and genuinely collaborative. I'd recommend CodeSeed to anyone looking for a development team that listens and knows how to bring an idea to life."</span>
-                </div>
-                <div class="author text-right">
-                    <p class="font-bold text-lg text-white">
-                        <span data-lang="en">Luis E. Bahena</span>
-                        <span data-lang="tr" class="hidden">Luis E. Bahena</span>
-                    </p>
-                    <p class="text-gray-300">
-                        <span data-lang="en">Founder, Trust-Client.com</span>
-                        <span data-lang="tr" class="hidden">Founder, Trust-Client.com</span>
-                    </p>
-                </div>
-            </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="projects" class="projects-section bg-white py-16">
-        <div class="container mx-auto px-4">
-            <h2 class="text-4xl md:text-5xl lg:text-6xl font-serif italic font-normal text-center mb-12 text-secondary">
-                <span data-lang="en">Past Projects</span>
-                <span data-lang="tr" class="hidden">Geçmiş Projeler</span>
-            </h2>
-            <div class="project-cards flex flex-col md:grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-                <div class="project-card bg-white rounded-lg shadow-md p-6 transition-all duration-300 hover:shadow-lg hover:scale-105">
-                    <div class="project-image h-64 bg-contain bg-center bg-no-repeat mb-6" style="background-image: url('assets/harman.png');"></div>
-                    <h3 class="text-xl font-bold mb-4 text-center">
-                        <span data-lang="en">Commander System: Automated Operations - Harman International</span>
-                        <span data-lang="tr" class="hidden">Komutan Sistemi: Otomatik Operasyonlar - Harman International</span>
-                    </h3>
-                    <p class="text-gray-600 mb-6 text-center">
-                        <span data-lang="en">Custom cloud-based automated operations management system for multiple regions, processing daily orders worth 1M-10M USD and managing 1B+ USD inventory annually.</span>
-                        <span data-lang="tr" class="hidden">Birden fazla bölge için özel bulut tabanlı otomatik operasyon yönetim sistemi, günlük 1M-10M USD değerinde siparişleri işler ve yıllık 1B+ USD envanter yönetir.</span>
-                    </p>
-                    <div class="flex justify-center">
-                        <a href="/projects/harman.html" data-project="harman" class="inline-block bg-primary hover:bg-secondary text-white font-bold py-3 px-6 rounded-full transition-colors duration-300">
-                            <span data-lang="en">Learn More</span>
-                            <span data-lang="tr" class="hidden">Daha Fazla Bilgi</span>
-                        </a>
-                    </div>
-                </div>
-                <div class="project-card bg-white rounded-lg shadow-md p-6 transition-all duration-300 hover:shadow-lg hover:scale-105">
-                    <div class="project-image h-64 bg-contain bg-center bg-no-repeat mb-6" style="background-image: url('assets/coflow.png');"></div>
-                    <h3 class="text-xl font-bold mb-4 text-center">
-                        <span data-lang="en">CoFlow: Advanced AI-Powered Community Management Bot</span>
-                        <span data-lang="tr" class="hidden">CoFlow: Gelişmiş AI Destekli Topluluk Yönetim Botu</span>
-                    </h3>
-                    <p class="text-gray-600 mb-6 text-center">
-                        <span data-lang="en">Sophisticated Discord bot leveraging cutting-edge AI technologies to enhance community engagement and reduce administrative overhead.</span>
-                        <span data-lang="tr" class="hidden">Topluluk katılımını artıran ve idari yükü %azaltan en son AI teknolojilerinden yararlanan sofistike Discord botu.</span>
-                    </p>
-                    <div class="flex justify-center">
-                        <a href="/projects/coflow.html" data-project="coflow" class="inline-block bg-primary hover:bg-secondary text-white font-bold py-3 px-6 rounded-full transition-colors duration-300">
-                            <span data-lang="en">Learn More</span>
-                            <span data-lang="tr" class="hidden">Daha Fazla Bilgi</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <section id="team" class="bg-primary py-16">
-        <div class="container mx-auto px-4">
-            <h2 class="text-4xl md:text-5xl lg:text-6xl font-serif italic font-normal text-center mb-12 text-white">
-                <span data-lang="en">Our Team</span>
-                <span data-lang="tr" class="hidden">Ekibimiz</span>
-            </h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="team-member group h-64 [perspective:1000px]">
-                    <div class="relative h-full w-full transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
-                        <div class="absolute inset-0 bg-white rounded-lg shadow-md p-4 [backface-visibility:hidden]">
-                            <img src="assets/team-member-1.png" alt="Bryce Merrill" class="w-32 h-32 mx-auto rounded-full mb-4">
-                            <h3 class="text-xl font-semibold text-center">Bryce Merrill</h3>
-                            <p class="text-center text-gray-600">
-                                <span data-lang="en">Principal Software Engineer</span>
-                                <span data-lang="tr" class="hidden">Baş Yazılım Mühendisi</span>
-                            </p>
-                        </div>
-                        <div class="absolute inset-0 bg-white text-black rounded-lg shadow-md p-4 [transform:rotateY(180deg)] [backface-visibility:hidden] overflow-y-auto flex items-center justify-center">
-                            <p class="text-center">
-                                <span data-lang="en">Bryce is an adaptive engineer with a passion for intelligent systems and automations that transform processes and deliver huge value. He specializes in backend systems, but isn't afraid to get his hands dirty with frontend, API, and data integrations. Bryce left corporate tech to build software that aligns with his values.</span>
-                                <span data-lang="tr" class="hidden">Bryce, süreçleri dönüştüren ve büyük değer yaratan akıllı sistemlere tutkuyla bağlı uyumlu bir mühendistir. Backend sistemlerinde uzmanlaşmıştır; frontend, API ve veri entegrasyonlarıyla da uğraşmaktan çekinmez. Kurumsal teknolojiden, değerleriyle uyumlu yazılım inşa etmek için ayrıldı.</span>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="team-member group h-64 [perspective:1000px]">
-                    <div class="relative h-full w-full transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
-                        <div class="absolute inset-0 bg-white rounded-lg shadow-md p-4 [backface-visibility:hidden]">
-                            <img src="assets/team-member-2.png" alt="Leyla Firatli" class="w-32 h-32 mx-auto rounded-full mb-4">
-                            <h3 class="text-xl font-semibold text-center">Leyla Fıratlı</h3>
-                            <p class="text-center text-gray-600">
-                                <span data-lang="en">Data Architect + Web Developer</span>
-                                <span data-lang="tr" class="hidden">Veri Mimarı + Web Geliştirici</span>
-                            </p>
-                        </div>
-                        <div class="absolute inset-0 bg-white text-black rounded-lg shadow-md p-4 [transform:rotateY(180deg)] [backface-visibility:hidden] overflow-y-auto flex items-center justify-center">
-                            <p class="text-center">
-                                <span data-lang="en">Leyla, with 7+ years experience building data infrastructure for companies like Google and Accenture, brings enterprise-level expertise to ethical software development. She combines technical excellence with a commitment to responsible data practices.</span>
-                                <span data-lang="tr" class="hidden">Google ve Accenture gibi şirketler için veri altyapısı inşa etmede 7+ yıl deneyime sahip Leyla, etik yazılım geliştirmeye kurumsal düzeyde uzmanlık getiriyor. Teknik mükemmelliği sorumlu veri uygulamalarına bağlılıkla birleştiriyor.</span>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="team-member group h-64 [perspective:1000px]">
-                    <div class="relative h-full w-full transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
-                        <div class="absolute inset-0 bg-white rounded-lg shadow-md p-4 [backface-visibility:hidden]">
-                            <img src="assets/team-member-3.png" alt="Deanna Patelis" class="w-32 h-32 mx-auto rounded-full mb-4">
-                            <h3 class="text-xl font-semibold text-center">Deanna Patelis</h3>
-                            <p class="text-center text-gray-600">
-                                <span data-lang="en">Machine Learning Engineer</span>
-                                <span data-lang="tr" class="hidden">Makine Öğrenimi Mühendisi</span>
-                            </p>
-                        </div>
-                        <div class="absolute inset-0 bg-white text-black rounded-lg shadow-md p-4 [transform:rotateY(180deg)] [backface-visibility:hidden] overflow-y-auto flex items-center justify-center">
-                            <p class="text-center">
-                                <span data-lang="en">Deanna is an expert in machine learning with a focus on applied cutting-edge LLM solutions. Additionally, she wields DevOps magic to ensure projects are efficiently deployed and improved.</span>
-                                <span data-lang="tr" class="hidden">Deanna, en son LLM çözümlerine odaklanan makine öğrenimi konusunda bir uzmandır. Ayrıca, projelerin verimli bir şekilde dağıtılmasını ve geliştirilmesini sağlamak için DevOps sihirini kullanır.</span>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="team-member group h-64 [perspective:1000px]">
-                    <div class="relative h-full w-full transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
-                        <div class="absolute inset-0 bg-white rounded-lg shadow-md p-4 [backface-visibility:hidden]">
-                            <img src="assets/team-member-4.png" alt="Isaac Vandyne" class="w-32 h-32 mx-auto rounded-full mb-4">
-                            <h3 class="text-xl font-semibold text-center">Isaac Vandyne</h3>
-                            <p class="text-center text-gray-600">
-                                <span data-lang="en">Product Designer/Creative Tactician</span>
-                                <span data-lang="tr" class="hidden">Ürün Tasarımcısı/Yaratıcı Taktisyen</span>
-                            </p>
-                        </div>
-                        <div class="absolute inset-0 bg-white text-black rounded-lg shadow-md p-4 [transform:rotateY(180deg)] [backface-visibility:hidden] overflow-y-auto flex items-center justify-center">
-                            <p class="text-center">
-                                <span data-lang="en">With a colorful background in graphic and motion design, and 7+ years of experience building complex b2b software platforms, Isaac has both the imagination and technical ability to craft world class products that solve users problems.</span>
-                                <span data-lang="tr" class="hidden">Grafik ve hareket tasarımında renkli bir geçmişe ve karmaşık b2b yazılım platformları oluşturmada 7+ yıllık deneyime sahip olan Isaac, kullanıcıların sorunlarını çözen dünya çapında ürünler yaratmak için hem hayal gücüne hem de teknik yeteneğe sahiptir.</span>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section id="contact" class="contact-section bg-black py-16">
-        <div class="container mx-auto px-4">
-            <h2 class="text-4xl md:text-5xl lg:text-6xl font-serif italic font-normal text-center mb-12 text-white">
-                <span data-lang="en">Work with us</span>
-                <span data-lang="tr" class="hidden">Bizimle Çalışın</span>
-            </h2>
-            <form id="contact-form" action="https://formspree.io/f/mnnaoeoa" method="POST" class="max-w-lg mx-auto">
-                <input type="text" name="name" class="w-full mb-4 p-2 border border-gray-300 rounded" required
-                    data-placeholder-en="Your Name"
-                    data-placeholder-tr="Adınız"
-                    placeholder="Your Name">
-                <input type="email" name="_replyto" class="w-full mb-4 p-2 border border-gray-300 rounded" required
-                    data-placeholder-en="Your Email"
-                    data-placeholder-tr="E-posta Adresiniz"
-                    placeholder="Your Email">
-                <textarea name="message" class="w-full mb-4 p-2 border border-gray-300 rounded h-32" required
-                    data-placeholder-en="Your Message"
-                    data-placeholder-tr="Mesajınız"
-                    placeholder="Your Message"></textarea>
-                <input type="text" name="_gotcha" style="display:none" class="hidden">
-                <button type="submit" class="w-full bg-primary hover:bg-secondary text-white font-bold py-2 px-4 rounded transition-colors duration-300">
-                    <span data-lang="en">Plant the Seed</span>
-                    <span data-lang="tr" class="hidden">İletişime Geç</span>
-                </button>
-            </form>
-        </div>
-    </section>
-
-    <footer class="bg-secondary py-8 md:py-10 px-4">
-        <div class="container mx-auto max-w-2xl text-center">
-            <p class="footer-mission text-white/95 text-sm md:text-base leading-relaxed"><span data-lang="en">Professional software development that aligns with your values. Building better technology,&nbsp;ethically.</span><span data-lang="tr" class="hidden">Değerlerinizle uyumlu profesyonel yazılım geliştirme. Daha iyi teknolojiyi etik bir şekilde inşa ediyoruz.</span></p>
-        </div>
-    </footer>
+        </a>
+    </main>
 </body>
 </html>
