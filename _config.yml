@@ -1,0 +1,8 @@
+# GitHub Pages (Jekyll) settings.
+# Internal files below stay in the repo but are not published on code-seed.io.
+exclude:
+  - email/
+  - EMAIL_TASK_CHECKLIST.md
+  - linkedin-post.txt
+  - package.json
+  - README.md
