@@ -30,10 +30,16 @@ window.FormGuard = (() => {
         const widget = document.createElement('div');
         widget.className = 'cf-turnstile';
         widget.dataset.sitekey = TURNSTILE_SITE_KEY;
-        widget.dataset.appearance = 'interaction-only';
+        widget.dataset.appearance = 'always';
+        widget.dataset.size = 'flexible';
         widget.style.marginTop = '1rem';
-        const button = form.querySelector('button[type="submit"]');
-        form.insertBefore(widget, button);
+        if (form.dataset.turnstile === 'end') {
+            widget.style.flexBasis = '100%';
+            widget.style.marginTop = '0';
+            form.appendChild(widget);
+        } else {
+            form.insertBefore(widget, form.querySelector('button[type="submit"]'));
+        }
     }
 
     function protect(form) {

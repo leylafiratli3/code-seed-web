@@ -213,6 +213,12 @@ html { scroll-behavior: smooth; scroll-padding-top: 5rem; }
     .platform-bar li:last-child { grid-column: 1 / -1; border-left: 0; }
 }
 
+/* The character lineup is desktop-only; on phones the hero is text-first */
+@media (max-width: 767px) {
+    .studio-hero .hero-stage { display: none; }
+    section.studio-hero { min-height: 0; }
+}
+
 @media (prefers-reduced-motion: reduce) {
     html { scroll-behavior: auto; }
     .hex-btn, .keyart img { transition: none; }
