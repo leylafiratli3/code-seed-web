@@ -233,3 +233,4 @@ html { scroll-behavior: smooth; scroll-padding-top: 5rem; }
 .stance-flags { display: flex; gap: .5rem; }
 .flag { display: block; width: 30px; height: 20px; border-radius: 3px; box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.15); }
 .stance-line { font-size: .85rem; font-style: italic; }
+.flag { filter: saturate(.7) brightness(.92); }
