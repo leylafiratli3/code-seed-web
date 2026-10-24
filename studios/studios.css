@@ -228,7 +228,8 @@ html { scroll-behavior: smooth; scroll-padding-top: 5rem; }
 }
 
 /* Footer stance flags */
-.stance { display: flex; align-items: center; gap: .75rem; }
+.stance { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: .5rem .75rem; }
 .stance-head { font-size: .85rem; }
 .stance-flags { display: flex; gap: .5rem; }
 .flag { display: block; width: 30px; height: 20px; border-radius: 3px; box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.15); }
+.stance-line { font-size: .85rem; font-style: italic; }
